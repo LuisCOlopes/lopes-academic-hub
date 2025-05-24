@@ -23,7 +23,7 @@ import {
   FileText, 
   Contact,
   Calendar,
-  News,
+  Newspaper,
   Youtube
 } from 'lucide-react';
 
@@ -54,10 +54,10 @@ const AcademicSidebar: React.FC = () => {
     { title: 'Speaking Engagements', url: '/speaking', icon: FileText },
     { title: t('workshops'), url: '/workshops', icon: Book },
     { title: t('consulting'), url: '/consulting', icon: FileText },
-    { title: t('media'), url: '/media', icon: News },
+    { title: t('media'), url: '/media', icon: Newspaper },
     { title: 'Hobbies', url: '/hobbies', icon: Users },
     { title: t('contact'), url: '/contact', icon: Contact },
-    { title: t('news'), url: '/news', icon: News },
+    { title: t('news'), url: '/news', icon: Newspaper },
     { title: t('blog'), url: '/blog', icon: FileText },
   ];
 

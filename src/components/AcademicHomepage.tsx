@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Users, FileText, Calendar, News, Contact } from 'lucide-react';
+import { BookOpen, Users, FileText, Calendar, Newspaper, Contact } from 'lucide-react';
 
 const AcademicHomepage: React.FC = () => {
   const { t } = useLanguage();
@@ -35,7 +34,7 @@ const AcademicHomepage: React.FC = () => {
     {
       title: 'Recent News',
       description: 'Latest updates and announcements',
-      icon: News,
+      icon: Newspaper,
       url: '/news',
       color: 'bg-orange-500'
     }
