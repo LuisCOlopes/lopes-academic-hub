@@ -98,8 +98,8 @@ const LandingPage: React.FC = () => {
                 {t('contactInfo')}
               </h3>
               <div className="space-y-3 text-gray-600">
-                <p>📧 luis.lopes@ufu.br</p>
-                <p>📞 +55 (34) 3239-4292</p>
+                <p>📧 lcol@ufu.br</p>
+                <p>📞 +55 (34) 3230-9536</p>
                 <p>🏢 Faculdade de Engenharia Química</p>
                 <p>📍 Uberlândia, MG - Brasil</p>
               </div>
@@ -112,15 +112,27 @@ const LandingPage: React.FC = () => {
               </h3>
               <div className="space-y-2">
                 <span className="inline-block bg-academic-blue text-white px-3 py-1 rounded-full text-sm">
-                  {t('processEngineering')}
+                  Controle de Processos
                 </span>
                 <br />
                 <span className="inline-block bg-academic-blue-light text-white px-3 py-1 rounded-full text-sm">
-                  {t('sustainability')}
+                  Modelagem e Simulação
                 </span>
                 <br />
                 <span className="inline-block bg-academic-blue-dark text-white px-3 py-1 rounded-full text-sm">
-                  {t('industrialChemistry')}
+                  Otimização
+                </span>
+                <br />
+                <span className="inline-block bg-academic-blue text-white px-3 py-1 rounded-full text-sm">
+                  Operabilidade de Processos
+                </span>
+                <br />
+                <span className="inline-block bg-academic-blue-light text-white px-3 py-1 rounded-full text-sm">
+                  Descarbonização
+                </span>
+                <br />
+                <span className="inline-block bg-academic-blue-dark text-white px-3 py-1 rounded-full text-sm">
+                  Eletrificação de Processos
                 </span>
               </div>
             </Card>
@@ -134,6 +146,14 @@ const LandingPage: React.FC = () => {
                 <a href="https://www.ufu.br" target="_blank" rel="noopener noreferrer" 
                    className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   🏛️ Universidade Federal de Uberlândia
+                </a>
+                <a href="https://feq.ufu.br" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                  🏭 FEQUI - Faculdade de Engenharia Química
+                </a>
+                <a href="https://ppgeq.feq.ufu.br" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                  🎓 Programa de Pós-graduação em Engenharia Química
                 </a>
                 <a href="#" className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   📚 Lattes CV

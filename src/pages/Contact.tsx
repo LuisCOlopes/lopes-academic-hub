@@ -1,4 +1,3 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -36,7 +35,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">luis.lopes@ufu.br</p>
+                      <p className="text-gray-600">lcol@ufu.br</p>
                     </div>
                   </div>
                 </Card>
@@ -48,7 +47,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+55 (34) 3239-4292</p>
+                      <p className="text-gray-600">+55 (34) 3230-9536</p>
                     </div>
                   </div>
                 </Card>
