@@ -47,7 +47,34 @@ const translations = {
     consulting: 'Consultoria',
     media: 'Mídia',
     blog: 'Blog',
-    news: 'Notícias'
+    news: 'Notícias',
+    
+    // Page titles and content
+    awardsTitle: 'Prêmios e Reconhecimentos',
+    serviceTitle: 'Serviços à Comunidade',
+    leadershipTitle: 'Liderança Acadêmica',
+    projectsTitle: 'Projetos de Pesquisa',
+    teamTitle: 'Nossa Equipe',
+    opportunitiesTitle: 'Oportunidades de Pesquisa',
+    alumniTitle: 'Ex-Alunos',
+    communityTitle: 'Engajamento Comunitário',
+    podcastTitle: 'Podcast Acadêmico',
+    conferencesTitle: 'Conferências e Eventos',
+    workshopsTitle: 'Workshops e Cursos',
+    consultingTitle: 'Serviços de Consultoria',
+    mediaTitle: 'Na Mídia',
+    newsTitle: 'Notícias e Atualizações',
+    blogTitle: 'Blog Acadêmico',
+    
+    // Common phrases
+    learnMore: 'Saiba Mais',
+    readMore: 'Ler Mais',
+    viewAll: 'Ver Todos',
+    contact: 'Contato',
+    email: 'Email',
+    phone: 'Telefone',
+    office: 'Escritório',
+    cv: 'Currículo'
   },
   en: {
     // Navigation
@@ -86,7 +113,34 @@ const translations = {
     consulting: 'Consulting',
     media: 'Media',
     blog: 'Blog',
-    news: 'News'
+    news: 'News',
+    
+    // Page titles and content
+    awardsTitle: 'Awards and Recognition',
+    serviceTitle: 'Community Service',
+    leadershipTitle: 'Academic Leadership',
+    projectsTitle: 'Research Projects',
+    teamTitle: 'Our Team',
+    opportunitiesTitle: 'Research Opportunities',
+    alumniTitle: 'Alumni Network',
+    communityTitle: 'Community Engagement',
+    podcastTitle: 'Academic Podcast',
+    conferencesTitle: 'Conferences and Events',
+    workshopsTitle: 'Workshops and Courses',
+    consultingTitle: 'Consulting Services',
+    mediaTitle: 'In the Media',
+    newsTitle: 'News and Updates',
+    blogTitle: 'Academic Blog',
+    
+    // Common phrases
+    learnMore: 'Learn More',
+    readMore: 'Read More',
+    viewAll: 'View All',
+    contact: 'Contact',
+    email: 'Email',
+    phone: 'Phone',
+    office: 'Office',
+    cv: 'CV'
   },
   es: {
     // Navigation
@@ -125,7 +179,34 @@ const translations = {
     consulting: 'Consultoría',
     media: 'Medios',
     blog: 'Blog',
-    news: 'Noticias'
+    news: 'Noticias',
+    
+    // Page titles and content
+    awardsTitle: 'Premios y Reconocimientos',
+    serviceTitle: 'Servicio a la Comunidad',
+    leadershipTitle: 'Liderazgo Académico',
+    projectsTitle: 'Proyectos de Investigación',
+    teamTitle: 'Nuestro Equipo',
+    opportunitiesTitle: 'Oportunidades de Investigación',
+    alumniTitle: 'Red de Egresados',
+    communityTitle: 'Compromiso Comunitario',
+    podcastTitle: 'Podcast Académico',
+    conferencesTitle: 'Conferencias y Eventos',
+    workshopsTitle: 'Talleres y Cursos',
+    consultingTitle: 'Servicios de Consultoría',
+    mediaTitle: 'En los Medios',
+    newsTitle: 'Noticias y Actualizaciones',
+    blogTitle: 'Blog Académico',
+    
+    // Common phrases
+    learnMore: 'Aprender Más',
+    readMore: 'Leer Más',
+    viewAll: 'Ver Todo',
+    contact: 'Contacto',
+    email: 'Correo',
+    phone: 'Teléfono',
+    office: 'Oficina',
+    cv: 'CV'
   }
 };
 
