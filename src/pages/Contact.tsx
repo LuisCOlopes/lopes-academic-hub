@@ -1,10 +1,11 @@
+
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Video, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -48,6 +49,44 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
                       <p className="text-gray-600">+55 (34) 3230-9536</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <Video className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">MS-Teams</h3>
+                      <a 
+                        href="https://teams.microsoft.com/l/chat/0/0?users=lcol@ufu.br" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-academic-blue hover:text-academic-blue-dark"
+                      >
+                        Start Chat
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 w-12 bg-blue-800 rounded-lg flex items-center justify-center">
+                      <Linkedin className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">LinkedIn</h3>
+                      <a 
+                        href="https://www.linkedin.com/in/lu%C3%ADs-cl%C3%A1udio-oliveira-lopes-a1b28414?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgkwwG1ayTG6XiYt7XFuiRQ%3D%3D" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-academic-blue hover:text-academic-blue-dark"
+                      >
+                        Connect on LinkedIn
+                      </a>
                     </div>
                   </div>
                 </Card>

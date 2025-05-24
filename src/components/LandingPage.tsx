@@ -155,8 +155,17 @@ const LandingPage: React.FC = () => {
                    className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   🎓 Programa de Pós-graduação em Engenharia Química
                 </a>
-                <a href="#" className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                <a href="http://lattes.cnpq.br/9971842873202479" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   📚 Lattes CV
+                </a>
+                <a href="https://feq.ufu.br/graduacao/engenharia-quimica/corpo-docente" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                  📋 Plano de Trabalho Docente
+                </a>
+                <a href="https://orcid.org/0000-0003-4224-5586" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                  🆔 ORCID
                 </a>
                 <a href="#" className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   🔬 ResearchGate
