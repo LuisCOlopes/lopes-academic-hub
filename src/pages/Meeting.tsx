@@ -1,4 +1,3 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -136,7 +135,6 @@ const Meeting = () => {
                       <SelectContent>
                         <SelectItem value="presencial">Presencial (UFU)</SelectItem>
                         <SelectItem value="teams">MS Teams</SelectItem>
-                        <SelectItem value="zoom">Zoom</SelectItem>
                         <SelectItem value="meet">Google Meet</SelectItem>
                       </SelectContent>
                     </Select>
