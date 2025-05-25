@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -8,6 +9,54 @@ import { BookOpen, Users, FileText, Calendar, Newspaper, Contact } from 'lucide-
 const AcademicHomepage: React.FC = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
+
+  const getWelcomeTitle = () => {
+    const currentLang = localStorage.getItem('preferred-language') || 'pt';
+    switch (currentLang) {
+      case 'en':
+        return 'Welcome to my Academic Hub';
+      case 'es':
+        return 'Bienvenido a mi Centro Académico';
+      default:
+        return 'Bem-vindo ao meu Hub Acadêmico';
+    }
+  };
+
+  const getWelcomeDescription = () => {
+    const currentLang = localStorage.getItem('preferred-language') || 'pt';
+    switch (currentLang) {
+      case 'en':
+        return 'Professor of Chemical Engineering at the Federal University of Uberlândia, dedicated to advancing knowledge in sustainable industrial processes and chemical engineering education.';
+      case 'es':
+        return 'Profesor de Ingeniería Química en la Universidad Federal de Uberlândia, dedicado a avanzar el conocimiento en procesos industriales sostenibles y educación en ingeniería química.';
+      default:
+        return 'Professor de Engenharia Química na Universidade Federal de Uberlândia, dedicado ao avanço do conhecimento em processos industriais sustentáveis e educação em engenharia química.';
+    }
+  };
+
+  const getLearnMoreText = () => {
+    const currentLang = localStorage.getItem('preferred-language') || 'pt';
+    switch (currentLang) {
+      case 'en':
+        return 'Learn More About Me';
+      case 'es':
+        return 'Conoce Más Sobre Mí';
+      default:
+        return 'Saiba Mais Sobre Mim';
+    }
+  };
+
+  const getContactText = () => {
+    const currentLang = localStorage.getItem('preferred-language') || 'pt';
+    switch (currentLang) {
+      case 'en':
+        return 'Get in Touch';
+      case 'es':
+        return 'Ponte en Contacto';
+      default:
+        return 'Entre em Contato';
+    }
+  };
 
   const featuredSections = [
     {
@@ -43,35 +92,33 @@ const AcademicHomepage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-academic-blue to-academic-blue-light text-white py-20">
+      <section className="relative bg-gradient-to-r from-ufu-navy to-ufu-blue text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold mb-6">
-                Welcome to my Academic Hub
+              <h1 className="text-4xl lg:text-5xl font-playfair font-bold mb-6 text-ufu-light">
+                {getWelcomeTitle()}
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Professor of Chemical Engineering at the Federal University of Uberlândia, 
-                dedicated to advancing knowledge in sustainable industrial processes and 
-                chemical engineering education.
+              <p className="text-xl text-ufu-light mb-8 leading-relaxed opacity-90">
+                {getWelcomeDescription()}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => navigate('/about')}
                   size="lg"
                   variant="secondary"
-                  className="bg-white text-academic-blue hover:bg-blue-50"
+                  className="bg-ufu-light text-ufu-navy hover:bg-white"
                 >
-                  Learn More About Me
+                  {getLearnMoreText()}
                 </Button>
                 <Button 
                   onClick={() => navigate('/contact')}
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-academic-blue"
+                  className="border-ufu-light text-ufu-light hover:bg-ufu-light hover:text-ufu-navy"
                 >
                   <Contact className="mr-2 h-5 w-5" />
-                  Get in Touch
+                  {getContactText()}
                 </Button>
               </div>
             </div>
@@ -174,36 +221,36 @@ const AcademicHomepage: React.FC = () => {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-ufu-light">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in">
-              <div className="text-3xl font-bold text-academic-blue mb-2">15+</div>
-              <div className="text-gray-600">Years of Experience</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">25+</div>
+              <div className="text-ufu-navy">Years of Experience</div>
             </div>
             <div className="animate-fade-in">
-              <div className="text-3xl font-bold text-academic-blue mb-2">50+</div>
-              <div className="text-gray-600">Publications</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">80+</div>
+              <div className="text-ufu-navy">Publications</div>
             </div>
             <div className="animate-fade-in">
-              <div className="text-3xl font-bold text-academic-blue mb-2">200+</div>
-              <div className="text-gray-600">Students Mentored</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">150+</div>
+              <div className="text-ufu-navy">Students Mentored</div>
             </div>
             <div className="animate-fade-in">
-              <div className="text-3xl font-bold text-academic-blue mb-2">10+</div>
-              <div className="text-gray-600">Active Projects</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">R$ 8M+</div>
+              <div className="text-ufu-navy">Research Funding</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 academic-gradient text-white">
+      <section className="py-20 px-6 bg-ufu-navy text-ufu-light">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-playfair font-bold mb-6">
             Interested in Collaboration?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl opacity-90 mb-8">
             I'm always open to discussing research opportunities, consulting projects, 
             and academic partnerships.
           </p>
@@ -212,7 +259,7 @@ const AcademicHomepage: React.FC = () => {
               onClick={() => navigate('/contact')}
               size="lg"
               variant="secondary"
-              className="bg-white text-academic-blue hover:bg-blue-50"
+              className="bg-ufu-light text-ufu-navy hover:bg-white"
             >
               <Contact className="mr-2 h-5 w-5" />
               Contact Me
@@ -221,7 +268,7 @@ const AcademicHomepage: React.FC = () => {
               onClick={() => navigate('/meeting')}
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-academic-blue"
+              className="border-ufu-light text-ufu-light hover:bg-ufu-light hover:text-ufu-navy"
             >
               <Calendar className="mr-2 h-5 w-5" />
               Request a Meeting

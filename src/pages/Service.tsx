@@ -11,74 +11,86 @@ const Service = () => {
 
   const serviceActivities = [
     {
-      category: 'Editorial Service',
+      category: 'Consultoria e Revisão',
       icon: FileText,
       activities: [
         {
-          role: 'Associate Editor',
-          organization: 'Journal of Chemical Engineering',
-          period: '2022 - Present',
-          description: 'Responsible for manuscript review and editorial decisions'
-        },
-        {
-          role: 'Reviewer',
-          organization: 'Multiple International Journals',
-          period: '2018 - Present',
-          description: 'Regular reviewer for 15+ peer-reviewed journals'
+          role: 'Consultoria "ad hoc"',
+          organization: 'Agências de fomento, periódicos científicos e congressos',
+          period: '2000 - Presente',
+          description: 'Revisor regular para mais de 15 periódicos internacionais'
         }
       ]
     },
     {
-      category: 'Professional Organizations',
+      category: 'Periódicos Revisados',
       icon: Globe,
       activities: [
         {
-          role: 'Board Member',
-          organization: 'Brazilian Chemical Engineering Association',
-          period: '2021 - Present',
-          description: 'Strategic planning and policy development'
+          role: 'Revisor',
+          organization: 'Industrial & Engineering Chemistry Research',
+          period: '2005 - Presente',
+          description: 'Avaliação regular de manuscritos'
         },
         {
-          role: 'Committee Chair',
-          organization: 'International Conference on Sustainable Processes',
-          period: '2020 - 2023',
-          description: 'Organizing committee for annual conference'
+          role: 'Revisor',
+          organization: 'Journal of Process Control',
+          period: '2003 - Presente',
+          description: 'Revisão de artigos em controle de processos'
+        },
+        {
+          role: 'Revisor',
+          organization: 'Automatica',
+          period: '2004 - Presente',
+          description: 'Periódico de alto impacto em automação'
+        },
+        {
+          role: 'Revisor',
+          organization: 'Computers & Chemical Engineering',
+          period: '2002 - Presente',
+          description: 'Revista especializada em engenharia química computacional'
+        },
+        {
+          role: 'Revisor',
+          organization: 'IEEE Trans. On Automatic Control',
+          period: '2008 - Presente',
+          description: 'Principal revista IEEE em controle automático'
         }
       ]
     },
     {
-      category: 'University Service',
+      category: 'Editor de Periódicos',
       icon: School,
       activities: [
         {
-          role: 'Department Head',
-          organization: 'Chemical Engineering Department - UFU',
-          period: '2019 - 2022',
-          description: 'Administrative leadership and strategic planning'
+          role: 'Editor Associado',
+          organization: 'Brazilian Journal of Chemical Engineering',
+          period: '2009 - 2013',
+          description: 'Responsável por decisões editoriais e revisão de manuscritos'
         },
         {
-          role: 'Graduate Committee Member',
-          organization: 'UFU Graduate School',
-          period: '2018 - Present',
-          description: 'Review and approve graduate program policies'
+          role: 'Editor',
+          organization: 'Ciência & Engenharia',
+          period: '2005 - Presente (15+ anos)',
+          description: 'Editor de longa data da revista'
         }
       ]
     },
     {
-      category: 'Community Outreach',
+      category: 'Serviços Acadêmicos',
       icon: Users,
       activities: [
         {
-          role: 'Science Fair Judge',
-          organization: 'Regional High Schools',
-          period: '2017 - Present',
-          description: 'Mentoring young scientists and engineers'
+          role: 'Coordenador',
+          organization: 'Curso de Engenharia de Segurança',
+          period: '2004 - 2012',
+          description: 'Coordenação geral do curso de especialização'
         },
         {
-          role: 'Technical Consultant',
-          organization: 'Local Industries',
-          period: '2016 - Present',
-          description: 'Pro bono consulting for small chemical companies'
+          role: 'Coordenador Geral',
+          organization: 'Projeto Proteger-se',
+          period: '2020 - Presente',
+          description: 'Mais de 7.000 pessoas atendidas em projeto de extensão'
         }
       ]
     }
@@ -88,11 +100,11 @@ const Service = () => {
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('serviceTitle')}
+          <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
+            Serviços Prestados
           </h1>
-          <p className="text-lg text-gray-600">
-            Professional service to the academic community and society
+          <p className="text-lg text-ufu-blue">
+            Serviços profissionais à comunidade acadêmica e sociedade
           </p>
         </div>
 
@@ -100,24 +112,24 @@ const Service = () => {
           {serviceActivities.map((category, index) => (
             <Card key={index} className="p-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-academic-blue rounded-lg">
-                  <category.icon className="h-6 w-6 text-white" />
+                <div className="p-2 bg-ufu-navy rounded-lg">
+                  <category.icon className="h-6 w-6 text-ufu-light" />
                 </div>
-                <h2 className="text-2xl font-playfair font-bold text-gray-900">
+                <h2 className="text-2xl font-playfair font-bold text-ufu-navy">
                   {category.category}
                 </h2>
               </div>
 
               <div className="grid gap-4">
                 {category.activities.map((activity, actIndex) => (
-                  <div key={actIndex} className="border-l-4 border-academic-blue pl-4 py-2">
+                  <div key={actIndex} className="border-l-4 border-ufu-blue pl-4 py-2">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-ufu-navy">
                         {activity.role}
                       </h3>
                       <Badge variant="outline">{activity.period}</Badge>
                     </div>
-                    <p className="text-academic-blue font-medium mb-1">
+                    <p className="text-ufu-blue font-medium mb-1">
                       {activity.organization}
                     </p>
                     <p className="text-gray-600">
@@ -130,25 +142,25 @@ const Service = () => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Current Service Opportunities
+        <div className="mt-12 p-6 bg-ufu-light rounded-lg">
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
+            Oportunidades Atuais de Serviço
           </h2>
-          <p className="text-gray-600 mb-4">
-            Looking for opportunities to contribute to the academic community? Contact me about potential collaborations.
+          <p className="text-ufu-navy mb-4">
+            Procurando oportunidades para contribuir com a comunidade acadêmica? Entre em contato sobre possíveis colaborações.
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Peer Review</h3>
-              <p className="text-sm text-gray-600">Available for manuscript reviews</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">Revisão por Pares</h3>
+              <p className="text-sm text-ufu-blue">Disponível para revisão de manuscritos</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Conference Organization</h3>
-              <p className="text-sm text-gray-600">Committee participation welcome</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">Organização de Conferências</h3>
+              <p className="text-sm text-ufu-blue">Participação em comitês bem-vinda</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Grant Review</h3>
-              <p className="text-sm text-gray-600">Panel service for funding agencies</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">Revisão de Projetos</h3>
+              <p className="text-sm text-ufu-blue">Serviços de painel para agências de fomento</p>
             </div>
           </div>
         </div>

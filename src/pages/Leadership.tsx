@@ -11,63 +11,87 @@ const Leadership = () => {
 
   const leadershipRoles = [
     {
-      position: 'Department Head',
-      organization: 'Chemical Engineering Department - UFU',
-      period: '2019 - 2022',
+      position: 'Diretor Substituto da Diretoria de Qualidade de Vida (DIRVE)',
+      organization: 'Pró-reitoria de Assistência Estudantil - UFU',
+      period: '2021 - Atual',
       achievements: [
-        'Led department through COVID-19 transition to online learning',
-        'Increased research funding by 40%',
-        'Implemented new curriculum aligned with industry needs',
-        'Established partnerships with 5 international universities'
+        'Coordenação de programas de qualidade de vida estudantil',
+        'Implementação de políticas de bem-estar',
+        'Gestão de equipes multidisciplinares',
+        'Desenvolvimento de projetos de apoio estudantil'
       ],
-      impact: 'Strategic Leadership'
+      impact: 'Gestão Administrativa'
     },
     {
-      position: 'Research Group Director',
-      organization: 'Sustainable Processes Laboratory',
-      period: '2017 - Present',
+      position: 'Assessor do Reitor para Assuntos Estudantis',
+      organization: 'Universidade Federal de Uberlândia',
+      period: '2017 - 2025',
       achievements: [
-        'Built research team from 5 to 25 members',
-        'Secured R$ 2.5M in research grants',
-        'Published 50+ peer-reviewed papers',
-        'Graduated 15 PhD and 30 MSc students'
+        'Trabalho na PROEXC (Pró-reitoria de Extensão e Cultura)',
+        'Atuação na PROAE (Pró-reitoria de Assistência Estudantil)',
+        'Coordenação da ASAES (Assessoria Administrativa da PROAE)',
+        'Desenvolvimento de políticas estudantis'
       ],
-      impact: 'Research Excellence'
+      impact: 'Liderança Estratégica'
     },
     {
-      position: 'International Committee Chair',
-      organization: 'Brazilian Chemical Engineering Society',
-      period: '2020 - Present',
+      position: 'Coordenador do Programa de Pós-graduação em Engenharia Química',
+      organization: 'FEQUI/UFU',
+      period: '2010 - 2012',
       achievements: [
-        'Organized 3 international conferences',
-        'Established exchange programs with 10 countries',
-        'Created mentorship network for young researchers',
-        'Increased international membership by 60%'
+        'Coordenação de programa de pós-graduação conceito CAPES 5',
+        'Gestão de mais de 100 estudantes de mestrado e doutorado',
+        'Implementação de melhorias curriculares',
+        'Fortalecimento da pesquisa e extensão'
       ],
-      impact: 'Global Collaboration'
+      impact: 'Excelência Acadêmica'
+    },
+    {
+      position: 'Membro do Conselho Universitário',
+      organization: 'UFU',
+      period: '2010 - 2012',
+      achievements: [
+        'Participação em decisões estratégicas da universidade',
+        'Representação da comunidade acadêmica',
+        'Contribuição para políticas institucionais',
+        'Assessoria em planejamento universitário'
+      ],
+      impact: 'Governança Universitária'
     }
+  ];
+
+  const additionalRoles = [
+    'Coordenador do Grupo IV do Departamento de Engenharia Química',
+    'Membro de Comissão do INEP/MEC para autorização de funcionamento de Cursos',
+    'Representante docente no conselho da Faculdade de Engenharia Química (2001-2002)',
+    'Membro do Conselho de Pesquisa e Pós-graduação (2010-2012)',
+    'Substituto diretor da FEQUI no Conselho Diretor da UFU (2001-2005)',
+    'Presidente do Núcleo Docente Estruturante (NDE) do Curso de Engenharia Química',
+    'Coordenador do NUCOP (Núcleo de Modelagem, Controle e Otimização de Processos) (2005-2009)',
+    'Assessor Administrativo da Faculdade de Engenharia Química (2001-2005)',
+    'Membro da COPSIA - Comissão Permanente de Sindicância e Inquérito Administrativo (2022-2023)'
   ];
 
   const leadershipPhilosophy = [
     {
       icon: Users,
-      title: 'Collaborative Leadership',
-      description: 'Building inclusive teams that leverage diverse perspectives and expertise'
+      title: 'Liderança Colaborativa',
+      description: 'Construção de equipes inclusivas que aproveitam perspectivas e expertises diversas'
     },
     {
       icon: Target,
-      title: 'Vision-Driven',
-      description: 'Setting clear goals and inspiring others to achieve ambitious objectives'
+      title: 'Orientado por Visão',
+      description: 'Estabelecimento de metas claras e inspiração de outros para alcançar objetivos ambiciosos'
     },
     {
       icon: TrendingUp,
-      title: 'Continuous Improvement',
-      description: 'Fostering innovation and adaptation in rapidly changing environments'
+      title: 'Melhoria Contínua',
+      description: 'Promoção da inovação e adaptação em ambientes em rápida mudança'
     },
     {
       icon: Crown,
-      title: 'Ethical Foundation',
-      description: 'Leading with integrity and commitment to academic and professional ethics'
+      title: 'Base Ética',
+      description: 'Liderança com integridade e compromisso com a ética acadêmica e profissional'
     }
   ];
 
@@ -75,26 +99,26 @@ const Leadership = () => {
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('leadershipTitle')}
+          <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
+            Liderança
           </h1>
-          <p className="text-lg text-gray-600">
-            Academic and professional leadership experience driving innovation and excellence
+          <p className="text-lg text-ufu-blue">
+            Experiência em liderança acadêmica e profissional promovendo inovação e excelência
           </p>
         </div>
 
         {/* Leadership Philosophy */}
         <div className="mb-12">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Leadership Philosophy
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
+            Filosofia de Liderança
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {leadershipPhilosophy.map((principle, index) => (
               <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-academic-blue rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <principle.icon className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-ufu-navy rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <principle.icon className="h-6 w-6 text-ufu-light" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-ufu-navy mb-2">
                   {principle.title}
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -106,15 +130,15 @@ const Leadership = () => {
         </div>
 
         {/* Leadership Roles */}
-        <div className="grid gap-8">
+        <div className="grid gap-8 mb-12">
           {leadershipRoles.map((role, index) => (
             <Card key={index} className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-semibold text-ufu-navy mb-2">
                     {role.position}
                   </h3>
-                  <p className="text-academic-blue font-medium mb-1">
+                  <p className="text-ufu-blue font-medium mb-1">
                     {role.organization}
                   </p>
                   <Badge variant="outline">{role.period}</Badge>
@@ -125,13 +149,13 @@ const Leadership = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                  Key Achievements
+                <h4 className="text-lg font-semibold text-ufu-navy mb-3">
+                  Principais Realizações
                 </h4>
                 <ul className="space-y-2">
                   {role.achievements.map((achievement, achIndex) => (
                     <li key={achIndex} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-academic-blue rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-ufu-blue rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">{achievement}</span>
                     </li>
                   ))}
@@ -141,32 +165,49 @@ const Leadership = () => {
           ))}
         </div>
 
+        {/* Additional Roles */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
+            Outras Posições de Liderança
+          </h2>
+          <Card className="p-6">
+            <div className="grid md:grid-cols-2 gap-4">
+              {additionalRoles.map((role, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-ufu-blue rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-600">{role}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+
         {/* Current Initiatives */}
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Current Leadership Initiatives
+        <div className="p-6 bg-ufu-light rounded-lg">
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
+            Iniciativas Atuais de Liderança
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Sustainability Task Force
+              <h3 className="font-semibold text-ufu-navy mb-2">
+                Projeto Proteger-se
               </h3>
               <p className="text-gray-600 text-sm mb-3">
-                Leading university-wide initiative to achieve carbon neutrality by 2030
+                Coordenação geral de projeto de extensão com mais de 7.000 pessoas atendidas
               </p>
               <Badge variant="outline" className="text-green-600 border-green-600">
-                In Progress
+                Em Andamento
               </Badge>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Industry Partnership Program
+              <h3 className="font-semibold text-ufu-navy mb-2">
+                Qualidade de Vida Estudantil
               </h3>
               <p className="text-gray-600 text-sm mb-3">
-                Developing strategic partnerships between academia and industry
+                Desenvolvimento de políticas e programas de bem-estar estudantil
               </p>
               <Badge variant="outline" className="text-blue-600 border-blue-600">
-                Planning Phase
+                Ativo
               </Badge>
             </div>
           </div>

@@ -4,38 +4,48 @@ import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Calendar, Trophy } from 'lucide-react';
+import { Award, Calendar, Trophy, ExternalLink } from 'lucide-react';
 
 const Awards = () => {
   const { t } = useLanguage();
 
   const awards = [
     {
-      year: '2023',
-      title: 'Excellence in Teaching Award',
-      organization: 'UFU - Chemical Engineering Faculty',
-      description: 'Recognized for outstanding contributions to chemical engineering education',
-      type: 'teaching'
+      year: '2024',
+      title: 'Poster Destaque no III PSE-BR',
+      organization: 'Process Systems Engineering Brasil',
+      description: 'Reconhecimento por pesquisa de destaque em engenharia de sistemas de processos',
+      type: 'research',
+      location: 'São Paulo'
     },
     {
       year: '2022',
-      title: 'Best Research Paper Award',
-      organization: 'Brazilian Chemical Engineering Congress',
-      description: 'For research on sustainable industrial processes',
+      title: '1º Lugar Dissertação de Mestrado FEELT',
+      organization: 'Faculdade de Engenharia Elétrica - UFU',
+      description: 'Orientação premiada: "Controle tolerante de quadricópteros em cenários com falhas em atuadores e sensores" - Autor: Kenji Fabiano Ávila Okada',
+      type: 'teaching',
+      link: 'https://repositorio.ufu.br/handle/123456789/34929',
+      details: 'Orientador: Prof. Dr. Aniel Silva de Morais, Coorientador: Prof. Dr. Luís Cláudio Oliveira Lopes'
+    },
+    {
+      year: '2012',
+      title: 'Prêmio Chemtech de Incentivo à Pesquisa',
+      organization: 'ABEQ - Chemtech',
+      description: 'Reconhecimento em Simulação, Otimização e Controle de Processos',
       type: 'research'
     },
     {
-      year: '2021',
-      title: 'CNPq Research Fellowship',
-      organization: 'National Council for Scientific Development',
-      description: 'Productivity scholarship for research excellence',
-      type: 'fellowship'
+      year: '2007',
+      title: 'Artigo de Destaque V SNCA',
+      organization: 'AINST-IEEE-UFBA',
+      description: 'Artigo destacado no V Seminário Nacional de Controle e Automação',
+      type: 'research'
     },
     {
-      year: '2020',
-      title: 'Innovation in Sustainability Award',
-      organization: 'Brazilian Environmental Engineering Society',
-      description: 'For contributions to green chemical processes',
+      year: '2003',
+      title: '2º Melhor Artigo do III Seminário Nacional',
+      organization: 'AINST, IEEE e UFBA',
+      description: 'Segundo melhor artigo do III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações',
       type: 'research'
     }
   ];
@@ -56,11 +66,11 @@ const Awards = () => {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'teaching':
-        return 'bg-blue-500';
+        return 'bg-ufu-blue';
       case 'research':
-        return 'bg-green-500';
+        return 'bg-ufu-navy';
       case 'fellowship':
-        return 'bg-purple-500';
+        return 'bg-ufu-teal';
       default:
         return 'bg-gray-500';
     }
@@ -70,11 +80,11 @@ const Awards = () => {
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('awardsTitle')}
+          <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
+            Prêmios e Reconhecimentos
           </h1>
-          <p className="text-lg text-gray-600">
-            Recognition for excellence in teaching, research, and professional service
+          <p className="text-lg text-ufu-blue">
+            Reconhecimento pela excelência em ensino, pesquisa e serviços profissionais
           </p>
         </div>
 
@@ -82,46 +92,67 @@ const Awards = () => {
           {awards.map((award, index) => (
             <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4">
-                <div className={`p-3 ${getTypeColor(award.type)} rounded-lg flex items-center justify-center`}>
+                <div className={`p-3 ${getTypeColor(award.type)} rounded-lg flex items-center justify-center text-white`}>
                   {getTypeIcon(award.type)}
                 </div>
                 
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold text-ufu-navy">
                       {award.title}
                     </h3>
                     <Badge variant="outline">{award.year}</Badge>
+                    {award.location && (
+                      <Badge variant="secondary">{award.location}</Badge>
+                    )}
                   </div>
                   
-                  <p className="text-academic-blue font-medium mb-2">
+                  <p className="text-ufu-blue font-medium mb-2">
                     {award.organization}
                   </p>
                   
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 mb-3">
                     {award.description}
                   </p>
+
+                  {award.details && (
+                    <p className="text-sm text-gray-500 mb-3">
+                      {award.details}
+                    </p>
+                  )}
+
+                  {award.link && (
+                    <a 
+                      href={award.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-ufu-blue hover:text-ufu-navy text-sm"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Link para download
+                    </a>
+                  )}
                 </div>
               </div>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Fellowship Applications
+        <div className="mt-12 p-6 bg-ufu-light rounded-lg">
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
+            Oportunidades de Bolsas
           </h2>
-          <p className="text-gray-600 mb-4">
-            Information about current fellowship opportunities and application deadlines.
+          <p className="text-ufu-navy mb-4">
+            Informações sobre oportunidades atuais de bolsas e prazos de candidatura.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">CNPq Fellowships</h3>
-              <p className="text-sm text-gray-600">Applications open annually in March</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CNPq</h3>
+              <p className="text-sm text-ufu-blue">Candidaturas abertas anualmente em março</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">CAPES Scholarships</h3>
-              <p className="text-sm text-gray-600">Rolling applications for graduate students</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CAPES</h3>
+              <p className="text-sm text-ufu-blue">Candidaturas contínuas para estudantes de pós-graduação</p>
             </div>
           </div>
         </div>

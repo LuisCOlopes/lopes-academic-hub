@@ -12,77 +12,58 @@ const Projects = () => {
 
   const activeProjects = [
     {
-      title: 'Sustainable Catalytic Processes for Green Chemistry',
-      description: 'Development of novel catalytic systems for environmentally friendly chemical production',
-      funding: 'CNPq - R$ 450,000',
-      duration: '2022-2025',
-      status: 'Active',
-      icon: Leaf,
-      category: 'Sustainability',
-      collaborators: ['MIT', 'UNICAMP', 'PETROBRAS'],
-      publications: 8,
-      students: 6
-    },
-    {
-      title: 'AI-Driven Process Optimization in Chemical Industries',
-      description: 'Machine learning applications for real-time optimization of chemical processes',
-      funding: 'FAPEMIG - R$ 320,000',
-      duration: '2023-2026',
-      status: 'Active',
+      title: 'Projeto Conceitual de um Sistema Autônomo',
+      description: 'Desenvolvimento de sistema autônomo para controle de processos químicos',
+      funding: 'PETROBRAS - R$ 1.469.712,01',
+      duration: '2025-2027',
+      status: 'Em andamento',
       icon: Zap,
-      category: 'Technology',
-      collaborators: ['USP', 'Google Research', 'Braskem'],
-      publications: 4,
-      students: 8
+      category: 'Automação',
+      collaborators: ['PETROBRAS'],
+      tc: 'T.C. nº 23117.009434/2025-20'
     },
     {
-      title: 'Biorefinery Integration for Circular Economy',
-      description: 'Integrated approach to biomass conversion and waste utilization',
-      funding: 'EU Horizon - €380,000',
-      duration: '2021-2024',
-      status: 'Active',
+      title: 'Otimização da Separação sólido-líquido',
+      description: 'Otimização de processos de separação sólido-líquido em sistemas industriais',
+      funding: 'PETROBRAS - R$ 1.594.172,60',
+      duration: '2008-Em andamento',
+      status: 'Em andamento',
       icon: Factory,
-      category: 'Bioprocessing',
-      collaborators: ['TU Delft', 'NREL', 'Shell'],
-      publications: 12,
-      students: 4
-    },
-    {
-      title: 'Advanced Materials for Chemical Separation',
-      description: 'Novel membrane and adsorbent materials for efficient separation processes',
-      funding: 'CAPES - R$ 280,000',
-      duration: '2023-2025',
-      status: 'Starting',
-      icon: Beaker,
-      category: 'Materials',
-      collaborators: ['Stanford', 'COPPE-UFRJ'],
-      publications: 2,
-      students: 5
+      category: 'Separação',
+      collaborators: ['PETROBRAS'],
+      tc: 'T.C. nº 0050.0047865.08.9'
     }
   ];
 
   const completedProjects = [
     {
-      title: 'Green Hydrogen Production from Biogas',
-      duration: '2019-2022',
-      impact: '15 publications, 3 patents, 2 PhD graduates',
-      funding: 'FINEP - R$ 680,000'
+      title: 'Tecnologias de controle de sólidos',
+      duration: '2016-2019',
+      impact: 'Desenvolvimento de tecnologias avançadas para controle de sólidos em processos industriais',
+      funding: 'PETROBRAS - R$ 1.883.672,14',
+      tc: 'T.C. nº 0050.0101352-16.9'
     },
     {
-      title: 'Microreactor Technology for Fine Chemicals',
-      duration: '2018-2021',
-      impact: '22 publications, 1 startup company, 5 MSc graduates',
-      funding: 'CNPq/RHAE - R$ 420,000'
+      title: 'Desenvolvimento de Sistemas',
+      duration: '2010-2012',
+      impact: 'Desenvolvimento de sistemas avançados para processos químicos',
+      funding: 'FAPEMIG APQ-04173-07 - R$ 12.450,00'
+    },
+    {
+      title: 'Parceria com a UFBA/PEI e UFRGS',
+      duration: '2009-2012',
+      impact: 'Projeto de cooperação acadêmica entre universidades',
+      funding: 'PROCAD NF-Nº21/2009/AUXPE (nº360/2010)'
     }
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Active':
+      case 'Em andamento':
         return 'bg-green-100 text-green-800';
-      case 'Starting':
+      case 'Iniciando':
         return 'bg-blue-100 text-blue-800';
-      case 'Completed':
+      case 'Finalizado':
         return 'bg-gray-100 text-gray-800';
       default:
         return 'bg-gray-100 text-gray-800';
@@ -93,31 +74,31 @@ const Projects = () => {
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('projectsTitle')}
+          <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
+            Projetos de Pesquisa
           </h1>
-          <p className="text-lg text-gray-600">
-            Current and completed research projects advancing chemical engineering knowledge
+          <p className="text-lg text-ufu-blue">
+            Projetos atuais e concluídos avançando o conhecimento em engenharia química
           </p>
         </div>
 
         {/* Active Projects */}
         <div className="mb-12">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Active Research Projects
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
+            Projetos Ativos
           </h2>
           <div className="grid gap-6">
             {activeProjects.map((project, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-academic-blue rounded-lg flex items-center justify-center">
-                    <project.icon className="h-6 w-6 text-white" />
+                  <div className="p-3 bg-ufu-navy rounded-lg flex items-center justify-center">
+                    <project.icon className="h-6 w-6 text-ufu-light" />
                   </div>
                   
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 className="text-xl font-semibold text-ufu-navy mb-2">
                           {project.title}
                         </h3>
                         <div className="flex items-center gap-2 mb-2">
@@ -126,6 +107,9 @@ const Projects = () => {
                             {project.status}
                           </Badge>
                         </div>
+                        {project.tc && (
+                          <p className="text-sm text-gray-600 mb-2">{project.tc}</p>
+                        )}
                       </div>
                       <Button variant="ghost" size="sm">
                         <ExternalLink className="h-4 w-4" />
@@ -136,36 +120,27 @@ const Projects = () => {
                       {project.description}
                     </p>
                     
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
                       <div>
-                        <p className="font-medium text-gray-900">Funding</p>
+                        <p className="font-medium text-ufu-navy">Financiamento</p>
                         <p className="text-gray-600">{project.funding}</p>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">Duration</p>
+                        <p className="font-medium text-ufu-navy">Duração</p>
                         <p className="text-gray-600 flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
                           {project.duration}
                         </p>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">Publications</p>
-                        <p className="text-gray-600">{project.publications} papers</p>
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">Students</p>
-                        <p className="text-gray-600">{project.students} researchers</p>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-4">
-                      <p className="font-medium text-gray-900 text-sm mb-2">Collaborators</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.collaborators.map((collab, collabIndex) => (
-                          <Badge key={collabIndex} variant="secondary" className="text-xs">
-                            {collab}
-                          </Badge>
-                        ))}
+                        <p className="font-medium text-ufu-navy">Colaboradores</p>
+                        <div className="flex flex-wrap gap-1">
+                          {project.collaborators.map((collab, collabIndex) => (
+                            <Badge key={collabIndex} variant="secondary" className="text-xs">
+                              {collab}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -177,47 +152,50 @@ const Projects = () => {
 
         {/* Completed Projects */}
         <div className="mb-12">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Recently Completed Projects
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
+            Projetos Concluídos
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {completedProjects.map((project, index) => (
               <Card key={index} className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-ufu-navy mb-2">
                   {project.title}
                 </h3>
                 <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-gray-100 text-gray-800">Completed</Badge>
+                  <Badge className="bg-gray-100 text-gray-800">Finalizado</Badge>
                   <span className="text-sm text-gray-600">{project.duration}</span>
                 </div>
+                {project.tc && (
+                  <p className="text-sm text-gray-600 mb-2">{project.tc}</p>
+                )}
                 <p className="text-gray-600 text-sm mb-3">{project.impact}</p>
-                <p className="text-academic-blue font-medium text-sm">{project.funding}</p>
+                <p className="text-ufu-blue font-medium text-sm">{project.funding}</p>
               </Card>
             ))}
           </div>
         </div>
 
         {/* Project Statistics */}
-        <div className="bg-gray-50 rounded-lg p-6">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Research Impact
+        <div className="bg-ufu-light rounded-lg p-6">
+          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
+            Impacto da Pesquisa
           </h2>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-academic-blue mb-2">R$ 2.5M</div>
-              <div className="text-gray-600">Total Funding Secured</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">R$ 8M+</div>
+              <div className="text-ufu-navy">Financiamento Total</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-academic-blue mb-2">45+</div>
-              <div className="text-gray-600">Publications Generated</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">80+</div>
+              <div className="text-ufu-navy">Publicações Geradas</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-academic-blue mb-2">25</div>
-              <div className="text-gray-600">Graduate Students</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">50+</div>
+              <div className="text-ufu-navy">Estudantes de Pós-graduação</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-academic-blue mb-2">12</div>
-              <div className="text-gray-600">Industry Partners</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">15+</div>
+              <div className="text-ufu-navy">Parcerias Industriais</div>
             </div>
           </div>
         </div>

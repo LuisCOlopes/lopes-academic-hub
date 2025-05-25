@@ -118,17 +118,57 @@
 
   .ufu-navy {
     background: #05445e;
+    color: #d4f1f4;
   }
 
   .ufu-blue {
     background: #189ab4;
+    color: #05445e;
   }
 
   .ufu-teal {
     background: #75e6da;
+    color: #05445e;
   }
 
   .ufu-light {
     background: #d4f1f4;
+    color: #05445e;
+  }
+
+  .bg-ufu-navy {
+    background-color: #05445e;
+    color: #d4f1f4;
+  }
+
+  .bg-ufu-blue {
+    background-color: #189ab4;
+    color: #05445e;
+  }
+
+  .bg-ufu-teal {
+    background-color: #75e6da;
+    color: #05445e;
+  }
+
+  .bg-ufu-light {
+    background-color: #d4f1f4;
+    color: #05445e;
+  }
+
+  .text-ufu-navy {
+    color: #05445e;
+  }
+
+  .text-ufu-blue {
+    color: #189ab4;
+  }
+
+  .text-ufu-teal {
+    color: #75e6da;
+  }
+
+  .text-ufu-light {
+    color: #d4f1f4;
   }
 }
