@@ -14,35 +14,35 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 214 100% 35%;
+    --primary: 196 91% 37%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 214 100% 35%;
+    --secondary: 186 56% 82%;
+    --secondary-foreground: 196 91% 37%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 214 32% 91%;
-    --accent-foreground: 214 100% 35%;
+    --accent: 186 56% 82%;
+    --accent-foreground: 196 91% 37%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 214 100% 35%;
+    --ring: 196 91% 37%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 214 100% 35%;
+    --sidebar-background: 196 91% 37%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 214 100% 35%;
-    --sidebar-accent: 214 88% 40%;
+    --sidebar-primary-foreground: 196 91% 37%;
+    --sidebar-accent: 190 78% 51%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 214 88% 40%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 190 78% 51%;
+    --sidebar-ring: 186 56% 82%;
   }
 
   .dark {
@@ -100,11 +100,11 @@
 
 @layer components {
   .academic-gradient {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    background: linear-gradient(135deg, #05445e 0%, #189ab4 50%, #75e6da 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    background: linear-gradient(135deg, #05445e, #189ab4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -114,5 +114,21 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .ufu-navy {
+    background: #05445e;
+  }
+
+  .ufu-blue {
+    background: #189ab4;
+  }
+
+  .ufu-teal {
+    background: #75e6da;
+  }
+
+  .ufu-light {
+    background: #d4f1f4;
   }
 }

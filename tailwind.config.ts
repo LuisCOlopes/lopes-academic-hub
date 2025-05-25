@@ -68,13 +68,22 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				academic: {
-					blue: '#1e40af',
-					'blue-light': '#3b82f6',
-					'blue-dark': '#1e3a8a',
-					navy: '#0f172a',
+					blue: '#189ab4',
+					'blue-light': '#75e6da',
+					'blue-dark': '#05445e',
+					navy: '#05445e',
+					grotto: '#189ab4',
+					teal: '#75e6da',
+					light: '#d4f1f4',
 					gold: '#f59e0b',
 					'gray-light': '#f8fafc',
 					'gray-medium': '#64748b',
+				},
+				ufu: {
+					navy: '#05445e',
+					blue: '#189ab4',
+					teal: '#75e6da',
+					light: '#d4f1f4',
 				}
 			},
 			borderRadius: {

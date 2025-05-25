@@ -62,13 +62,13 @@ const AcademicSidebar: React.FC = () => {
   ];
 
   return (
-    <Sidebar className="bg-gradient-to-b from-academic-blue to-academic-blue-dark">
+    <Sidebar className="bg-gradient-to-b from-ufu-navy to-ufu-blue">
       <SidebarHeader className="p-6">
         <div className="text-center">
           <h2 className="text-xl font-playfair font-bold text-white mb-2">
             Prof. Luís Cláudio
           </h2>
-          <p className="text-blue-100 text-sm">Chemical Engineering</p>
+          <p className="text-ufu-light text-sm">Chemical Engineering</p>
           <div className="mt-4">
             <LanguageSelector />
           </div>
@@ -77,7 +77,7 @@ const AcademicSidebar: React.FC = () => {
       
       <SidebarContent className="px-3">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-blue-100 font-semibold">
+          <SidebarGroupLabel className="text-ufu-light font-semibold">
             Academic Hub
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -101,7 +101,7 @@ const AcademicSidebar: React.FC = () => {
       </SidebarContent>
       
       <SidebarFooter className="p-4">
-        <div className="text-center text-blue-100 text-xs">
+        <div className="text-center text-ufu-light text-xs">
           <p>© 2024 Prof. Luís Cláudio</p>
           <p>UFU - Chemical Engineering</p>
         </div>
