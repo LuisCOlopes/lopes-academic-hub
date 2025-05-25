@@ -21,6 +21,7 @@ const translations = {
     
     // Home page
     welcome: 'Bem-vindo',
+    welcomeAcademicHub: 'Bem-vindo ao meu Hub Acadêmico',
     professor: 'Professor',
     chemicalEngineering: 'Engenharia Química',
     federalUniversity: 'Universidade Federal de Uberlândia',
@@ -48,6 +49,13 @@ const translations = {
     media: 'Mídia',
     blog: 'Blog',
     news: 'Notícias',
+    
+    // Research page
+    researchTitle: 'Pesquisa',
+    researchSubtitle: 'Avançando a engenharia química através de pesquisa inovadora e soluções sustentáveis',
+    researchAreasTitle: 'Áreas de Pesquisa',
+    currentProjectsTitle: 'Projetos Atuais',
+    researchImpactTitle: 'Impacto da Pesquisa',
     
     // Page titles and content
     awardsTitle: 'Prêmios e Reconhecimentos',
@@ -138,6 +146,7 @@ const translations = {
     
     // Home page
     welcome: 'Welcome',
+    welcomeAcademicHub: 'Welcome to my Academic Hub',
     professor: 'Professor',
     chemicalEngineering: 'Chemical Engineering',
     federalUniversity: 'Federal University of Uberlândia',
@@ -165,6 +174,13 @@ const translations = {
     media: 'Media',
     blog: 'Blog',
     news: 'News',
+    
+    // Research page
+    researchTitle: 'Research',
+    researchSubtitle: 'Advancing chemical engineering through innovative research and sustainable solutions',
+    researchAreasTitle: 'Research Areas',
+    currentProjectsTitle: 'Current Projects',
+    researchImpactTitle: 'Research Impact',
     
     // Page titles and content
     awardsTitle: 'Awards and Recognition',
@@ -255,6 +271,7 @@ const translations = {
     
     // Home page
     welcome: 'Bienvenido',
+    welcomeAcademicHub: 'Bienvenido a mi Hub Académico',
     professor: 'Profesor',
     chemicalEngineering: 'Ingeniería Química',
     federalUniversity: 'Universidad Federal de Uberlândia',
@@ -282,6 +299,13 @@ const translations = {
     media: 'Medios',
     blog: 'Blog',
     news: 'Noticias',
+    
+    // Research page
+    researchTitle: 'Investigación',
+    researchSubtitle: 'Avanzando la ingeniería química a través de investigación innovadora y soluciones sostenibles',
+    researchAreasTitle: 'Áreas de Investigación',
+    currentProjectsTitle: 'Proyectos Actuales',
+    researchImpactTitle: 'Impacto de la Investigación',
     
     // Page titles and content
     awardsTitle: 'Premios y Reconocimientos',
