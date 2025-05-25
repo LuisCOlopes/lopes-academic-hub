@@ -19,6 +19,8 @@ import Projects from "./pages/Projects";
 import Team from "./pages/Team";
 import Opportunities from "./pages/Opportunities";
 import EnergyTransition from "./pages/EnergyTransition";
+import Meeting from "./pages/Meeting";
+import StudentResources from "./pages/StudentResources";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
