@@ -18,6 +18,7 @@ import Leadership from "./pages/Leadership";
 import Projects from "./pages/Projects";
 import Team from "./pages/Team";
 import Opportunities from "./pages/Opportunities";
+import EnergyTransition from "./pages/EnergyTransition";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/projects" element={<Projects />} />
             <Route path="/team" element={<Team />} />
             <Route path="/opportunities" element={<Opportunities />} />
+            <Route path="/energy-transition" element={<EnergyTransition />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

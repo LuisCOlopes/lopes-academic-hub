@@ -66,6 +66,13 @@ const translations = {
     newsTitle: 'Notícias e Atualizações',
     blogTitle: 'Blog Acadêmico',
     
+    // Translated sidebar items
+    requestMeeting: 'Solicite Reunião',
+    studentResources: 'Material Educacional',
+    speakingEngagements: 'Palestras',
+    getInvolved: 'Participe',
+    hobbies: 'Hobbies',
+    
     // Common phrases
     learnMore: 'Saiba Mais',
     readMore: 'Ler Mais',
@@ -132,6 +139,13 @@ const translations = {
     newsTitle: 'News and Updates',
     blogTitle: 'Academic Blog',
     
+    // Translated sidebar items
+    requestMeeting: 'Request Meeting',
+    studentResources: 'Student Resources',
+    speakingEngagements: 'Speaking Engagements',
+    getInvolved: 'Get Involved',
+    hobbies: 'Hobbies',
+    
     // Common phrases
     learnMore: 'Learn More',
     readMore: 'Read More',
@@ -197,6 +211,13 @@ const translations = {
     mediaTitle: 'En los Medios',
     newsTitle: 'Noticias y Actualizaciones',
     blogTitle: 'Blog Académico',
+    
+    // Translated sidebar items
+    requestMeeting: 'Solicitar Reunión',
+    studentResources: 'Recursos Estudiantiles',
+    speakingEngagements: 'Conferencias',
+    getInvolved: 'Participar',
+    hobbies: 'Aficiones',
     
     // Common phrases
     learnMore: 'Aprender Más',

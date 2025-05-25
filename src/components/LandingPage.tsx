@@ -128,11 +128,7 @@ const LandingPage: React.FC = () => {
                 </span>
                 <br />
                 <span className="inline-block bg-academic-blue-light text-white px-3 py-1 rounded-full text-sm">
-                  Descarbonização
-                </span>
-                <br />
-                <span className="inline-block bg-academic-blue-dark text-white px-3 py-1 rounded-full text-sm">
-                  Eletrificação de Processos
+                  Transição Energética
                 </span>
               </div>
             </Card>
@@ -167,10 +163,12 @@ const LandingPage: React.FC = () => {
                    className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   🆔 ORCID
                 </a>
-                <a href="#" className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                <a href="https://www.researchgate.net/profile/Luis-Claudio-Oliveira-Lopes?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   🔬 ResearchGate
                 </a>
-                <a href="#" className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
+                <a href="https://scholar.google.com/citations?user=ToR1aUIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" 
+                   className="block text-academic-blue hover:text-academic-blue-dark transition-colors">
                   📖 Google Scholar
                 </a>
               </div>
