@@ -11,6 +11,12 @@ const Research = () => {
   const researchProjects = {
     pt: [
       {
+        title: "Sistema Autônomo de Separação de Sólidos Gerados na Perfuração",
+        description: "Desenvolvimento de sistema autônomo para separação eficiente de sólidos gerados durante a perfuração de poços",
+        period: "2025 - Atual",
+        status: "Em andamento"
+      },
+      {
         title: "Transição Energética nas Plantas Químicas",
         description: "Estudo da eletrificação e coprocessamento em plantas químicas para transição energética sustentável",
         period: "2025 - Atual",
@@ -73,6 +79,12 @@ const Research = () => {
     ],
     en: [
       {
+        title: "Autonomous System for Solids Separation in Drilling Operations",
+        description: "Development of autonomous system for efficient separation of solids generated during well drilling",
+        period: "2025 - Current",
+        status: "Ongoing"
+      },
+      {
         title: "Energy Transition in Chemical Plants",
         description: "Study of electrification and co-processing in chemical plants for sustainable energy transition",
         period: "2025 - Current",
@@ -134,6 +146,12 @@ const Research = () => {
       }
     ],
     es: [
+      {
+        title: "Sistema Autónomo de Separación de Sólidos Generados en Perforación",
+        description: "Desarrollo de sistema autónomo para separación eficiente de sólidos generados durante la perforación de pozos",
+        period: "2025 - Actual",
+        status: "En curso"
+      },
       {
         title: "Transición Energética en Plantas Químicas",
         description: "Estudio de electrificación y co-procesamiento en plantas químicas para transición energética sostenible",

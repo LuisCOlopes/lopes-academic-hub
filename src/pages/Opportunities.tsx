@@ -232,12 +232,15 @@ const Opportunities = () => {
           </div>
         </div>
 
-        {/* Available Fellowships */}
+        {/* Available Fellowships/Bolsas */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Available Fellowships
+            Bolsas Disponíveis
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <p className="text-gray-600 mb-6">
+            Informações sobre oportunidades atuais de bolsas e prazos de candidatura.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
             {fellowships.map((fellowship, index) => (
               <Card key={index} className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -263,6 +266,17 @@ const Opportunities = () => {
                 </div>
               </Card>
             ))}
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="p-4 bg-ufu-light rounded-lg">
+              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CNPq</h3>
+              <p className="text-sm text-ufu-blue">Candidaturas abertas anualmente em março</p>
+            </div>
+            <div className="p-4 bg-ufu-light rounded-lg">
+              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CAPES</h3>
+              <p className="text-sm text-ufu-blue">Candidaturas contínuas para estudantes de pós-graduação</p>
+            </div>
           </div>
         </div>
 

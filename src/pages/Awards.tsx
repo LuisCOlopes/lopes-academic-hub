@@ -137,25 +137,6 @@ const Awards = () => {
             </Card>
           ))}
         </div>
-
-        <div className="mt-12 p-6 bg-ufu-light rounded-lg">
-          <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
-            Oportunidades de Bolsas
-          </h2>
-          <p className="text-ufu-navy mb-4">
-            Informações sobre oportunidades atuais de bolsas e prazos de candidatura.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CNPq</h3>
-              <p className="text-sm text-ufu-blue">Candidaturas abertas anualmente em março</p>
-            </div>
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-ufu-navy mb-2">Bolsas CAPES</h3>
-              <p className="text-sm text-ufu-blue">Candidaturas contínuas para estudantes de pós-graduação</p>
-            </div>
-          </div>
-        </div>
       </div>
     </AcademicLayout>
   );
