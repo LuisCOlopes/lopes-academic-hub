@@ -78,7 +78,7 @@ const StudentResources = () => {
               
               <div className="space-y-4">
                 <div className="border border-ufu-light rounded-lg p-4">
-                  <h3 className="font-semibold text-ufu-navy mb-2">MATLAB/Simulink</h3>
+                  <h3 className="font-semibold text-ufu-navy mb-2">Scilab</h3>
                   <p className="text-sm text-ufu-blue mb-3">Códigos para controle e simulação de processos</p>
                   <Button size="sm" variant="outline" className="border-ufu-blue text-ufu-blue">
                     <ExternalLink className="mr-2 h-4 w-4" />
@@ -96,7 +96,7 @@ const StudentResources = () => {
                 </div>
                 
                 <div className="border border-ufu-light rounded-lg p-4">
-                  <h3 className="font-semibold text-ufu-navy mb-2">Aspen Plus</h3>
+                  <h3 className="font-semibold text-ufu-navy mb-2">AVEVA</h3>
                   <p className="text-sm text-ufu-blue mb-3">Modelos e simulações de processos industriais</p>
                   <Button size="sm" variant="outline" className="border-ufu-blue text-ufu-blue">
                     <Download className="mr-2 h-4 w-4" />
@@ -129,7 +129,7 @@ const StudentResources = () => {
                 </div>
                 
                 <div className="border border-ufu-light rounded-lg p-4">
-                  <h3 className="font-semibold text-ufu-navy mb-2">Simulação em MATLAB</h3>
+                  <h3 className="font-semibold text-ufu-navy mb-2">Simulação em Scilab</h3>
                   <p className="text-sm text-ufu-blue mb-3">Tutoriais práticos de programação e simulação</p>
                   <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
                     <Video className="mr-2 h-4 w-4" />
@@ -164,43 +164,28 @@ const StudentResources = () => {
                 <div className="border border-ufu-light rounded-lg p-4">
                   <h3 className="font-semibold text-ufu-navy mb-2">Controle Avançado de Processos</h3>
                   <p className="text-sm text-ufu-blue mb-3">Minicurso de 20 horas sobre técnicas avançadas</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
-                      <Download className="mr-2 h-4 w-4" />
-                      Material
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-ufu-blue text-ufu-blue">
-                      Inscrever-se
-                    </Button>
-                  </div>
+                  <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
+                    <Download className="mr-2 h-4 w-4" />
+                    Material
+                  </Button>
                 </div>
                 
                 <div className="border border-ufu-light rounded-lg p-4">
                   <h3 className="font-semibold text-ufu-navy mb-2">Python para Engenheiros</h3>
                   <p className="text-sm text-ufu-blue mb-3">Programação aplicada à engenharia química</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
-                      <Download className="mr-2 h-4 w-4" />
-                      Material
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-ufu-blue text-ufu-blue">
-                      Inscrever-se
-                    </Button>
-                  </div>
+                  <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
+                    <Download className="mr-2 h-4 w-4" />
+                    Material
+                  </Button>
                 </div>
                 
                 <div className="border border-ufu-light rounded-lg p-4">
                   <h3 className="font-semibold text-ufu-navy mb-2">Transição Energética</h3>
                   <p className="text-sm text-ufu-blue mb-3">Descarbonização e eletrificação de processos</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
-                      <Download className="mr-2 h-4 w-4" />
-                      Material
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-ufu-blue text-ufu-blue">
-                      Inscrever-se
-                    </Button>
-                  </div>
+                  <Button size="sm" className="bg-ufu-blue hover:bg-ufu-navy text-white">
+                    <Download className="mr-2 h-4 w-4" />
+                    Material
+                  </Button>
                 </div>
               </div>
             </Card>

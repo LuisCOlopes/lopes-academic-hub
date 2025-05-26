@@ -1,10 +1,9 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Badge } from '@/components/ui/badge';
-import { Calendar } from 'lucide-react';
+import { Calendar, FileText, Link } from 'lucide-react';
 
 const Research = () => {
   const { t, language } = useLanguage();
@@ -229,6 +228,48 @@ const Research = () => {
     }
   };
 
+  const recentPublications = [
+    {
+      title: "Operability for Process Flowsheet Analysis",
+      authors: "FERREIRA, U.G.; NEIRO, S.M.S.; Oliveira-Lopes, L.C.; et al.",
+      journal: "Digital Chemical Engineering",
+      year: "2025"
+    },
+    {
+      title: "Simulation of carbon monoxide dispersion released from a fleet in urban environment",
+      authors: "SOUZA, D.B.; BARROZO, M.A.; OLIVEIRA-LOPES, L.C.; MURATA, V.V.",
+      journal: "Brazilian Journal of Chemical Engineering",
+      year: "2025"
+    },
+    {
+      title: "Fault-Tolerant Control for Quadcopters Under Actuator and Sensor Faults",
+      authors: "OKADA, K.F.A.; MORAIS, A.S.; RIBEIRO, L.; et al.",
+      journal: "Sensors",
+      year: "2024"
+    }
+  ];
+
+  const currentOpenings = [
+    {
+      title: "Projeto Conceitual de um Sistema Autônomo de Separação de Sólidos Gerados na Perfuração - Rota 1",
+      duration: "730 dias corridos",
+      value: "R$ 1.469.712,01",
+      status: "Ativo"
+    },
+    {
+      title: "Otimização da Separação sólido-líquido na perfuração de poços de petróleo e gás",
+      subtitle: "SubProjeto: Automação do sistema extrator de sólidos gerados em perfuração offshore",
+      period: "2022-2025",
+      value: "R$ 1.594.172,60",
+      status: "Ativo"
+    },
+    {
+      title: "Transição Energética: Coprocessamento e Eletrificação",
+      funding: "CNPq, FAPEMIG",
+      status: "Ativo"
+    }
+  ];
+
   const currentProjects = researchProjects[language] || researchProjects.pt;
 
   return (
@@ -275,6 +316,79 @@ const Research = () => {
                 </Card>
               ))}
             </div>
+          </section>
+
+          {/* Publications Metrics */}
+          <section className="mb-12">
+            <Card className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Publications</h2>
+              <div className="grid md:grid-cols-4 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-academic-blue">30+</div>
+                  <div className="text-gray-600">Journal Publications</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-academic-blue">150+</div>
+                  <div className="text-gray-600">Conference Publications</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-academic-blue">12</div>
+                  <div className="text-gray-600">h-index (2015-)</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-academic-blue">23</div>
+                  <div className="text-gray-600">i10-index (2015-)</div>
+                </div>
+              </div>
+              
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Journal Articles</h3>
+              <div className="space-y-4">
+                {recentPublications.map((pub, index) => (
+                  <div key={index} className="border-l-4 border-academic-blue pl-4">
+                    <h4 className="font-medium text-gray-900">{pub.title}</h4>
+                    <p className="text-sm text-gray-600">{pub.authors}</p>
+                    <p className="text-sm text-academic-blue">{pub.journal}, {pub.year}</p>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </section>
+
+          {/* Research Opportunities */}
+          <section className="mb-12">
+            <Card className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Oportunidades de Pesquisa</h2>
+              <p className="text-gray-600 mb-6">
+                Estamos sempre procurando estudantes motivados para participar de projetos de pesquisa 
+                em controle de processos, inteligência artificial aplicada à engenharia química, 
+                e sustentabilidade energética.
+              </p>
+              
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Current Openings</h3>
+              <div className="space-y-4 mb-6">
+                {currentOpenings.map((opening, index) => (
+                  <div key={index} className="border border-gray-200 rounded-lg p-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <h4 className="font-semibold text-gray-900">{opening.title}</h4>
+                      <Badge className="bg-green-100 text-green-800">{opening.status}</Badge>
+                    </div>
+                    {opening.subtitle && (
+                      <p className="text-sm text-gray-600 mb-2">{opening.subtitle}</p>
+                    )}
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                      {opening.duration && <span>Duração: {opening.duration}</span>}
+                      {opening.period && <span>Período: {opening.period}</span>}
+                      {opening.value && <span>Valor: {opening.value}</span>}
+                      {opening.funding && <span>Financiamento: {opening.funding}</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <Button className="bg-academic-blue hover:bg-blue-700">
+                Saiba Mais
+              </Button>
+            </Card>
           </section>
 
           {/* Research Impact */}
