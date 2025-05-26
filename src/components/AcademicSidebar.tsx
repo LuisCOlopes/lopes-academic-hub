@@ -39,7 +39,6 @@ const AcademicSidebar: React.FC = () => {
     { title: t('research'), url: '/research', icon: Book },
     { title: t('projects'), url: '/projects', icon: BookOpen },
     { title: t('opportunities'), url: '/opportunities', icon: FileText },
-    { title: 'Bolsas', url: '/opportunities', icon: Calendar },
     { title: t('requestMeeting'), url: '/meeting', icon: Calendar },
     { title: t('teaching'), url: '/teaching', icon: Book },
     { title: t('studentResources'), url: '/student-resources', icon: BookOpen },
