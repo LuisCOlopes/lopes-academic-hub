@@ -81,10 +81,10 @@ const Service = () => {
       icon: Users,
       activities: [
         {
-          role: 'Coordenador',
+          role: 'Professor e Orientador',
           organization: 'Curso de Engenharia de Segurança',
           period: '2004 - 2012',
-          description: 'Coordenação geral do curso de especialização'
+          description: 'Professor e orientação no curso de especialização'
         },
         {
           role: 'Coordenador Geral',

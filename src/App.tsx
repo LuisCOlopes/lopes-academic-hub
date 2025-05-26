@@ -29,6 +29,8 @@ import Blog from "./pages/Blog";
 import Hobbies from "./pages/Hobbies";
 import GetInvolved from "./pages/GetInvolved";
 import Speaking from "./pages/Speaking";
+import Consulting from "./pages/Consulting";
+import Material from "./pages/Material";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,6 +67,8 @@ const App = () => (
             <Route path="/hobbies" element={<Hobbies />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/speaking" element={<Speaking />} />
+            <Route path="/consulting" element={<Consulting />} />
+            <Route path="/material" element={<Material />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

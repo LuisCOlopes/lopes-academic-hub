@@ -37,21 +37,24 @@ const Consulting = () => {
     }
   ];
 
-  const clientTypes = [
+  const clientCompanies = [
     {
-      type: 'Chemical Manufacturing',
-      companies: ['Petrobras', 'Braskem', 'BASF Brazil'],
-      projects: 12
+      name: 'Braskem',
+      sector: 'Petroquímica',
+      description: 'Maior produtora de resinas termoplásticas das Américas',
+      projects: 'Otimização de processos e controle avançado'
     },
     {
-      type: 'Pharmaceutical',
-      companies: ['Local pharma companies', 'Generic manufacturers'],
-      projects: 8
+      name: 'Souza Cruz',
+      sector: 'Indústria de Tabaco',
+      description: 'Líder no mercado brasileiro de cigarros',
+      projects: 'Sistemas de controle e segurança de processos'
     },
     {
-      type: 'Food & Beverage',
-      companies: ['Regional food processors', 'Beverage manufacturers'],
-      projects: 6
+      name: 'Petrobras',
+      sector: 'Petróleo e Gás',
+      description: 'Empresa integrada de energia',
+      projects: 'Controle de sólidos e separação sólido-líquido'
     }
   ];
 
@@ -60,10 +63,10 @@ const Consulting = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('consultingTitle')}
+            Consultoria
           </h1>
           <p className="text-lg text-gray-600">
-            Professional consulting services for chemical engineering and process optimization
+            Serviços especializados em engenharia química e otimização de processos
           </p>
         </div>
 
@@ -85,7 +88,7 @@ const Consulting = () => {
               </div>
               
               <div className="border-t pt-4">
-                <h4 className="font-medium text-gray-900 mb-3">Key Services:</h4>
+                <h4 className="font-medium text-gray-900 mb-3">Serviços Principais:</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
@@ -101,27 +104,27 @@ const Consulting = () => {
 
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Client Portfolio
+            Empresas Clientes
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {clientTypes.map((client, index) => (
+          <div className="grid gap-6">
+            {clientCompanies.map((company, index) => (
               <Card key={index} className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {client.type}
-                </h3>
-                <div className="mb-4">
-                  <p className="text-sm font-medium text-gray-700 mb-2">Notable Clients:</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {client.companies.map((company, i) => (
-                      <li key={i}>• {company}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-academic-blue">
-                    {client.projects}
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {company.name}
+                      </h3>
+                      <Badge variant="outline">{company.sector}</Badge>
+                    </div>
+                    <p className="text-gray-600 mb-3">
+                      {company.description}
+                    </p>
+                    <div className="p-3 bg-gray-50 rounded-lg">
+                      <h4 className="font-medium text-gray-900 mb-1">Projetos:</h4>
+                      <p className="text-sm text-gray-600">{company.projects}</p>
+                    </div>
                   </div>
-                  <div className="text-sm text-gray-600">Projects Completed</div>
                 </div>
               </Card>
             ))}
@@ -129,42 +132,43 @@ const Consulting = () => {
         </div>
 
         <div className="mb-12 p-6 bg-gradient-to-r from-academic-blue to-blue-600 text-white rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">Why Choose My Consulting Services?</h2>
+          <h2 className="text-2xl font-bold mb-4">Por que escolher nossos serviços de consultoria?</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <Clock className="h-8 w-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">15+ Years Experience</h3>
-              <p className="text-sm opacity-90">Extensive industry and academic background</p>
+              <h3 className="font-semibold mb-1">20+ Anos de Experiência</h3>
+              <p className="text-sm opacity-90">Ampla experiência industrial e acadêmica</p>
             </div>
             <div className="text-center">
               <TrendingUp className="h-8 w-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">Proven Results</h3>
-              <p className="text-sm opacity-90">Documented improvements and cost savings</p>
+              <h3 className="font-semibold mb-1">Resultados Comprovados</h3>
+              <p className="text-sm opacity-90">Melhorias documentadas e economia de custos</p>
             </div>
             <div className="text-center">
               <Lightbulb className="h-8 w-8 mx-auto mb-2" />
-              <h3 className="font-semibold mb-1">Innovation Focus</h3>
-              <p className="text-sm opacity-90">Cutting-edge solutions and technologies</p>
+              <h3 className="font-semibold mb-1">Foco em Inovação</h3>
+              <p className="text-sm opacity-90">Soluções e tecnologias de ponta</p>
             </div>
           </div>
         </div>
 
         <div className="p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Get Started
+            Entre em Contato
           </h2>
           <p className="text-gray-600 mb-6">
-            Ready to optimize your processes or solve complex engineering challenges? Let's discuss your project requirements.
+            Pronto para otimizar seus processos ou resolver desafios complexos de engenharia? 
+            Vamos discutir os requisitos do seu projeto.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg">
-              Schedule Consultation
+              Agendar Consultoria
             </Button>
             <Button size="lg" variant="outline">
-              Request Proposal
+              Solicitar Proposta
             </Button>
             <Button size="lg" variant="outline">
-              View Case Studies
+              Ver Casos de Estudo
             </Button>
           </div>
         </div>

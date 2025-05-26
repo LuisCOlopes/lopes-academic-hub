@@ -3,40 +3,43 @@ import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { BookOpen, Users, FileText } from 'lucide-react';
+import { BookOpen, Users, FileText, Link } from 'lucide-react';
 
 const Teaching = () => {
   const { t } = useLanguage();
 
   const courses = [
     {
-      code: "EQU101",
-      name: "Introduction to Chemical Engineering",
+      code: "FEQUI31030",
+      name: "Projeto de Processos da Indústria Química",
       level: "Undergraduate",
-      semester: "Fall 2024",
-      students: 45
+      semester: "2024/2",
+      students: 24,
+      description: "PPIQ - Projeto de processos industriais químicos"
     },
     {
-      code: "EQU305",
-      name: "Process Design and Optimization",
+      code: "FEQUI31022",
+      name: "Controle de Processos Químicos II",
       level: "Undergraduate", 
-      semester: "Spring 2024",
-      students: 32
+      semester: "2024/2",
+      students: 13,
+      description: "CPQ II - Controle avançado de processos"
     },
     {
-      code: "EQU501",
-      name: "Advanced Process Control",
+      code: "PEQ003",
+      name: "Métodos Matemáticos em Engenharia Química",
       level: "Graduate",
-      semester: "Fall 2024",
-      students: 18
-    },
-    {
-      code: "EQU502",
-      name: "Sustainable Chemical Processes",
-      level: "Graduate",
-      semester: "Spring 2024",
-      students: 12
+      semester: "2024/2",
+      students: 8,
+      description: "Métodos matemáticos aplicados à engenharia química"
     }
+  ];
+
+  const computationalTools = [
+    "Scilab",
+    "AVEVA",
+    "Python",
+    "CoCo Simulator"
   ];
 
   const teachingPhilosophy = [
@@ -94,13 +97,14 @@ const Teaching = () => {
           {/* Current Courses */}
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Current Courses</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-6">
               {courses.map((course, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">{course.name}</h3>
                       <p className="text-academic-blue font-medium">{course.code}</p>
+                      <p className="text-gray-600 text-sm mt-1">{course.description}</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs ${
                       course.level === 'Graduate' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'
@@ -118,6 +122,20 @@ const Teaching = () => {
                 </Card>
               ))}
             </div>
+          </section>
+
+          {/* Computational Tools */}
+          <section className="mb-12">
+            <Card className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Códigos Computacionais</h2>
+              <div className="grid md:grid-cols-4 gap-4">
+                {computationalTools.map((tool, index) => (
+                  <div key={index} className="p-4 bg-gray-50 rounded-lg text-center">
+                    <span className="text-gray-700 font-medium">{tool}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
           </section>
 
           {/* Teaching Resources */}
@@ -139,10 +157,10 @@ const Teaching = () => {
               </Card>
               
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <Users className="h-12 w-12 text-academic-blue mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Lab Manuals</h3>
-                <p className="text-gray-600 mb-4">Laboratory experiments and procedures</p>
-                <Button variant="outline" size="sm">View Manuals</Button>
+                <Link className="h-12 w-12 text-academic-blue mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Material</h3>
+                <p className="text-gray-600 mb-4">Course materials and download links</p>
+                <Button variant="outline" size="sm">View Materials</Button>
               </Card>
             </div>
           </section>
