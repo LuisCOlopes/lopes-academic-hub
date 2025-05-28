@@ -109,7 +109,49 @@ const translations = {
     courseMaterials: 'Materiais do Curso',
     
     // Community Page
-    communityTitle: 'Comunidade Acadêmica'
+    communityTitle: 'Comunidade Acadêmica',
+    
+    // Conferences Page
+    conferencesTitle: 'Conferências',
+    
+    // Publications Page
+    publicationsTitle: 'Publicações',
+    
+    // Projects Page
+    projectsTitle: 'Projetos',
+    
+    // Opportunities Page
+    opportunitiesTitle: 'Oportunidades',
+    
+    // Team Page
+    teamTitle: 'Equipe',
+    
+    // Awards Page
+    awardsTitle: 'Prêmios',
+    
+    // Service Page
+    serviceTitle: 'Serviços',
+    
+    // Leadership Page
+    leadershipTitle: 'Liderança',
+    
+    // Alumni Page
+    alumniTitle: 'Ex-Alunos',
+    
+    // Get Involved Page
+    getInvolvedTitle: 'Participe',
+    
+    // Meeting Page
+    meetingTitle: 'Solicitar Reunião',
+    
+    // Material Page
+    materialTitle: 'Material Educacional',
+    
+    // News Page
+    newsTitle: 'Notícias',
+    
+    // Media Page
+    mediaTitle: 'Mídia'
   },
   en: {
     // Navigation
@@ -210,7 +252,49 @@ const translations = {
     courseMaterials: 'Course Materials',
     
     // Community Page
-    communityTitle: 'Academic Community'
+    communityTitle: 'Academic Community',
+    
+    // Conferences Page
+    conferencesTitle: 'Conferences',
+    
+    // Publications Page
+    publicationsTitle: 'Publications',
+    
+    // Projects Page
+    projectsTitle: 'Projects',
+    
+    // Opportunities Page
+    opportunitiesTitle: 'Opportunities',
+    
+    // Team Page
+    teamTitle: 'Team',
+    
+    // Awards Page
+    awardsTitle: 'Awards',
+    
+    // Service Page
+    serviceTitle: 'Service',
+    
+    // Leadership Page
+    leadershipTitle: 'Leadership',
+    
+    // Alumni Page
+    alumniTitle: 'Alumni',
+    
+    // Get Involved Page
+    getInvolvedTitle: 'Get Involved',
+    
+    // Meeting Page
+    meetingTitle: 'Request Meeting',
+    
+    // Material Page
+    materialTitle: 'Educational Materials',
+    
+    // News Page
+    newsTitle: 'News',
+    
+    // Media Page
+    mediaTitle: 'Media'
   },
   es: {
     // Navigation
@@ -311,7 +395,49 @@ const translations = {
     courseMaterials: 'Materiales del Curso',
     
     // Community Page
-    communityTitle: 'Comunidad Académica'
+    communityTitle: 'Comunidad Académica',
+    
+    // Conferences Page
+    conferencesTitle: 'Conferencias',
+    
+    // Publications Page
+    publicationsTitle: 'Publicaciones',
+    
+    // Projects Page
+    projectsTitle: 'Proyectos',
+    
+    // Opportunities Page
+    opportunitiesTitle: 'Oportunidades',
+    
+    // Team Page
+    teamTitle: 'Equipo',
+    
+    // Awards Page
+    awardsTitle: 'Premios',
+    
+    // Service Page
+    serviceTitle: 'Servicios',
+    
+    // Leadership Page
+    leadershipTitle: 'Liderazgo',
+    
+    // Alumni Page
+    alumniTitle: 'Egresados',
+    
+    // Get Involved Page
+    getInvolvedTitle: 'Participa',
+    
+    // Meeting Page
+    meetingTitle: 'Solicitar Reunión',
+    
+    // Material Page
+    materialTitle: 'Material Educativo',
+    
+    // News Page
+    newsTitle: 'Noticias',
+    
+    // Media Page
+    mediaTitle: 'Medios'
   }
 };
 
