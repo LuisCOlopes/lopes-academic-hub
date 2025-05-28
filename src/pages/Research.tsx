@@ -1,444 +1,163 @@
+
+import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, FileText, Link } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { BookOpen, Award, TrendingUp, Users, ExternalLink } from 'lucide-react';
 
 const Research = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  const researchProjects = {
-    pt: [
-      {
-        title: "Sistema Autônomo de Separação de Sólidos Gerados na Perfuração",
-        description: "Desenvolvimento de sistema autônomo para separação eficiente de sólidos gerados durante a perfuração de poços",
-        period: "2025 - Atual",
-        status: "Em andamento"
-      },
-      {
-        title: "Transição Energética nas Plantas Químicas",
-        description: "Estudo da eletrificação e coprocessamento em plantas químicas para transição energética sustentável",
-        period: "2025 - Atual",
-        status: "Em andamento"
-      },
-      {
-        title: "Operabilidade de Plantas Químicas",
-        description: "Desenvolvimento de metodologias para melhorar a operabilidade e eficiência de plantas químicas",
-        period: "2024 - Atual",
-        status: "Em andamento"
-      },
-      {
-        title: "Sistemas de Controle Preditivo Tolerantes a Falhas",
-        description: "Desenvolvimento de sistemas avançados de controle preditivo com tolerância a falhas",
-        period: "2007 - Atual",
-        status: "Em andamento"
-      },
-      {
-        title: "Sistemas de Controle Distribuído",
-        description: "Desenvolvimento de arquiteturas de controle distribuído para processos químicos",
-        period: "2011 - 2016",
-        status: "Finalizado"
-      },
-      {
-        title: "Inteligência Artificial Aplicada a Segurança de Processos",
-        description: "Aplicação de técnicas de IA para melhorar a segurança em processos químicos industriais",
-        period: "2010 - 2023",
-        status: "Finalizado"
-      },
-      {
-        title: "Controle de Sistemas Híbridos",
-        description: "Estudo e desenvolvimento de estratégias de controle para sistemas híbridos",
-        period: "2008 - 2012",
-        status: "Finalizado"
-      },
-      {
-        title: "Intensificação de Processos através de Micro-sistemas",
-        description: "Investigação da intensificação de processos químicos utilizando micro-sistemas",
-        period: "2008 - 2012",
-        status: "Finalizado"
-      },
-      {
-        title: "Controle de Processos Tolerante a Falhas",
-        description: "Desenvolvimento de metodologias de controle robusto tolerante a falhas",
-        period: "2003 - 2007",
-        status: "Finalizado"
-      },
-      {
-        title: "Sistemas Energeticamente Sustentáveis",
-        description: "Desenvolvimento de tecnologias para sistemas energeticamente sustentáveis",
-        period: "2012 - 2015",
-        status: "Finalizado"
-      },
-      {
-        title: "Análise de Desempenho de Controladores",
-        description: "Estudo e avaliação de desempenho de diferentes estratégias de controle",
-        period: "2003 - 2012",
-        status: "Finalizado"
-      }
-    ],
-    en: [
-      {
-        title: "Autonomous System for Solids Separation in Drilling Operations",
-        description: "Development of autonomous system for efficient separation of solids generated during well drilling",
-        period: "2025 - Current",
-        status: "Ongoing"
-      },
-      {
-        title: "Energy Transition in Chemical Plants",
-        description: "Study of electrification and co-processing in chemical plants for sustainable energy transition",
-        period: "2025 - Current",
-        status: "Ongoing"
-      },
-      {
-        title: "Chemical Plant Operability",
-        description: "Development of methodologies to improve operability and efficiency of chemical plants",
-        period: "2024 - Current",
-        status: "Ongoing"
-      },
-      {
-        title: "Fault-Tolerant Predictive Control Systems",
-        description: "Development of advanced predictive control systems with fault tolerance",
-        period: "2007 - Current",
-        status: "Ongoing"
-      },
-      {
-        title: "Distributed Control Systems",
-        description: "Development of distributed control architectures for chemical processes",
-        period: "2011 - 2016",
-        status: "Completed"
-      },
-      {
-        title: "Artificial Intelligence Applied to Process Safety",
-        description: "Application of AI techniques to improve safety in industrial chemical processes",
-        period: "2010 - 2023",
-        status: "Completed"
-      },
-      {
-        title: "Hybrid Systems Control",
-        description: "Study and development of control strategies for hybrid systems",
-        period: "2008 - 2012",
-        status: "Completed"
-      },
-      {
-        title: "Process Intensification through Micro-systems",
-        description: "Investigation of chemical process intensification using micro-systems",
-        period: "2008 - 2012",
-        status: "Completed"
-      },
-      {
-        title: "Fault-Tolerant Process Control",
-        description: "Development of robust fault-tolerant control methodologies",
-        period: "2003 - 2007",
-        status: "Completed"
-      },
-      {
-        title: "Energy Sustainable Systems",
-        description: "Development of technologies for energy sustainable systems",
-        period: "2012 - 2015",
-        status: "Completed"
-      },
-      {
-        title: "Controller Performance Analysis",
-        description: "Study and evaluation of performance of different control strategies",
-        period: "2003 - 2012",
-        status: "Completed"
-      }
-    ],
-    es: [
-      {
-        title: "Sistema Autónomo de Separación de Sólidos Generados en Perforación",
-        description: "Desarrollo de sistema autónomo para separación eficiente de sólidos generados durante la perforación de pozos",
-        period: "2025 - Actual",
-        status: "En curso"
-      },
-      {
-        title: "Transición Energética en Plantas Químicas",
-        description: "Estudio de electrificación y co-procesamiento en plantas químicas para transición energética sostenible",
-        period: "2025 - Actual",
-        status: "En curso"
-      },
-      {
-        title: "Operabilidad de Plantas Químicas",
-        description: "Desarrollo de metodologías para mejorar la operabilidad y eficiencia de plantas químicas",
-        period: "2024 - Actual",
-        status: "En curso"
-      },
-      {
-        title: "Sistemas de Control Predictivo Tolerantes a Fallas",
-        description: "Desarrollo de sistemas avanzados de control predictivo con tolerancia a fallas",
-        period: "2007 - Actual",
-        status: "En curso"
-      },
-      {
-        title: "Sistemas de Control Distribuido",
-        description: "Desarrollo de arquitecturas de control distribuido para procesos químicos",
-        period: "2011 - 2016",
-        status: "Finalizado"
-      },
-      {
-        title: "Inteligencia Artificial Aplicada a Seguridad de Procesos",
-        description: "Aplicación de técnicas de IA para mejorar la seguridad en procesos químicos industriales",
-        period: "2010 - 2023",
-        status: "Finalizado"
-      },
-      {
-        title: "Control de Sistemas Híbridos",
-        description: "Estudio y desarrollo de estrategias de control para sistemas híbridos",
-        period: "2008 - 2012",
-        status: "Finalizado"
-      },
-      {
-        title: "Intensificación de Procesos a través de Micro-sistemas",
-        description: "Investigación de intensificación de procesos químicos utilizando micro-sistemas",
-        period: "2008 - 2012",
-        status: "Finalizado"
-      },
-      {
-        title: "Control de Procesos Tolerante a Fallas",
-        description: "Desarrollo de metodologías de control robusto tolerante a fallas",
-        period: "2003 - 2007",
-        status: "Finalizado"
-      },
-      {
-        title: "Sistemas Energéticamente Sostenibles",
-        description: "Desarrollo de tecnologías para sistemas energéticamente sostenibles",
-        period: "2012 - 2015",
-        status: "Finalizado"
-      },
-      {
-        title: "Análisis de Rendimiento de Controladores",
-        description: "Estudio y evaluación de rendimiento de diferentes estrategias de control",
-        period: "2003 - 2012",
-        status: "Finalizado"
-      }
-    ]
+  const getCurrentLanguage = () => {
+    return localStorage.getItem('preferred-language') || 'pt';
   };
 
-  const getStatusColor = (status: string) => {
-    if (language === 'pt') {
-      switch (status) {
-        case 'Em andamento':
-          return 'bg-green-100 text-green-800';
-        case 'Finalizado':
-          return 'bg-gray-100 text-gray-800';
-        default:
-          return 'bg-blue-100 text-blue-800';
+  const getContent = () => {
+    const lang = getCurrentLanguage();
+    
+    const content = {
+      pt: {
+        title: 'Pesquisa',
+        subtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
+        currentResearch: 'Pesquisa Atual',
+        researchMetrics: 'Métricas de Pesquisa',
+        publications: 'Publicações',
+        citations: 'Citações',
+        students: 'Estudantes Orientados',
+        funding: 'Financiamento',
+        researchAreas: 'Áreas de Pesquisa',
+        currentProjects: 'Projetos Atuais'
+      },
+      en: {
+        title: 'Research',
+        subtitle: 'Advances in chemical process engineering and sustainable technologies',
+        currentResearch: 'Current Research',
+        researchMetrics: 'Research Metrics',
+        publications: 'Publications',
+        citations: 'Citations',
+        students: 'Students Supervised',
+        funding: 'Funding',
+        researchAreas: 'Research Areas',
+        currentProjects: 'Current Projects'
+      },
+      es: {
+        title: 'Investigación',
+        subtitle: 'Avances en ingeniería de procesos químicos y tecnologías sostenibles',
+        currentResearch: 'Investigación Actual',
+        researchMetrics: 'Métricas de Investigación',
+        publications: 'Publicaciones',
+        citations: 'Citas',
+        students: 'Estudiantes Supervisados',
+        funding: 'Financiamiento',
+        researchAreas: 'Áreas de Investigación',
+        currentProjects: 'Proyectos Actuales'
       }
-    } else if (language === 'en') {
-      switch (status) {
-        case 'Ongoing':
-          return 'bg-green-100 text-green-800';
-        case 'Completed':
-          return 'bg-gray-100 text-gray-800';
-        default:
-          return 'bg-blue-100 text-blue-800';
-      }
-    } else {
-      switch (status) {
-        case 'En curso':
-          return 'bg-green-100 text-green-800';
-        case 'Finalizado':
-          return 'bg-gray-100 text-gray-800';
-        default:
-          return 'bg-blue-100 text-blue-800';
-      }
-    }
+    };
+
+    return content[lang] || content.pt;
   };
 
-  const recentPublications = [
+  const content = getContent();
+
+  const currentProjects = [
     {
-      title: "Operability for Process Flowsheet Analysis",
-      authors: "FERREIRA, U.G.; NEIRO, S.M.S.; Oliveira-Lopes, L.C.; et al.",
-      journal: "Digital Chemical Engineering",
-      year: "2025"
-    },
-    {
-      title: "Simulation of carbon monoxide dispersion released from a fleet in urban environment",
-      authors: "SOUZA, D.B.; BARROZO, M.A.; OLIVEIRA-LOPES, L.C.; MURATA, V.V.",
-      journal: "Brazilian Journal of Chemical Engineering",
-      year: "2025"
-    },
-    {
-      title: "Fault-Tolerant Control for Quadcopters Under Actuator and Sensor Faults",
-      authors: "OKADA, K.F.A.; MORAIS, A.S.; RIBEIRO, L.; et al.",
-      journal: "Sensors",
-      year: "2024"
+      title: 'Sistema Autônomo de Separação de Sólidos Gerados na Perfuração',
+      status: 'Em andamento',
+      period: '2025-atual',
+      description: 'Desenvolvimento de sistema autônomo para separação de sólidos na perfuração de poços de petróleo'
     }
   ];
-
-  const currentOpenings = [
-    {
-      title: "Projeto Conceitual de um Sistema Autônomo de Separação de Sólidos Gerados na Perfuração - Rota 1",
-      duration: "730 dias corridos",
-      value: "R$ 1.469.712,01",
-      status: "Ativo"
-    },
-    {
-      title: "Otimização da Separação sólido-líquido na perfuração de poços de petróleo e gás",
-      subtitle: "SubProjeto: Automação do sistema extrator de sólidos gerados em perfuração offshore",
-      period: "2022-2025",
-      value: "R$ 1.594.172,60",
-      status: "Ativo"
-    },
-    {
-      title: "Transição Energética: Coprocessamento e Eletrificação",
-      funding: "CNPq, FAPEMIG",
-      status: "Ativo"
-    }
-  ];
-
-  const currentProjects = researchProjects[language] || researchProjects.pt;
 
   return (
     <AcademicLayout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-              {t('researchTitle')}
-            </h1>
-            <p className="text-xl text-gray-600">
-              {t('researchSubtitle')}
-            </p>
+      <div className="p-6 max-w-6xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
+            {content.title}
+          </h1>
+          <p className="text-lg text-gray-600">
+            {content.subtitle}
+          </p>
+        </div>
+
+        {/* Research Metrics */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+            {content.researchMetrics}
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <Card className="p-6 text-center">
+              <div className="text-3xl font-bold text-academic-blue mb-2">150+</div>
+              <div className="text-gray-600">{content.publications}</div>
+            </Card>
+            <Card className="p-6 text-center">
+              <div className="text-3xl font-bold text-academic-blue mb-2">600+</div>
+              <div className="text-gray-600">{content.citations}</div>
+            </Card>
+            <Card className="p-6 text-center">
+              <div className="text-3xl font-bold text-academic-blue mb-2">80+</div>
+              <div className="text-gray-600">{content.students}</div>
+            </Card>
+            <Card className="p-6 text-center">
+              <div className="text-3xl font-bold text-academic-blue mb-2">R$ 5M+</div>
+              <div className="text-gray-600">{content.funding}</div>
+            </Card>
           </div>
+        </div>
 
-          {/* Research Projects */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('projectsTitle')}</h2>
-            <div className="grid gap-6">
-              {currentProjects.map((project, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                          {project.title}
-                        </h3>
-                        <div className="flex items-center gap-2 ml-4">
-                          <Badge className={getStatusColor(project.status)}>
-                            {project.status}
-                          </Badge>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 mb-3">{project.description}</p>
-                      <div className="flex items-center gap-2 text-sm text-gray-500">
-                        <Calendar className="h-4 w-4" />
-                        <span>{project.period}</span>
-                      </div>
+        {/* Current Projects */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+            {content.currentProjects}
+          </h2>
+          <div className="grid gap-6">
+            {currentProjects.map((project, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-3">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <span>{project.period}</span>
                     </div>
-                    <Button variant="outline" size="sm" className="mt-4 md:mt-0 text-ufu-blue border-ufu-blue contact-link">
-                      {t('learnMore')}
-                    </Button>
                   </div>
-                </Card>
-              ))}
-            </div>
-          </section>
+                  <Badge className="bg-green-100 text-green-800">
+                    {project.status}
+                  </Badge>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
 
-          {/* Publications Metrics */}
-          <section className="mb-12">
-            <Card className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Publications</h2>
-              <div className="grid md:grid-cols-4 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-academic-blue">30+</div>
-                  <div className="text-gray-600">Journal Publications</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-academic-blue">150+</div>
-                  <div className="text-gray-600">Conference Publications</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-academic-blue">12</div>
-                  <div className="text-gray-600">h-index (2015-)</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-academic-blue">23</div>
-                  <div className="text-gray-600">i10-index (2015-)</div>
-                </div>
-              </div>
-              
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Journal Articles</h3>
-              <div className="space-y-4">
-                {recentPublications.map((pub, index) => (
-                  <div key={index} className="border-l-4 border-academic-blue pl-4">
-                    <h4 className="font-medium text-gray-900">{pub.title}</h4>
-                    <p className="text-sm text-gray-600">{pub.authors}</p>
-                    <p className="text-sm text-academic-blue">{pub.journal}, {pub.year}</p>
-                  </div>
-                ))}
-              </div>
+        {/* Research Areas */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+            {content.researchAreas}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="p-6 text-center">
+              <BookOpen className="h-12 w-12 text-academic-blue mx-auto mb-4" />
+              <h3 className="font-semibold text-gray-900 mb-2">Controle de Processos</h3>
+              <p className="text-gray-600 text-sm">Sistemas de controle avançado para processos químicos</p>
             </Card>
-          </section>
-
-          {/* Research Opportunities */}
-          <section className="mb-12">
-            <Card className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Oportunidades de Pesquisa</h2>
-              <p className="text-gray-600 mb-6">
-                Estamos sempre procurando estudantes motivados para participar de projetos de pesquisa 
-                em controle de processos, inteligência artificial aplicada à engenharia química, 
-                e sustentabilidade energética.
-              </p>
-              
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Current Openings</h3>
-              <div className="space-y-4 mb-6">
-                {currentOpenings.map((opening, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="font-semibold text-gray-900">{opening.title}</h4>
-                      <Badge className="bg-green-100 text-green-800">{opening.status}</Badge>
-                    </div>
-                    {opening.subtitle && (
-                      <p className="text-sm text-gray-600 mb-2">{opening.subtitle}</p>
-                    )}
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                      {opening.duration && <span>Duração: {opening.duration}</span>}
-                      {opening.period && <span>Período: {opening.period}</span>}
-                      {opening.value && <span>Valor: {opening.value}</span>}
-                      {opening.funding && <span>Financiamento: {opening.funding}</span>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <Button className="bg-academic-blue hover:bg-blue-700">
-                Saiba Mais
-              </Button>
+            <Card className="p-6 text-center">
+              <TrendingUp className="h-12 w-12 text-academic-blue mx-auto mb-4" />
+              <h3 className="font-semibold text-gray-900 mb-2">Otimização</h3>
+              <p className="text-gray-600 text-sm">Otimização de processos industriais</p>
             </Card>
-          </section>
-
-          {/* Research Impact */}
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('researchImpactTitle')}</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-ufu-blue mb-2">80+</div>
-                <div className="text-gray-600">
-                  {language === 'pt' ? 'Publicações' : language === 'en' ? 'Publications' : 'Publicaciones'}
-                </div>
-              </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-ufu-blue mb-2">1500+</div>
-                <div className="text-gray-600">
-                  {language === 'pt' ? 'Citações' : language === 'en' ? 'Citations' : 'Citas'}
-                </div>
-              </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-ufu-blue mb-2">50+</div>
-                <div className="text-gray-600">
-                  {language === 'pt' ? 'Estudantes Orientados' : language === 'en' ? 'Students Supervised' : 'Estudiantes Supervisados'}
-                </div>
-              </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-ufu-blue mb-2">R$ 8M+</div>
-                <div className="text-gray-600">
-                  {language === 'pt' ? 'Financiamento' : language === 'en' ? 'Funding' : 'Financiación'}
-                </div>
-              </Card>
-            </div>
-          </section>
+            <Card className="p-6 text-center">
+              <Award className="h-12 w-12 text-academic-blue mx-auto mb-4" />
+              <h3 className="font-semibold text-gray-900 mb-2">Segurança</h3>
+              <p className="text-gray-600 text-sm">Segurança e tolerância a falhas</p>
+            </Card>
+          </div>
         </div>
       </div>
     </AcademicLayout>

@@ -5,77 +5,124 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Mail, Linkedin, GraduationCap, User, Users, ExternalLink } from 'lucide-react';
+import { Users, GraduationCap, Award, ExternalLink, MapPin } from 'lucide-react';
 
 const Team = () => {
   const { t } = useLanguage();
 
-  const currentMembers = [
+  const getCurrentLanguage = () => {
+    return localStorage.getItem('preferred-language') || 'pt';
+  };
+
+  const getContent = () => {
+    const lang = getCurrentLanguage();
+    
+    const content = {
+      pt: {
+        title: 'Nossa Equipe',
+        subtitle: 'Estudantes, colaboradores e parceiros de pesquisa',
+        undergraduateStudents: 'Alunos de Iniciação Científica',
+        masterStudents: 'Alunos de Mestrado',
+        doctoralStudents: 'Alunos de Doutorado',
+        collaborators: 'Colaboradores',
+        ufuCollaborators: 'Colaboradores UFU',
+        brazilianCollaborators: 'Colaboradores no Brasil',
+        internationalCollaborators: 'Colaboradores Internacionais',
+        chemicalEngineering: 'Faculdade de Engenharia Química',
+        electricalEngineering: 'Faculdade de Engenharia Elétrica',
+        visitProfile: 'Visitar Perfil'
+      },
+      en: {
+        title: 'Our Team',
+        subtitle: 'Students, collaborators, and research partners',
+        undergraduateStudents: 'Undergraduate Research Students',
+        masterStudents: 'Master\'s Students',
+        doctoralStudents: 'Doctoral Students',
+        collaborators: 'Collaborators',
+        ufuCollaborators: 'UFU Collaborators',
+        brazilianCollaborators: 'Brazilian Collaborators',
+        internationalCollaborators: 'International Collaborators',
+        chemicalEngineering: 'Faculty of Chemical Engineering',
+        electricalEngineering: 'Faculty of Electrical Engineering',
+        visitProfile: 'Visit Profile'
+      },
+      es: {
+        title: 'Nuestro Equipo',
+        subtitle: 'Estudiantes, colaboradores y socios de investigación',
+        undergraduateStudents: 'Estudiantes de Investigación de Pregrado',
+        masterStudents: 'Estudiantes de Maestría',
+        doctoralStudents: 'Estudiantes de Doctorado',
+        collaborators: 'Colaboradores',
+        ufuCollaborators: 'Colaboradores UFU',
+        brazilianCollaborators: 'Colaboradores en Brasil',
+        internationalCollaborators: 'Colaboradores Internacionales',
+        chemicalEngineering: 'Facultad de Ingeniería Química',
+        electricalEngineering: 'Facultad de Ingeniería Eléctrica',
+        visitProfile: 'Visitar Perfil'
+      }
+    };
+
+    return content[lang] || content.pt;
+  };
+
+  const content = getContent();
+
+  const undergraduateStudents = [
     {
       name: 'Filipe Eloy Rodrigues de Oliveira',
-      position: 'Undergraduate Researcher',
-      research: 'Projeto número 1',
-      funding: 'Petrobras',
-      since: '2024',
-      level: 'ic'
+      project: 'Projeto número 1',
+      funding: 'Petrobras'
     },
     {
       name: 'José Maria da Silva',
-      position: 'Undergraduate Researcher',
-      research: 'Projeto número 1',
-      funding: 'Petrobras',
-      since: '2024',
-      level: 'ic'
-    },
-    {
-      name: 'Isadora Maria Ferreira Junqueira',
-      position: 'MSc Student',
-      research: 'Análise de operabilidade para plantas não-lineares com falhas em atuadores',
-      since: '2023',
-      level: 'msc'
-    },
-    {
-      name: 'Pedro Gelson Morais',
-      position: 'PhD Student',
-      research: 'Integração de rotas tecnológicas de coprocessamento de bio-óleo em unidades de hidrotratamento em refinarias de petróleo angolanas',
-      since: '2022',
-      level: 'phd'
+      project: 'Projeto número 1', 
+      funding: 'Petrobras'
     }
   ];
 
-  const ufuCollaborators = [
+  const masterStudents = [
     {
-      faculty: 'Faculdade de Engenharia Química',
-      members: [
-        'Rubens Gedraite',
-        'Sérgio Mauro da Silva Neiro',
-        'Thiago Vaz da Costa'
-      ]
-    },
-    {
-      faculty: 'Faculdade de Engenharia Elétrica',
-      members: [
-        'Aniel Silva de Morais',
-        'Gabriela Vieira Lima'
-      ]
+      name: 'Isadora Maria Ferreira Junqueira',
+      project: 'Análise de operabilidade para plantas não-lineares com falhas em atuadores',
+      funding: ''
     }
   ];
+
+  const doctoralStudents = [
+    {
+      name: 'Pedro Gelson Morais',
+      project: 'Integração de rotas tecnológicas de coprocessamento de bio-óleo em unidades de hidrotratamento em refinarias de petróleo angolanas',
+      funding: ''
+    }
+  ];
+
+  const ufuCollaborators = {
+    chemicalEngineering: [
+      { name: 'Rubens Gedraite' },
+      { name: 'Sérgio Mauro da Silva Neiro' },
+      { name: 'Thiago Vaz da Costa' }
+    ],
+    electricalEngineering: [
+      { name: 'Aniel Silva de Morais' },
+      { name: 'Gabriela Vieira Lima' }
+    ]
+  };
 
   const brazilianCollaborators = [
     {
       name: 'Heleno Bispo da Silva Júnior',
       institution: 'Universidade Federal de Campina Grande - PB (UFCG)',
-      url: 'https://www.uaeq.ufcg.edu.br/index.php/docentes/103-heleno-bispo-da-silva-junior'
+      link: 'https://www.uaeq.ufcg.edu.br/index.php/docentes/103-heleno-bispo-da-silva-junior'
     },
     {
       name: 'Cristiano Hora de Oliveira Fontes',
       institution: 'Universidade Federal da Bahia (UFBA)',
-      url: 'http://www.pei.ufba.br/pt-br/cristiano-hora-de-oliveira-fontes'
+      link: 'http://www.pei.ufba.br/pt-br/cristiano-hora-de-oliveira-fontes'
     },
     {
       name: 'Flávio Vasconcelos da Silva',
       institution: 'Universidade Estadual de Campinas (Unicamp)',
-      url: 'https://portal.dados.unicamp.br/perfil?origem=&docente=286898&sigla_unidade=&nome_unidade=&nome_programa='
+      link: 'https://portal.dados.unicamp.br/perfil?origem=&docente=286898&sigla_unidade=&nome_unidade=&nome_programa='
     }
   ];
 
@@ -83,99 +130,77 @@ const Team = () => {
     {
       name: 'Panagiotis D. Christofides',
       institution: 'University of California, Los Angeles (UCLA)',
-      url: 'https://samueli.ucla.edu/leadership-panagiotis-christofides/'
+      link: 'https://samueli.ucla.edu/leadership-panagiotis-christofides/'
     },
     {
       name: 'Fernando V. Lima',
       institution: 'West Virginia University (WVU)',
-      url: 'https://fernandolima.faculty.wvu.edu/'
+      link: 'https://fernandolima.faculty.wvu.edu/'
     }
   ];
-
-  const getPositionColor = (level: string) => {
-    if (level === 'phd') return 'bg-blue-100 text-blue-800';
-    if (level === 'msc') return 'bg-green-100 text-green-800';
-    if (level === 'ic') return 'bg-orange-100 text-orange-800';
-    return 'bg-gray-100 text-gray-800';
-  };
 
   return (
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('teamTitle')}
+            {content.title}
           </h1>
           <p className="text-lg text-gray-600">
-            Meet our diverse research team advancing chemical engineering knowledge
+            {content.subtitle}
           </p>
         </div>
 
-        {/* Team Statistics */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <Card className="p-6 text-center">
-            <Users className="h-8 w-8 text-academic-blue mx-auto mb-3" />
-            <div className="text-2xl font-bold text-gray-900 mb-1">25</div>
-            <div className="text-gray-600">Total Members</div>
-          </Card>
-          <Card className="p-6 text-center">
-            <GraduationCap className="h-8 w-8 text-academic-blue mx-auto mb-3" />
-            <div className="text-2xl font-bold text-gray-900 mb-1">8</div>
-            <div className="text-gray-600">PhD Students</div>
-          </Card>
-          <Card className="p-6 text-center">
-            <User className="h-8 w-8 text-academic-blue mx-auto mb-3" />
-            <div className="text-2xl font-bold text-gray-900 mb-1">12</div>
-            <div className="text-gray-600">MSc Students</div>
-          </Card>
-          <Card className="p-6 text-center">
-            <Users className="h-8 w-8 text-academic-blue mx-auto mb-3" />
-            <div className="text-2xl font-bold text-gray-900 mb-1">15</div>
-            <div className="text-gray-600">International Collaborators</div>
-          </Card>
-        </div>
-
-        {/* Current Team Members */}
+        {/* Current Students */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Equipe
+            Estudantes Atuais
           </h2>
           
-          {/* Undergraduate Researchers */}
+          {/* Undergraduate Students */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Alunos de Iniciação Científica</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-academic-blue" />
+              {content.undergraduateStudents}
+            </h3>
             <div className="grid md:grid-cols-2 gap-4">
-              {currentMembers.filter(member => member.level === 'ic').map((member, index) => (
+              {undergraduateStudents.map((student, index) => (
                 <Card key={index} className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">{member.name}</h4>
-                  <p className="text-sm text-gray-600 mb-1">Projeto: {member.research}</p>
-                  <p className="text-sm text-academic-blue">Financiamento: {member.funding}</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{student.name}</h4>
+                  <p className="text-sm text-gray-600 mb-2">{student.project}</p>
+                  <Badge variant="outline">{student.funding}</Badge>
                 </Card>
               ))}
             </div>
           </div>
 
-          {/* MSc Students */}
+          {/* Master's Students */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Alunos de Mestrado</h3>
-            <div className="grid md:grid-cols-1 gap-4">
-              {currentMembers.filter(member => member.level === 'msc').map((member, index) => (
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <Award className="h-5 w-5 text-academic-blue" />
+              {content.masterStudents}
+            </h3>
+            <div className="grid gap-4">
+              {masterStudents.map((student, index) => (
                 <Card key={index} className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">{member.name}</h4>
-                  <p className="text-sm text-gray-600">Projeto: {member.research}</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{student.name}</h4>
+                  <p className="text-sm text-gray-600">{student.project}</p>
                 </Card>
               ))}
             </div>
           </div>
 
-          {/* PhD Students */}
+          {/* Doctoral Students */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Alunos de Doutorado</h3>
-            <div className="grid md:grid-cols-1 gap-4">
-              {currentMembers.filter(member => member.level === 'phd').map((member, index) => (
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <Users className="h-5 w-5 text-academic-blue" />
+              {content.doctoralStudents}
+            </h3>
+            <div className="grid gap-4">
+              {doctoralStudents.map((student, index) => (
                 <Card key={index} className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">{member.name}</h4>
-                  <p className="text-sm text-gray-600">Projeto: {member.research}</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">{student.name}</h4>
+                  <p className="text-sm text-gray-600">{student.project}</p>
                 </Card>
               ))}
             </div>
@@ -185,41 +210,67 @@ const Team = () => {
         {/* Collaborators */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Colaboradores
+            {content.collaborators}
           </h2>
-          
+
           {/* UFU Collaborators */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">UFU</h3>
-            <div className="space-y-4">
-              {ufuCollaborators.map((faculty, index) => (
-                <Card key={index} className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-3">{faculty.faculty}</h4>
-                  <div className="space-y-1">
-                    {faculty.members.map((member, memberIndex) => (
-                      <p key={memberIndex} className="text-gray-600">• {member}</p>
-                    ))}
-                  </div>
-                </Card>
-              ))}
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              {content.ufuCollaborators}
+            </h3>
+            
+            <div className="space-y-6">
+              <Card className="p-6">
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  {content.chemicalEngineering}
+                </h4>
+                <div className="grid md:grid-cols-3 gap-3">
+                  {ufuCollaborators.chemicalEngineering.map((collaborator, index) => (
+                    <div key={index} className="p-3 bg-gray-50 rounded-lg">
+                      <p className="font-medium text-gray-900">{collaborator.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  {content.electricalEngineering}
+                </h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {ufuCollaborators.electricalEngineering.map((collaborator, index) => (
+                    <div key={index} className="p-3 bg-gray-50 rounded-lg">
+                      <p className="font-medium text-gray-900">{collaborator.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
             </div>
           </div>
 
           {/* Brazilian Collaborators */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Colaboradores no Brasil</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              {content.brazilianCollaborators}
+            </h3>
+            <div className="grid gap-4">
               {brazilianCollaborators.map((collaborator, index) => (
                 <Card key={index} className="p-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="font-semibold text-gray-900">{collaborator.name}</h4>
-                      <p className="text-academic-blue">{collaborator.institution}</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">{collaborator.name}</h4>
+                      <p className="text-sm text-gray-600 flex items-center gap-1">
+                        <MapPin className="h-3 w-3" />
+                        {collaborator.institution}
+                      </p>
                     </div>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={collaborator.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => window.open(collaborator.link, '_blank')}
+                    >
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      {content.visitProfile}
                     </Button>
                   </div>
                 </Card>
@@ -229,51 +280,31 @@ const Team = () => {
 
           {/* International Collaborators */}
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Colaboradores Internacionais</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              {content.internationalCollaborators}
+            </h3>
+            <div className="grid gap-4">
               {internationalCollaborators.map((collaborator, index) => (
                 <Card key={index} className="p-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="font-semibold text-gray-900">{collaborator.name}</h4>
-                      <p className="text-academic-blue">{collaborator.institution}</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">{collaborator.name}</h4>
+                      <p className="text-sm text-gray-600 flex items-center gap-1">
+                        <MapPin className="h-3 w-3" />
+                        {collaborator.institution}
+                      </p>
                     </div>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={collaborator.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => window.open(collaborator.link, '_blank')}
+                    >
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      {content.visitProfile}
                     </Button>
                   </div>
                 </Card>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Join Our Team */}
-        <div className="bg-gray-50 rounded-lg p-6">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Join Our Research Team
-          </h2>
-          <p className="text-gray-600 mb-6">
-            We are always looking for motivated students and researchers to join our team. 
-            Current openings and application information available on our opportunities page.
-          </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">PhD Positions</h3>
-              <p className="text-sm text-gray-600 mb-3">Full funding available for qualified candidates</p>
-              <Button variant="outline" size="sm">Learn More</Button>
-            </div>
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Postdoc Opportunities</h3>
-              <p className="text-sm text-gray-600 mb-3">Research fellowships in sustainable processes</p>
-              <Button variant="outline" size="sm">Apply Now</Button>
-            </div>
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Visiting Researchers</h3>
-              <p className="text-sm text-gray-600 mb-3">International exchange programs</p>
-              <Button variant="outline" size="sm">Contact Us</Button>
             </div>
           </div>
         </div>
