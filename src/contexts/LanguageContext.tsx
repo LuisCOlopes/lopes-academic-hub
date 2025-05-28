@@ -1,6 +1,8 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+export type Language = 'pt' | 'en' | 'es';
+
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
@@ -57,11 +59,9 @@ const translations = {
     greenTechnology: 'Desenvolvimento de Tecnologia Verde',
     exploreMyResearch: 'Explore Minha Pesquisa',
     yearsOfExperience: 'Anos de Experiência',
-    publications: 'Publicações',
     researchFunding: 'Financiamento de Pesquisa',
     interestedInCollaboration: 'Interessado em Colaboração?',
     contactMe: 'Entre em Contato',
-    requestMeeting: 'Solicitar Reunião',
     
     // About Page
     aboutTitle: 'Sobre o Professor',
@@ -96,6 +96,9 @@ const translations = {
     researchTitle: 'Pesquisa',
     currentResearch: 'Pesquisa Atual',
     researchMetrics: 'Métricas de Pesquisa',
+    citations: 'Citações',
+    students: 'Estudantes Orientados',
+    funding: 'Financiamento',
     
     // Teaching Page
     teachingTitle: 'Ensino',
@@ -157,11 +160,9 @@ const translations = {
     greenTechnology: 'Green Technology Development',
     exploreMyResearch: 'Explore My Research',
     yearsOfExperience: 'Years of Experience',
-    publications: 'Publications',
     researchFunding: 'Research Funding',
     interestedInCollaboration: 'Interested in Collaboration?',
     contactMe: 'Contact Me',
-    requestMeeting: 'Request Meeting',
     
     // About Page
     aboutTitle: 'About Professor',
@@ -196,6 +197,9 @@ const translations = {
     researchTitle: 'Research',
     currentResearch: 'Current Research',
     researchMetrics: 'Research Metrics',
+    citations: 'Citations',
+    students: 'Students Supervised',
+    funding: 'Funding',
     
     // Teaching Page
     teachingTitle: 'Teaching',
@@ -257,11 +261,9 @@ const translations = {
     greenTechnology: 'Desarrollo de Tecnología Verde',
     exploreMyResearch: 'Explora Mi Investigación',
     yearsOfExperience: 'Años de Experiencia',
-    publications: 'Publicaciones',
     researchFunding: 'Financiamiento de Investigación',
     interestedInCollaboration: '¿Interesado en Colaboración?',
     contactMe: 'Contáctame',
-    requestMeeting: 'Solicitar Reunión',
     
     // About Page
     aboutTitle: 'Acerca del Profesor',
@@ -296,6 +298,9 @@ const translations = {
     researchTitle: 'Investigación',
     currentResearch: 'Investigación Actual',
     researchMetrics: 'Métricas de Investigación',
+    citations: 'Citas',
+    students: 'Estudiantes Supervisados',
+    funding: 'Financiamiento',
     
     // Teaching Page
     teachingTitle: 'Enseñanza',
