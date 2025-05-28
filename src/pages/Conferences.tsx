@@ -63,7 +63,7 @@ const Conferences = () => {
         <div className="space-y-8">
           <section>
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Upcoming Conferences
+              {t('upcomingConferences')}
             </h2>
             <div className="grid gap-6">
               {upcomingConferences.map((conference, index) => (
@@ -104,7 +104,7 @@ const Conferences = () => {
 
           <section>
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Past Conferences
+              {t('pastConferences')}
             </h2>
             <div className="grid gap-6">
               {pastConferences.map((conference, index) => (
@@ -157,7 +157,7 @@ const Conferences = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Speaking Opportunities
+            {t('speakingOpportunities')}
           </h2>
           <p className="text-gray-600 mb-4">
             Interested in having me speak at your conference or event? I'm always open to sharing knowledge and insights.

@@ -51,17 +51,17 @@ const Speaking = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Speaking Engagements
+            {t('speakingTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Sharing knowledge and insights at conferences, workshops, and academic events
+            {t('speakingSubtitle')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Recent & Upcoming Engagements
+              {t('recentUpcomingEngagements')}
             </h2>
             
             <div className="space-y-6">
@@ -102,7 +102,7 @@ const Speaking = () => {
             <Card className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Mic className="h-6 w-6 text-academic-blue" />
-                <h3 className="text-lg font-semibold text-gray-900">Expertise Areas</h3>
+                <h3 className="text-lg font-semibold text-gray-900">{t('expertiseAreas')}</h3>
               </div>
               <div className="space-y-2">
                 {expertiseAreas.map((area, index) => (
@@ -114,28 +114,28 @@ const Speaking = () => {
             </Card>
 
             <Card className="p-6 bg-academic-blue text-white">
-              <h3 className="text-lg font-semibold mb-3">Book a Speaking Engagement</h3>
+              <h3 className="text-lg font-semibold mb-3">{t('bookSpeakingEngagement')}</h3>
               <p className="text-sm mb-4">
-                Available for conferences, workshops, and academic events related to chemical engineering and process control.
+                {t('availableForSpeaking')}
               </p>
               <Button variant="secondary">
-                Contact for Speaking
+                {t('contactForSpeaking')}
               </Button>
             </Card>
 
             <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Speaking Stats</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('speakingStats')}</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Total Presentations</span>
+                  <span className="text-sm text-gray-600">{t('totalPresentations')}</span>
                   <span className="font-semibold">150+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Countries</span>
+                  <span className="text-sm text-gray-600">{t('countries')}</span>
                   <span className="font-semibold">12</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Keynote Addresses</span>
+                  <span className="text-sm text-gray-600">{t('keynoteAddresses')}</span>
                   <span className="font-semibold">25</span>
                 </div>
               </div>

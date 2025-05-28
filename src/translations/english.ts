@@ -102,9 +102,23 @@ export const enTranslations = {
   
   // Conferences Page
   conferencesTitle: 'Conferences',
+  upcomingConferences: 'Upcoming Conferences',
+  pastConferences: 'Past Conferences',
+  speakingOpportunities: 'Speaking Opportunities',
   
   // Publications Page
   publicationsTitle: 'Publications',
+  recentPublications: 'Recent Journal Articles',
+  bookChapters: 'Book Chapters',
+  academicProfiles: 'Academic Profiles',
+  totalPublications: 'Total Publications',
+  totalCitations: 'Total Citations',
+  hIndex: 'h-index',
+  i10Index: 'i10-index',
+  journalArticles: 'Journal Articles',
+  viewPaper: 'View Paper',
+  downloadPdf: 'Download PDF',
+  visitProfile: 'Visit Profile',
   
   // Projects Page
   projectsTitle: 'Projects',
@@ -140,5 +154,33 @@ export const enTranslations = {
   newsTitle: 'News',
   
   // Media Page
-  mediaTitle: 'Media'
+  mediaTitle: 'Media',
+
+  // Speaking Page
+  speakingTitle: 'Speaking Engagements',
+  speakingSubtitle: 'Sharing knowledge and insights at conferences, workshops, and academic events',
+  recentUpcomingEngagements: 'Recent & Upcoming Engagements',
+  expertiseAreas: 'Expertise Areas',
+  bookSpeakingEngagement: 'Book a Speaking Engagement',
+  contactForSpeaking: 'Contact for Speaking',
+  speakingStats: 'Speaking Stats',
+  totalPresentations: 'Total Presentations',
+  countries: 'Countries',
+  keynoteAddresses: 'Keynote Addresses',
+  availableForSpeaking: 'Available for conferences, workshops, and academic events related to chemical engineering and process control.',
+
+  // Service Page specific
+  servicesProvided: 'Services Provided',
+  servicesSubtitle: 'Professional services to the academic community and society',
+  consultingAndReview: 'Consulting and Review',
+  reviewedJournals: 'Reviewed Journals',
+  journalEditor: 'Journal Editor',
+  academicServices: 'Academic Services',
+  currentServiceOpportunities: 'Current Service Opportunities',
+  peerReview: 'Peer Review',
+  conferenceOrganization: 'Conference Organization',
+  projectReview: 'Project Review',
+  availableForReview: 'Available for manuscript review',
+  committeeParticipation: 'Committee participation welcome',
+  panelServices: 'Panel services for funding agencies'
 };

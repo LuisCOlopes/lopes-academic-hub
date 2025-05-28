@@ -11,7 +11,7 @@ const Service = () => {
 
   const serviceActivities = [
     {
-      category: 'Consultoria e Revisão',
+      category: t('consultingAndReview'),
       icon: FileText,
       activities: [
         {
@@ -23,7 +23,7 @@ const Service = () => {
       ]
     },
     {
-      category: 'Periódicos Revisados',
+      category: t('reviewedJournals'),
       icon: Globe,
       activities: [
         {
@@ -59,7 +59,7 @@ const Service = () => {
       ]
     },
     {
-      category: 'Editor de Periódicos',
+      category: t('journalEditor'),
       icon: School,
       activities: [
         {
@@ -77,7 +77,7 @@ const Service = () => {
       ]
     },
     {
-      category: 'Serviços Acadêmicos',
+      category: t('academicServices'),
       icon: Users,
       activities: [
         {
@@ -101,10 +101,10 @@ const Service = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
-            Serviços Prestados
+            {t('servicesProvided')}
           </h1>
           <p className="text-lg text-ufu-blue">
-            Serviços profissionais à comunidade acadêmica e sociedade
+            {t('servicesSubtitle')}
           </p>
         </div>
 
@@ -144,23 +144,23 @@ const Service = () => {
 
         <div className="mt-12 p-6 bg-ufu-light rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
-            Oportunidades Atuais de Serviço
+            {t('currentServiceOpportunities')}
           </h2>
           <p className="text-ufu-navy mb-4">
             Procurando oportunidades para contribuir com a comunidade acadêmica? Entre em contato sobre possíveis colaborações.
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-ufu-navy mb-2">Revisão por Pares</h3>
-              <p className="text-sm text-ufu-blue">Disponível para revisão de manuscritos</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">{t('peerReview')}</h3>
+              <p className="text-sm text-ufu-blue">{t('availableForReview')}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-ufu-navy mb-2">Organização de Conferências</h3>
-              <p className="text-sm text-ufu-blue">Participação em comitês bem-vinda</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">{t('conferenceOrganization')}</h3>
+              <p className="text-sm text-ufu-blue">{t('committeeParticipation')}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-ufu-navy mb-2">Revisão de Projetos</h3>
-              <p className="text-sm text-ufu-blue">Serviços de painel para agências de fomento</p>
+              <h3 className="font-semibold text-ufu-navy mb-2">{t('projectReview')}</h3>
+              <p className="text-sm text-ufu-blue">{t('panelServices')}</p>
             </div>
           </div>
         </div>

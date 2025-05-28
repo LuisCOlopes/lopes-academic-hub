@@ -102,9 +102,23 @@ export const esTranslations = {
   
   // Conferences Page
   conferencesTitle: 'Conferencias',
+  upcomingConferences: 'Conferencias Futuras',
+  pastConferences: 'Conferencias Pasadas',
+  speakingOpportunities: 'Oportunidades de Presentación',
   
   // Publications Page
   publicationsTitle: 'Publicaciones',
+  recentPublications: 'Artículos de Revista Recientes',
+  bookChapters: 'Capítulos de Libros',
+  academicProfiles: 'Perfiles Académicos',
+  totalPublications: 'Total de Publicaciones',
+  totalCitations: 'Total de Citas',
+  hIndex: 'Índice h',
+  i10Index: 'Índice i10',
+  journalArticles: 'Artículos de Revista',
+  viewPaper: 'Ver Artículo',
+  downloadPdf: 'Descargar PDF',
+  visitProfile: 'Visitar Perfil',
   
   // Projects Page
   projectsTitle: 'Proyectos',
@@ -140,5 +154,33 @@ export const esTranslations = {
   newsTitle: 'Noticias',
   
   // Media Page
-  mediaTitle: 'Medios'
+  mediaTitle: 'Medios',
+
+  // Speaking Page
+  speakingTitle: 'Conferencias Magistrales',
+  speakingSubtitle: 'Compartiendo conocimiento e ideas en conferencias, talleres y eventos académicos',
+  recentUpcomingEngagements: 'Compromisos Recientes y Futuros',
+  expertiseAreas: 'Áreas de Especialización',
+  bookSpeakingEngagement: 'Solicitar Conferencia',
+  contactForSpeaking: 'Contacto para Conferencias',
+  speakingStats: 'Estadísticas de Conferencias',
+  totalPresentations: 'Total de Presentaciones',
+  countries: 'Países',
+  keynoteAddresses: 'Discursos Principales',
+  availableForSpeaking: 'Disponible para conferencias, talleres y eventos académicos relacionados con ingeniería química y control de procesos.',
+
+  // Service Page specific
+  servicesProvided: 'Servicios Prestados',
+  servicesSubtitle: 'Servicios profesionales a la comunidad académica y sociedad',
+  consultingAndReview: 'Consultoría y Revisión',
+  reviewedJournals: 'Revistas Revisadas',
+  journalEditor: 'Editor de Revista',
+  academicServices: 'Servicios Académicos',
+  currentServiceOpportunities: 'Oportunidades Actuales de Servicio',
+  peerReview: 'Revisión por Pares',
+  conferenceOrganization: 'Organización de Conferencias',
+  projectReview: 'Revisión de Proyectos',
+  availableForReview: 'Disponible para revisión de manuscritos',
+  committeeParticipation: 'Participación en comités bienvenida',
+  panelServices: 'Servicios de panel para agencias de financiamiento'
 };

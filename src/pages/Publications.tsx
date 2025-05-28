@@ -75,10 +75,10 @@ const Publications = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Publications
+              {t('publicationsTitle')}
             </h1>
             <p className="text-xl text-gray-600">
-              Research contributions to the scientific community
+              {t('publicationsDescription')}
             </p>
           </div>
 
@@ -87,26 +87,26 @@ const Publications = () => {
             <div className="grid md:grid-cols-4 gap-6">
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-academic-blue mb-2">50+</div>
-                <div className="text-gray-600">Total Publications</div>
+                <div className="text-gray-600">{t('totalPublications')}</div>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-academic-blue mb-2">1,200+</div>
-                <div className="text-gray-600">Total Citations</div>
+                <div className="text-gray-600">{t('totalCitations')}</div>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-academic-blue mb-2">18</div>
-                <div className="text-gray-600">h-index</div>
+                <div className="text-gray-600">{t('hIndex')}</div>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-academic-blue mb-2">25</div>
-                <div className="text-gray-600">i10-index</div>
+                <div className="text-gray-600">{t('i10Index')}</div>
               </Card>
             </div>
           </section>
 
           {/* Recent Publications */}
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Recent Journal Articles</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('recentPublications')}</h2>
             <div className="space-y-6">
               {publications.map((pub, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
@@ -130,17 +130,17 @@ const Publications = () => {
                       }`}>
                         {pub.type}
                       </span>
-                      <span className="text-xs text-gray-500">{pub.citations} citations</span>
+                      <span className="text-xs text-gray-500">{pub.citations} {t('citations')}</span>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue">
                       <Link className="h-4 w-4 mr-2" />
-                      View Paper
+                      {t('viewPaper')}
                     </Button>
                     <Button variant="ghost" size="sm" className="text-gray-600">
                       <FileText className="h-4 w-4 mr-2" />
-                      Download PDF
+                      {t('downloadPdf')}
                     </Button>
                   </div>
                 </Card>
@@ -150,7 +150,7 @@ const Publications = () => {
 
           {/* Book Chapters */}
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Book Chapters</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('bookChapters')}</h2>
             <div className="space-y-4">
               {bookChapters.map((chapter, index) => (
                 <Card key={index} className="p-6">
@@ -174,7 +174,7 @@ const Publications = () => {
 
           {/* External Links */}
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Academic Profiles</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('academicProfiles')}</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="h-12 w-12 bg-academic-blue rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -182,7 +182,7 @@ const Publications = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Google Scholar</h3>
                 <p className="text-gray-600 mb-4">Complete citation metrics and publication list</p>
-                <Button variant="outline" size="sm">Visit Profile</Button>
+                <Button variant="outline" size="sm">{t('visitProfile')}</Button>
               </Card>
               
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -191,7 +191,7 @@ const Publications = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">ResearchGate</h3>
                 <p className="text-gray-600 mb-4">Research network and collaboration platform</p>
-                <Button variant="outline" size="sm">Visit Profile</Button>
+                <Button variant="outline" size="sm">{t('visitProfile')}</Button>
               </Card>
               
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -200,7 +200,7 @@ const Publications = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Lattes CV</h3>
                 <p className="text-gray-600 mb-4">Brazilian academic curriculum platform</p>
-                <Button variant="outline" size="sm">Visit Profile</Button>
+                <Button variant="outline" size="sm">{t('visitProfile')}</Button>
               </Card>
             </div>
           </section>
