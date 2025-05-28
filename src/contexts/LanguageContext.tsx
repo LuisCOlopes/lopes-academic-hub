@@ -33,4 +33,4 @@ export const useLanguage = () => {
   return context;
 };
 
-export { Language };
+export type { Language };
