@@ -1,3 +1,4 @@
+
 export const esTranslations = {
   // Navigation
   home: 'Inicio',
@@ -187,10 +188,6 @@ export const esTranslations = {
   newsTitle: 'Noticias',
   newsSubtitle: 'Últimas noticias y actualizaciones de nuestro grupo de investigación y actividades académicas',
   
-  // Media Page
-  mediaTitle: 'Medios',
-  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa',
-  
   // Speaking Page
   speakingTitle: 'Conferencias Magistrales',
   speakingSubtitle: 'Compartiendo conocimiento e ideas en conferencias, talleres y eventos académicos',
@@ -228,13 +225,5 @@ export const esTranslations = {
   
   // Podcast Page
   podcastTitle: 'Podcast',
-  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria',
-  
-  // Media Page
-  mediaTitle: 'Medios',
-  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa',
-  
-  // Workshops Page
-  workshopsTitle: 'Talleres',
-  workshopsSubtitle: 'Talleres especializados y entrenamiento en ingeniería química'
+  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria'
 };
