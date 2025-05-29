@@ -11,58 +11,70 @@ const News = () => {
 
   const newsItems = [
     {
-      title: 'New Research Grant Awarded for Sustainable Chemical Processes',
-      excerpt: 'Received R$ 2.5 million funding from CNPq to develop environmentally friendly chemical manufacturing processes.',
+      title: t('newResearchGrantSustainable') || 'Nova Bolsa de Pesquisa Concedida para Processos Químicos Sustentáveis',
+      excerpt: t('researchGrantExcerpt') || 'Recebido financiamento de R$ 2,5 milhões do CNPq para desenvolver processos de fabricação química ambientalmente amigáveis.',
       date: '2024-01-20',
-      category: 'Research',
+      category: t('research') || 'Pesquisa',
       author: 'Prof. Academic Name',
       featured: true
     },
     {
-      title: 'Best Teaching Award Recognition at UFU',
-      excerpt: 'Honored with the Excellence in Teaching Award for innovative approaches to chemical engineering education.',
+      title: t('bestTeachingAwardUFU') || 'Reconhecimento do Prêmio de Melhor Ensino na UFU',
+      excerpt: t('teachingAwardExcerpt') || 'Homenageado com o Prêmio de Excelência em Ensino por abordagens inovadoras na educação em engenharia química.',
       date: '2024-01-15',
-      category: 'Awards',
+      category: t('awards') || 'Prêmios',
       author: 'University Communications'
     },
     {
-      title: 'International Collaboration with European Universities',
-      excerpt: 'Signed partnership agreements with leading European institutions for joint research and student exchange programs.',
+      title: t('internationalCollaborationEuropean') || 'Colaboração Internacional com Universidades Europeias',
+      excerpt: t('collaborationExcerpt') || 'Assinados acordos de parceria com instituições europeias líderes para pesquisa conjunta e programas de intercâmbio estudantil.',
       date: '2024-01-10',
-      category: 'Collaboration',
+      category: t('collaboration') || 'Colaboração',
       author: 'Prof. Academic Name'
     },
     {
-      title: 'Student Team Wins National Engineering Competition',
-      excerpt: 'Our undergraduate team secured first place in the Brazilian Chemical Engineering Students Competition.',
+      title: t('studentTeamWinsNational') || 'Equipe de Estudantes Vence Competição Nacional de Engenharia',
+      excerpt: t('studentCompetitionExcerpt') || 'Nossa equipe de graduação garantiu o primeiro lugar na Competição Brasileira de Estudantes de Engenharia Química.',
       date: '2024-01-05',
-      category: 'Students',
+      category: t('students') || 'Estudantes',
       author: 'Team Advisor'
     },
     {
-      title: 'New Laboratory Equipment Installation Complete',
-      excerpt: 'State-of-the-art process control systems now operational in our advanced chemical engineering laboratory.',
+      title: t('newLabEquipmentInstallation') || 'Instalação de Novos Equipamentos de Laboratório Concluída',
+      excerpt: t('labEquipmentExcerpt') || 'Sistemas de controle de processos de última geração agora operacionais em nosso laboratório avançado de engenharia química.',
       date: '2023-12-20',
-      category: 'Infrastructure',
+      category: t('infrastructure') || 'Infraestrutura',
       author: 'Lab Manager'
     },
     {
-      title: 'Published Research on Green Chemistry Applications',
-      excerpt: 'Latest findings on sustainable catalyst development published in top-tier international journal.',
+      title: t('publishedResearchGreenChemistry') || 'Pesquisa Publicada sobre Aplicações de Química Verde',
+      excerpt: t('greenChemistryExcerpt') || 'Últimas descobertas sobre desenvolvimento de catalisadores sustentáveis publicadas em revista internacional de primeira linha.',
       date: '2023-12-15',
-      category: 'Publications',
+      category: t('publications') || 'Publicações',
       author: 'Prof. Academic Name'
     }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      'Pesquisa': 'bg-blue-100 text-blue-800',
       'Research': 'bg-blue-100 text-blue-800',
+      'Investigación': 'bg-blue-100 text-blue-800',
+      'Prêmios': 'bg-yellow-100 text-yellow-800',
       'Awards': 'bg-yellow-100 text-yellow-800',
+      'Premios': 'bg-yellow-100 text-yellow-800',
+      'Colaboração': 'bg-green-100 text-green-800',
       'Collaboration': 'bg-green-100 text-green-800',
+      'Colaboración': 'bg-green-100 text-green-800',
+      'Estudantes': 'bg-purple-100 text-purple-800',
       'Students': 'bg-purple-100 text-purple-800',
+      'Estudiantes': 'bg-purple-100 text-purple-800',
+      'Infraestrutura': 'bg-gray-100 text-gray-800',
       'Infrastructure': 'bg-gray-100 text-gray-800',
-      'Publications': 'bg-red-100 text-red-800'
+      'Infraestructura': 'bg-gray-100 text-gray-800',
+      'Publicações': 'bg-red-100 text-red-800',
+      'Publications': 'bg-red-100 text-red-800',
+      'Publicaciones': 'bg-red-100 text-red-800'
     };
     return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
@@ -75,7 +87,7 @@ const News = () => {
             {t('newsTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Latest news and updates from our research group and academic activities
+            {t('newsSubtitle')}
           </p>
         </div>
 
@@ -83,7 +95,7 @@ const News = () => {
         {newsItems.find(item => item.featured) && (
           <div className="mb-8">
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-              Featured News
+              {t('featuredNews') || 'Notícia em Destaque'}
             </h2>
             {newsItems
               .filter(item => item.featured)
@@ -113,7 +125,7 @@ const News = () => {
                       {item.author}
                     </div>
                     <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      Read more <ArrowRight className="h-4 w-4" />
+                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
                 </Card>
@@ -124,7 +136,7 @@ const News = () => {
         {/* All News */}
         <div>
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Recent News
+            {t('recentNews') || 'Notícias Recentes'}
           </h2>
           <div className="grid gap-6">
             {newsItems
@@ -155,7 +167,7 @@ const News = () => {
                       {item.author}
                     </div>
                     <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      Read more <ArrowRight className="h-4 w-4" />
+                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
                 </Card>
@@ -165,21 +177,21 @@ const News = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Subscribe to Updates
+            {t('subscribeToUpdates') || 'Inscreva-se para Atualizações'}
           </h2>
           <p className="text-gray-600 mb-4">
-            Stay informed about our latest research developments, achievements, and academic activities.
+            {t('stayInformedResearch') || 'Mantenha-se informado sobre nossos mais recentes desenvolvimentos de pesquisa, conquistas e atividades acadêmicas.'}
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex-1 min-w-64">
               <input 
                 type="email" 
-                placeholder="Enter your email address"
+                placeholder={t('enterEmailAddress') || 'Digite seu endereço de email'}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-academic-blue focus:border-transparent"
               />
             </div>
             <button className="px-6 py-2 bg-academic-blue text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Subscribe
+              {t('subscribe') || 'Inscrever-se'}
             </button>
           </div>
         </div>

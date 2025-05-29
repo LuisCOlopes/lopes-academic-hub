@@ -12,41 +12,41 @@ const Media = () => {
 
   const mediaItems = [
     {
-      type: 'Interview',
-      title: 'The Future of Sustainable Chemical Engineering',
+      type: t('interview') || 'Entrevista',
+      title: t('sustainableChemEngFuture') || 'O Futuro da Engenharia Química Sustentável',
       outlet: 'Engineering Today Brazil',
       date: '2024-01-15',
-      description: 'Discussing green chemistry innovations and their impact on Brazilian industry',
+      description: t('greenChemistryImpact') || 'Discussão sobre inovações em química verde e seu impacto na indústria brasileira',
       mediaType: 'video',
       duration: '25 min',
       url: '#'
     },
     {
-      type: 'Article',
-      title: 'Innovation in Chemical Process Education',
+      type: t('article') || 'Artigo',
+      title: t('processEducationInnovation') || 'Inovação no Ensino de Processos Químicos',
       outlet: 'Academic Quarterly',
       date: '2023-12-10',
-      description: 'Feature article on modern teaching methodologies in engineering',
+      description: t('modernTeachingMethods') || 'Artigo sobre metodologias de ensino modernas em engenharia',
       mediaType: 'text',
-      readTime: '8 min read',
+      readTime: '8 min ' + (t('read') || 'leitura'),
       url: '#'
     },
     {
       type: 'Podcast',
-      title: 'Engineering Leadership in Academia',
+      title: t('engineeringLeadership') || 'Liderança em Engenharia na Academia',
       outlet: 'TechTalk Podcast',
       date: '2023-11-22',
-      description: 'Discussion on academic leadership and research management',
+      description: t('academicLeadershipDiscussion') || 'Discussão sobre liderança acadêmica e gestão de pesquisa',
       mediaType: 'audio',
       duration: '45 min',
       url: '#'
     },
     {
-      type: 'TV Interview',
-      title: 'Chemical Safety in Industrial Settings',
+      type: t('tvInterview') || 'Entrevista TV',
+      title: t('chemicalSafetyIndustrial') || 'Segurança Química em Ambientes Industriais',
       outlet: 'Rede Globo - Bom Dia Brasil',
       date: '2023-10-08',
-      description: 'Expert commentary on chemical safety protocols',
+      description: t('expertCommentarySafety') || 'Comentário especializado sobre protocolos de segurança química',
       mediaType: 'video',
       duration: '12 min',
       url: '#'
@@ -55,19 +55,19 @@ const Media = () => {
 
   const pressReleases = [
     {
-      title: 'UFU Professor Receives National Excellence Award',
+      title: t('ufuProfessorAward') || 'Professor da UFU Recebe Prêmio Nacional de Excelência',
       date: '2023-12-15',
-      summary: 'Recognition for outstanding contributions to chemical engineering education and research'
+      summary: t('excellenceAwardRecognition') || 'Reconhecimento por contribuições excepcionais ao ensino e pesquisa em engenharia química'
     },
     {
-      title: 'New Research Grant for Sustainable Process Development',
+      title: t('newResearchGrant') || 'Nova Bolsa de Pesquisa para Desenvolvimento de Processos Sustentáveis',
       date: '2023-09-20',
-      summary: 'R$ 2.5 million funding approved for green chemistry research initiative'
+      summary: t('fundingApproved') || 'Financiamento de R$ 2,5 milhões aprovado para iniciativa de pesquisa em química verde'
     },
     {
-      title: 'International Collaboration Agreement Signed',
+      title: t('internationalCollaboration') || 'Acordo de Colaboração Internacional Assinado',
       date: '2023-07-10',
-      summary: 'Partnership with European universities for student and faculty exchange programs'
+      summary: t('partnershipEuropeanUniversities') || 'Parceria com universidades europeias para programas de intercâmbio de estudantes e professores'
     }
   ];
 
@@ -105,14 +105,14 @@ const Media = () => {
             {t('mediaTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Media appearances, interviews, and press coverage
+            {t('mediaSubtitle')}
           </p>
         </div>
 
         <div className="space-y-8">
           <section>
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Recent Media Appearances
+              {t('recentMediaAppearances') || 'Aparições Recentes na Mídia'}
             </h2>
             <div className="grid gap-6">
               {mediaItems.map((item, index) => (
@@ -149,7 +149,7 @@ const Media = () => {
                           {item.duration || item.readTime}
                         </span>
                         <Button size="sm" variant="outline">
-                          View <ExternalLink className="h-3 w-3 ml-1" />
+                          {t('view') || 'Ver'} <ExternalLink className="h-3 w-3 ml-1" />
                         </Button>
                       </div>
                     </div>
@@ -161,7 +161,7 @@ const Media = () => {
 
           <section>
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Press Releases
+              {t('pressReleases') || 'Comunicados à Imprensa'}
             </h2>
             <div className="space-y-4">
               {pressReleases.map((release, index) => (
@@ -179,7 +179,7 @@ const Media = () => {
                       </span>
                     </div>
                     <Button size="sm" variant="ghost">
-                      Read More
+                      {t('readMore') || 'Leia Mais'}
                     </Button>
                   </div>
                 </Card>
@@ -190,27 +190,27 @@ const Media = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Media Inquiries
+            {t('mediaInquiries') || 'Consultas da Mídia'}
           </h2>
           <p className="text-gray-600 mb-4">
-            Available for interviews, expert commentary, and media appearances on topics related to chemical engineering, sustainability, and education.
+            {t('availableForInterviews') || 'Disponível para entrevistas, comentários especializados e aparições na mídia sobre tópicos relacionados à engenharia química, sustentabilidade e educação.'}
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Expert Commentary</h3>
-              <p className="text-sm text-gray-600">Chemical engineering and safety topics</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('expertCommentary') || 'Comentário Especializado'}</h3>
+              <p className="text-sm text-gray-600">{t('chemEngSafetyTopics') || 'Tópicos de engenharia química e segurança'}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Educational Insights</h3>
-              <p className="text-sm text-gray-600">Academic trends and teaching innovation</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('educationalInsights') || 'Insights Educacionais'}</h3>
+              <p className="text-sm text-gray-600">{t('academicTrendsTeaching') || 'Tendências acadêmicas e inovação no ensino'}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Industry Analysis</h3>
-              <p className="text-sm text-gray-600">Market trends and technology developments</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('industryAnalysis') || 'Análise da Indústria'}</h3>
+              <p className="text-sm text-gray-600">{t('marketTrendsTechnology') || 'Tendências de mercado e desenvolvimentos tecnológicos'}</p>
             </div>
           </div>
           <div className="mt-6">
-            <Button>Contact for Media Inquiries</Button>
+            <Button>{t('contactForMediaInquiries') || 'Contato para Consultas da Mídia'}</Button>
           </div>
         </div>
       </div>

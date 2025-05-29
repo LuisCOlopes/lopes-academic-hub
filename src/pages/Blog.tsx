@@ -11,46 +11,54 @@ const Blog = () => {
 
   const blogPosts = [
     {
-      title: 'The Future of Chemical Engineering Education',
-      excerpt: 'Exploring how digital transformation is reshaping the way we teach and learn chemical engineering.',
+      title: t('futureChemEngEducation') || 'O Futuro da Educação em Engenharia Química',
+      excerpt: t('digitalTransformationEducation') || 'Explorando como a transformação digital está remodelando a forma como ensinamos e aprendemos engenharia química.',
       date: '2024-01-20',
-      category: 'Education',
-      readTime: '5 min read',
+      category: t('education') || 'Educação',
+      readTime: '5 ' + (t('minRead') || 'min de leitura'),
       comments: 12,
       featured: true
     },
     {
-      title: 'Sustainability in Process Design: A Personal Perspective',
-      excerpt: 'Reflecting on decades of research and the evolution of sustainable practices in chemical engineering.',
+      title: t('sustainabilityProcessDesign') || 'Sustentabilidade no Design de Processos: Uma Perspectiva Pessoal',
+      excerpt: t('decadesResearchEvolution') || 'Refletindo sobre décadas de pesquisa e a evolução de práticas sustentáveis na engenharia química.',
       date: '2024-01-15',
-      category: 'Sustainability',
-      readTime: '8 min read',
+      category: t('sustainability') || 'Sustentabilidade',
+      readTime: '8 ' + (t('minRead') || 'min de leitura'),
       comments: 18
     },
     {
-      title: 'Lessons from Industry-Academia Collaboration',
-      excerpt: 'Key insights gained from working with Petrobras and other industry partners.',
+      title: t('lessonsIndustryAcademia') || 'Lições da Colaboração Indústria-Academia',
+      excerpt: t('keyInsightsPetrobras') || 'Principais insights obtidos do trabalho com a Petrobras e outros parceiros da indústria.',
       date: '2024-01-10',
-      category: 'Collaboration',
-      readTime: '6 min read',
+      category: t('collaboration') || 'Colaboração',
+      readTime: '6 ' + (t('minRead') || 'min de leitura'),
       comments: 7
     },
     {
-      title: 'Mentoring Graduate Students: Best Practices',
-      excerpt: 'Strategies and approaches for effective graduate student supervision and mentorship.',
+      title: t('mentoringGraduateStudents') || 'Mentoria de Estudantes de Pós-graduação: Melhores Práticas',
+      excerpt: t('strategiesSupervision') || 'Estratégias e abordagens para supervisão e mentoria eficazes de estudantes de pós-graduação.',
       date: '2024-01-05',
-      category: 'Mentoring',
-      readTime: '7 min read',
+      category: t('mentoring') || 'Mentoria',
+      readTime: '7 ' + (t('minRead') || 'min de leitura'),
       comments: 25
     }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      'Educação': 'bg-blue-100 text-blue-800',
       'Education': 'bg-blue-100 text-blue-800',
+      'Educación': 'bg-blue-100 text-blue-800',
+      'Sustentabilidade': 'bg-green-100 text-green-800',
       'Sustainability': 'bg-green-100 text-green-800',
+      'Sostenibilidad': 'bg-green-100 text-green-800',
+      'Colaboração': 'bg-purple-100 text-purple-800',
       'Collaboration': 'bg-purple-100 text-purple-800',
-      'Mentoring': 'bg-yellow-100 text-yellow-800'
+      'Colaboración': 'bg-purple-100 text-purple-800',
+      'Mentoria': 'bg-yellow-100 text-yellow-800',
+      'Mentoring': 'bg-yellow-100 text-yellow-800',
+      'Mentoría': 'bg-yellow-100 text-yellow-800'
     };
     return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
@@ -60,10 +68,10 @@ const Blog = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Academic Blog
+            {t('academicBlog') || 'Blog Acadêmico'}
           </h1>
           <p className="text-lg text-gray-600">
-            Thoughts, insights, and reflections on chemical engineering, education, and research
+            {t('blogSubtitle')}
           </p>
         </div>
 
@@ -71,7 +79,7 @@ const Blog = () => {
         {blogPosts.find(post => post.featured) && (
           <div className="mb-8">
             <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-              Featured Post
+              {t('featuredPost') || 'Post em Destaque'}
             </h2>
             {blogPosts
               .filter(post => post.featured)
@@ -101,10 +109,10 @@ const Blog = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-500">
                       <MessageCircle className="h-4 w-4" />
-                      {post.comments} comments
+                      {post.comments} {t('comments') || 'comentários'}
                     </div>
                     <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      Read more <ArrowRight className="h-4 w-4" />
+                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
                 </Card>
@@ -115,7 +123,7 @@ const Blog = () => {
         {/* All Posts */}
         <div>
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Recent Posts
+            {t('recentPosts') || 'Posts Recentes'}
           </h2>
           <div className="grid gap-6">
             {blogPosts
@@ -146,10 +154,10 @@ const Blog = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-500">
                       <MessageCircle className="h-4 w-4" />
-                      {post.comments} comments
+                      {post.comments} {t('comments') || 'comentários'}
                     </div>
                     <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      Read more <ArrowRight className="h-4 w-4" />
+                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
                 </Card>

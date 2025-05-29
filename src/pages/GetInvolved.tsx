@@ -11,28 +11,44 @@ const GetInvolved = () => {
 
   const opportunities = [
     {
-      title: 'Research Collaboration',
-      description: 'Join our research projects in chemical engineering and process control',
+      title: t('researchCollaboration') || 'Colaboração em Pesquisa',
+      description: t('researchCollaborationDesc') || 'Participe de nossos projetos de pesquisa em engenharia química e controle de processos',
       icon: Lightbulb,
-      activities: ['Graduate research positions', 'Postdoc opportunities', 'Industry partnerships']
+      activities: [
+        t('graduateResearchPositions') || 'Posições de pesquisa de pós-graduação',
+        t('postdocOpportunities') || 'Oportunidades de pós-doutorado', 
+        t('industryPartnerships') || 'Parcerias com a indústria'
+      ]
     },
     {
-      title: 'Academic Mentoring',
-      description: 'Participate in our mentoring programs for students and young researchers',
+      title: t('academicMentoring') || 'Mentoria Acadêmica',
+      description: t('academicMentoringDesc') || 'Participe de nossos programas de mentoria para estudantes e jovens pesquisadores',
       icon: Users,
-      activities: ['Student mentoring', 'Career guidance', 'Research supervision']
+      activities: [
+        t('studentMentoring') || 'Mentoria de estudantes',
+        t('careerGuidance') || 'Orientação de carreira',
+        t('researchSupervision') || 'Supervisão de pesquisa'
+      ]
     },
     {
-      title: 'Educational Initiatives',
-      description: 'Contribute to innovative teaching methods and educational programs',
+      title: t('educationalInitiatives') || 'Iniciativas Educacionais',
+      description: t('educationalInitiativesDesc') || 'Contribua para métodos de ensino inovadores e programas educacionais',
       icon: BookOpen,
-      activities: ['Curriculum development', 'Workshop facilitation', 'Online courses']
+      activities: [
+        t('curriculumDevelopment') || 'Desenvolvimento curricular',
+        t('workshopFacilitation') || 'Facilitação de workshops',
+        t('onlineCourses') || 'Cursos online'
+      ]
     },
     {
-      title: 'Professional Development',
-      description: 'Engage in professional growth and networking opportunities',
+      title: t('professionalDevelopment') || 'Desenvolvimento Profissional',
+      description: t('professionalDevelopmentDesc') || 'Participe de oportunidades de crescimento profissional e networking',
       icon: Award,
-      activities: ['Conference participation', 'Professional societies', 'Skill development']
+      activities: [
+        t('conferenceParticipation') || 'Participação em conferências',
+        t('professionalSocieties') || 'Sociedades profissionais',
+        t('skillDevelopment') || 'Desenvolvimento de habilidades'
+      ]
     }
   ];
 
@@ -41,10 +57,10 @@ const GetInvolved = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Get Involved
+            {t('getInvolvedTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Join our academic community and contribute to advancing chemical engineering
+            {t('getInvolvedSubtitle')}
           </p>
         </div>
 
@@ -69,7 +85,7 @@ const GetInvolved = () => {
                     ))}
                   </ul>
                   <Button size="sm" variant="outline">
-                    Learn More
+                    {t('learnMore')}
                   </Button>
                 </div>
               </div>
@@ -79,34 +95,33 @@ const GetInvolved = () => {
 
         <div className="space-y-8">
           <Card className="p-6 bg-gradient-to-r from-academic-blue to-blue-600 text-white">
-            <h2 className="text-2xl font-bold mb-4">Join Our Research Network</h2>
+            <h2 className="text-2xl font-bold mb-4">{t('joinResearchNetwork') || 'Junte-se à Nossa Rede de Pesquisa'}</h2>
             <p className="mb-4">
-              Connect with researchers, industry professionals, and students passionate about 
-              chemical engineering and sustainable technologies.
+              {t('joinResearchNetworkDesc') || 'Conecte-se com pesquisadores, profissionais da indústria e estudantes apaixonados por engenharia química e tecnologias sustentáveis.'}
             </p>
             <Button variant="secondary">
-              Apply Now
+              {t('applyNow') || 'Candidate-se Agora'}
             </Button>
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">For Students</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forStudents') || 'Para Estudantes'}</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Research internships</li>
-                <li>• Graduate program opportunities</li>
-                <li>• Academic mentoring</li>
-                <li>• Career guidance</li>
+                <li>• {t('researchInternships') || 'Estágios de pesquisa'}</li>
+                <li>• {t('graduateProgramOpportunities') || 'Oportunidades de programa de pós-graduação'}</li>
+                <li>• {t('academicMentoring') || 'Mentoria acadêmica'}</li>
+                <li>• {t('careerGuidance') || 'Orientação de carreira'}</li>
               </ul>
             </Card>
 
             <Card className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">For Professionals</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forProfessionals') || 'Para Profissionais'}</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Industry collaboration</li>
-                <li>• Consulting opportunities</li>
-                <li>• Professional development</li>
-                <li>• Knowledge sharing</li>
+                <li>• {t('industryCollaboration') || 'Colaboração com a indústria'}</li>
+                <li>• {t('consultingOpportunities') || 'Oportunidades de consultoria'}</li>
+                <li>• {t('professionalDevelopment') || 'Desenvolvimento profissional'}</li>
+                <li>• {t('knowledgeSharing') || 'Compartilhamento de conhecimento'}</li>
               </ul>
             </Card>
           </div>

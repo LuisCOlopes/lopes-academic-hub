@@ -81,10 +81,10 @@ const Awards = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
-            Prêmios e Reconhecimentos
+            {t('awardsTitle')}
           </h1>
           <p className="text-lg text-ufu-blue">
-            Reconhecimento pela excelência em ensino, pesquisa e serviços profissionais
+            {t('awardsSubtitle')}
           </p>
         </div>
 

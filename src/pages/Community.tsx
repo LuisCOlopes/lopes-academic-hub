@@ -60,7 +60,7 @@ const Community = () => {
             {t('communityTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Construindo conexões e promovendo colaboração na comunidade acadêmica
+            {t('communitySubtitle')}
           </p>
         </div>
 
@@ -69,29 +69,29 @@ const Community = () => {
           <Card className="p-6 text-center">
             <Users className="h-8 w-8 text-academic-blue mx-auto mb-3" />
             <div className="text-2xl font-bold text-gray-900">7000+</div>
-            <div className="text-sm text-gray-600">Pessoas Impactadas</div>
+            <div className="text-sm text-gray-600">{t('peopleImpacted') || 'Pessoas Impactadas'}</div>
           </Card>
           <Card className="p-6 text-center">
             <Globe className="h-8 w-8 text-academic-blue mx-auto mb-3" />
             <div className="text-2xl font-bold text-gray-900">15+</div>
-            <div className="text-sm text-gray-600">Parcerias Ativas</div>
+            <div className="text-sm text-gray-600">{t('activePartnerships') || 'Parcerias Ativas'}</div>
           </Card>
           <Card className="p-6 text-center">
             <MessageCircle className="h-8 w-8 text-academic-blue mx-auto mb-3" />
             <div className="text-2xl font-bold text-gray-900">50+</div>
-            <div className="text-sm text-gray-600">Eventos Organizados</div>
+            <div className="text-sm text-gray-600">{t('eventsOrganized') || 'Eventos Organizados'}</div>
           </Card>
           <Card className="p-6 text-center">
             <BookOpen className="h-8 w-8 text-academic-blue mx-auto mb-3" />
             <div className="text-2xl font-bold text-gray-900">100+</div>
-            <div className="text-sm text-gray-600">Recursos Compartilhados</div>
+            <div className="text-sm text-gray-600">{t('resourcesShared') || 'Recursos Compartilhados'}</div>
           </Card>
         </div>
 
         {/* Community Initiatives */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Iniciativas da Comunidade
+            {t('communityInitiatives') || 'Iniciativas da Comunidade'}
           </h2>
           <div className="grid gap-6">
             {communityInitiatives.map((initiative, index) => (
@@ -107,17 +107,17 @@ const Community = () => {
                     <div className="flex items-center gap-3">
                       <Badge variant="outline">{initiative.type}</Badge>
                       <span className="text-sm text-gray-500">
-                        {initiative.participants} participantes
+                        {initiative.participants} {t('participants') || 'participantes'}
                       </span>
                     </div>
                   </div>
                   <Badge className={initiative.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}>
-                    {initiative.status === 'active' ? 'Ativo' : 'Finalizado'}
+                    {initiative.status === 'active' ? t('active') || 'Ativo' : t('completed') || 'Finalizado'}
                   </Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button size="sm">Saiba Mais</Button>
-                  <Button size="sm" variant="outline">Participar</Button>
+                  <Button size="sm">{t('learnMore')}</Button>
+                  <Button size="sm" variant="outline">{t('participate') || 'Participar'}</Button>
                 </div>
               </Card>
             ))}
@@ -127,7 +127,7 @@ const Community = () => {
         {/* Partnerships */}
         <section className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            Parcerias e Colaborações
+            {t('partnershipsAndCollaborations') || 'Parcerias e Colaborações'}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {partnerships.map((partnership, index) => (
@@ -149,31 +149,31 @@ const Community = () => {
         {/* Get Involved */}
         <div className="p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Como Participar
+            {t('howToParticipate') || 'Como Participar'}
           </h2>
           <p className="text-gray-600 mb-6">
-            Junte-se à nossa comunidade acadêmica e contribua para o avanço da engenharia química
+            {t('joinAcademicCommunity') || 'Junte-se à nossa comunidade acadêmica e contribua para o avanço da engenharia química'}
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">
               <Calendar className="h-6 w-6 text-academic-blue mb-2" />
-              <h3 className="font-semibold text-gray-900 mb-2">Eventos</h3>
-              <p className="text-sm text-gray-600">Participe de seminários e workshops</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('events') || 'Eventos'}</h3>
+              <p className="text-sm text-gray-600">{t('participateInSeminars') || 'Participe de seminários e workshops'}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
               <Users className="h-6 w-6 text-academic-blue mb-2" />
-              <h3 className="font-semibold text-gray-900 mb-2">Colaboração</h3>
-              <p className="text-sm text-gray-600">Colabore em projetos de pesquisa</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('collaboration') || 'Colaboração'}</h3>
+              <p className="text-sm text-gray-600">{t('collaborateInProjects') || 'Colabore em projetos de pesquisa'}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
               <Award className="h-6 w-6 text-academic-blue mb-2" />
-              <h3 className="font-semibold text-gray-900 mb-2">Mentoria</h3>
-              <p className="text-sm text-gray-600">Receba ou ofereça mentoria</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('mentoring') || 'Mentoria'}</h3>
+              <p className="text-sm text-gray-600">{t('receiveMentoring') || 'Receba ou ofereça mentoria'}</p>
             </div>
           </div>
           <div className="mt-6">
-            <Button className="mr-4">Entre em Contato</Button>
-            <Button variant="outline">Saiba Mais</Button>
+            <Button className="mr-4">{t('contactUs') || 'Entre em Contato'}</Button>
+            <Button variant="outline">{t('learnMore')}</Button>
           </div>
         </div>
       </div>
