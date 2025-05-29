@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -75,17 +74,17 @@ const Projects = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
-            Projetos de Pesquisa
+            {t('projectsTitle')}
           </h1>
           <p className="text-lg text-ufu-blue">
-            Projetos atuais e concluídos avançando o conhecimento em engenharia química
+            {t('projectsSubtitle')}
           </p>
         </div>
 
         {/* Active Projects */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Projetos Ativos
+            {t('activeProjects')}
           </h2>
           <div className="grid gap-6">
             {activeProjects.map((project, index) => (
@@ -153,7 +152,7 @@ const Projects = () => {
         {/* Completed Projects */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Projetos Concluídos
+            {t('completedProjects')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {completedProjects.map((project, index) => (
@@ -178,24 +177,24 @@ const Projects = () => {
         {/* Project Statistics */}
         <div className="bg-ufu-light rounded-lg p-6">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Impacto da Pesquisa
+            {t('researchImpact')}
           </h2>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-ufu-navy mb-2">R$ 8M+</div>
-              <div className="text-ufu-navy">Financiamento Total</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">R$ 5M+</div>
+              <div className="text-ufu-navy">{t('totalFunding')}</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-ufu-navy mb-2">80+</div>
-              <div className="text-ufu-navy">Publicações Geradas</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">150+</div>
+              <div className="text-ufu-navy">{t('publicationsGenerated')}</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-ufu-navy mb-2">50+</div>
-              <div className="text-ufu-navy">Estudantes de Pós-graduação</div>
+              <div className="text-ufu-navy">{t('graduateStudents')}</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-ufu-navy mb-2">15+</div>
-              <div className="text-ufu-navy">Parcerias Industriais</div>
+              <div className="text-3xl font-bold text-ufu-navy mb-2">5+</div>
+              <div className="text-ufu-navy">{t('industrialPartnerships')}</div>
             </div>
           </div>
         </div>

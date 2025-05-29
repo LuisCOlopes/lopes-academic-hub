@@ -1,4 +1,3 @@
-
 export const enTranslations = {
   // Navigation
   home: 'Home',
@@ -182,5 +181,79 @@ export const enTranslations = {
   projectReview: 'Project Review',
   availableForReview: 'Available for manuscript review',
   committeeParticipation: 'Committee participation welcome',
-  panelServices: 'Panel services for funding agencies'
+  panelServices: 'Panel services for funding agencies',
+  
+  // Academic Profiles descriptions
+  googleScholarDescription: 'Complete citation metrics and publication list',
+  researchGateDescription: 'Research network and collaboration platform',
+  lattesCvDescription: 'Brazilian academic curriculum platform',
+  orcidDescription: 'Researcher identifier and profile',
+  
+  // Research Page
+  researchSubtitle: 'Advances in chemical process engineering and sustainable technologies',
+  researchAreas: 'Research Areas',
+  currentProjects: 'Current Projects',
+  
+  // Opportunities Page
+  opportunitiesSubtitle: 'Available research and collaboration opportunities',
+  
+  // Meeting Page
+  meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
+  
+  // Teaching Page
+  teachingSubtitle: 'Courses and educational resources for chemical engineering education',
+  
+  // Material Page
+  materialSubtitle: 'Educational resources and teaching materials developed',
+  
+  // Team Page
+  teamSubtitle: 'Our research team and collaborators',
+  
+  // Projects Page
+  projectsSubtitle: 'Current and completed projects advancing knowledge in chemical engineering',
+  researchImpact: 'Research Impact',
+  totalFunding: 'Total Funding',
+  publicationsGenerated: 'Publications Generated',
+  graduateStudents: 'Graduate Students',
+  industrialPartnerships: 'Industrial Partnerships',
+  activeProjects: 'Active Projects',
+  completedProjects: 'Completed Projects',
+  
+  // Consulting Page
+  consultingSubtitle: 'Consulting services in chemical engineering and industrial processes',
+  
+  // Alumni Page
+  alumniSubtitle: 'Alumni and their professional trajectories',
+  
+  // Awards Page
+  awardsSubtitle: 'Recognition and awards received',
+  
+  // Leadership Page
+  leadershipSubtitle: 'Experience in academic and professional leadership promoting innovation and excellence',
+  
+  // Get Involved Page
+  getInvolvedSubtitle: 'Opportunities to participate in research and projects',
+  
+  // Community Page
+  communitySubtitle: 'Connecting researchers and professionals in the field',
+  
+  // Podcast Page
+  podcastSubtitle: 'Engineering Conversations - Insights from academia and industry',
+  
+  // Media Page
+  mediaSubtitle: 'Media appearances, interviews, and press coverage',
+  
+  // Hobbies Page
+  hobbiesTitle: 'Personal Interests & Hobbies',
+  hobbiesSubtitle: 'Beyond academic pursuits, exploring creativity and personal enrichment',
+  
+  // News Page
+  newsSubtitle: 'Latest news and updates from our research group and academic activities',
+  
+  // Blog Page
+  blogSubtitle: 'Reflections and insights on chemical engineering and academia',
+  
+  // Workshops Page
+  workshopsTitle: 'Workshops',
+  workshopsSubtitle: 'Specialized workshops and training in chemical engineering'
 };

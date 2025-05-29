@@ -1,4 +1,3 @@
-
 export const esTranslations = {
   // Navigation
   home: 'Inicio',
@@ -88,6 +87,9 @@ export const esTranslations = {
   citations: 'Citas',
   students: 'Estudiantes Supervisados',
   funding: 'Financiamiento',
+  researchSubtitle: 'Avances en ingeniería de procesos químicos y tecnologías sostenibles',
+  researchAreas: 'Áreas de Investigación',
+  currentProjects: 'Proyectos Actuales',
   
   // Teaching Page
   teachingTitle: 'Enseñanza',
@@ -96,9 +98,11 @@ export const esTranslations = {
   lectureNotes: 'Notas de Clase',
   problemSets: 'Conjuntos de Problemas',
   courseMaterials: 'Materiales del Curso',
+  teachingSubtitle: 'Cursos y recursos educativos para la formación en ingeniería química',
   
   // Community Page
   communityTitle: 'Comunidad Académica',
+  communitySubtitle: 'Conectando investigadores y profesionales del área',
   
   // Conferences Page
   conferencesTitle: 'Conferencias',
@@ -122,54 +126,29 @@ export const esTranslations = {
   
   // Projects Page
   projectsTitle: 'Proyectos',
+  projectsSubtitle: 'Proyectos actuales y completados que avanzan el conocimiento en ingeniería química',
+  researchImpact: 'Impacto de la Investigación',
+  totalFunding: 'Financiamiento Total',
+  publicationsGenerated: 'Publicaciones Generadas',
+  graduateStudents: 'Estudiantes de Posgrado',
+  industrialPartnerships: 'Asociaciones Industriales',
+  activeProjects: 'Proyectos Activos',
+  completedProjects: 'Proyectos Completados',
   
   // Opportunities Page
   opportunitiesTitle: 'Oportunidades',
+  opportunitiesSubtitle: 'Oportunidades de investigación y colaboración disponibles',
   
   // Team Page
   teamTitle: 'Equipo',
+  teamSubtitle: 'Nuestro equipo de investigación y colaboradores',
   
   // Awards Page
   awardsTitle: 'Premios',
+  awardsSubtitle: 'Reconocimientos y premios recibidos',
   
   // Service Page
   serviceTitle: 'Servicios',
-  
-  // Leadership Page
-  leadershipTitle: 'Liderazgo',
-  
-  // Alumni Page
-  alumniTitle: 'Egresados',
-  
-  // Get Involved Page
-  getInvolvedTitle: 'Participa',
-  
-  // Meeting Page
-  meetingTitle: 'Solicitar Reunión',
-  
-  // Material Page
-  materialTitle: 'Material Educativo',
-  
-  // News Page
-  newsTitle: 'Noticias',
-  
-  // Media Page
-  mediaTitle: 'Medios',
-
-  // Speaking Page
-  speakingTitle: 'Conferencias Magistrales',
-  speakingSubtitle: 'Compartiendo conocimiento e ideas en conferencias, talleres y eventos académicos',
-  recentUpcomingEngagements: 'Compromisos Recientes y Futuros',
-  expertiseAreas: 'Áreas de Especialización',
-  bookSpeakingEngagement: 'Solicitar Conferencia',
-  contactForSpeaking: 'Contacto para Conferencias',
-  speakingStats: 'Estadísticas de Conferencias',
-  totalPresentations: 'Total de Presentaciones',
-  countries: 'Países',
-  keynoteAddresses: 'Discursos Principales',
-  availableForSpeaking: 'Disponible para conferencias, talleres y eventos académicos relacionados con ingeniería química y control de procesos.',
-
-  // Service Page specific
   servicesProvided: 'Servicios Prestados',
   servicesSubtitle: 'Servicios profesionales a la comunidad académica y sociedad',
   consultingAndReview: 'Consultoría y Revisión',
@@ -182,5 +161,80 @@ export const esTranslations = {
   projectReview: 'Revisión de Proyectos',
   availableForReview: 'Disponible para revisión de manuscritos',
   committeeParticipation: 'Participación en comités bienvenida',
-  panelServices: 'Servicios de panel para agencias de financiamiento'
+  panelServices: 'Servicios de panel para agencias de financiamiento',
+  
+  // Leadership Page
+  leadershipTitle: 'Liderazgo',
+  leadershipSubtitle: 'Experiencia en liderazgo académico y profesional promoviendo innovación y excelencia',
+  
+  // Alumni Page
+  alumniTitle: 'Egresados',
+  alumniSubtitle: 'Egresados y sus trayectorias profesionales',
+  
+  // Get Involved Page
+  getInvolvedTitle: 'Participa',
+  getInvolvedSubtitle: 'Oportunidades para participar en investigación y proyectos',
+  
+  // Meeting Page
+  meetingTitle: 'Solicitar Reunión',
+  meetingSubtitle: 'Programa una reunión para discusiones académicas o colaboraciones',
+  
+  // Material Page
+  materialTitle: 'Material Educativo',
+  materialSubtitle: 'Recursos educativos y materiales didácticos desarrollados',
+  
+  // News Page
+  newsTitle: 'Noticias',
+  newsSubtitle: 'Últimas noticias y actualizaciones de nuestro grupo de investigación y actividades académicas',
+  
+  // Media Page
+  mediaTitle: 'Medios',
+  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa',
+  
+  // Speaking Page
+  speakingTitle: 'Conferencias Magistrales',
+  speakingSubtitle: 'Compartiendo conocimiento e ideas en conferencias, talleres y eventos académicos',
+  recentUpcomingEngagements: 'Compromisos Recientes y Futuros',
+  expertiseAreas: 'Áreas de Especialización',
+  bookSpeakingEngagement: 'Solicitar Conferencia',
+  contactForSpeaking: 'Contacto para Conferencias',
+  speakingStats: 'Estadísticas de Conferencias',
+  totalPresentations: 'Total de Presentaciones',
+  countries: 'Países',
+  keynoteAddresses: 'Discursos Principales',
+  availableForSpeaking: 'Disponible para conferencias, talleres y eventos académicos relacionados con ingeniería química y control de procesos.',
+  
+  // Hobbies Page
+  hobbiesTitle: 'Intereses Personales y Pasatiempos',
+  hobbiesSubtitle: 'Más allá de las actividades académicas, explorando creatividad y enriquecimiento personal',
+  
+  // Blog Page
+  blogTitle: 'Blog',
+  blogSubtitle: 'Reflexiones y perspectivas sobre ingeniería química y academia',
+  
+  // Workshops Page
+  workshopsTitle: 'Talleres',
+  workshopsSubtitle: 'Talleres especializados y entrenamiento en ingeniería química',
+  
+  // Academic Profiles descriptions
+  googleScholarDescription: 'Métricas completas de citas y lista de publicaciones',
+  researchGateDescription: 'Red de investigación y plataforma de colaboración',
+  lattesCvDescription: 'Plataforma brasileña de currículum académico',
+  orcidDescription: 'Identificador y perfil de investigador',
+  
+  // Consulting Page
+  consultingTitle: 'Consultoría',
+  consultingSubtitle: 'Servicios de consultoría en ingeniería química y procesos industriales',
+  
+  // Podcast Page
+  podcastTitle: 'Podcast',
+  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria',
+  
+  // Media Page
+  mediaTitle: 'Medios',
+  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa',
+  
+  // Workshops Page
+  workshopsTitle: 'Talleres',
+  workshopsSubtitle: 'Talleres especializados y entrenamiento en ingeniería química'
 };

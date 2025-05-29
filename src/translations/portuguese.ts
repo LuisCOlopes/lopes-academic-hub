@@ -1,4 +1,3 @@
-
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -182,5 +181,79 @@ export const ptTranslations = {
   projectReview: 'Revisão de Projetos',
   availableForReview: 'Disponível para revisão de manuscritos',
   committeeParticipation: 'Participação em comitês bem-vinda',
-  panelServices: 'Serviços de painel para agências de fomento'
+  panelServices: 'Serviços de painel para agências de fomento',
+  
+  // Academic Profiles descriptions
+  googleScholarDescription: 'Métricas completas de citação e lista de publicações',
+  researchGateDescription: 'Rede de pesquisa e plataforma de colaboração',
+  lattesCvDescription: 'Plataforma brasileira de currículo acadêmico',
+  orcidDescription: 'Identificador e perfil de pesquisador',
+  
+  // Research Page
+  researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
+  researchAreas: 'Áreas de Pesquisa',
+  currentProjects: 'Projetos Atuais',
+  
+  // Opportunities Page
+  opportunitiesSubtitle: 'Oportunidades de pesquisa e colaboração disponíveis',
+  
+  // Meeting Page
+  meetingSubtitle: 'Agende uma reunião para discussões acadêmicas ou colaborações',
+  
+  // Teaching Page
+  teachingSubtitle: 'Cursos e recursos educacionais para formação em engenharia química',
+  
+  // Material Page
+  materialSubtitle: 'Recursos educacionais e materiais didáticos desenvolvidos',
+  
+  // Team Page
+  teamSubtitle: 'Nossa equipe de pesquisa e colaboradores',
+  
+  // Projects Page
+  projectsSubtitle: 'Projetos atuais e concluídos avançando o conhecimento em engenharia química',
+  researchImpact: 'Impacto da Pesquisa',
+  totalFunding: 'Financiamento Total',
+  publicationsGenerated: 'Publicações Geradas',
+  graduateStudents: 'Estudantes de Pós-graduação',
+  industrialPartnerships: 'Parcerias Industriais',
+  activeProjects: 'Projetos Ativos',
+  completedProjects: 'Projetos Concluídos',
+  
+  // Consulting Page
+  consultingSubtitle: 'Serviços de consultoria em engenharia química e processos industriais',
+  
+  // Alumni Page
+  alumniSubtitle: 'Ex-alunos e suas trajetórias profissionais',
+  
+  // Awards Page
+  awardsSubtitle: 'Reconhecimentos e prêmios recebidos',
+  
+  // Leadership Page
+  leadershipSubtitle: 'Experiência em liderança acadêmica e profissional promovendo inovação e excelência',
+  
+  // Get Involved Page
+  getInvolvedSubtitle: 'Oportunidades para participar de pesquisas e projetos',
+  
+  // Community Page
+  communitySubtitle: 'Conectando pesquisadores e profissionais da área',
+  
+  // Podcast Page
+  podcastSubtitle: 'Conversas sobre engenharia - Insights da academia e indústria',
+  
+  // Media Page
+  mediaSubtitle: 'Aparições na mídia, entrevistas e cobertura da imprensa',
+  
+  // Hobbies Page
+  hobbiesTitle: 'Interesses Pessoais e Hobbies',
+  hobbiesSubtitle: 'Além das atividades acadêmicas, explorando criatividade e enriquecimento pessoal',
+  
+  // News Page
+  newsSubtitle: 'Últimas notícias e atualizações de nosso grupo de pesquisa e atividades acadêmicas',
+  
+  // Blog Page
+  blogSubtitle: 'Reflexões e insights sobre engenharia química e academia',
+  
+  // Workshops Page
+  workshopsTitle: 'Workshops',
+  workshopsSubtitle: 'Workshops e treinamentos especializados em engenharia química'
 };

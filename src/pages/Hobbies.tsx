@@ -3,35 +3,35 @@ import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
-import { Camera, Music, BookOpen, MapPin } from 'lucide-react';
+import { Film, Music, BookOpen, MapPin } from 'lucide-react';
 
 const Hobbies = () => {
   const { t } = useLanguage();
 
   const hobbies = [
     {
-      title: 'Photography',
-      description: 'Capturing moments and landscapes, especially during travels and academic conferences.',
-      icon: Camera,
-      activities: ['Nature photography', 'Urban landscapes', 'Academic events']
+      title: 'Cinema',
+      description: 'Apreciação de filmes de diversos gêneros, especialmente dramas e ficção científica.',
+      icon: Film,
+      activities: ['Filmes clássicos', 'Cinema nacional', 'Ficção científica']
     },
     {
-      title: 'Music',
-      description: 'Playing guitar and listening to various music genres for relaxation.',
+      title: 'Música',
+      description: 'Tocar violão e apreciar diversos gêneros musicais para relaxamento.',
       icon: Music,
-      activities: ['Classical guitar', 'Brazilian music', 'Jazz appreciation']
+      activities: ['Violão clássico', 'Música brasileira', 'Apreciação de jazz']
     },
     {
-      title: 'Reading',
-      description: 'Beyond technical literature, enjoying fiction and historical books.',
+      title: 'Leitura',
+      description: 'Além da literatura técnica, gosto de ficção e livros históricos.',
       icon: BookOpen,
-      activities: ['Historical fiction', 'Science fiction', 'Biographies']
+      activities: ['Ficção histórica', 'Ficção científica', 'Biografias']
     },
     {
-      title: 'Travel',
-      description: 'Exploring new places and cultures, often combining with academic activities.',
+      title: 'Viagens',
+      description: 'Explorar novos lugares e culturas, frequentemente combinando com atividades acadêmicas.',
       icon: MapPin,
-      activities: ['Cultural experiences', 'Academic conferences', 'Nature exploration']
+      activities: ['Experiências culturais', 'Conferências acadêmicas', 'Exploração da natureza']
     }
   ];
 
@@ -40,10 +40,10 @@ const Hobbies = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Personal Interests & Hobbies
+            {t('hobbiesTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Beyond academic pursuits, exploring creativity and personal enrichment
+            {t('hobbiesSubtitle')}
           </p>
         </div>
 
@@ -75,12 +75,12 @@ const Hobbies = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Work-Life Balance
+            Equilíbrio entre Trabalho e Vida Pessoal
           </h2>
           <p className="text-gray-600">
-            Maintaining a healthy balance between academic responsibilities and personal interests 
-            is essential for creativity and well-being. These activities provide inspiration and 
-            fresh perspectives that often enhance my academic work.
+            Manter um equilíbrio saudável entre responsabilidades acadêmicas e interesses pessoais 
+            é essencial para a criatividade e bem-estar. Essas atividades proporcionam inspiração e 
+            perspectivas novas que frequentemente enriquecem meu trabalho acadêmico.
           </p>
         </div>
       </div>

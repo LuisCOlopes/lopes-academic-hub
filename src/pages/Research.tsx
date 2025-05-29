@@ -10,57 +10,6 @@ import { BookOpen, Award, TrendingUp, Users, ExternalLink } from 'lucide-react';
 const Research = () => {
   const { t } = useLanguage();
 
-  const getCurrentLanguage = () => {
-    return localStorage.getItem('preferred-language') || 'pt';
-  };
-
-  const getContent = () => {
-    const lang = getCurrentLanguage();
-    
-    const content = {
-      pt: {
-        title: 'Pesquisa',
-        subtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
-        currentResearch: 'Pesquisa Atual',
-        researchMetrics: 'Métricas de Pesquisa',
-        publications: 'Publicações',
-        citations: 'Citações',
-        students: 'Estudantes Orientados',
-        funding: 'Financiamento',
-        researchAreas: 'Áreas de Pesquisa',
-        currentProjects: 'Projetos Atuais'
-      },
-      en: {
-        title: 'Research',
-        subtitle: 'Advances in chemical process engineering and sustainable technologies',
-        currentResearch: 'Current Research',
-        researchMetrics: 'Research Metrics',
-        publications: 'Publications',
-        citations: 'Citations',
-        students: 'Students Supervised',
-        funding: 'Funding',
-        researchAreas: 'Research Areas',
-        currentProjects: 'Current Projects'
-      },
-      es: {
-        title: 'Investigación',
-        subtitle: 'Avances en ingeniería de procesos químicos y tecnologías sostenibles',
-        currentResearch: 'Investigación Actual',
-        researchMetrics: 'Métricas de Investigación',
-        publications: 'Publicaciones',
-        citations: 'Citas',
-        students: 'Estudiantes Supervisados',
-        funding: 'Financiamiento',
-        researchAreas: 'Áreas de Investigación',
-        currentProjects: 'Proyectos Actuales'
-      }
-    };
-
-    return content[lang] || content.pt;
-  };
-
-  const content = getContent();
-
   const currentProjects = [
     {
       title: 'Sistema Autônomo de Separação de Sólidos Gerados na Perfuração',
@@ -75,34 +24,34 @@ const Research = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {content.title}
+            {t('researchTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            {content.subtitle}
+            {t('researchSubtitle')}
           </p>
         </div>
 
         {/* Research Metrics */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            {content.researchMetrics}
+            {t('researchMetrics')}
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             <Card className="p-6 text-center">
               <div className="text-3xl font-bold text-academic-blue mb-2">150+</div>
-              <div className="text-gray-600">{content.publications}</div>
+              <div className="text-gray-600">{t('publications')}</div>
             </Card>
             <Card className="p-6 text-center">
               <div className="text-3xl font-bold text-academic-blue mb-2">600+</div>
-              <div className="text-gray-600">{content.citations}</div>
+              <div className="text-gray-600">{t('citations')}</div>
             </Card>
             <Card className="p-6 text-center">
               <div className="text-3xl font-bold text-academic-blue mb-2">80+</div>
-              <div className="text-gray-600">{content.students}</div>
+              <div className="text-gray-600">{t('students')}</div>
             </Card>
             <Card className="p-6 text-center">
               <div className="text-3xl font-bold text-academic-blue mb-2">R$ 5M+</div>
-              <div className="text-gray-600">{content.funding}</div>
+              <div className="text-gray-600">{t('funding')}</div>
             </Card>
           </div>
         </div>
@@ -110,7 +59,7 @@ const Research = () => {
         {/* Current Projects */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            {content.currentProjects}
+            {t('currentProjects')}
           </h2>
           <div className="grid gap-6">
             {currentProjects.map((project, index) => (
@@ -139,7 +88,7 @@ const Research = () => {
         {/* Research Areas */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            {content.researchAreas}
+            {t('researchAreas')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="p-6 text-center">

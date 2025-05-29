@@ -5,50 +5,55 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Users, BookOpen } from 'lucide-react';
+import { Users, Clock, Calendar, MapPin } from 'lucide-react';
 
 const Workshops = () => {
   const { t } = useLanguage();
 
   const upcomingWorkshops = [
     {
-      title: 'Process Simulation with ASPEN Plus',
-      description: 'Hands-on training for chemical process modeling and simulation',
+      title: 'Controle Avançado de Processos Químicos',
       date: '2024-03-15',
-      duration: '2 days',
-      level: 'Intermediate',
-      capacity: 20,
-      enrolled: 15,
-      topics: ['ASPEN Plus', 'Process Modeling', 'Simulation']
+      duration: '2 dias',
+      location: 'UFU - Uberlândia',
+      participants: 30,
+      description: 'Workshop prático sobre técnicas avançadas de controle para processos químicos industriais.',
+      level: 'Avançado',
+      topics: ['MPC', 'Controle Robusto', 'Simulação']
     },
     {
-      title: 'Sustainable Engineering Design',
-      description: 'Green chemistry principles and sustainable process design',
+      title: 'Introdução à Simulação de Processos',
       date: '2024-04-20',
-      duration: '1 day',
-      level: 'Beginner',
-      capacity: 30,
-      enrolled: 22,
-      topics: ['Green Chemistry', 'Sustainability', 'Design Principles']
+      duration: '1 dia',
+      location: 'Online',
+      participants: 50,
+      description: 'Workshop introdutório sobre simulação de processos usando softwares livres.',
+      level: 'Iniciante',
+      topics: ['CoCo Simulator', 'Modelagem', 'Análise']
     }
   ];
 
   const pastWorkshops = [
     {
-      title: 'Advanced Control Systems',
-      description: 'Implementation of modern control strategies in chemical processes',
-      date: '2024-01-18',
-      duration: '3 days',
-      participants: 25,
-      feedback: 4.8
+      title: 'Simulação de Plantas Químicas Utilizando Simulador CoCo',
+      year: '2014',
+      type: 'Extensão',
+      duration: 'Curso de curta duração',
+      participants: 25
     },
     {
-      title: 'Safety in Chemical Engineering',
-      description: 'Risk assessment and safety protocols for chemical processes',
-      date: '2023-11-15',
-      duration: '2 days',
-      participants: 35,
-      feedback: 4.9
+      title: 'Introdução à Simulação e Controle de Processos com Softwares Livres',
+      year: '2013',
+      type: 'Extensão',
+      duration: '8 horas',
+      participants: 30
+    },
+    {
+      title: 'Análise e Simulação de Unidades Industriais com o Simulador Livre CoCo',
+      year: '2012',
+      type: 'Extensão',
+      duration: '8 horas',
+      participants: 20
     }
   ];
 
@@ -60,142 +65,123 @@ const Workshops = () => {
             {t('workshopsTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Professional development workshops and training programs
+            {t('workshopsSubtitle')}
           </p>
         </div>
 
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Upcoming Workshops
-            </h2>
-            <div className="grid gap-6">
-              {upcomingWorkshops.map((workshop, index) => (
-                <Card key={index} className="p-6 border-l-4 border-l-green-500">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        {/* Upcoming Workshops */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+            Próximos Workshops
+          </h2>
+          <div className="grid gap-6">
+            {upcomingWorkshops.map((workshop, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <h3 className="text-xl font-semibold text-gray-900">
                         {workshop.title}
                       </h3>
-                      <p className="text-gray-600 mb-3">
-                        {workshop.description}
-                      </p>
+                      <Badge variant="outline">{workshop.level}</Badge>
                     </div>
-                    <Badge 
-                      className={workshop.level === 'Beginner' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}
-                    >
-                      {workshop.level}
-                    </Badge>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">
+                    
+                    <p className="text-gray-600 mb-4">
+                      {workshop.description}
+                    </p>
+                    
+                    <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4" />
                         {new Date(workshop.date).toLocaleDateString()}
-                      </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4" />
+                        {workshop.duration}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4" />
+                        {workshop.location}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="h-4 w-4" />
+                        {workshop.participants} participantes
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">{workshop.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">
-                        {workshop.enrolled}/{workshop.capacity} enrolled
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <BookOpen className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">Materials included</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <p className="text-sm font-medium text-gray-700 mb-2">Topics covered:</p>
-                    <div className="flex flex-wrap gap-2">
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {workshop.topics.map((topic, i) => (
                         <Badge key={i} variant="secondary">{topic}</Badge>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
-                    <Button>Register Now</Button>
-                    <Button variant="outline">More Info</Button>
+                  <div className="flex flex-col gap-2">
+                    <Button>Inscrever-se</Button>
+                    <Button variant="outline">Mais Informações</Button>
                   </div>
-                </Card>
-              ))}
-            </div>
-          </section>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-              Past Workshops
-            </h2>
-            <div className="grid gap-6">
-              {pastWorkshops.map((workshop, index) => (
-                <Card key={index} className="p-6 border-l-4 border-l-academic-blue">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        {workshop.title}
-                      </h3>
-                      <p className="text-gray-600 mb-3">
-                        {workshop.description}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-gray-500">Feedback Score</div>
-                      <div className="text-2xl font-bold text-academic-blue">
-                        {workshop.feedback}/5.0
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">
-                        {new Date(workshop.date).toLocaleDateString()}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">{workshop.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">
-                        {workshop.participants} participants
-                      </span>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </section>
-        </div>
-
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Custom Training Programs
+        {/* Past Workshops */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+            Workshops Anteriores
           </h2>
-          <p className="text-gray-600 mb-4">
-            Need specialized training for your organization? I offer custom workshops tailored to your specific needs.
-          </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Corporate Training</h3>
-              <p className="text-sm text-gray-600">On-site training for industry teams</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {pastWorkshops.map((workshop, index) => (
+              <Card key={index} className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {workshop.title}
+                </h3>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <Badge variant="outline">{workshop.type}</Badge>
+                  <Badge variant="secondary">{workshop.year}</Badge>
+                </div>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-4 w-4" />
+                    {workshop.duration}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-4 w-4" />
+                    {workshop.participants} participantes
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Workshop Benefits */}
+        <div className="bg-gray-50 rounded-lg p-6">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            Por que Participar dos Nossos Workshops?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-academic-blue rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Aprendizado Prático</h3>
+              <p className="text-gray-600 text-sm">Experiência hands-on com ferramentas e técnicas modernas</p>
             </div>
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Academic Workshops</h3>
-              <p className="text-sm text-gray-600">University-specific programs</p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-academic-blue rounded-lg flex items-center justify-center mx-auto mb-3">
+                <MapPin className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Networking</h3>
+              <p className="text-gray-600 text-sm">Conecte-se com profissionais e pesquisadores da área</p>
             </div>
-            <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Online Training</h3>
-              <p className="text-sm text-gray-600">Virtual workshops and webinars</p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-academic-blue rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Clock className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Certificação</h3>
+              <p className="text-gray-600 text-sm">Receba certificado de participação reconhecido</p>
             </div>
           </div>
         </div>

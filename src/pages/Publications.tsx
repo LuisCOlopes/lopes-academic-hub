@@ -1,4 +1,3 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -287,7 +286,7 @@ const Publications = () => {
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Google Scholar</h3>
-                <p className="text-gray-600 mb-4">Complete citation metrics and publication list</p>
+                <p className="text-gray-600 mb-4">{t('googleScholarDescription')}</p>
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -302,7 +301,7 @@ const Publications = () => {
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">ResearchGate</h3>
-                <p className="text-gray-600 mb-4">Research network and collaboration platform</p>
+                <p className="text-gray-600 mb-4">{t('researchGateDescription')}</p>
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -317,7 +316,7 @@ const Publications = () => {
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Lattes CV</h3>
-                <p className="text-gray-600 mb-4">Brazilian academic curriculum platform</p>
+                <p className="text-gray-600 mb-4">{t('lattesCvDescription')}</p>
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -332,7 +331,7 @@ const Publications = () => {
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">ORCID</h3>
-                <p className="text-gray-600 mb-4">Researcher identifier and profile</p>
+                <p className="text-gray-600 mb-4">{t('orcidDescription')}</p>
                 <Button 
                   variant="outline" 
                   size="sm"
