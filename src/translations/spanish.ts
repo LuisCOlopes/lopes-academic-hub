@@ -1,4 +1,5 @@
 
+
 export const esTranslations = {
   // Navigation
   home: 'Inicio',
@@ -225,5 +226,10 @@ export const esTranslations = {
   
   // Podcast Page
   podcastTitle: 'Podcast',
-  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria'
+  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria',
+  
+  // Media Page
+  mediaTitle: 'Medios',
+  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa'
 };
+
