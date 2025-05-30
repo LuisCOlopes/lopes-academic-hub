@@ -1,3 +1,4 @@
+
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -31,15 +32,41 @@ export const ptTranslations = {
   workshops: 'Workshops',
   requestMeeting: 'Solicitar Reunião',
 
-  // Home page
+  // Home page content
   welcomeMessage: 'Bem-vindo ao Hub Acadêmico',
   subtitle: 'Prof. Dr. Luís Cláudio Oliveira Lopes',
   introduction: 'Professor Titular de Engenharia Química na UFU',
+  professor: 'Professor Titular',
+  chemicalEngineering: 'Engenharia Química',
+  federalUniversity: 'Universidade Federal de Uberlândia',
+  bio: 'Especialista em controle de processos químicos, sistemas tolerantes a falhas e sustentabilidade. Dedicado à formação de engenheiros químicos preparados para os desafios do futuro.',
+  viewFullProfile: 'Ver Perfil Completo',
+  contactMe: 'Entre em Contato',
+  contactInfo: 'Informações de Contato',
+  exploreMyAcademicWork: 'Explore Meu Trabalho Acadêmico',
+  exploreMyResearch: 'Explorar Minhas Pesquisas',
+  researchHighlights: 'Destaques da Pesquisa',
+  researchFocus: 'Minha pesquisa foca em inovações tecnológicas que contribuem para processos químicos mais seguros, eficientes e sustentáveis.',
+  interestedInCollaboration: 'Interessado em Colaboração?',
+  yearsOfExperience: 'Anos de Experiência',
+  researchFunding: 'Financiamento de Pesquisa',
+  
+  // Research interests
   researchInterests: 'Interesses de Pesquisa',
   researchInterest1: 'Controle de Processos',
   researchInterest2: 'Sistemas Tolerantes a Falhas',
   researchInterest3: 'Sustentabilidade',
   researchInterest4: 'Otimização',
+  processControl: 'Controle de Processos',
+  industrialSafety: 'Segurança Industrial',
+  wasteManagement: 'Gestão de Resíduos',
+  greenTechnology: 'Tecnologia Verde',
+  
+  // Academic section descriptions
+  researchDescription: 'Pesquisas inovadoras em engenharia química e controle de processos',
+  publicationsDescription: 'Artigos científicos e contribuições para a literatura acadêmica',
+  teachingDescription: 'Formação de engenheiros químicos através de metodologias inovadoras',
+  newsDescription: 'Últimas notícias e atualizações do mundo acadêmico',
   
   // About page
   aboutTitle: 'Sobre',
@@ -315,7 +342,7 @@ export const ptTranslations = {
 
   // Research page
   researchTitle: 'Pesquisa',
-  researchSubtitle: 'Avances em engenharia de processos químicos e tecnologias sustentáveis',
+  researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
   researchAreas: 'Áreas de Pesquisa',
   currentProjects: 'Projetos Atuais',
   researchMetrics: 'Métricas de Pesquisa',
@@ -328,9 +355,9 @@ export const ptTranslations = {
 
   // Material page
   materialTitle: 'Material Educativo',
-  materialSubtitle: 'Recursos educativos e materiais didácticos desenvolvidos',
+  materialSubtitle: 'Recursos educativos e materiais didáticos desenvolvidos',
 
   // Meeting page
   meetingTitle: 'Solicitar Reunião',
-  meetingSubtitle: 'Programa uma reunião para discussões académicas ou colaborações'
+  meetingSubtitle: 'Programe uma reunião para discussões acadêmicas ou colaborações'
 };
