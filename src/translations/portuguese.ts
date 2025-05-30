@@ -1,5 +1,4 @@
 
-
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -31,6 +30,7 @@ export const ptTranslations = {
   conferences: 'Conferências',
   community: 'Comunidade',
   workshops: 'Workshops',
+  requestMeeting: 'Solicitar Reunião',
 
   // Home page
   welcomeMessage: 'Bem-vindo ao Hub Acadêmico',
@@ -312,6 +312,27 @@ export const ptTranslations = {
   
   // Consulting page
   consultingTitle: 'Consultoria',
-  consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos'
-};
+  consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos',
 
+  // Research page
+  researchTitle: 'Pesquisa',
+  researchSubtitle: 'Avances em engenharia de processos químicos e tecnologias sustentáveis',
+  researchAreas: 'Áreas de Pesquisa',
+  currentProjects: 'Projetos Atuais',
+  researchMetrics: 'Métricas de Pesquisa',
+  citations: 'Citações',
+  funding: 'Financiamento',
+  publications: 'Publicações',
+
+  // Opportunities page
+  opportunitiesTitle: 'Oportunidades',
+  opportunitiesSubtitle: 'Oportunidades de pesquisa e colaboração disponíveis',
+
+  // Material page
+  materialTitle: 'Material Educativo',
+  materialSubtitle: 'Recursos educativos e materiais didácticos desenvolvidos',
+
+  // Meeting page
+  meetingTitle: 'Solicitar Reunião',
+  meetingSubtitle: 'Programa uma reunião para discussões académicas ou colaborações'
+};
