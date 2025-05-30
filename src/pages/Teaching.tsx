@@ -11,27 +11,27 @@ const Teaching = () => {
   const courses = [
     {
       code: "FEQUI31030",
-      name: "Projeto de Processos da Indústria Química",
-      level: "Undergraduate",
+      name: t('processDesignCourse') || "Projeto de Processos da Indústria Química",
+      level: t('undergraduate') || "Undergraduate",
       semester: "2024/2",
       students: 24,
-      description: "PPIQ - Projeto de processos industriais químicos"
+      description: t('processDesignDescription') || "PPIQ - Projeto de processos industriais químicos"
     },
     {
       code: "FEQUI31022",
-      name: "Controle de Processos Químicos II",
-      level: "Undergraduate", 
+      name: t('chemicalProcessControl2') || "Controle de Processos Químicos II",
+      level: t('undergraduate') || "Undergraduate", 
       semester: "2024/2",
       students: 13,
-      description: "CPQ II - Controle avançado de processos"
+      description: t('advancedProcessControl') || "CPQ II - Controle avançado de processos"
     },
     {
       code: "PEQ003",
-      name: "Métodos Matemáticos em Engenharia Química",
-      level: "Graduate",
+      name: t('mathematicalMethods') || "Métodos Matemáticos em Engenharia Química",
+      level: t('graduate') || "Graduate",
       semester: "2024/2",
       students: 8,
-      description: "Métodos matemáticos aplicados à engenharia química"
+      description: t('mathematicalMethodsDescription') || "Métodos matemáticos aplicados à engenharia química"
     }
   ];
 
@@ -48,16 +48,16 @@ const Teaching = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Teaching
+              {t('teachingTitle')}
             </h1>
             <p className="text-xl text-gray-600">
-              Inspiring the next generation of chemical engineers through innovative education
+              {t('teachingSubtitle')}
             </p>
           </div>
 
           {/* Current Courses */}
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Current Courses</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('currentCourses')}</h2>
             <div className="grid gap-6">
               {courses.map((course, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
@@ -68,17 +68,17 @@ const Teaching = () => {
                       <p className="text-gray-600 text-sm mt-1">{course.description}</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs ${
-                      course.level === 'Graduate' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'
+                      course.level === 'Graduate' || course.level === 'Pós-graduação' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'
                     }`}>
                       {course.level}
                     </span>
                   </div>
                   <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
                     <span>📅 {course.semester}</span>
-                    <span>👥 {course.students} students</span>
+                    <span>👥 {course.students} {t('students')}</span>
                   </div>
                   <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue">
-                    View Syllabus
+                    {t('viewSyllabus')}
                   </Button>
                 </Card>
               ))}
@@ -88,7 +88,7 @@ const Teaching = () => {
           {/* Computational Tools */}
           <section className="mb-12">
             <Card className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Códigos Computacionais</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('computationalCodes')}</h2>
               <div className="grid md:grid-cols-4 gap-4">
                 {computationalTools.map((tool, index) => (
                   <div key={index} className="p-4 bg-gray-50 rounded-lg text-center hover:shadow-md transition-shadow">
@@ -102,98 +102,50 @@ const Teaching = () => {
 
           {/* Teaching Resources */}
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Teaching Resources</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <BookOpen className="h-12 w-12 text-academic-blue mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Lecture Notes</h3>
-                <p className="text-gray-600 mb-4">Comprehensive lecture materials and study guides</p>
-                <Button variant="outline" size="sm">Access Materials</Button>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('teachingResources')}</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <BookOpen className="h-8 w-8 text-academic-blue mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">{t('courseMaterials')}</h3>
+                <p className="text-gray-600 text-sm mb-3">{t('courseMaterialsDescription')}</p>
+                <Button size="sm" variant="outline">{t('access')}</Button>
               </Card>
-              
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <FileText className="h-12 w-12 text-academic-blue mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Problem Sets</h3>
-                <p className="text-gray-600 mb-4">Practice problems and solution guides</p>
-                <Button variant="outline" size="sm">Download Problems</Button>
+
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Users className="h-8 w-8 text-academic-blue mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">{t('studentProjects')}</h3>
+                <p className="text-gray-600 text-sm mb-3">{t('studentProjectsDescription')}</p>
+                <Button size="sm" variant="outline">{t('explore')}</Button>
               </Card>
-              
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <Link className="h-12 w-12 text-academic-blue mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Material</h3>
-                <p className="text-gray-600 mb-4">Course materials and download links</p>
-                <Button variant="outline" size="sm">View Materials</Button>
+
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <FileText className="h-8 w-8 text-academic-blue mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">{t('assignments')}</h3>
+                <p className="text-gray-600 text-sm mb-3">{t('assignmentsDescription')}</p>
+                <Button size="sm" variant="outline">{t('download')}</Button>
               </Card>
             </div>
           </section>
 
-          {/* Complete Teaching History */}
-          <section className="mb-12">
-            <Card className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Histórico de Ensino</h2>
-              
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Disciplinas de Graduação</h3>
-                <div className="max-h-96 overflow-y-auto">
-                  <div className="grid gap-2 text-sm">
-                    <div className="grid grid-cols-4 gap-4 font-semibold border-b pb-2">
-                      <span>Código</span>
-                      <span>Disciplina</span>
-                      <span>Ano</span>
-                      <span>Período</span>
-                    </div>
-                    {/* Recent courses shown as examples */}
-                    <div className="grid grid-cols-4 gap-4 py-1">
-                      <span>FEQUI31033</span>
-                      <span>Trabalho de Conclusão de Curso</span>
-                      <span>2024</span>
-                      <span>2° Semestre</span>
-                    </div>
-                    <div className="grid grid-cols-4 gap-4 py-1">
-                      <span>FEQUI31030</span>
-                      <span>Projeto de Processos da Indústria Química</span>
-                      <span>2024</span>
-                      <span>2° Semestre</span>
-                    </div>
-                    <div className="grid grid-cols-4 gap-4 py-1">
-                      <span>FEQUI31022</span>
-                      <span>Controle de Processos Químicos II</span>
-                      <span>2024</span>
-                      <span>1° e 2° Semestre</span>
-                    </div>
-                    <div className="text-center py-4 text-gray-600">
-                      ... 127 disciplinas ministradas desde 1991 ...
-                    </div>
-                  </div>
+          {/* Teaching Philosophy */}
+          <section>
+            <Card className="p-6 bg-academic-blue text-white">
+              <h2 className="text-2xl font-semibold mb-4">{t('teachingPhilosophy')}</h2>
+              <p className="mb-4">
+                {t('teachingPhilosophyText')}
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white/10 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">{t('practicalLearning')}</h3>
+                  <p className="text-sm">{t('practicalLearningDescription')}</p>
                 </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Disciplinas de Pós-graduação</h3>
-                <div className="max-h-96 overflow-y-auto">
-                  <div className="grid gap-2 text-sm">
-                    <div className="grid grid-cols-4 gap-4 font-semibold border-b pb-2">
-                      <span>Código</span>
-                      <span>Disciplina</span>
-                      <span>Ano</span>
-                      <span>Período</span>
-                    </div>
-                    <div className="grid grid-cols-4 gap-4 py-1">
-                      <span>PEQ003</span>
-                      <span>Métodos Matemáticos em Engenharia Química</span>
-                      <span>2024</span>
-                      <span>2° Semestre</span>
-                    </div>
-                    <div className="grid grid-cols-4 gap-4 py-1">
-                      <span>PEQ038E</span>
-                      <span>Tópicos Especiais em Modelagem, Controle e Otimização</span>
-                      <span>2024</span>
-                      <span>1° Semestre</span>
-                    </div>
-                    <div className="text-center py-4 text-gray-600">
-                      ... 41 disciplinas de pós-graduação ministradas desde 2005 ...
-                    </div>
-                  </div>
+                <div className="bg-white/10 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">{t('criticalThinking')}</h3>
+                  <p className="text-sm">{t('criticalThinkingDescription')}</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">{t('industryConnection')}</h3>
+                  <p className="text-sm">{t('industryConnectionDescription')}</p>
                 </div>
               </div>
             </Card>

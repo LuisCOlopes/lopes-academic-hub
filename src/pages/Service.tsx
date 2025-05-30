@@ -11,86 +11,86 @@ const Service = () => {
 
   const serviceActivities = [
     {
-      category: t('consultingAndReview'),
+      category: t('consultingAndReview') || 'Consultoria e Revisão',
       icon: FileText,
       activities: [
         {
-          role: 'Consultoria "ad hoc"',
-          organization: 'Agências de fomento, periódicos científicos e congressos',
-          period: '2000 - Presente',
-          description: 'Revisor regular para mais de 15 periódicos internacionais'
+          role: t('adHocConsulting') || 'Consultoria "ad hoc"',
+          organization: t('fundingAgenciesJournals') || 'Agências de fomento, periódicos científicos e congressos',
+          period: '2000 - ' + (t('present') || 'Presente'),
+          description: t('regularReviewerDescription') || 'Revisor regular para mais de 15 periódicos internacionais'
         }
       ]
     },
     {
-      category: t('reviewedJournals'),
+      category: t('reviewedJournals') || 'Periódicos Revisados',
       icon: Globe,
       activities: [
         {
-          role: 'Revisor',
+          role: t('reviewer') || 'Revisor',
           organization: 'Industrial & Engineering Chemistry Research',
-          period: '2005 - Presente',
-          description: 'Avaliação regular de manuscritos'
+          period: '2005 - ' + (t('present') || 'Presente'),
+          description: t('regularManuscriptEvaluation') || 'Avaliação regular de manuscritos'
         },
         {
-          role: 'Revisor',
+          role: t('reviewer') || 'Revisor',
           organization: 'Journal of Process Control',
-          period: '2003 - Presente',
-          description: 'Revisão de artigos em controle de processos'
+          period: '2003 - ' + (t('present') || 'Presente'),
+          description: t('processControlReview') || 'Revisão de artigos em controle de processos'
         },
         {
-          role: 'Revisor',
+          role: t('reviewer') || 'Revisor',
           organization: 'Automatica',
-          period: '2004 - Presente',
-          description: 'Periódico de alto impacto em automação'
+          period: '2004 - ' + (t('present') || 'Presente'),
+          description: t('highImpactAutomation') || 'Periódico de alto impacto em automação'
         },
         {
-          role: 'Revisor',
+          role: t('reviewer') || 'Revisor',
           organization: 'Computers & Chemical Engineering',
-          period: '2002 - Presente',
-          description: 'Revista especializada em engenharia química computacional'
+          period: '2002 - ' + (t('present') || 'Presente'),
+          description: t('computationalChemicalEngineering') || 'Revista especializada em engenharia química computacional'
         },
         {
-          role: 'Revisor',
+          role: t('reviewer') || 'Revisor',
           organization: 'IEEE Trans. On Automatic Control',
-          period: '2008 - Presente',
-          description: 'Principal revista IEEE em controle automático'
+          period: '2008 - ' + (t('present') || 'Presente'),
+          description: t('ieeeMainJournal') || 'Principal revista IEEE em controle automático'
         }
       ]
     },
     {
-      category: t('journalEditor'),
+      category: t('journalEditor') || 'Editor de Periódico',
       icon: School,
       activities: [
         {
-          role: 'Editor Associado',
+          role: t('associateEditor') || 'Editor Associado',
           organization: 'Brazilian Journal of Chemical Engineering',
           period: '2009 - 2013',
-          description: 'Responsável por decisões editoriais e revisão de manuscritos'
+          description: t('editorialDecisions') || 'Responsável por decisões editoriais e revisão de manuscritos'
         },
         {
-          role: 'Editor',
+          role: t('editor') || 'Editor',
           organization: 'Ciência & Engenharia',
-          period: '2005 - Presente (15+ anos)',
-          description: 'Editor de longa data da revista'
+          period: '2005 - ' + (t('present') || 'Presente') + ' (15+ ' + (t('years') || 'anos') + ')',
+          description: t('longTermEditor') || 'Editor de longa data da revista'
         }
       ]
     },
     {
-      category: t('academicServices'),
+      category: t('academicServices') || 'Serviços Acadêmicos',
       icon: Users,
       activities: [
         {
-          role: 'Professor e Orientador',
-          organization: 'Curso de Engenharia de Segurança',
+          role: t('professorAndAdvisor') || 'Professor e Orientador',
+          organization: t('safetyEngineeringCourse') || 'Curso de Engenharia de Segurança',
           period: '2004 - 2012',
-          description: 'Professor e orientação no curso de especialização'
+          description: t('teachingAndAdvising') || 'Professor e orientação no curso de especialização'
         },
         {
-          role: 'Coordenador Geral',
-          organization: 'Projeto Proteger-se',
-          period: '2020 - Presente',
-          description: 'Mais de 7.000 pessoas atendidas em projeto de extensão'
+          role: t('generalCoordinator') || 'Coordenador Geral',
+          organization: t('protegerseProject') || 'Projeto Proteger-se',
+          period: '2020 - ' + (t('present') || 'Presente'),
+          description: t('protegerseDescription') || 'Mais de 7.000 pessoas atendidas em projeto de extensão'
         }
       ]
     }
@@ -147,7 +147,7 @@ const Service = () => {
             {t('currentServiceOpportunities')}
           </h2>
           <p className="text-ufu-navy mb-4">
-            Procurando oportunidades para contribuir com a comunidade acadêmica? Entre em contato sobre possíveis colaborações.
+            {t('serviceOpportunitiesDescription') || 'Procurando oportunidades para contribuir com a comunidade acadêmica? Entre em contato sobre possíveis colaborações.'}
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">

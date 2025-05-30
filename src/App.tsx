@@ -33,6 +33,7 @@ import Consulting from "./pages/Consulting";
 import Material from "./pages/Material";
 import Conferences from "./pages/Conferences";
 import Community from "./pages/Community";
+import Workshops from "./pages/Workshops";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ const App = () => (
             <Route path="/material" element={<Material />} />
             <Route path="/conferences" element={<Conferences />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/workshops" element={<Workshops />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

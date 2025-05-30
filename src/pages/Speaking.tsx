@@ -12,38 +12,38 @@ const Speaking = () => {
 
   const speakingEngagements = [
     {
-      title: 'Sustainable Chemical Engineering: Future Perspectives',
-      event: 'International Chemical Engineering Conference',
+      title: t('sustainableChemicalEngineering') || 'Sustainable Chemical Engineering: Future Perspectives',
+      event: t('internationalChemicalConference') || 'International Chemical Engineering Conference',
       date: '2024-03-15',
       location: 'São Paulo, Brazil',
-      type: 'Keynote',
-      audience: 'Academic & Industry Professionals'
+      type: t('keynote') || 'Keynote',
+      audience: t('academicIndustryProfessionals') || 'Academic & Industry Professionals'
     },
     {
-      title: 'Innovation in Process Control Systems',
-      event: 'Brazilian Process Control Symposium',
+      title: t('innovationProcessControl') || 'Innovation in Process Control Systems',
+      event: t('brazilianProcessSymposium') || 'Brazilian Process Control Symposium',
       date: '2024-02-20',
       location: 'Rio de Janeiro, Brazil',
-      type: 'Invited Talk',
-      audience: 'Engineers & Researchers'
+      type: t('invitedTalk') || 'Invited Talk',
+      audience: t('engineersResearchers') || 'Engineers & Researchers'
     },
     {
-      title: 'Fault-Tolerant Control in Chemical Processes',
-      event: 'Control Systems Workshop',
+      title: t('faultTolerantControl') || 'Fault-Tolerant Control in Chemical Processes',
+      event: t('controlSystemsWorkshop') || 'Control Systems Workshop',
       date: '2024-01-18',
       location: 'Uberlândia, Brazil',
-      type: 'Workshop',
-      audience: 'Graduate Students'
+      type: t('workshop') || 'Workshop',
+      audience: t('graduateStudents') || 'Graduate Students'
     }
   ];
 
   const expertiseAreas = [
-    'Chemical Process Control',
-    'Fault-Tolerant Systems',
-    'Sustainable Engineering',
-    'Process Safety',
-    'Academic Leadership',
-    'Industry-Academia Collaboration'
+    t('chemicalProcessControl') || 'Chemical Process Control',
+    t('faultTolerantSystems') || 'Fault-Tolerant Systems',
+    t('sustainableEngineering') || 'Sustainable Engineering',
+    t('processSafety') || 'Process Safety',
+    t('academicLeadership') || 'Academic Leadership',
+    t('industryAcademiaCollaboration') || 'Industry-Academia Collaboration'
   ];
 
   return (

@@ -1,259 +1,319 @@
+
 export const ptTranslations = {
   // Navigation
   home: 'Início',
+  academic: 'Acadêmico',
   about: 'Sobre',
   research: 'Pesquisa',
-  projects: 'Projetos',
-  opportunities: 'Oportunidades',
-  requestMeeting: 'Solicitar Reunião',
   teaching: 'Ensino',
-  studentResources: 'Material Educacional',
   publications: 'Publicações',
-  conferences: 'Conferências',
-  speaking: 'Palestras',
-  workshops: 'Workshops',
-  consulting: 'Consultoria',
-  team: 'Equipe',
-  alumni: 'Ex-Alunos',
+  contact: 'Contato',
   awards: 'Prêmios',
   service: 'Serviços',
   leadership: 'Liderança',
-  getInvolved: 'Participe',
-  community: 'Comunidade',
+  projects: 'Projetos',
+  team: 'Equipe',
+  opportunities: 'Oportunidades',
+  energyTransition: 'Transição Energética',
+  meeting: 'Reunião',
+  studentResources: 'Recursos para Estudantes',
+  alumni: 'Ex-alunos',
   podcast: 'Podcast',
-  media: 'Mídia',
-  hobbies: 'Hobbies',
-  contact: 'Contato',
   news: 'Notícias',
+  media: 'Mídia',
   blog: 'Blog',
+  hobbies: 'Hobbies',
+  getInvolved: 'Participar',
+  speaking: 'Palestras',
+  consulting: 'Consultoria',
+  material: 'Material',
+  conferences: 'Conferências',
+  community: 'Comunidade',
+  workshops: 'Workshops',
+
+  // Home page
+  welcomeMessage: 'Bem-vindo ao Hub Acadêmico',
+  subtitle: 'Prof. Dr. Luís Cláudio Oliveira Lopes',
+  introduction: 'Professor Titular de Engenharia Química na UFU',
+  researchInterests: 'Interesses de Pesquisa',
+  researchInterest1: 'Controle de Processos',
+  researchInterest2: 'Sistemas Tolerantes a Falhas',
+  researchInterest3: 'Sustentabilidade',
+  researchInterest4: 'Otimização',
   
-  // Landing Page
-  professor: 'Professor Titular',
-  chemicalEngineering: 'Engenharia Química',
-  federalUniversity: 'Universidade Federal de Uberlândia',
-  bio: 'Professor Titular da Faculdade de Engenharia Química da Universidade Federal de Uberlândia, atuando na área de Engenharia de Processos Químicos (PSE, da sigla em inglês), modelagem, controle e Otimização de processos químicos industriais, segurança e desenvolvimento de processos sustentáveis.',
-  viewFullProfile: 'Ver Perfil Completo',
-  exploreMyAcademicWork: 'Explore Meu Trabalho Acadêmico',
-  researchDescription: 'Explore minhas pesquisas em Engenharia de Processos - PSE(Process Systems Engineering)',
-  publicationsDescription: 'Artigos científicos e contribuições para a pesquisa',
-  teachingDescription: 'Cursos e recursos educacionais',
-  newsDescription: 'Últimas novidades e atualizações',
-  learnMore: 'Saiba Mais',
-  researchHighlights: 'Destaques da Pesquisa',
-  researchFocus: 'Minha pesquisa foca em Engenharia de Sistemas de Processos (PSE), controle de processos, modelagem e otimização de processos químicos, Inteligência Artificial aplicada à segurança de processos, e desenvolvimento de tecnologias ambientalmente amigáveis para a indústria química.',
-  processControl: 'Controle e Otimização de Processos',
-  industrialSafety: 'Segurança Industrial de Processos Químicos',
-  wasteManagement: 'Gestão de Resíduos Industriais',
-  greenTechnology: 'Desenvolvimento de Tecnologia Verde',
-  exploreMyResearch: 'Explore Minha Pesquisa',
-  yearsOfExperience: 'Anos de Experiência',
-  researchFunding: 'Financiamento de Pesquisa',
-  interestedInCollaboration: 'Interessado em Colaboração?',
-  contactMe: 'Entre em Contato',
-  
-  // About Page
-  aboutTitle: 'Sobre o Professor',
-  aboutSubtitle: 'Dedicado ao avanço da engenharia química através da pesquisa e ensino',
+  // About page
+  aboutTitle: 'Sobre',
+  aboutSubtitle: 'Trajetória Acadêmica e Profissional',
   biography: 'Biografia',
   education: 'Formação',
-  researchInterests: 'Áreas de Pesquisa',
   
-  // Contact Page
+  // Awards page
+  awardsTitle: 'Prêmios e Reconhecimentos',
+  awardsSubtitle: 'Reconhecimentos pela excelência em pesquisa e ensino',
+  
+  // Contact page
   contactTitle: 'Contato',
-  contactSubtitle: 'Entre em contato para discussões acadêmicas, colaborações ou consultas',
+  contactSubtitle: 'Entre em contato para colaborações e oportunidades',
   contactInformation: 'Informações de Contato',
   email: 'E-mail',
   phone: 'Telefone',
   officeAddress: 'Endereço do Escritório',
-  officeAddressText: 'Faculdade de Engenharia Química\nUniversidade Federal de Uberlândia\nAv. João Naves de Ávila, 2121\nUberlândia, MG - 38400-902',
+  officeAddressText: 'Universidade Federal de Uberlândia\nFaculdade de Engenharia Química\nBloco K, Sala 237\nUberlândia, MG',
   officeHours: 'Horário de Atendimento',
-  officeHoursText: 'Segunda a Sexta: 8:00 - 17:00\nPor agendamento',
+  officeHoursText: 'Segunda a Sexta: 08:00 - 17:00\nAtendimento mediante agendamento',
   scheduleMeeting: 'Agendar Reunião',
   sendMessage: 'Enviar Mensagem',
-  firstName: 'Primeiro Nome',
+  firstName: 'Nome',
   lastName: 'Sobrenome',
-  emailAddress: 'Endereço de E-mail',
+  emailAddress: 'E-mail',
   institution: 'Instituição',
   subject: 'Assunto',
   message: 'Mensagem',
   clearForm: 'Limpar Formulário',
-  noteText: 'Respondo geralmente dentro de 48 horas. Para questões urgentes, use o telefone.',
-  contactInfo: 'Informações de Contato',
+  noteText: 'Responderemos sua mensagem em até 48 horas.',
   
-  // Research Page
-  researchTitle: 'Pesquisa',
-  currentResearch: 'Pesquisa Atual',
-  researchMetrics: 'Métricas de Pesquisa',
-  citations: 'Citações',
-  students: 'Estudantes Orientados',
-  funding: 'Financiamento',
-  
-  // Teaching Page
+  // Teaching page
   teachingTitle: 'Ensino',
+  teachingSubtitle: 'Inspirando a próxima geração de engenheiros químicos através da educação inovadora',
   currentCourses: 'Disciplinas Atuais',
-  teachingResources: 'Recursos Didáticos',
-  lectureNotes: 'Notas de Aula',
-  problemSets: 'Conjuntos de Problemas',
+  computationalCodes: 'Códigos Computacionais',
+  teachingResources: 'Recursos de Ensino',
   courseMaterials: 'Materiais do Curso',
+  courseMaterialsDescription: 'Slides, notas e referências para todas as disciplinas',
+  studentProjects: 'Projetos de Estudantes',
+  studentProjectsDescription: 'Trabalhos e projetos desenvolvidos pelos alunos',
+  assignments: 'Atividades',
+  assignmentsDescription: 'Exercícios e trabalhos para download',
+  teachingPhilosophy: 'Filosofia de Ensino',
+  teachingPhilosophyText: 'Acredito em uma abordagem prática e conectada com a indústria para formar engenheiros químicos preparados para os desafios do futuro.',
+  practicalLearning: 'Aprendizado Prático',
+  practicalLearningDescription: 'Conexão entre teoria e aplicação real',
+  criticalThinking: 'Pensamento Crítico',
+  criticalThinkingDescription: 'Desenvolvimento de capacidade analítica',
+  industryConnection: 'Conexão Industrial',
+  industryConnectionDescription: 'Integração com demandas do mercado',
+  processDesignCourse: 'Projeto de Processos da Indústria Química',
+  processDesignDescription: 'PPIQ - Projeto de processos industriais químicos',
+  chemicalProcessControl2: 'Controle de Processos Químicos II',
+  advancedProcessControl: 'CPQ II - Controle avançado de processos',
+  mathematicalMethods: 'Métodos Matemáticos em Engenharia Química',
+  mathematicalMethodsDescription: 'Métodos matemáticos aplicados à engenharia química',
+  undergraduate: 'Graduação',
+  graduate: 'Pós-graduação',
+  students: 'estudantes',
+  viewSyllabus: 'Ver Ementa',
+  access: 'Acessar',
+  explore: 'Explorar',
+  download: 'Baixar',
   
-  // Community Page
-  communityTitle: 'Comunidade Acadêmica',
-  
-  // Conferences Page
-  conferencesTitle: 'Conferências',
-  upcomingConferences: 'Conferências Futuras',
-  pastConferences: 'Conferências Passadas',
-  speakingOpportunities: 'Oportunidades de Apresentação',
-  
-  // Publications Page
-  publicationsTitle: 'Publicações',
-  recentPublications: 'Publicações Recentes',
-  bookChapters: 'Capítulos de Livros',
-  academicProfiles: 'Perfis Acadêmicos',
-  totalPublications: 'Total de Publicações',
-  totalCitations: 'Total de Citações',
-  hIndex: 'Índice h',
-  i10Index: 'Índice i10',
-  journalArticles: 'Artigos de Revista',
-  viewPaper: 'Ver Artigo',
-  downloadPdf: 'Baixar PDF',
-  visitProfile: 'Visitar Perfil',
-  
-  // Projects Page
-  projectsTitle: 'Projetos',
-  
-  // Opportunities Page
-  opportunitiesTitle: 'Oportunidades',
-  
-  // Team Page
-  teamTitle: 'Equipe',
-  
-  // Awards Page
-  awardsTitle: 'Prêmios',
-  
-  // Service Page
-  serviceTitle: 'Serviços',
-  
-  // Leadership Page
-  leadershipTitle: 'Liderança',
-  
-  // Alumni Page
-  alumniTitle: 'Ex-Alunos',
-  
-  // Get Involved Page
-  getInvolvedTitle: 'Participe',
-  
-  // Meeting Page
-  meetingTitle: 'Solicitar Reunião',
-  
-  // Material Page
-  materialTitle: 'Material Educacional',
-  
-  // News Page
-  newsTitle: 'Notícias',
-  
-  // Media Page
-  mediaTitle: 'Mídia',
-
-  // Speaking Page
-  speakingTitle: 'Palestras',
-  speakingSubtitle: 'Compartilhando conhecimento e insights em conferências, workshops e eventos acadêmicos',
-  recentUpcomingEngagements: 'Compromissos Recentes e Futuros',
+  // Speaking page
+  speakingTitle: 'Palestras e Apresentações',
+  speakingSubtitle: 'Compartilhando conhecimento através de palestras e apresentações',
+  recentUpcomingEngagements: 'Engajamentos Recentes e Futuros',
   expertiseAreas: 'Áreas de Especialização',
-  bookSpeakingEngagement: 'Solicitar Palestra',
+  bookSpeakingEngagement: 'Agendar Palestra',
+  availableForSpeaking: 'Disponível para palestras em conferências e eventos acadêmicos',
   contactForSpeaking: 'Contato para Palestras',
   speakingStats: 'Estatísticas de Palestras',
   totalPresentations: 'Total de Apresentações',
   countries: 'Países',
-  keynoteAddresses: 'Discursos Principais',
-  availableForSpeaking: 'Disponível para conferências, workshops e eventos acadêmicos relacionados à engenharia química e controle de processos.',
-
-  // Service Page specific
+  keynoteAddresses: 'Palestras Principais',
+  sustainableChemicalEngineering: 'Engenharia Química Sustentável: Perspectivas Futuras',
+  internationalChemicalConference: 'Conferência Internacional de Engenharia Química',
+  keynote: 'Palestra Principal',
+  academicIndustryProfessionals: 'Profissionais Acadêmicos e da Indústria',
+  innovationProcessControl: 'Inovação em Sistemas de Controle de Processos',
+  brazilianProcessSymposium: 'Simpósio Brasileiro de Controle de Processos',
+  invitedTalk: 'Palestra Convidada',
+  engineersResearchers: 'Engenheiros e Pesquisadores',
+  faultTolerantControl: 'Controle Tolerante a Falhas em Processos Químicos',
+  controlSystemsWorkshop: 'Workshop de Sistemas de Controle',
+  workshop: 'Workshop',
+  graduateStudents: 'Estudantes de Pós-graduação',
+  chemicalProcessControl: 'Controle de Processos Químicos',
+  faultTolerantSystems: 'Sistemas Tolerantes a Falhas',
+  sustainableEngineering: 'Engenharia Sustentável',
+  processSafety: 'Segurança de Processos',
+  academicLeadership: 'Liderança Acadêmica',
+  industryAcademiaCollaboration: 'Colaboração Indústria-Academia',
+  
+  // Service page
   servicesProvided: 'Serviços Prestados',
-  servicesSubtitle: 'Serviços profissionais à comunidade acadêmica e sociedade',
+  servicesSubtitle: 'Contribuições para a comunidade acadêmica e científica',
   consultingAndReview: 'Consultoria e Revisão',
   reviewedJournals: 'Periódicos Revisados',
-  journalEditor: 'Editor de Periódicos',
+  journalEditor: 'Editor de Periódico',
   academicServices: 'Serviços Acadêmicos',
-  currentServiceOpportunities: 'Oportunidades Atuais de Serviço',
+  adHocConsulting: 'Consultoria "ad hoc"',
+  fundingAgenciesJournals: 'Agências de fomento, periódicos científicos e congressos',
+  present: 'Presente',
+  regularReviewerDescription: 'Revisor regular para mais de 15 periódicos internacionais',
+  reviewer: 'Revisor',
+  regularManuscriptEvaluation: 'Avaliação regular de manuscritos',
+  processControlReview: 'Revisão de artigos em controle de processos',
+  highImpactAutomation: 'Periódico de alto impacto em automação',
+  computationalChemicalEngineering: 'Revista especializada em engenharia química computacional',
+  ieeeMainJournal: 'Principal revista IEEE em controle automático',
+  associateEditor: 'Editor Associado',
+  editorialDecisions: 'Responsável por decisões editoriais e revisão de manuscritos',
+  editor: 'Editor',
+  years: 'anos',
+  longTermEditor: 'Editor de longa data da revista',
+  professorAndAdvisor: 'Professor e Orientador',
+  safetyEngineeringCourse: 'Curso de Engenharia de Segurança',
+  teachingAndAdvising: 'Professor e orientação no curso de especialização',
+  generalCoordinator: 'Coordenador Geral',
+  protegerseProject: 'Projeto Proteger-se',
+  protegerseDescription: 'Mais de 7.000 pessoas atendidas em projeto de extensão',
+  currentServiceOpportunities: 'Oportunidades de Serviço Atuais',
+  serviceOpportunitiesDescription: 'Procurando oportunidades para contribuir com a comunidade acadêmica? Entre em contato sobre possíveis colaborações.',
   peerReview: 'Revisão por Pares',
-  conferenceOrganization: 'Organização de Conferências',
-  projectReview: 'Revisão de Projetos',
   availableForReview: 'Disponível para revisão de manuscritos',
-  committeeParticipation: 'Participação em comitês bem-vinda',
-  panelServices: 'Serviços de painel para agências de fomento',
+  conferenceOrganization: 'Organização de Conferências',
+  committeeParticipation: 'Participação em comitês',
+  projectReview: 'Revisão de Projetos',
+  panelServices: 'Serviços de painel',
   
-  // Academic Profiles descriptions
-  googleScholarDescription: 'Métricas completas de citação e lista de publicações',
-  researchGateDescription: 'Rede de pesquisa e plataforma de colaboração',
-  lattesCvDescription: 'Plataforma brasileira de currículo acadêmico',
-  orcidDescription: 'Identificador e perfil de pesquisador',
+  // Common terms
+  learnMore: 'Saiba Mais',
+  readMore: 'Leia Mais',
+  viewMore: 'Ver Mais',
+  contactUs: 'Entre em Contato',
   
-  // Research Page
-  researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
-  researchAreas: 'Áreas de Pesquisa',
-  currentProjects: 'Projetos Atuais',
+  // Alumni page
+  alumniTitle: 'Ex-alunos',
+  alumniSubtitle: 'Trajetórias de sucesso dos nossos egressos',
   
-  // Opportunities Page
-  opportunitiesSubtitle: 'Oportunidades de pesquisa e colaboração disponíveis',
+  // Team page
+  teamTitle: 'Equipe',
+  teamSubtitle: 'Nosso grupo de pesquisa e colaboradores',
   
-  // Meeting Page
-  meetingSubtitle: 'Agende uma reunião para discussões acadêmicas ou colaborações',
+  // Community page
+  communityTitle: 'Comunidade',
+  communitySubtitle: 'Conectando pesquisadores e profissionais',
+  peopleImpacted: 'Pessoas Impactadas',
+  activePartnerships: 'Parcerias Ativas',
+  eventsOrganized: 'Eventos Organizados',
+  resourcesShared: 'Recursos Compartilhados',
+  communityInitiatives: 'Iniciativas da Comunidade',
+  participants: 'participantes',
+  active: 'Ativo',
+  completed: 'Finalizado',
+  participate: 'Participar',
+  partnershipsAndCollaborations: 'Parcerias e Colaborações',
+  howToParticipate: 'Como Participar',
+  joinAcademicCommunity: 'Junte-se à nossa comunidade acadêmica e contribua para o avanço da engenharia química',
+  events: 'Eventos',
+  participateInSeminars: 'Participe de seminários e workshops',
+  collaboration: 'Colaboração',
+  collaborateInProjects: 'Colabore em projetos de pesquisa',
+  mentoring: 'Mentoria',
+  receiveMentoring: 'Receba ou ofereça mentoria',
   
-  // Teaching Page
-  teachingSubtitle: 'Cursos e recursos educacionais para formação em engenharia química',
-  
-  // Material Page
-  materialSubtitle: 'Recursos educacionais e materiais didáticos desenvolvidos',
-  
-  // Team Page
-  teamSubtitle: 'Nossa equipe de pesquisa e colaboradores',
-  
-  // Projects Page
-  projectsSubtitle: 'Projetos atuais e concluídos avançando o conhecimento em engenharia química',
-  researchImpact: 'Impacto da Pesquisa',
-  totalFunding: 'Financiamento Total',
-  publicationsGenerated: 'Publicações Geradas',
-  graduateStudents: 'Estudantes de Pós-graduação',
-  industrialPartnerships: 'Parcerias Industriais',
-  activeProjects: 'Projetos Ativos',
-  completedProjects: 'Projetos Concluídos',
-  
-  // Consulting Page
-  consultingSubtitle: 'Serviços de consultoria em engenharia química e processos industriais',
-  
-  // Alumni Page
-  alumniSubtitle: 'Ex-alunos e suas trajetórias profissionais',
-  
-  // Awards Page
-  awardsSubtitle: 'Reconhecimentos e prêmios recebidos',
-  
-  // Leadership Page
-  leadershipSubtitle: 'Experiência em liderança acadêmica e profissional promovendo inovação e excelência',
-  
-  // Get Involved Page
-  getInvolvedSubtitle: 'Oportunidades para participar de pesquisas e projetos',
-  
-  // Community Page
-  communitySubtitle: 'Conectando pesquisadores e profissionais da área',
-  
-  // Podcast Page
-  podcastSubtitle: 'Conversas sobre engenharia - Insights da academia e indústria',
-  
-  // Media Page
-  mediaSubtitle: 'Aparições na mídia, entrevistas e cobertura da imprensa',
-  
-  // Hobbies Page
-  hobbiesTitle: 'Interesses Pessoais e Hobbies',
-  hobbiesSubtitle: 'Além das atividades acadêmicas, explorando criatividade e enriquecimento pessoal',
-  
-  // News Page
-  newsSubtitle: 'Últimas notícias e atualizações de nosso grupo de pesquisa e atividades acadêmicas',
-  
-  // Blog Page
-  blogSubtitle: 'Reflexões e insights sobre engenharia química e academia',
-  
-  // Workshops Page
+  // Workshops page
   workshopsTitle: 'Workshops',
-  workshopsSubtitle: 'Workshops e treinamentos especializados em engenharia química'
+  workshopsSubtitle: 'Workshops e treinamentos especializados',
+  upcomingWorkshops: 'Próximos Workshops',
+  pastWorkshops: 'Workshops Anteriores',
+  workshopMaterials: 'Materiais do Workshop',
+  register: 'Inscrever-se',
+  registerNow: 'Inscreva-se Agora',
+  capacity: 'Capacidade',
+  duration: 'Duração',
+  level: 'Nível',
+  beginner: 'Iniciante',
+  intermediate: 'Intermediário',
+  advanced: 'Avançado',
+  
+  // Conferences page
+  conferencesTitle: 'Conferências',
+  upcomingConferences: 'Próximas Conferências',
+  speakingOpportunities: 'Oportunidades de Palestras',
+  
+  // Get Involved page  
+  getInvolvedTitle: 'Participe',
+  getInvolvedSubtitle: 'Oportunidades para se envolver em pesquisa e educação',
+  researchCollaboration: 'Colaboração em Pesquisa',
+  researchCollaborationDesc: 'Participe de nossos projetos de pesquisa em engenharia química e controle de processos',
+  graduateResearchPositions: 'Posições de pesquisa de pós-graduação',
+  postdocOpportunities: 'Oportunidades de pós-doutorado',
+  industryPartnerships: 'Parcerias com a indústria',
+  academicMentoring: 'Mentoria Acadêmica',
+  academicMentoringDesc: 'Participe de nossos programas de mentoria para estudantes e jovens pesquisadores',
+  studentMentoring: 'Mentoria de estudantes',
+  careerGuidance: 'Orientação de carreira',
+  researchSupervision: 'Supervisão de pesquisa',
+  educationalInitiatives: 'Iniciativas Educacionais',
+  educationalInitiativesDesc: 'Contribua para métodos de ensino inovadores e programas educacionais',
+  curriculumDevelopment: 'Desenvolvimento curricular',
+  workshopFacilitation: 'Facilitação de workshops',
+  onlineCourses: 'Cursos online',
+  professionalDevelopment: 'Desenvolvimento Profissional',
+  professionalDevelopmentDesc: 'Participe de oportunidades de crescimento profissional e networking',
+  conferenceParticipation: 'Participação em conferências',
+  professionalSocieties: 'Sociedades profissionais',
+  skillDevelopment: 'Desenvolvimento de habilidades',
+  joinResearchNetwork: 'Junte-se à Nossa Rede de Pesquisa',
+  joinResearchNetworkDesc: 'Conecte-se com pesquisadores, profissionais da indústria e estudantes apaixonados por engenharia química e tecnologias sustentáveis.',
+  applyNow: 'Candidate-se Agora',
+  forStudents: 'Para Estudantes',
+  researchInternships: 'Estágios de pesquisa',
+  graduateProgramOpportunities: 'Oportunidades de programa de pós-graduação',
+  forProfessionals: 'Para Profissionais',
+  industryCollaboration: 'Colaboração com a indústria',
+  consultingOpportunities: 'Oportunidades de consultoria',
+  knowledgeSharing: 'Compartilhamento de conhecimento',
+  
+  // Podcast page
+  podcastTitle: 'Podcast Acadêmico',
+  podcastSubtitle: 'Conversas sobre engenharia química e inovação',
+  latestEpisode: 'Episódio Mais Recente',
+  playNow: 'Reproduzir Agora',
+  allEpisodes: 'Todos os Episódios',
+  guests: 'Convidados',
+  play: 'Reproduzir',
+  subscribeAndFollow: 'Inscreva-se e Siga',
+  stayUpdatedEpisodes: 'Mantenha-se atualizado com nossos episódios mais recentes e nunca perca insights de especialistas líderes.',
+  sustainableProcessesFuture: 'O Futuro dos Processos Químicos Sustentáveis',
+  sustainableProcessesDesc: 'Explorando inovações em química verde e seu impacto na indústria',
+  labToIndustryStories: 'Do Laboratório à Indústria: Histórias de Transferência de Tecnologia',
+  labToIndustryDesc: 'Exemplos do mundo real de comercialização bem-sucedida de pesquisa',
+  studentSuccessStories: 'Histórias de Sucesso de Estudantes em Engenharia Química',
+  studentSuccessDesc: 'Ex-alunos compartilhando suas jornadas de carreira e lições aprendidas',
+  greenChemistry: 'Química Verde',
+  sustainability: 'Sustentabilidade',
+  innovation: 'Inovação',
+  technologyTransfer: 'Transferência de Tecnologia',
+  industry: 'Indústria',
+  careerDevelopment: 'Desenvolvimento de Carreira',
+  studentLife: 'Vida Estudantil',
+  professionalGrowth: 'Crescimento Profissional',
+  minRead: 'min de leitura',
+  comments: 'comentários',
+  
+  // Blog page
+  academicBlog: 'Blog Acadêmico',
+  blogSubtitle: 'Reflexões e insights sobre engenharia química e educação',
+  featuredPost: 'Post em Destaque',
+  recentPosts: 'Posts Recentes',
+  futureChemEngEducation: 'O Futuro da Educação em Engenharia Química',
+  digitalTransformationEducation: 'Explorando como a transformação digital está remodelando a forma como ensinamos e aprendemos engenharia química.',
+  sustainabilityProcessDesign: 'Sustentabilidade no Design de Processos: Uma Perspectiva Pessoal',
+  decadesResearchEvolution: 'Refletindo sobre décadas de pesquisa e a evolução de práticas sustentáveis na engenharia química.',
+  lessonsIndustryAcademia: 'Lições da Colaboração Indústria-Academia',
+  keyInsightsPetrobras: 'Principais insights obtidos do trabalho com a Petrobras e outros parceiros da indústria.',
+  mentoringGraduateStudents: 'Mentoria de Estudantes de Pós-graduação: Melhores Práticas',
+  strategiesSupervision: 'Estratégias e abordagens para supervisão e mentoria eficazes de estudantes de pós-graduação.',
+  
+  // Hobbies page
+  hobbiesTitle: 'Interesses Pessoais',
+  hobbiesSubtitle: 'Equilibrando vida acadêmica e pessoal',
+  
+  // Common blog/content categories
+  education: 'Educação',
+  collaboration: 'Colaboração',
+  
+  // Consulting page
+  consultingTitle: 'Consultoria',
+  consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos'
 };
