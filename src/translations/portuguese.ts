@@ -309,10 +309,6 @@ export const ptTranslations = {
   hobbiesTitle: 'Interesses Pessoais',
   hobbiesSubtitle: 'Equilibrando vida acadêmica e pessoal',
   
-  // Common blog/content categories
-  education: 'Educação',
-  collaboration: 'Colaboração',
-  
   // Consulting page
   consultingTitle: 'Consultoria',
   consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos'
