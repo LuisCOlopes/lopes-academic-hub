@@ -1,4 +1,3 @@
-
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -322,7 +321,6 @@ export const ptTranslations = {
   researchMetrics: 'Métricas de Pesquisa',
   citations: 'Citações',
   funding: 'Financiamento',
-  publications: 'Publicações',
 
   // Opportunities page
   opportunitiesTitle: 'Oportunidades',
