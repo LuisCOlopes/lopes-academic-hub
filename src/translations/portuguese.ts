@@ -1,4 +1,5 @@
 
+
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -313,3 +314,4 @@ export const ptTranslations = {
   consultingTitle: 'Consultoria',
   consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos'
 };
+
