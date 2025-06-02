@@ -1,0 +1,28 @@
+
+export const teamTranslations = {
+  // Team page
+  teamTitle: 'Team',
+  teamSubtitle: 'Our research team and collaborators',
+  currentStudents: 'Current Students',
+  undergraduateStudents: 'Undergraduate Students',
+  masterStudents: 'Master\'s Students',
+  phdStudents: 'PhD Students',
+  collaborators: 'Collaborators',
+  ufuCollaborators: 'UFU Collaborators',
+  brazilianCollaborators: 'Brazilian Collaborators',
+  internationalCollaborators: 'International Collaborators',
+  chemicalEngineeringFaculty: 'Faculty of Chemical Engineering',
+  electricalEngineeringFaculty: 'Faculty of Electrical Engineering',
+  project: 'Project',
+  researchStats: 'Research Statistics',
+  graduatedStudents: 'Graduated Students',
+  doctorsFormed: 'Doctors Graduated',
+  mastersFormed: 'Masters Graduated',
+  collaborationCountries: 'Collaboration Countries',
+  joinTeam: 'Join Our Team',
+  joinTeamDescription: 'We are always looking for motivated students and researchers interested in contributing to the advancement of chemical engineering.',
+  undergradResearch: 'Undergraduate Research',
+  masters: 'Master\'s',
+  phd: 'PhD',
+  postdoc: 'Postdoc',
+};

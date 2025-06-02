@@ -1,0 +1,26 @@
+
+export const homeTranslations = {
+  // Landing Page
+  professor: 'Full Professor',
+  chemicalEngineering: 'Chemical Engineering',
+  federalUniversity: 'Federal University of Uberlândia',
+  bio: 'Full Professor at the Faculty of Chemical Engineering, Federal University of Uberlândia, working in the area of Process Systems Engineering (PSE), modeling, control and optimization of industrial chemical processes, safety and development of sustainable processes.',
+  viewFullProfile: 'View Full Profile',
+  exploreMyAcademicWork: 'Explore My Academic Work',
+  researchDescription: 'Explore my research in PSE(Process Systems Engineering)',
+  publicationsDescription: 'Scientific articles and research contributions',
+  teachingDescription: 'Courses and educational resources',
+  newsDescription: 'Latest news and updates',
+  learnMore: 'Learn More',
+  researchHighlights: 'Research Highlights',
+  researchFocus: 'My research focuses on Process System Engineering (PSE), process control, modeling and optimization of chemical processes, Artificial Intelligence applied to safety of processes, and the development of environmentally friendly technologies for the chemical industry.',
+  processControl: 'Process Control and Optimization',
+  industrialSafety: 'Industrial Safety of Chemical Processes',
+  wasteManagement: 'Industrial Waste Management',
+  greenTechnology: 'Green Technology Development',
+  exploreMyResearch: 'Explore My Research',
+  yearsOfExperience: 'Years of Experience',
+  researchFunding: 'Research Funding',
+  interestedInCollaboration: 'Interested in Collaboration?',
+  contactMe: 'Contact Me',
+};
