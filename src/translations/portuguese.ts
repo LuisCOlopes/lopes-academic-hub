@@ -1,5 +1,3 @@
-
-
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -134,6 +132,46 @@ export const ptTranslations = {
   explore: 'Explorar',
   download: 'Baixar',
   
+  // Material page - Educational Resources
+  materialTitle: 'Material Educativo',
+  materialSubtitle: 'Recursos didáticos para apoio ao ensino e aprendizagem',
+  courseNotes: 'Notas de Aula',
+  computationalCodesTitle: 'Códigos Computacionais',
+  exercises: 'Exercícios',
+  educationalVideos: 'Vídeos Educacionais',
+  minicourses: 'Minicursos',
+  usagePolicy: 'Política de Uso',
+  educationalPurpose: 'Os materiais são disponibilizados para fins educacionais',
+  citeSource: 'Cite a fonte ao utilizar em trabalhos acadêmicos',
+  commercialUse: 'Uso comercial requer autorização prévia',
+  reportIssues: 'Reportar problemas ou sugestões para',
+  
+  // Team page - Updated with real data
+  teamTitle: 'Equipe',
+  teamSubtitle: 'Nosso grupo de pesquisa e colaboradores',
+  currentStudents: 'Estudantes Atuais',
+  undergraduateStudents: 'Alunos de Iniciação Científica',
+  masterStudents: 'Alunos de Mestrado',
+  phdStudents: 'Alunos de Doutorado',
+  collaborators: 'Colaboradores',
+  ufuCollaborators: 'Colaboradores UFU',
+  brazilianCollaborators: 'Colaboradores no Brasil',
+  internationalCollaborators: 'Colaboradores Internacionais',
+  chemicalEngineeringFaculty: 'Faculdade de Engenharia Química',
+  electricalEngineeringFaculty: 'Faculdade de Engenharia Elétrica',
+  project: 'Projeto',
+  researchStats: 'Estatísticas do Grupo',
+  graduatedStudents: 'Estudantes Formados',
+  doctorsFormed: 'Doutores Formados',
+  mastersFormed: 'Mestres Formados',
+  collaborationCountries: 'Países de Colaboração',
+  joinTeam: 'Junte-se ao Nosso Grupo',
+  joinTeamDescription: 'Estamos sempre procurando estudantes motivados e pesquisadores interessados em contribuir para o avanço da engenharia química.',
+  undergradResearch: 'Iniciação Científica',
+  masters: 'Mestrado',
+  phd: 'Doutorado',
+  postdoc: 'Pós-doutorado',
+  
   // Speaking page
   speakingTitle: 'Palestras e Apresentações',
   speakingSubtitle: 'Compartilhando conhecimento através de palestras e apresentações',
@@ -248,7 +286,6 @@ export const ptTranslations = {
   researchGateDescription: 'Rede de pesquisa e plataforma de colaboração',
   lattesCvDescription: 'Plataforma brasileira de currículo acadêmico',
   orcidDescription: 'Identificador e perfil de pesquisador',
-  researchMetrics: 'Métricas de Pesquisa',
   publicationsByYear: 'Publicações por Ano',
   citationTrends: 'Tendências de Citação',
   collaborationNetwork: 'Rede de Colaboração',
@@ -317,6 +354,14 @@ export const ptTranslations = {
   podcastAppearances: 'Aparições em Podcast',
   mediaKit: 'Kit de Mídia',
   
+  // Research page
+  researchTitle: 'Pesquisa',
+  researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
+  researchAreas: 'Áreas de Pesquisa',
+  currentProjects: 'Projetos Atuais',
+  citations: 'Citações',
+  funding: 'Financiamento',
+  
   // Common terms
   learnMore: 'Saiba Mais',
   readMore: 'Leia Mais',
@@ -326,10 +371,6 @@ export const ptTranslations = {
   // Alumni page
   alumniTitle: 'Ex-alunos',
   alumniSubtitle: 'Trajetórias de sucesso dos nossos egressos',
-  
-  // Team page
-  teamTitle: 'Equipe',
-  teamSubtitle: 'Nosso grupo de pesquisa e colaboradores',
   
   // Community page
   communityTitle: 'Comunidade',
@@ -455,21 +496,9 @@ export const ptTranslations = {
   consultingTitle: 'Consultoria',
   consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos',
 
-  // Research page
-  researchTitle: 'Pesquisa',
-  researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
-  researchAreas: 'Áreas de Pesquisa',
-  currentProjects: 'Projetos Atuais',
-  citations: 'Citações',
-  funding: 'Financiamento',
-
   // Opportunities page
   opportunitiesTitle: 'Oportunidades',
   opportunitiesSubtitle: 'Oportunidades de pesquisa e colaboração disponíveis',
-
-  // Material page
-  materialTitle: 'Material Educativo',
-  materialSubtitle: 'Recursos educativos e materiais didáticos desenvolvidos',
 
   // Meeting page
   meetingTitle: 'Solicitar Reunião',

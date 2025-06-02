@@ -1,3 +1,4 @@
+
 export const enTranslations = {
   // Navigation
   home: 'Home',
@@ -83,10 +84,12 @@ export const enTranslations = {
   // Research Page
   researchTitle: 'Research',
   currentResearch: 'Current Research',
-  researchMetrics: 'Research Metrics',
   citations: 'Citations',
   students: 'Students Supervised',
   funding: 'Funding',
+  researchSubtitle: 'Advances in chemical process engineering and sustainable technologies',
+  researchAreas: 'Research Areas',
+  currentProjects: 'Current Projects',
   
   // Teaching Page
   teachingTitle: 'Teaching',
@@ -95,9 +98,77 @@ export const enTranslations = {
   lectureNotes: 'Lecture Notes',
   problemSets: 'Problem Sets',
   courseMaterials: 'Course Materials',
+  teachingSubtitle: 'Courses and educational resources for chemical engineering education',
+  computationalCodes: 'Computational Codes',
+  courseMaterialsDescription: 'Slides, notes and references for all courses',
+  studentProjects: 'Student Projects',
+  studentProjectsDescription: 'Works and projects developed by students',
+  assignments: 'Assignments',
+  assignmentsDescription: 'Exercises and assignments for download',
+  teachingPhilosophy: 'Teaching Philosophy',
+  teachingPhilosophyText: 'I believe in a practical approach connected to industry to train chemical engineers prepared for future challenges.',
+  practicalLearning: 'Practical Learning',
+  practicalLearningDescription: 'Connection between theory and real application',
+  criticalThinking: 'Critical Thinking',
+  criticalThinkingDescription: 'Development of analytical capacity',
+  industryConnection: 'Industry Connection',
+  industryConnectionDescription: 'Integration with market demands',
+  processDesignCourse: 'Chemical Industry Process Design',
+  processDesignDescription: 'PPIQ - Industrial chemical process design',
+  chemicalProcessControl2: 'Chemical Process Control II',
+  advancedProcessControl: 'CPQ II - Advanced process control',
+  mathematicalMethods: 'Mathematical Methods in Chemical Engineering',
+  mathematicalMethodsDescription: 'Mathematical methods applied to chemical engineering',
+  undergraduate: 'Undergraduate',
+  graduate: 'Graduate',
+  viewSyllabus: 'View Syllabus',
+  access: 'Access',
+  explore: 'Explore',
+  download: 'Download',
+  
+  // Material page - Educational Resources
+  materialTitle: 'Educational Materials',
+  materialSubtitle: 'Educational resources for teaching and learning support',
+  courseNotes: 'Course Notes',
+  computationalCodesTitle: 'Computational Codes',
+  exercises: 'Exercises',
+  educationalVideos: 'Educational Videos',
+  minicourses: 'Short Courses',
+  usagePolicy: 'Usage Policy',
+  educationalPurpose: 'Materials are provided for educational purposes',
+  citeSource: 'Cite source when using in academic work',
+  commercialUse: 'Commercial use requires prior authorization',
+  reportIssues: 'Report issues or suggestions to',
+  
+  // Team page
+  teamTitle: 'Team',
+  teamSubtitle: 'Our research team and collaborators',
+  currentStudents: 'Current Students',
+  undergraduateStudents: 'Undergraduate Students',
+  masterStudents: 'Master\'s Students',
+  phdStudents: 'PhD Students',
+  collaborators: 'Collaborators',
+  ufuCollaborators: 'UFU Collaborators',
+  brazilianCollaborators: 'Brazilian Collaborators',
+  internationalCollaborators: 'International Collaborators',
+  chemicalEngineeringFaculty: 'Faculty of Chemical Engineering',
+  electricalEngineeringFaculty: 'Faculty of Electrical Engineering',
+  project: 'Project',
+  researchStats: 'Research Statistics',
+  graduatedStudents: 'Graduated Students',
+  doctorsFormed: 'Doctors Graduated',
+  mastersFormed: 'Masters Graduated',
+  collaborationCountries: 'Collaboration Countries',
+  joinTeam: 'Join Our Team',
+  joinTeamDescription: 'We are always looking for motivated students and researchers interested in contributing to the advancement of chemical engineering.',
+  undergradResearch: 'Undergraduate Research',
+  masters: 'Master\'s',
+  phd: 'PhD',
+  postdoc: 'Postdoc',
   
   // Community Page
   communityTitle: 'Academic Community',
+  communitySubtitle: 'Connecting researchers and professionals in the field',
   
   // Conferences Page
   conferencesTitle: 'Conferences',
@@ -121,54 +192,25 @@ export const enTranslations = {
   
   // Projects Page
   projectsTitle: 'Projects',
+  projectsSubtitle: 'Current and completed projects advancing knowledge in chemical engineering',
+  researchImpact: 'Research Impact',
+  totalFunding: 'Total Funding',
+  publicationsGenerated: 'Publications Generated',
+  graduateStudents: 'Graduate Students',
+  industrialPartnerships: 'Industrial Partnerships',
+  activeProjects: 'Active Projects',
+  completedProjects: 'Completed Projects',
   
   // Opportunities Page
   opportunitiesTitle: 'Opportunities',
-  
-  // Team Page
-  teamTitle: 'Team',
+  opportunitiesSubtitle: 'Available research and collaboration opportunities',
   
   // Awards Page
   awardsTitle: 'Awards',
+  awardsSubtitle: 'Recognition and awards received',
   
   // Service Page
   serviceTitle: 'Service',
-  
-  // Leadership Page
-  leadershipTitle: 'Leadership',
-  
-  // Alumni Page
-  alumniTitle: 'Alumni',
-  
-  // Get Involved Page
-  getInvolvedTitle: 'Get Involved',
-  
-  // Meeting Page
-  meetingTitle: 'Request Meeting',
-  
-  // Material Page
-  materialTitle: 'Educational Materials',
-  
-  // News Page
-  newsTitle: 'News',
-  
-  // Media Page
-  mediaTitle: 'Media',
-
-  // Speaking Page
-  speakingTitle: 'Speaking Engagements',
-  speakingSubtitle: 'Sharing knowledge and insights at conferences, workshops, and academic events',
-  recentUpcomingEngagements: 'Recent & Upcoming Engagements',
-  expertiseAreas: 'Expertise Areas',
-  bookSpeakingEngagement: 'Book a Speaking Engagement',
-  contactForSpeaking: 'Contact for Speaking',
-  speakingStats: 'Speaking Stats',
-  totalPresentations: 'Total Presentations',
-  countries: 'Countries',
-  keynoteAddresses: 'Keynote Addresses',
-  availableForSpeaking: 'Available for conferences, workshops, and academic events related to chemical engineering and process control.',
-
-  // Service Page specific
   servicesProvided: 'Services Provided',
   servicesSubtitle: 'Professional services to the academic community and society',
   consultingAndReview: 'Consulting and Review',
@@ -183,75 +225,51 @@ export const enTranslations = {
   committeeParticipation: 'Committee participation welcome',
   panelServices: 'Panel services for funding agencies',
   
+  // Leadership Page
+  leadershipTitle: 'Leadership',
+  leadershipSubtitle: 'Experience in academic and professional leadership promoting innovation and excellence',
+  
+  // Alumni Page
+  alumniTitle: 'Alumni',
+  alumniSubtitle: 'Alumni and their professional trajectories',
+  
+  // Get Involved Page
+  getInvolvedTitle: 'Get Involved',
+  getInvolvedSubtitle: 'Opportunities to participate in research and projects',
+  
+  // Meeting Page
+  meetingTitle: 'Request Meeting',
+  meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
+  
+  // News Page
+  newsTitle: 'News',
+  newsSubtitle: 'Latest news and updates from our research group and academic activities',
+  
+  // Speaking Page
+  speakingTitle: 'Speaking Engagements',
+  speakingSubtitle: 'Sharing knowledge and insights at conferences, workshops, and academic events',
+  recentUpcomingEngagements: 'Recent & Upcoming Engagements',
+  expertiseAreas: 'Expertise Areas',
+  bookSpeakingEngagement: 'Book a Speaking Engagement',
+  contactForSpeaking: 'Contact for Speaking',
+  speakingStats: 'Speaking Stats',
+  totalPresentations: 'Total Presentations',
+  countries: 'Countries',
+  keynoteAddresses: 'Keynote Addresses',
+  availableForSpeaking: 'Available for conferences, workshops, and academic events related to chemical engineering and process control.',
+  
   // Academic Profiles descriptions
   googleScholarDescription: 'Complete citation metrics and publication list',
   researchGateDescription: 'Research network and collaboration platform',
   lattesCvDescription: 'Brazilian academic curriculum platform',
   orcidDescription: 'Researcher identifier and profile',
   
-  // Research Page
-  researchSubtitle: 'Advances in chemical process engineering and sustainable technologies',
-  researchAreas: 'Research Areas',
-  currentProjects: 'Current Projects',
-  
-  // Opportunities Page
-  opportunitiesSubtitle: 'Available research and collaboration opportunities',
-  
-  // Meeting Page
-  meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
-  
-  // Teaching Page
-  teachingSubtitle: 'Courses and educational resources for chemical engineering education',
-  
-  // Material Page
-  materialSubtitle: 'Educational resources and teaching materials developed',
-  
-  // Team Page
-  teamSubtitle: 'Our research team and collaborators',
-  
-  // Projects Page
-  projectsSubtitle: 'Current and completed projects advancing knowledge in chemical engineering',
-  researchImpact: 'Research Impact',
-  totalFunding: 'Total Funding',
-  publicationsGenerated: 'Publications Generated',
-  graduateStudents: 'Graduate Students',
-  industrialPartnerships: 'Industrial Partnerships',
-  activeProjects: 'Active Projects',
-  completedProjects: 'Completed Projects',
-  
   // Consulting Page
   consultingSubtitle: 'Consulting services in chemical engineering and industrial processes',
-  
-  // Alumni Page
-  alumniSubtitle: 'Alumni and their professional trajectories',
-  
-  // Awards Page
-  awardsSubtitle: 'Recognition and awards received',
-  
-  // Leadership Page
-  leadershipSubtitle: 'Experience in academic and professional leadership promoting innovation and excellence',
-  
-  // Get Involved Page
-  getInvolvedSubtitle: 'Opportunities to participate in research and projects',
-  
-  // Community Page
-  communitySubtitle: 'Connecting researchers and professionals in the field',
-  
-  // Podcast Page
-  podcastSubtitle: 'Engineering Conversations - Insights from academia and industry',
-  
-  // Media Page
-  mediaSubtitle: 'Media appearances, interviews, and press coverage',
   
   // Hobbies Page
   hobbiesTitle: 'Personal Interests & Hobbies',
   hobbiesSubtitle: 'Beyond academic pursuits, exploring creativity and personal enrichment',
-  
-  // News Page
-  newsSubtitle: 'Latest news and updates from our research group and academic activities',
-  
-  // Blog Page
-  blogSubtitle: 'Reflections and insights on chemical engineering and academia',
   
   // Workshops Page
   workshopsTitle: 'Workshops',

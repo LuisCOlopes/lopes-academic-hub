@@ -12,7 +12,7 @@ const Material = () => {
 
   const materials = [
     {
-      category: 'Notas de Aula',
+      category: t('courseNotes'),
       icon: BookOpen,
       items: [
         {
@@ -32,7 +32,7 @@ const Material = () => {
       ]
     },
     {
-      category: 'Códigos Computacionais',
+      category: t('computationalCodesTitle'),
       icon: Calculator,
       items: [
         {
@@ -52,7 +52,7 @@ const Material = () => {
       ]
     },
     {
-      category: 'Exercícios',
+      category: t('exercises'),
       icon: FileText,
       items: [
         {
@@ -72,7 +72,7 @@ const Material = () => {
       ]
     },
     {
-      category: 'Vídeos Educacionais',
+      category: t('educationalVideos'),
       icon: Video,
       items: [
         {
@@ -133,7 +133,7 @@ const Material = () => {
                       </div>
                       <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
                         <Download className="h-4 w-4 mr-1" />
-                        Download
+                        {t('download')}
                       </Button>
                     </div>
                   </Card>
@@ -145,13 +145,13 @@ const Material = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Política de Uso
+            {t('usagePolicy')}
           </h2>
           <div className="text-gray-600 space-y-2">
-            <p>• Os materiais são disponibilizados para fins educacionais</p>
-            <p>• Cite a fonte ao utilizar em trabalhos acadêmicos</p>
-            <p>• Uso comercial requer autorização prévia</p>
-            <p>• Reportar problemas ou sugestões para lclaudio@ufu.br</p>
+            <p>• {t('educationalPurpose')}</p>
+            <p>• {t('citeSource')}</p>
+            <p>• {t('commercialUse')}</p>
+            <p>• {t('reportIssues')} lclaudio@ufu.br</p>
           </div>
         </div>
       </div>

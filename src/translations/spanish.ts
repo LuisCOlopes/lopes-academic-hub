@@ -85,7 +85,6 @@ export const esTranslations = {
   // Research Page
   researchTitle: 'Investigación',
   currentResearch: 'Investigación Actual',
-  researchMetrics: 'Métricas de Investigación',
   citations: 'Citas',
   students: 'Estudiantes Supervisados',
   funding: 'Financiamiento',
@@ -101,6 +100,72 @@ export const esTranslations = {
   problemSets: 'Conjuntos de Problemas',
   courseMaterials: 'Materiales del Curso',
   teachingSubtitle: 'Cursos y recursos educativos para la formación en ingeniería química',
+  computationalCodes: 'Códigos Computacionales',
+  courseMaterialsDescription: 'Diapositivas, notas y referencias para todos los cursos',
+  studentProjects: 'Proyectos de Estudiantes',
+  studentProjectsDescription: 'Trabajos y proyectos desarrollados por estudiantes',
+  assignments: 'Tareas',
+  assignmentsDescription: 'Ejercicios y tareas para descargar',
+  teachingPhilosophy: 'Filosofía de Enseñanza',
+  teachingPhilosophyText: 'Creo en un enfoque práctico conectado con la industria para formar ingenieros químicos preparados para los desafíos futuros.',
+  practicalLearning: 'Aprendizaje Práctico',
+  practicalLearningDescription: 'Conexión entre teoría y aplicación real',
+  criticalThinking: 'Pensamiento Crítico',
+  criticalThinkingDescription: 'Desarrollo de capacidad analítica',
+  industryConnection: 'Conexión Industrial',
+  industryConnectionDescription: 'Integración con demandas del mercado',
+  processDesignCourse: 'Diseño de Procesos de la Industria Química',
+  processDesignDescription: 'PPIQ - Diseño de procesos químicos industriales',
+  chemicalProcessControl2: 'Control de Procesos Químicos II',
+  advancedProcessControl: 'CPQ II - Control avanzado de procesos',
+  mathematicalMethods: 'Métodos Matemáticos en Ingeniería Química',
+  mathematicalMethodsDescription: 'Métodos matemáticos aplicados a la ingeniería química',
+  undergraduate: 'Pregrado',
+  graduate: 'Posgrado',
+  viewSyllabus: 'Ver Programa',
+  access: 'Acceder',
+  explore: 'Explorar',
+  download: 'Descargar',
+  
+  // Material page - Educational Resources
+  materialTitle: 'Material Educativo',
+  materialSubtitle: 'Recursos educativos para apoyo en enseñanza y aprendizaje',
+  courseNotes: 'Notas de Curso',
+  computationalCodesTitle: 'Códigos Computacionales',
+  exercises: 'Ejercicios',
+  educationalVideos: 'Videos Educativos',
+  minicourses: 'Minicursos',
+  usagePolicy: 'Política de Uso',
+  educationalPurpose: 'Los materiales se proporcionan para fines educativos',
+  citeSource: 'Cite la fuente al usar en trabajos académicos',
+  commercialUse: 'El uso comercial requiere autorización previa',
+  reportIssues: 'Reportar problemas o sugerencias a',
+  
+  // Team page
+  teamTitle: 'Equipo',
+  teamSubtitle: 'Nuestro equipo de investigación y colaboradores',
+  currentStudents: 'Estudiantes Actuales',
+  undergraduateStudents: 'Estudiantes de Pregrado',
+  masterStudents: 'Estudiantes de Maestría',
+  phdStudents: 'Estudiantes de Doctorado',
+  collaborators: 'Colaboradores',
+  ufuCollaborators: 'Colaboradores UFU',
+  brazilianCollaborators: 'Colaboradores Brasileños',
+  internationalCollaborators: 'Colaboradores Internacionales',
+  chemicalEngineeringFaculty: 'Facultad de Ingeniería Química',
+  electricalEngineeringFaculty: 'Facultad de Ingeniería Eléctrica',
+  project: 'Proyecto',
+  researchStats: 'Estadísticas de Investigación',
+  graduatedStudents: 'Estudiantes Graduados',
+  doctorsFormed: 'Doctores Graduados',
+  mastersFormed: 'Maestros Graduados',
+  collaborationCountries: 'Países de Colaboración',
+  joinTeam: 'Únete a Nuestro Equipo',
+  joinTeamDescription: 'Siempre buscamos estudiantes motivados e investigadores interesados en contribuir al avance de la ingeniería química.',
+  undergradResearch: 'Investigación de Pregrado',
+  masters: 'Maestría',
+  phd: 'Doctorado',
+  postdoc: 'Postdoctorado',
   
   // Community Page
   communityTitle: 'Comunidad Académica',
@@ -141,10 +206,6 @@ export const esTranslations = {
   opportunitiesTitle: 'Oportunidades',
   opportunitiesSubtitle: 'Oportunidades de investigación y colaboración disponibles',
   
-  // Team Page
-  teamTitle: 'Equipo',
-  teamSubtitle: 'Nuestro equipo de investigación y colaboradores',
-  
   // Awards Page
   awardsTitle: 'Premios',
   awardsSubtitle: 'Reconocimientos y premios recibidos',
@@ -181,10 +242,6 @@ export const esTranslations = {
   meetingTitle: 'Solicitar Reunión',
   meetingSubtitle: 'Programa una reunión para discusiones académicas o colaboraciones',
   
-  // Material Page
-  materialTitle: 'Material Educativo',
-  materialSubtitle: 'Recursos educativos y materiales didácticos desarrollados',
-  
   // News Page
   newsTitle: 'Noticias',
   newsSubtitle: 'Últimas noticias y actualizaciones de nuestro grupo de investigación y actividades académicas',
@@ -202,18 +259,6 @@ export const esTranslations = {
   keynoteAddresses: 'Discursos Principales',
   availableForSpeaking: 'Disponible para conferencias, talleres y eventos académicos relacionados con ingeniería química y control de procesos.',
   
-  // Hobbies Page
-  hobbiesTitle: 'Intereses Personales y Pasatiempos',
-  hobbiesSubtitle: 'Más allá de las actividades académicas, explorando creatividad y enriquecimiento personal',
-  
-  // Blog Page
-  blogTitle: 'Blog',
-  blogSubtitle: 'Reflexiones y perspectivas sobre ingeniería química y academia',
-  
-  // Workshops Page
-  workshopsTitle: 'Talleres',
-  workshopsSubtitle: 'Talleres especializados y entrenamiento en ingeniería química',
-  
   // Academic Profiles descriptions
   googleScholarDescription: 'Métricas completas de citas y lista de publicaciones',
   researchGateDescription: 'Red de investigación y plataforma de colaboración',
@@ -224,12 +269,11 @@ export const esTranslations = {
   consultingTitle: 'Consultoría',
   consultingSubtitle: 'Servicios de consultoría en ingeniería química y procesos industriales',
   
-  // Podcast Page
-  podcastTitle: 'Podcast',
-  podcastSubtitle: 'Conversaciones de Ingeniería - Perspectivas de la academia e industria',
+  // Hobbies Page
+  hobbiesTitle: 'Intereses Personales y Pasatiempos',
+  hobbiesSubtitle: 'Más allá de las actividades académicas, explorando creatividad y enriquecimiento personal',
   
-  // Media Page
-  mediaTitle: 'Medios',
-  mediaSubtitle: 'Apariciones en medios, entrevistas y cobertura de prensa'
+  // Workshops Page
+  workshopsTitle: 'Talleres',
+  workshopsSubtitle: 'Talleres especializados y entrenamiento en ingeniería química'
 };
-
