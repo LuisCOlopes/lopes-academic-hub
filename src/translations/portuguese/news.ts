@@ -1,0 +1,28 @@
+
+export const newsTranslations = {
+  // News page
+  newsTitle: 'Notícias',
+  newsSubtitle: 'Últimas notícias e atualizações de nosso grupo de pesquisa e atividades acadêmicas',
+  featuredNews: 'Notícia em Destaque',
+  recentNews: 'Notícias Recentes',
+  newResearchGrantSustainable: 'Nova Bolsa de Pesquisa Concedida para Processos Químicos Sustentáveis',
+  researchGrantExcerpt: 'Recebido financiamento de R$ 2,5 milhões do CNPq para desenvolver processos de fabricação química ambientalmente amigáveis.',
+  bestTeachingAwardUFU: 'Reconhecimento do Prêmio de Melhor Ensino na UFU',
+  teachingAwardExcerpt: 'Homenageado com o Prêmio de Excelência em Ensino por abordagens inovadoras na educação em engenharia química.',
+  internationalCollaborationEuropean: 'Colaboração Internacional com Universidades Europeias',
+  collaborationExcerpt: 'Assinados acordos de parceria com instituições europeias líderes para pesquisa conjunta e programas de intercâmbio estudantil.',
+  studentTeamWinsNational: 'Equipe de Estudantes Vence Competição Nacional de Engenharia',
+  studentCompetitionExcerpt: 'Nossa equipe de graduação garantiu o primeiro lugar na Competição Brasileira de Estudantes de Engenharia Química.',
+  newLabEquipmentInstallation: 'Instalação de Novos Equipamentos de Laboratório Concluída',
+  labEquipmentExcerpt: 'Sistemas de controle de processos de última geração agora operacionais em nosso laboratório avançado de engenharia química.',
+  publishedResearchGreenChemistry: 'Pesquisa Publicada sobre Aplicações de Química Verde',
+  greenChemistryExcerpt: 'Últimas descobertas sobre desenvolvimento de catalisadores sustentáveis publicadas em revista internacional de primeira linha.',
+  subscribeToUpdates: 'Inscreva-se para Atualizações',
+  stayInformedResearch: 'Mantenha-se informado sobre nossos mais recentes desenvolvimentos de pesquisa, conquistas e atividades acadêmicas.',
+  enterEmailAddress: 'Digite seu endereço de email',
+  subscribe: 'Inscrever-se',
+  breakingNews: 'Notícias de Última Hora',
+  pressReleases: 'Comunicados à Imprensa',
+  researchUpdates: 'Atualizações de Pesquisa',
+  academicAchievements: 'Conquistas Acadêmicas',
+};
