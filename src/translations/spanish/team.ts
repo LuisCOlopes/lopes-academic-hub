@@ -1,0 +1,28 @@
+
+export const teamTranslations = {
+  // Team page
+  teamTitle: 'Equipo',
+  teamSubtitle: 'Nuestro equipo de investigación y colaboradores',
+  currentStudents: 'Estudiantes Actuales',
+  undergraduateStudents: 'Estudiantes de Pregrado',
+  masterStudents: 'Estudiantes de Maestría',
+  phdStudents: 'Estudiantes de Doctorado',
+  collaborators: 'Colaboradores',
+  ufuCollaborators: 'Colaboradores UFU',
+  brazilianCollaborators: 'Colaboradores Brasileños',
+  internationalCollaborators: 'Colaboradores Internacionales',
+  chemicalEngineeringFaculty: 'Facultad de Ingeniería Química',
+  electricalEngineeringFaculty: 'Facultad de Ingeniería Eléctrica',
+  project: 'Proyecto',
+  researchStats: 'Estadísticas de Investigación',
+  graduatedStudents: 'Estudiantes Graduados',
+  doctorsFormed: 'Doctores Graduados',
+  mastersFormed: 'Maestros Graduados',
+  collaborationCountries: 'Países de Colaboración',
+  joinTeam: 'Únete a Nuestro Equipo',
+  joinTeamDescription: 'Siempre buscamos estudiantes motivados e investigadores interesados en contribuir al avance de la ingeniería química.',
+  undergradResearch: 'Investigación de Pregrado',
+  masters: 'Maestría',
+  phd: 'Doctorado',
+  postdoc: 'Postdoctorado',
+};

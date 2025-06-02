@@ -1,0 +1,26 @@
+
+export const homeTranslations = {
+  // Landing Page
+  professor: 'Profesor Titular',
+  chemicalEngineering: 'Ingeniería Química',
+  federalUniversity: 'Universidad Federal de Uberlândia',
+  bio: 'Profesor Titular de la Facultad de Ingeniería Química de la Universidad Federal de Uberlândia, trabajando en el área de Ingeniería de Sistemas de Procesos (PSE, por sus siglas en inglés), modelado, control y optimización de procesos químicos industriales, seguridad y desarrollo de procesos sostenibles.',
+  viewFullProfile: 'Ver Perfil Completo',
+  exploreMyAcademicWork: 'Explora Mi Trabajo Académico',
+  researchDescription: 'Explora mi investigación en PSE(Process Systems Engineering)',
+  publicationsDescription: 'Artículos científicos y contribuciones a la investigación',
+  teachingDescription: 'Cursos y recursos educativos',
+  newsDescription: 'Últimas noticias y actualizaciones',
+  learnMore: 'Saber Más',
+  researchHighlights: 'Aspectos Destacados de la Investigación',
+  researchFocus: 'Mi investigación se centra en la Ingeniería de Sistemas de Procesos (PSE), control de procesos, modelado y optimización de procesos químicos, Inteligencia Artificial aplicada a la seguridad de procesos, y el desarrollo de tecnologías ambientalmente amigables para la industria química.',
+  processControl: 'Control y Optimización de Procesos',
+  industrialSafety: 'Seguridad Industrial de Procesos Químicos',
+  wasteManagement: 'Gestión de Residuos Industriales',
+  greenTechnology: 'Desarrollo de Tecnología Verde',
+  exploreMyResearch: 'Explora Mi Investigación',
+  yearsOfExperience: 'Años de Experiencia',
+  researchFunding: 'Financiamiento de Investigación',
+  interestedInCollaboration: '¿Interesado en Colaboración?',
+  contactMe: 'Contáctame',
+};
