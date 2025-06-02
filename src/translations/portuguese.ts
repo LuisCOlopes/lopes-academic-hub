@@ -1,4 +1,5 @@
 
+
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -459,7 +460,6 @@ export const ptTranslations = {
   researchSubtitle: 'Avanços em engenharia de processos químicos e tecnologias sustentáveis',
   researchAreas: 'Áreas de Pesquisa',
   currentProjects: 'Projetos Atuais',
-  researchMetrics: 'Métricas de Pesquisa',
   citations: 'Citações',
   funding: 'Financiamento',
 
