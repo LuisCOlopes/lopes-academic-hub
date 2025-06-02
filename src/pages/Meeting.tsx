@@ -1,15 +1,18 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Clock, MapPin } from 'lucide-react';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Calendar, Clock, MapPin, Video, Users } from 'lucide-react';
 
 const Meeting = () => {
   const { t } = useLanguage();
+  const [meetingFormat, setMeetingFormat] = useState('');
 
   return (
     <AcademicLayout>
@@ -26,17 +29,17 @@ const Meeting = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           <Card className="p-6">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Solicitar Reunião</h2>
-            <form className="space-y-4">
+            <form className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    {t('firstName')}
+                    {t('firstName')} *
                   </label>
                   <Input placeholder="Seu nome" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    {t('lastName')}
+                    {t('lastName')} *
                   </label>
                   <Input placeholder="Seu sobrenome" />
                 </div>
@@ -44,7 +47,7 @@ const Meeting = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  {t('emailAddress')}
+                  {t('emailAddress')} *
                 </label>
                 <Input type="email" placeholder="seu.email@exemplo.com" />
               </div>
@@ -57,37 +60,72 @@ const Meeting = () => {
               </div>
               
               <div>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Formato da Reunião *
+                </label>
+                <RadioGroup value={meetingFormat} onValueChange={setMeetingFormat} className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="presencial" id="presencial" />
+                    <Label htmlFor="presencial" className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      Presencial (UFU)
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="teams" id="teams" />
+                    <Label htmlFor="teams" className="flex items-center gap-2">
+                      <Video className="h-4 w-4" />
+                      MS Teams
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="meet" id="meet" />
+                    <Label htmlFor="meet" className="flex items-center gap-2">
+                      <Users className="h-4 w-4" />
+                      Google Meet
+                    </Label>
+                  </div>
+                </RadioGroup>
+              </div>
+              
+              <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Tipo de Reunião
                 </label>
-                <select className="w-full p-2 border border-gray-300 rounded-md">
-                  <option>Discussão Acadêmica</option>
-                  <option>Orientação de Pesquisa</option>
-                  <option>Colaboração</option>
-                  <option>Consultoria</option>
-                  <option>Outro</option>
-                </select>
+                <Select>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione o tipo de reunião" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="academic">Discussão Acadêmica</SelectItem>
+                    <SelectItem value="research">Orientação de Pesquisa</SelectItem>
+                    <SelectItem value="collaboration">Colaboração</SelectItem>
+                    <SelectItem value="consulting">Consultoria</SelectItem>
+                    <SelectItem value="other">Outro</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Data Preferida *
+                  </label>
+                  <Input type="date" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Horário Preferido *
+                  </label>
+                  <Input type="time" />
+                </div>
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Data Preferida
+                  Assunto/Objetivo da Reunião *
                 </label>
-                <Input type="date" />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Horário Preferido
-                </label>
-                <Input type="time" />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Assunto da Reunião
-                </label>
-                <Input placeholder="Breve descrição do assunto" />
+                <Input placeholder="Descreva brevemente o que gostaria de discutir na reunião..." />
               </div>
               
               <div>
@@ -95,8 +133,18 @@ const Meeting = () => {
                   Descrição Detalhada
                 </label>
                 <Textarea 
-                  placeholder="Descreva o objetivo da reunião e tópicos a serem discutidos..."
+                  placeholder="Descreva detalhadamente o objetivo da reunião e tópicos específicos a serem discutidos..."
                   rows={4}
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Informações Adicionais
+                </label>
+                <Textarea 
+                  placeholder="Qualquer informação adicional relevante (documentos, links, contexto específico, etc.)"
+                  rows={3}
                 />
               </div>
               
