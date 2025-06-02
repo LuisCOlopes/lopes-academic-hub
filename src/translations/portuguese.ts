@@ -1,3 +1,4 @@
+
 export const ptTranslations = {
   // Navigation
   home: 'Início',
@@ -203,6 +204,14 @@ export const ptTranslations = {
   // Leadership page
   leadershipTitle: 'Liderança',
   leadershipSubtitle: 'Experiência em liderança acadêmica e profissional promovendo inovação e excelência',
+  leadershipRoles: 'Funções de Liderança',
+  leadershipAchievements: 'Conquistas em Liderança',
+  visionaryLeadership: 'Liderança Visionária',
+  strategicPlanning: 'Planejamento Estratégico',
+  teamManagement: 'Gestão de Equipes',
+  institutionalDevelopment: 'Desenvolvimento Institucional',
+  academicGovernance: 'Governança Acadêmica',
+  researchLeadership: 'Liderança em Pesquisa',
   
   // Projects page
   projectsTitle: 'Projetos',
@@ -212,8 +221,13 @@ export const ptTranslations = {
   researchImpact: 'Impacto da Pesquisa',
   totalFunding: 'Financiamento Total',
   publicationsGenerated: 'Publicações Geradas',
-  graduateStudents: 'Estudantes de Pós-graduação',
   industrialPartnerships: 'Parcerias Industriais',
+  projectObjectives: 'Objetivos do Projeto',
+  projectMethodology: 'Metodologia do Projeto',
+  expectedOutcomes: 'Resultados Esperados',
+  collaboratingInstitutions: 'Instituições Colaboradoras',
+  projectTeam: 'Equipe do Projeto',
+  milestones: 'Marcos do Projeto',
   
   // Publications page
   publicationsTitle: 'Publicações',
@@ -233,6 +247,11 @@ export const ptTranslations = {
   researchGateDescription: 'Rede de pesquisa e plataforma de colaboração',
   lattesCvDescription: 'Plataforma brasileira de currículo acadêmico',
   orcidDescription: 'Identificador e perfil de pesquisador',
+  researchMetrics: 'Métricas de Pesquisa',
+  publicationsByYear: 'Publicações por Ano',
+  citationTrends: 'Tendências de Citação',
+  collaborationNetwork: 'Rede de Colaboração',
+  impactFactor: 'Fator de Impacto',
   
   // News page
   newsTitle: 'Notícias',
@@ -255,12 +274,15 @@ export const ptTranslations = {
   stayInformedResearch: 'Mantenha-se informado sobre nossos mais recentes desenvolvimentos de pesquisa, conquistas e atividades acadêmicas.',
   enterEmailAddress: 'Digite seu endereço de email',
   subscribe: 'Inscrever-se',
+  breakingNews: 'Notícias de Última Hora',
+  pressReleases: 'Comunicados à Imprensa',
+  researchUpdates: 'Atualizações de Pesquisa',
+  academicAchievements: 'Conquistas Acadêmicas',
   
   // Media page
   mediaTitle: 'Mídia',
   mediaSubtitle: 'Aparições na mídia, entrevistas e cobertura de imprensa',
   recentMediaAppearances: 'Aparições Recentes na Mídia',
-  pressReleases: 'Comunicados à Imprensa',
   interview: 'Entrevista',
   article: 'Artigo',
   tvInterview: 'Entrevista TV',
@@ -289,6 +311,10 @@ export const ptTranslations = {
   contactForMediaInquiries: 'Contato para Consultas da Mídia',
   view: 'Ver',
   read: 'leitura',
+  mediaGallery: 'Galeria de Mídia',
+  videoInterviews: 'Entrevistas em Vídeo',
+  podcastAppearances: 'Aparições em Podcast',
+  mediaKit: 'Kit de Mídia',
   
   // Common terms
   learnMore: 'Saiba Mais',
@@ -353,7 +379,6 @@ export const ptTranslations = {
   researchCollaborationDesc: 'Participe de nossos projetos de pesquisa em engenharia química e controle de processos',
   graduateResearchPositions: 'Posições de pesquisa de pós-graduação',
   postdocOpportunities: 'Oportunidades de pós-doutorado',
-  industryPartnerships: 'Parcerias com a indústria',
   academicMentoring: 'Mentoria Acadêmica',
   academicMentoringDesc: 'Participe de nossos programas de mentoria para estudantes e jovens pesquisadores',
   studentMentoring: 'Mentoria de estudantes',
