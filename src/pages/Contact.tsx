@@ -1,14 +1,65 @@
 
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, Phone, MapPin, Calendar, Video, Linkedin } from 'lucide-react';
+import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
+import { contactMessageSchema, type ContactMessageForm } from '@/lib/validations';
 
 const Contact = () => {
   const { t } = useLanguage();
+
+  const form = useForm<ContactMessageForm>({
+    resolver: zodResolver(contactMessageSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      institution: '',
+      subject: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (data: ContactMessageForm) => {
+    try {
+      console.log('Submitting contact message:', data);
+      
+      const { data: result, error } = await supabase.functions.invoke('submit-forms', {
+        body: {
+          type: 'contact-message',
+          data: data,
+        },
+      });
+
+      if (error) {
+        console.error('Submission error:', error);
+        toast.error('Erro ao enviar mensagem. Tente novamente.');
+        return;
+      }
+
+      console.log('Submission successful:', result);
+      toast.success('Mensagem enviada com sucesso! Responderemos em até 48 horas.');
+      form.reset();
+      
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error('Erro inesperado. Tente novamente.');
+    }
+  };
+
+  const handleClearForm = () => {
+    form.reset();
+    toast.info('Formulário limpo.');
+  };
 
   return (
     <AcademicLayout>
@@ -135,62 +186,116 @@ const Contact = () => {
               <Card className="p-8">
                 <h2 className="text-2xl font-semibold text-ufu-navy mb-6">{t('sendMessage')}</h2>
                 
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-ufu-navy mb-2">
-                        {t('firstName')} *
-                      </label>
-                      <Input placeholder={t('firstName')} />
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="firstName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t('firstName')} *</FormLabel>
+                            <FormControl>
+                              <Input placeholder={t('firstName')} {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t('lastName')} *</FormLabel>
+                            <FormControl>
+                              <Input placeholder={t('lastName')} {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-ufu-navy mb-2">
-                        {t('lastName')} *
-                      </label>
-                      <Input placeholder={t('lastName')} />
-                    </div>
-                  </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-ufu-navy mb-2">
-                      {t('emailAddress')} *
-                    </label>
-                    <Input type="email" placeholder={t('emailAddress')} />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-ufu-navy mb-2">
-                      {t('institution')}
-                    </label>
-                    <Input placeholder={t('institution')} />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-ufu-navy mb-2">
-                      {t('subject')} *
-                    </label>
-                    <Input placeholder={t('subject')} />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-ufu-navy mb-2">
-                      {t('message')} *
-                    </label>
-                    <Textarea 
-                      placeholder={t('message')}
-                      rows={6}
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t('emailAddress')} *</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder={t('emailAddress')} {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <div className="flex gap-4">
-                    <Button type="submit" className="flex-1 bg-ufu-blue hover:bg-ufu-navy text-white">
-                      {t('sendMessage')}
-                    </Button>
-                    <Button type="button" variant="outline" className="border-ufu-blue text-ufu-blue">
-                      {t('clearForm')}
-                    </Button>
-                  </div>
-                </form>
+                    <FormField
+                      control={form.control}
+                      name="institution"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t('institution')}</FormLabel>
+                          <FormControl>
+                            <Input placeholder={t('institution')} {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t('subject')} *</FormLabel>
+                          <FormControl>
+                            <Input placeholder={t('subject')} {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t('message')} *</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder={t('message')}
+                              rows={6}
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <div className="flex gap-4">
+                      <Button 
+                        type="submit" 
+                        className="flex-1 bg-ufu-blue hover:bg-ufu-navy text-white"
+                        disabled={form.formState.isSubmitting}
+                      >
+                        {form.formState.isSubmitting ? 'Enviando...' : t('sendMessage')}
+                      </Button>
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        className="border-ufu-blue text-ufu-blue"
+                        onClick={handleClearForm}
+                      >
+                        {t('clearForm')}
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
 
                 <div className="mt-6 p-4 bg-ufu-light rounded-lg">
                   <p className="text-sm text-ufu-navy">

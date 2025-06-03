@@ -9,7 +9,99 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      contact_messages: {
+        Row: {
+          created_at: string | null
+          email: string
+          first_name: string
+          id: string
+          institution: string | null
+          last_name: string
+          message: string
+          status: string | null
+          subject: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          first_name: string
+          id?: string
+          institution?: string | null
+          last_name: string
+          message: string
+          status?: string | null
+          subject: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          first_name?: string
+          id?: string
+          institution?: string | null
+          last_name?: string
+          message?: string
+          status?: string | null
+          subject?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      meeting_requests: {
+        Row: {
+          additional_info: string | null
+          created_at: string | null
+          description: string | null
+          email: string
+          first_name: string
+          id: string
+          institution: string | null
+          last_name: string
+          meeting_format: string
+          meeting_type: string | null
+          preferred_date: string
+          preferred_time: string
+          status: string | null
+          subject: string
+          updated_at: string | null
+        }
+        Insert: {
+          additional_info?: string | null
+          created_at?: string | null
+          description?: string | null
+          email: string
+          first_name: string
+          id?: string
+          institution?: string | null
+          last_name: string
+          meeting_format: string
+          meeting_type?: string | null
+          preferred_date: string
+          preferred_time: string
+          status?: string | null
+          subject: string
+          updated_at?: string | null
+        }
+        Update: {
+          additional_info?: string | null
+          created_at?: string | null
+          description?: string | null
+          email?: string
+          first_name?: string
+          id?: string
+          institution?: string | null
+          last_name?: string
+          meeting_format?: string
+          meeting_type?: string | null
+          preferred_date?: string
+          preferred_time?: string
+          status?: string | null
+          subject?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
