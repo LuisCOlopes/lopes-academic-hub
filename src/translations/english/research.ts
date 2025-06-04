@@ -14,4 +14,6 @@ export const researchTranslations = {
   researchInterest2: 'Fault-Tolerant Systems',
   researchInterest3: 'Sustainability',
   researchInterest4: 'Optimization',
+  researchMetrics: 'Research Metrics',
+  publications: 'Publications',
 };

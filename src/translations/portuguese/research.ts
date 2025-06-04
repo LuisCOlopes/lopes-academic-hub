@@ -17,4 +17,7 @@ export const researchTranslations = {
   citations: 'Citações',
   funding: 'Financiamento',
   researchDescription: 'Pesquisas inovadoras em engenharia química e controle de processos',
+  researchMetrics: 'Métricas de Pesquisa',
+  publications: 'Publicações',
+  students: 'Estudantes Orientados',
 };

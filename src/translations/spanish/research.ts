@@ -10,4 +10,6 @@ export const researchTranslations = {
   researchAreas: 'Áreas de Investigación',
   currentProjects: 'Proyectos Actuales',
   researchInterests: 'Intereses de Investigación',
+  researchMetrics: 'Métricas de Investigación',
+  publications: 'Publicaciones',
 };
