@@ -41,6 +41,8 @@ export const pagesTranslations = {
   dissertation: 'Dissertation',
   work: 'Work',
   year: 'Year',
+  university: 'University',
+  fundingAgency: 'Funding Agency',
   
   // Publications page
   publicationsSubtitle: 'Scientific articles and contributions to academic literature',
@@ -90,6 +92,6 @@ export const pagesTranslations = {
   consultingSubtitle: 'Specialized services in chemical engineering and process control',
   hobbiesTitle: 'Personal Interests',
   hobbiesSubtitle: 'Balancing academic and personal life',
-  alumniTitle: 'Alumni',
-  alumniSubtitle: 'Success stories of our graduates',
+  alumniPageTitle: 'Alumni',
+  alumniPageSubtitle: 'Success stories of our graduates',
 };

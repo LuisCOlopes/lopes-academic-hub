@@ -41,6 +41,8 @@ export const pagesTranslations = {
   dissertation: 'Disertación',
   work: 'Trabajo',
   year: 'Año',
+  university: 'Universidad',
+  fundingAgency: 'Agencia de Financiamiento',
   
   // Publications page
   publicationsSubtitle: 'Artículos científicos y contribuciones a la literatura académica',
@@ -90,6 +92,6 @@ export const pagesTranslations = {
   consultingSubtitle: 'Servicios especializados en ingeniería química y control de procesos',
   hobbiesTitle: 'Intereses Personales',
   hobbiesSubtitle: 'Equilibrando la vida académica y personal',
-  alumniTitle: 'Egresados',
-  alumniSubtitle: 'Historias de éxito de nuestros graduados',
+  alumniPageTitle: 'Egresados',
+  alumniPageSubtitle: 'Historias de éxito de nuestros graduados',
 };

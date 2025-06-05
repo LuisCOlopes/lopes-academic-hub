@@ -1,4 +1,3 @@
-
 export const pagesTranslations = {
   // Page titles and general content
   aboutTitle: 'Sobre',
@@ -42,6 +41,8 @@ export const pagesTranslations = {
   dissertation: 'Dissertação',
   work: 'Trabalho',
   year: 'Ano',
+  university: 'Universidade',
+  fundingAgency: 'Agência de Fomento',
   
   // Publications page
   publicationsSubtitle: 'Artigos científicos e contribuições para a literatura acadêmica',
@@ -91,6 +92,6 @@ export const pagesTranslations = {
   consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos',
   hobbiesTitle: 'Interesses Pessoais',
   hobbiesSubtitle: 'Equilibrando vida acadêmica e pessoal',
-  alumniTitle: 'Ex-alunos',
-  alumniSubtitle: 'Trajetórias de sucesso dos nossos egressos',
+  alumniPageTitle: 'Ex-alunos',
+  alumniPageSubtitle: 'Trajetórias de sucesso dos nossos egressos',
 };
