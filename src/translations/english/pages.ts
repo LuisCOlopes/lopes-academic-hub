@@ -1,70 +1,95 @@
-
 export const pagesTranslations = {
-  // About Page
-  aboutTitle: 'About Professor',
-  aboutSubtitle: 'Dedicated to advancing chemical engineering through research and teaching',
+  // Page titles and general content
+  aboutTitle: 'About',
+  aboutSubtitle: 'Academic and Professional Journey',
   biography: 'Biography',
   education: 'Education',
-  
-  // Publications Page
+  awardsTitle: 'Awards and Recognition',
+  awardsSubtitle: 'Recognition for excellence in research and teaching',
   publicationsTitle: 'Publications',
-  recentPublications: 'Recent Journal Articles',
+  publicationsDescription: 'Scientific articles and contributions to academic literature',
+  newsDescription: 'Latest news and updates from the academic world',
+  
+  // Alumni page translations
+  alumniTitle: 'Alumni and Supervisions',
+  alumniSubtitle: 'Complete record of academic supervisions conducted',
+  completedOrientations: 'Completed Supervisions',
+  completedOrientationsPart1: 'Completed Supervisions (Part 1)',
+  completedOrientationsPart2: 'Completed Supervisions (Part 2)',
+  orientationFlowchart: 'Academic supervision flowchart',
+  orientationFlowchart2: 'Continuation of academic supervision flowchart',
+  phdSupervised: 'PhD Graduates - Supervisions',
+  phdCoSupervised: 'PhD Graduates - Co-supervisions',
+  mastersSupervised: 'Masters Graduates - Dissertations Supervised',
+  mastersCoSupervised: 'Masters Graduates - Dissertations Co-supervised',
+  specialistsSupervised: 'Specialists Supervised - Lato Sensu Supervisions',
+  generalStatistics: 'General Statistics',
+  totalPostgraduateOrientations: 'Total Postgraduate Supervisions',
+  specialistsFormed: 'Specialists Formed',
+  doctorsFormed: 'Doctors Formed',
+  mastersFormed: 'Masters Formed',
+  doctorsSupervised: 'Doctors Supervised',
+  doctorsCoSupervised: 'Doctors Co-supervised',
+  mastersOrientated: 'Masters Supervised',
+  mastersCoOriented: 'Masters Co-supervised',
+  doctorate: 'Doctorate',
+  doctorateCoSupervision: 'Doctorate - Co-supervision',
+  masters: 'Masters',
+  mastersCoSupervision: 'Masters - Co-supervision',
+  specialization: 'Specialization',
+  thesis: 'Thesis',
+  dissertation: 'Dissertation',
+  work: 'Work',
+  year: 'Year',
+  
+  // Publications page
+  publicationsSubtitle: 'Scientific articles and contributions to academic literature',
+  recentPublications: 'Recent Publications',
   bookChapters: 'Book Chapters',
   academicProfiles: 'Academic Profiles',
   totalPublications: 'Total Publications',
   totalCitations: 'Total Citations',
-  hIndex: 'h-index',
-  i10Index: 'i10-index',
+  hIndex: 'h-Index',
+  i10Index: 'i10-Index',
   journalArticles: 'Journal Articles',
   viewPaper: 'View Paper',
   downloadPdf: 'Download PDF',
   visitProfile: 'Visit Profile',
+  googleScholarDescription: 'Complete citation metrics and publication list',
+  researchGateDescription: 'Research network and collaboration platform',
+  lattesCvDescription: 'Brazilian academic curriculum platform',
+  orcidDescription: 'Researcher identifier and profile',
+  publicationsByYear: 'Publications by Year',
+  citationTrends: 'Citation Trends',
+  collaborationNetwork: 'Collaboration Network',
+  impactFactor: 'Impact Factor',
   
-  // Projects Page
+  // Projects page
   projectsTitle: 'Projects',
   projectsSubtitle: 'Current and completed projects advancing knowledge in chemical engineering',
+  activeProjects: 'Active Projects',
+  completedProjects: 'Completed Projects',
   researchImpact: 'Research Impact',
   totalFunding: 'Total Funding',
   publicationsGenerated: 'Publications Generated',
   graduateStudents: 'Graduate Students',
   industrialPartnerships: 'Industrial Partnerships',
-  activeProjects: 'Active Projects',
-  completedProjects: 'Completed Projects',
+  projectObjectives: 'Project Objectives',
+  projectMethodology: 'Project Methodology',
+  expectedOutcomes: 'Expected Outcomes',
+  collaboratingInstitutions: 'Collaborating Institutions',
+  projectTeam: 'Project Team',
+  milestones: 'Project Milestones',
   
-  // Opportunities Page
+  // Other pages
   opportunitiesTitle: 'Opportunities',
   opportunitiesSubtitle: 'Available research and collaboration opportunities',
-  
-  // Awards Page
-  awardsTitle: 'Awards',
-  awardsSubtitle: 'Recognition and awards received',
-  
-  // Alumni Page
-  alumniTitle: 'Alumni',
-  alumniSubtitle: 'Alumni and their professional trajectories',
-  
-  // Get Involved Page
-  getInvolvedTitle: 'Get Involved',
-  getInvolvedSubtitle: 'Opportunities to participate in research and projects',
-  
-  // Meeting Page
   meetingTitle: 'Request Meeting',
   meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
-  
-  // News Page
-  newsTitle: 'News',
-  newsSubtitle: 'Latest news and updates from our research group and academic activities',
-  
-  // Consulting Page
-  consultingSubtitle: 'Consulting services in chemical engineering and industrial processes',
-  
-  // Hobbies Page
-  hobbiesTitle: 'Personal Interests & Hobbies',
-  hobbiesSubtitle: 'Beyond academic pursuits, exploring creativity and personal enrichment',
-  
-  // Academic Profiles descriptions
-  googleScholarDescription: 'Complete citation metrics and publication list',
-  researchGateDescription: 'Research network and collaboration platform',
-  lattesCvDescription: 'Brazilian academic curriculum platform',
-  orcidDescription: 'Researcher identifier and profile',
+  consultingTitle: 'Consulting',
+  consultingSubtitle: 'Specialized services in chemical engineering and process control',
+  hobbiesTitle: 'Personal Interests',
+  hobbiesSubtitle: 'Balancing academic and personal life',
+  alumniTitle: 'Alumni',
+  alumniSubtitle: 'Success stories of our graduates',
 };

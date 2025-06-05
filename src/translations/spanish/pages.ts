@@ -1,71 +1,95 @@
-
 export const pagesTranslations = {
-  // About Page
-  aboutTitle: 'Acerca del Profesor',
-  aboutSubtitle: 'Dedicado al avance de la ingeniería química a través de la investigación y la enseñanza',
+  // Page titles and general content
+  aboutTitle: 'Acerca de',
+  aboutSubtitle: 'Trayectoria Académica y Profesional',
   biography: 'Biografía',
-  education: 'Educación',
-  
-  // Publications Page
+  education: 'Formación',
+  awardsTitle: 'Premios y Reconocimientos',
+  awardsSubtitle: 'Reconocimientos por excelencia en investigación y enseñanza',
   publicationsTitle: 'Publicaciones',
-  recentPublications: 'Artículos de Revista Recientes',
+  publicationsDescription: 'Artículos científicos y contribuciones a la literatura académica',
+  newsDescription: 'Últimas noticias y actualizaciones del mundo académico',
+  
+  // Alumni page translations
+  alumniTitle: 'Egresados y Orientaciones',
+  alumniSubtitle: 'Registro completo de orientaciones académicas realizadas',
+  completedOrientations: 'Orientaciones Completadas',
+  completedOrientationsPart1: 'Orientaciones Completadas (Parte 1)',
+  completedOrientationsPart2: 'Orientaciones Completadas (Parte 2)',
+  orientationFlowchart: 'Diagrama de flujo de orientaciones académicas',
+  orientationFlowchart2: 'Continuación del diagrama de flujo de orientaciones académicas',
+  phdSupervised: 'Doctores Formados - Orientaciones',
+  phdCoSupervised: 'Doctores Formados - Coorientaciones',
+  mastersSupervised: 'Maestros Formados - Disertaciones Orientadas',
+  mastersCoSupervised: 'Maestros Formados - Disertaciones Coorientadas',
+  specialistsSupervised: 'Especialistas Orientados - Orientaciones Lato Sensu',
+  generalStatistics: 'Estadísticas Generales',
+  totalPostgraduateOrientations: 'Total de Orientaciones de Posgrado',
+  specialistsFormed: 'Especialistas Formados',
+  doctorsFormed: 'Doctores Formados',
+  mastersFormed: 'Maestros Formados',
+  doctorsSupervised: 'Doctores Orientados',
+  doctorsCoSupervised: 'Doctores Coorientados',
+  mastersOrientated: 'Maestros Orientados',
+  mastersCoOriented: 'Maestros Coorientados',
+  doctorate: 'Doctorado',
+  doctorateCoSupervision: 'Doctorado - Coorientación',
+  masters: 'Maestría',
+  mastersCoSupervision: 'Maestría - Coorientación',
+  specialization: 'Especialización',
+  thesis: 'Tesis',
+  dissertation: 'Disertación',
+  work: 'Trabajo',
+  year: 'Año',
+  
+  // Publications page
+  publicationsSubtitle: 'Artículos científicos y contribuciones a la literatura académica',
+  recentPublications: 'Publicaciones Recientes',
   bookChapters: 'Capítulos de Libros',
   academicProfiles: 'Perfiles Académicos',
   totalPublications: 'Total de Publicaciones',
   totalCitations: 'Total de Citas',
   hIndex: 'Índice h',
   i10Index: 'Índice i10',
-  journalArticles: 'Artículos de Revista',
+  journalArticles: 'Artículos de Revistas',
   viewPaper: 'Ver Artículo',
   downloadPdf: 'Descargar PDF',
   visitProfile: 'Visitar Perfil',
+  googleScholarDescription: 'Métricas completas de citas y lista de publicaciones',
+  researchGateDescription: 'Red de investigación y plataforma de colaboración',
+  lattesCvDescription: 'Plataforma brasileña de currículo académico',
+  orcidDescription: 'Identificador y perfil de investigador',
+  publicationsByYear: 'Publicaciones por Año',
+  citationTrends: 'Tendencias de Citas',
+  collaborationNetwork: 'Red de Colaboración',
+  impactFactor: 'Factor de Impacto',
   
-  // Projects Page
+  // Projects page
   projectsTitle: 'Proyectos',
   projectsSubtitle: 'Proyectos actuales y completados que avanzan el conocimiento en ingeniería química',
+  activeProjects: 'Proyectos Activos',
+  completedProjects: 'Proyectos Completados',
   researchImpact: 'Impacto de la Investigación',
   totalFunding: 'Financiamiento Total',
   publicationsGenerated: 'Publicaciones Generadas',
   graduateStudents: 'Estudiantes de Posgrado',
   industrialPartnerships: 'Asociaciones Industriales',
-  activeProjects: 'Proyectos Activos',
-  completedProjects: 'Proyectos Completados',
+  projectObjectives: 'Objetivos del Proyecto',
+  projectMethodology: 'Metodología del Proyecto',
+  expectedOutcomes: 'Resultados Esperados',
+  collaboratingInstitutions: 'Instituciones Colaboradoras',
+  projectTeam: 'Equipo del Proyecto',
+  milestones: 'Hitos del Proyecto',
   
-  // Opportunities Page
+  // Other pages
   opportunitiesTitle: 'Oportunidades',
   opportunitiesSubtitle: 'Oportunidades de investigación y colaboración disponibles',
-  
-  // Awards Page
-  awardsTitle: 'Premios',
-  awardsSubtitle: 'Reconocimientos y premios recibidos',
-  
-  // Alumni Page
-  alumniTitle: 'Egresados',
-  alumniSubtitle: 'Egresados y sus trayectorias profesionales',
-  
-  // Get Involved Page
-  getInvolvedTitle: 'Participa',
-  getInvolvedSubtitle: 'Oportunidades para participar en investigación y proyectos',
-  
-  // Meeting Page
   meetingTitle: 'Solicitar Reunión',
-  meetingSubtitle: 'Programa una reunión para discusiones académicas o colaboraciones',
-  
-  // News Page
-  newsTitle: 'Noticias',
-  newsSubtitle: 'Últimas noticias y actualizaciones de nuestro grupo de investigación y actividades académicas',
-  
-  // Consulting Page
+  meetingSubtitle: 'Programar una reunión para discusiones académicas o colaboraciones',
   consultingTitle: 'Consultoría',
-  consultingSubtitle: 'Servicios de consultoría en ingeniería química y procesos industriales',
-  
-  // Hobbies Page
-  hobbiesTitle: 'Intereses Personales y Pasatiempos',
-  hobbiesSubtitle: 'Más allá de las actividades académicas, explorando creatividad y enriquecimiento personal',
-  
-  // Academic Profiles descriptions
-  googleScholarDescription: 'Métricas completas de citas y lista de publicaciones',
-  researchGateDescription: 'Red de investigación y plataforma de colaboración',
-  lattesCvDescription: 'Plataforma brasileña de currículum académico',
-  orcidDescription: 'Identificador y perfil de investigador',
+  consultingSubtitle: 'Servicios especializados en ingeniería química y control de procesos',
+  hobbiesTitle: 'Intereses Personales',
+  hobbiesSubtitle: 'Equilibrando la vida académica y personal',
+  alumniTitle: 'Egresados',
+  alumniSubtitle: 'Historias de éxito de nuestros graduados',
 };

@@ -1,3 +1,4 @@
+
 export const pagesTranslations = {
   // Page titles and general content
   aboutTitle: 'Sobre',
@@ -9,6 +10,38 @@ export const pagesTranslations = {
   publicationsTitle: 'Publicações',
   publicationsDescription: 'Artigos científicos e contribuições para a literatura acadêmica',
   newsDescription: 'Últimas notícias e atualizações do mundo acadêmico',
+  
+  // Alumni page translations
+  alumniTitle: 'Ex-Alunos e Orientações',
+  alumniSubtitle: 'Registro completo de orientações acadêmicas realizadas',
+  completedOrientations: 'Orientações Concluídas',
+  completedOrientationsPart1: 'Orientações Concluídas (Parte 1)',
+  completedOrientationsPart2: 'Orientações Concluídas (Parte 2)',
+  orientationFlowchart: 'Fluxograma de orientações acadêmicas realizadas',
+  orientationFlowchart2: 'Continuação do fluxograma de orientações acadêmicas',
+  phdSupervised: 'Doutores Formados - Orientações',
+  phdCoSupervised: 'Doutores Formados - Coorientações',
+  mastersSupervised: 'Mestres Formados - Dissertações Orientadas',
+  mastersCoSupervised: 'Mestres Formados - Dissertações Coorientadas',
+  specialistsSupervised: 'Especialistas Orientados - Orientações Lato Sensu',
+  generalStatistics: 'Estatísticas Gerais',
+  totalPostgraduateOrientations: 'Total de Orientações Pós-graduação',
+  specialistsFormed: 'Especialistas Formados',
+  doctorsFormed: 'Doutores Formados',
+  mastersFormed: 'Mestres Formados',
+  doctorsSupervised: 'Doutores Orientados',
+  doctorsCoSupervised: 'Doutores Coorientados',
+  mastersOrientated: 'Mestres Orientados',
+  mastersCoOriented: 'Mestres Coorientados',
+  doctorate: 'Doutorado',
+  doctorateCoSupervision: 'Doutorado - Coorientação',
+  masters: 'Mestrado',
+  mastersCoSupervision: 'Mestrado - Coorientação',
+  specialization: 'Especialização',
+  thesis: 'Tese',
+  dissertation: 'Dissertação',
+  work: 'Trabalho',
+  year: 'Ano',
   
   // Publications page
   publicationsSubtitle: 'Artigos científicos e contribuições para a literatura acadêmica',

@@ -79,10 +79,10 @@ const Alumni = () => {
   ];
 
   const stats = [
-    { number: '5', label: 'Doutores Orientados', icon: GraduationCap },
-    { number: '6', label: 'Doutores Coorientados', icon: GraduationCap },
-    { number: '11', label: 'Mestres Orientados', icon: GraduationCap },
-    { number: '9', label: 'Mestres Coorientados', icon: GraduationCap }
+    { number: '5', label: t('doctorsSupervised'), icon: GraduationCap },
+    { number: '6', label: t('doctorsCoSupervised'), icon: GraduationCap },
+    { number: '11', label: t('mastersOrientated'), icon: GraduationCap },
+    { number: '9', label: t('mastersCoOriented'), icon: GraduationCap }
   ];
 
   return (
@@ -91,10 +91,10 @@ const Alumni = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
-              Ex-Alunos e Orientações
+              {t('alumniTitle')}
             </h1>
             <p className="text-lg text-ufu-blue">
-              Registro completo de orientações acadêmicas realizadas
+              {t('alumniSubtitle')}
             </p>
           </div>
 
@@ -111,47 +111,47 @@ const Alumni = () => {
 
           {/* Student Supervision Charts - Full Width Layout */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Orientações Concluídas</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('completedOrientations')}</h2>
             
             <Card className="p-6 mb-8">
-              <h3 className="text-xl font-semibold text-ufu-navy mb-4">Orientações Concluídas (Parte 1)</h3>
+              <h3 className="text-xl font-semibold text-ufu-navy mb-4">{t('completedOrientationsPart1')}</h3>
               <div className="text-center">
                 <img 
                   src="/lovable-uploads/8ea91021-e874-4bd2-891b-224d38f06d45.png" 
-                  alt="Orientações de Estudantes - Parte 1" 
+                  alt={t('orientationFlowchart')} 
                   className="mx-auto max-w-full h-auto rounded-lg"
                   style={{ maxHeight: '800px' }}
                 />
-                <p className="text-sm text-ufu-blue mt-3">Fluxograma de orientações acadêmicas realizadas</p>
+                <p className="text-sm text-ufu-blue mt-3">{t('orientationFlowchart')}</p>
               </div>
             </Card>
 
             <Card className="p-6">
-              <h3 className="text-xl font-semibold text-ufu-navy mb-4">Orientações Concluídas (Parte 2)</h3>
+              <h3 className="text-xl font-semibold text-ufu-navy mb-4">{t('completedOrientationsPart2')}</h3>
               <div className="text-center">
                 <img 
                   src="/lovable-uploads/93fb63db-e504-4915-a620-08b7a5ae5fd6.png" 
-                  alt="Orientações de Estudantes - Parte 2" 
+                  alt={t('orientationFlowchart2')} 
                   className="mx-auto max-w-full h-auto rounded-lg"
                   style={{ maxHeight: '800px' }}
                 />
-                <p className="text-sm text-ufu-blue mt-3">Continuação do fluxograma de orientações acadêmicas</p>
+                <p className="text-sm text-ufu-blue mt-3">{t('orientationFlowchart2')}</p>
               </div>
             </Card>
           </div>
 
           {/* PhD Supervised */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Doutores Formados - Orientações</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('phdSupervised')}</h2>
             <div className="grid gap-4">
               {phdSupervised.map((graduate, index) => (
                 <Card key={index} className="p-4">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                      <p className="text-ufu-blue text-sm mb-2"><strong>Tese:</strong> {graduate.thesis}</p>
+                      <p className="text-ufu-blue text-sm mb-2"><strong>{t('thesis')}:</strong> {graduate.thesis}</p>
                       <div className="flex items-center gap-4 text-sm">
-                        <span className="text-ufu-navy font-medium">Ano: {graduate.year}</span>
+                        <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
                         {graduate.funding && (
                           <Badge variant="outline" className="text-xs">
                             {graduate.funding}
@@ -159,7 +159,7 @@ const Alumni = () => {
                         )}
                       </div>
                     </div>
-                    <Badge className="bg-ufu-blue text-white">Doutorado</Badge>
+                    <Badge className="bg-ufu-blue text-white">{t('doctorate')}</Badge>
                   </div>
                 </Card>
               ))}
@@ -168,16 +168,16 @@ const Alumni = () => {
 
           {/* PhD Co-supervised */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Doutores Formados - Coorientações</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('phdCoSupervised')}</h2>
             <div className="grid gap-4">
               {phdCoSupervised.map((graduate, index) => (
                 <Card key={index} className="p-4">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                      <p className="text-ufu-blue text-sm mb-2"><strong>Tese:</strong> {graduate.thesis}</p>
+                      <p className="text-ufu-blue text-sm mb-2"><strong>{t('thesis')}:</strong> {graduate.thesis}</p>
                       <div className="flex items-center gap-4 text-sm">
-                        <span className="text-ufu-navy font-medium">Ano: {graduate.year}</span>
+                        <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
                         {graduate.area && (
                           <Badge variant="outline" className="text-xs">
                             {graduate.area}
@@ -190,7 +190,7 @@ const Alumni = () => {
                         )}
                       </div>
                     </div>
-                    <Badge className="bg-ufu-blue text-white">Doutorado - Coorientação</Badge>
+                    <Badge className="bg-ufu-blue text-white">{t('doctorateCoSupervision')}</Badge>
                   </div>
                 </Card>
               ))}
@@ -199,15 +199,15 @@ const Alumni = () => {
 
           {/* Masters Supervised */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Mestres Formados - Dissertações Orientadas</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('mastersSupervised')}</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {mastersDissertations.map((graduate, index) => (
                 <Card key={index} className="p-4">
                   <div className="mb-3">
                     <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                    <p className="text-ufu-blue text-sm mb-2"><strong>Dissertação:</strong> {graduate.thesis}</p>
+                    <p className="text-ufu-blue text-sm mb-2"><strong>{t('dissertation')}:</strong> {graduate.thesis}</p>
                     <div className="flex items-center gap-4 text-sm">
-                      <span className="text-ufu-navy font-medium">Ano: {graduate.year}</span>
+                      <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
                       {graduate.funding && (
                         <Badge variant="outline" className="text-xs">
                           {graduate.funding}
@@ -215,7 +215,7 @@ const Alumni = () => {
                       )}
                     </div>
                   </div>
-                  <Badge className="bg-green-100 text-green-800">Mestrado</Badge>
+                  <Badge className="bg-green-100 text-green-800">{t('masters')}</Badge>
                 </Card>
               ))}
             </div>
@@ -223,15 +223,15 @@ const Alumni = () => {
 
           {/* Masters Co-supervised */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Mestres Formados - Dissertações Coorientadas</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('mastersCoSupervised')}</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {mastersCoSupervised.map((graduate, index) => (
                 <Card key={index} className="p-4">
                   <div className="mb-3">
                     <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                    <p className="text-ufu-blue text-sm mb-2"><strong>Dissertação:</strong> {graduate.thesis}</p>
+                    <p className="text-ufu-blue text-sm mb-2"><strong>{t('dissertation')}:</strong> {graduate.thesis}</p>
                     <div className="flex items-center gap-4 text-sm">
-                      <span className="text-ufu-navy font-medium">Ano: {graduate.year}</span>
+                      <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
                       {graduate.area && (
                         <Badge variant="outline" className="text-xs">
                           {graduate.area}
@@ -244,7 +244,7 @@ const Alumni = () => {
                       )}
                     </div>
                   </div>
-                  <Badge className="bg-green-100 text-green-800">Mestrado - Coorientação</Badge>
+                  <Badge className="bg-green-100 text-green-800">{t('mastersCoSupervision')}</Badge>
                 </Card>
               ))}
             </div>
@@ -252,16 +252,16 @@ const Alumni = () => {
 
           {/* Specialists */}
           <div className="mb-12">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">Especialistas Orientados - Orientações Lato Sensu</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('specialistsSupervised')}</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {specialists.map((graduate, index) => (
                 <Card key={index} className="p-4">
                   <div className="mb-3">
                     <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                    <p className="text-ufu-blue text-sm mb-2"><strong>Trabalho:</strong> {graduate.thesis}</p>
-                    <span className="text-ufu-navy font-medium text-sm">Ano: {graduate.year}</span>
+                    <p className="text-ufu-blue text-sm mb-2"><strong>{t('work')}:</strong> {graduate.thesis}</p>
+                    <span className="text-ufu-navy font-medium text-sm">{t('year')}: {graduate.year}</span>
                   </div>
-                  <Badge className="bg-orange-100 text-orange-800">Especialização</Badge>
+                  <Badge className="bg-orange-100 text-orange-800">{t('specialization')}</Badge>
                 </Card>
               ))}
             </div>
@@ -269,23 +269,23 @@ const Alumni = () => {
 
           {/* Success Stories */}
           <Card className="p-6 bg-ufu-light">
-            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">Estatísticas Gerais</h2>
+            <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">{t('generalStatistics')}</h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-ufu-navy mb-2">31</div>
-                <div className="text-ufu-blue">Total de Orientações Pós-graduação</div>
+                <div className="text-ufu-blue">{t('totalPostgraduateOrientations')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-ufu-navy mb-2">18</div>
-                <div className="text-ufu-blue">Especialistas Formados</div>
+                <div className="text-ufu-blue">{t('specialistsFormed')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-ufu-navy mb-2">11</div>
-                <div className="text-ufu-blue">Doutores Formados</div>
+                <div className="text-ufu-blue">{t('doctorsFormed')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-ufu-navy mb-2">20</div>
-                <div className="text-ufu-blue">Mestres Formados</div>
+                <div className="text-ufu-blue">{t('mastersFormed')}</div>
               </div>
             </div>
           </Card>
