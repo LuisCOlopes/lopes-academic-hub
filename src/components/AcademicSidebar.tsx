@@ -25,7 +25,8 @@ import {
   Calendar,
   Newspaper,
   Youtube,
-  Award
+  Award,
+  Mic
 } from 'lucide-react';
 
 const AcademicSidebar: React.FC = () => {
@@ -44,18 +45,16 @@ const AcademicSidebar: React.FC = () => {
     { title: t('studentResources'), url: '/student-resources', icon: BookOpen },
     { title: t('publications'), url: '/publications', icon: FileText },
     { title: t('conferences'), url: '/conferences', icon: Calendar },
-    { title: t('speaking'), url: '/speaking', icon: FileText },
-    { title: t('workshops'), url: '/workshops', icon: Book },
+    { title: t('speakingWorkshops'), url: '/speaking-workshops', icon: Mic },
     { title: t('consulting'), url: '/consulting', icon: FileText },
     { title: t('team'), url: '/team', icon: Users },
     { title: t('alumni'), url: '/alumni', icon: Users },
-    { title: 'Prêmios', url: '/awards', icon: Award },
+    { title: t('awards'), url: '/awards', icon: Award },
     { title: t('service'), url: '/service', icon: FileText },
     { title: t('leadership'), url: '/leadership', icon: Users },
     { title: t('getInvolved'), url: '/get-involved', icon: Users },
     { title: t('community'), url: '/community', icon: Users },
-    { title: t('podcast'), url: '/podcast', icon: Youtube },
-    { title: t('media'), url: '/media', icon: Newspaper },
+    { title: t('mediaWorkshops'), url: '/media-podcast', icon: Youtube },
     { title: t('hobbies'), url: '/hobbies', icon: Users },
     { title: t('contact'), url: '/contact', icon: Contact },
     { title: t('news'), url: '/news', icon: Newspaper },
@@ -79,7 +78,7 @@ const AcademicSidebar: React.FC = () => {
       <SidebarContent className="px-3">
         <SidebarGroup>
           <SidebarGroupLabel className="text-ufu-light font-semibold">
-            Academic Hub
+            {t('academicHub')}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

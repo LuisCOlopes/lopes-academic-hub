@@ -27,4 +27,7 @@ export const navigationTranslations = {
   contact: 'Contacto',
   news: 'Noticias',
   blog: 'Blog',
+  academicHub: 'Hub Académico',
+  speakingWorkshops: 'Conferencias & Talleres',
+  mediaWorkshops: 'Medios & Podcast',
 };

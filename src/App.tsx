@@ -31,6 +31,8 @@ import Hobbies from "./pages/Hobbies"
 import EnergyTransition from "./pages/EnergyTransition"
 import Contact from "./pages/Contact"
 import Meeting from "./pages/Meeting"
+import SpeakingWorkshops from "./pages/SpeakingWorkshops"
+import MediaPodcast from "./pages/MediaPodcast"
 import NotFound from "./pages/NotFound"
 import "./App.css"
 
@@ -68,6 +70,8 @@ function App() {
           <Route path="/energy-transition" element={<EnergyTransition />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/meeting" element={<Meeting />} />
+          <Route path="/speaking-workshops" element={<SpeakingWorkshops />} />
+          <Route path="/media-podcast" element={<MediaPodcast />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />

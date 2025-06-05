@@ -11,8 +11,9 @@ import { speakingTranslations } from './speaking';
 import { serviceTranslations } from './service';
 import { leadershipTranslations } from './leadership';
 import { workshopsTranslations } from './workshops';
-import { communityTranslations } from './community';
 import { commonTranslations } from './common';
+import { speakingWorkshopsTranslations } from './speaking-workshops';
+import { mediaPodcastTranslations } from './media-podcast';
 
 export const esTranslations = {
   ...navigationTranslations,
@@ -27,6 +28,7 @@ export const esTranslations = {
   ...serviceTranslations,
   ...leadershipTranslations,
   ...workshopsTranslations,
-  ...communityTranslations,
   ...commonTranslations,
+  ...speakingWorkshopsTranslations,
+  ...mediaPodcastTranslations,
 };

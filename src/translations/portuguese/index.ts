@@ -18,6 +18,8 @@ import { involvementTranslations } from './involvement';
 import { podcastTranslations } from './podcast';
 import { blogTranslations } from './blog';
 import { commonTranslations } from './common';
+import { speakingWorkshopsTranslations } from './speaking-workshops';
+import { mediaPodcastTranslations } from './media-podcast';
 
 export const ptTranslations = {
   ...navigationTranslations,
@@ -39,4 +41,6 @@ export const ptTranslations = {
   ...podcastTranslations,
   ...blogTranslations,
   ...commonTranslations,
+  ...speakingWorkshopsTranslations,
+  ...mediaPodcastTranslations,
 };

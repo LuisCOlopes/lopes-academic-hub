@@ -31,4 +31,7 @@ export const navigationTranslations = {
   community: 'Comunidade',
   workshops: 'Workshops',
   requestMeeting: 'Solicitar Reunião',
+  academicHub: 'Hub Acadêmico',
+  speakingWorkshops: 'Palestras & Minicursos',
+  mediaWorkshops: 'Mídia & Podcast',
 };
