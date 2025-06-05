@@ -22,7 +22,7 @@ const LandingPage: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Content */}
-          <div className="text-center lg:text-left animate-fade-in">
+          <div className="text-left animate-fade-in">
             <div className="mb-6">
               <h1 className="text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-4">
                 Prof. <span className="text-gradient">Luís Cláudio</span>
@@ -42,7 +42,7 @@ const LandingPage: React.FC = () => {
               {t('bio')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => navigate('/academic')}
                 size="lg"
@@ -91,9 +91,9 @@ const LandingPage: React.FC = () => {
       {/* Quick Info Cards */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info Card */}
-            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left">
               <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-4">
                 {t('contactInfo')}
               </h3>
@@ -106,7 +106,7 @@ const LandingPage: React.FC = () => {
             </Card>
 
             {/* Research Interests Card */}
-            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left">
               <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-4">
                 {t('researchInterests')}
               </h3>
@@ -134,7 +134,7 @@ const LandingPage: React.FC = () => {
             </Card>
 
             {/* Quick Links Card */}
-            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+            <Card className="p-6 glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left">
               <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-4">
                 Links Relevantes
               </h3>
