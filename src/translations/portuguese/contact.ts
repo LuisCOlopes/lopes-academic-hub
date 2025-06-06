@@ -1,8 +1,7 @@
-
 export const contactTranslations = {
   // Contact Page
   contactTitle: 'Contato',
-  contactSubtitle: 'Entre em contato para colaborações, consultorias ou questões acadêmicas',
+  contactSubtitle: 'Entre em contato para colaborações, consultoria ou questões acadêmicas',
   contactForm: 'Formulário de Contato',
   name: 'Nome',
   email: 'Email',

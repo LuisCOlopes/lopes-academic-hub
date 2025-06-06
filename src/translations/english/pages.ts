@@ -94,4 +94,8 @@ export const pagesTranslations = {
   hobbiesSubtitle: 'Balancing academic and personal life',
   alumniPageTitle: 'Alumni',
   alumniPageSubtitle: 'Success stories of our graduates',
+  
+  // Conferences page
+  conferencesTitle: 'Conferences',
+  speakingOpportunities: 'Speaking Opportunities',
 };

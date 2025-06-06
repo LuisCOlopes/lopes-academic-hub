@@ -19,4 +19,28 @@ export const consultingTranslations = {
   deliveryDesc: 'Final report and training',
   completed: 'Completed',
   inProgress: 'In Progress',
+  
+  // Services
+  controlSystemsAnalysis: 'Control Systems Analysis and Design',
+  controlSystemsDesc: 'Development of control strategies for industrial chemical processes',
+  processOptimization: 'Process Optimization',
+  processOptimizationDesc: 'Efficiency improvement and operational cost reduction',
+  safetyAnalysis: 'Safety Analysis',
+  safetyAnalysisDesc: 'Risk assessment and fault-tolerant systems implementation',
+  modelingSimulation: 'Modeling and Simulation',
+  modelingSimulationDesc: 'Development of mathematical models for chemical processes',
+  
+  // Areas
+  pidControl: 'PID Control',
+  advancedControl: 'Advanced Control',
+  scadaSystems: 'SCADA Systems',
+  linearOptimization: 'Linear Optimization',
+  nonlinearOptimization: 'Non-Linear Optimization',
+  geneticAlgorithms: 'Genetic Algorithms',
+  hazop: 'HAZOP',
+  faultAnalysis: 'Fault Analysis',
+  safetySystems: 'Safety Systems',
+  dynamicSimulation: 'Dynamic Simulation',
+  phenomenologicalModels: 'Phenomenological Models',
+  cfd: 'CFD',
 };

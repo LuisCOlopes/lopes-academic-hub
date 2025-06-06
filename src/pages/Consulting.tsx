@@ -12,24 +12,24 @@ const Consulting = () => {
 
   const services = [
     {
-      title: 'Análise e Projeto de Sistemas de Controle',
-      description: 'Desenvolvimento de estratégias de controle para processos químicos industriais',
-      areas: ['Controle PID', 'Controle Avançado', 'Sistemas SCADA']
+      title: t('controlSystemsAnalysis'),
+      description: t('controlSystemsDesc'),
+      areas: [t('pidControl'), t('advancedControl'), t('scadaSystems')]
     },
     {
-      title: 'Otimização de Processos',
-      description: 'Melhoria da eficiência e redução de custos operacionais',
-      areas: ['Otimização Linear', 'Otimização Não-Linear', 'Algoritmos Genéticos']
+      title: t('processOptimization'),
+      description: t('processOptimizationDesc'),
+      areas: [t('linearOptimization'), t('nonlinearOptimization'), t('geneticAlgorithms')]
     },
     {
-      title: 'Análise de Segurança',
-      description: 'Avaliação de riscos e implementação de sistemas tolerantes a falhas',
-      areas: ['HAZOP', 'Análise de Falhas', 'Sistemas de Segurança']
+      title: t('safetyAnalysis'),
+      description: t('safetyAnalysisDesc'),
+      areas: [t('hazop'), t('faultAnalysis'), t('safetySystems')]
     },
     {
-      title: 'Modelagem e Simulação',
-      description: 'Desenvolvimento de modelos matemáticos para processos químicos',
-      areas: ['Simulação Dinâmica', 'Modelos Fenomenológicos', 'CFD']
+      title: t('modelingSimulation'),
+      description: t('modelingSimulationDesc'),
+      areas: [t('dynamicSimulation'), t('phenomenologicalModels'), t('cfd')]
     }
   ];
 
