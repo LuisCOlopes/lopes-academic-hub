@@ -89,31 +89,25 @@ const Conferences = () => {
     ]
   };
 
-  const upcomingConferences = [
+  const recentConferences = [
     {
       name: 'International Conference on Sustainable Engineering',
       date: '2024-06-15 to 2024-06-18',
       location: 'São Paulo, Brazil',
-      role: 'Keynote Speaker',
       topic: 'Green Chemical Processes in Industry 4.0',
-      status: 'confirmed'
+      status: 'completed'
     },
     {
       name: 'Brazilian Chemical Engineering Congress',
       date: '2024-09-10 to 2024-09-13',
       location: 'Rio de Janeiro, Brazil',
-      role: 'Session Chair',
       topic: 'Process Optimization and Control',
-      status: 'confirmed'
-    }
-  ];
-
-  const pastConferences = [
+      status: 'completed'
+    },
     {
       name: 'World Congress on Chemical Engineering',
       date: '2023-10-15 to 2023-10-18',
       location: 'Barcelona, Spain',
-      role: 'Invited Speaker',
       topic: 'Sustainable Process Design',
       materials: ['Presentation Slides', 'Paper']
     },
@@ -121,7 +115,6 @@ const Conferences = () => {
       name: 'Latin American Process Engineering Symposium',
       date: '2023-07-20 to 2023-07-23',
       location: 'Buenos Aires, Argentina',
-      role: 'Plenary Speaker',
       topic: 'Innovation in Chemical Engineering Education',
       materials: ['Video Recording', 'Extended Abstract']
     }
@@ -140,10 +133,9 @@ const Conferences = () => {
         </div>
 
         <Tabs defaultValue="conferences2025" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="conferences2025">Conferências 2025</TabsTrigger>
-            <TabsTrigger value="upcoming">Próximas Participações</TabsTrigger>
-            <TabsTrigger value="past">Participações Passadas</TabsTrigger>
+            <TabsTrigger value="recent">Últimas Conferências</TabsTrigger>
           </TabsList>
 
           <TabsContent value="conferences2025" className="space-y-8 mt-6">
@@ -258,56 +250,13 @@ const Conferences = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="upcoming" className="space-y-6 mt-6">
+          <TabsContent value="recent" className="space-y-6 mt-6">
             <section>
               <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                {t('upcomingConferences')}
+                Últimas Conferências
               </h2>
               <div className="grid gap-6">
-                {upcomingConferences.map((conference, index) => (
-                  <Card key={index} className="p-6 border-l-4 border-l-green-500">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                          {conference.name}
-                        </h3>
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            {conference.date}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <MapPin className="h-4 w-4" />
-                            {conference.location}
-                          </div>
-                        </div>
-                      </div>
-                      <Badge className="bg-green-100 text-green-800">{conference.status}</Badge>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">Role:</p>
-                        <p className="text-gray-600">{conference.role}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">Topic:</p>
-                        <p className="text-gray-600">{conference.topic}</p>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </section>
-          </TabsContent>
-
-          <TabsContent value="past" className="space-y-6 mt-6">
-            <section>
-              <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                {t('pastConferences')}
-              </h2>
-              <div className="grid gap-6">
-                {pastConferences.map((conference, index) => (
+                {recentConferences.map((conference, index) => (
                   <Card key={index} className="p-6 border-l-4 border-l-academic-blue">
                     <div className="flex justify-between items-start mb-4">
                       <div>
@@ -325,30 +274,29 @@ const Conferences = () => {
                           </div>
                         </div>
                       </div>
+                      {conference.status && (
+                        <Badge className="bg-green-100 text-green-800">{conference.status}</Badge>
+                      )}
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">Role:</p>
-                        <p className="text-gray-600">{conference.role}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">Topic:</p>
-                        <p className="text-gray-600">{conference.topic}</p>
-                      </div>
+                    <div className="mb-4">
+                      <p className="text-sm font-medium text-gray-700">Topic:</p>
+                      <p className="text-gray-600">{conference.topic}</p>
                     </div>
                     
-                    <div>
-                      <p className="text-sm font-medium text-gray-700 mb-2">Available Materials:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {conference.materials.map((material, i) => (
-                          <Button key={i} size="sm" variant="outline">
-                            {material}
-                            <ExternalLink className="h-3 w-3 ml-1" />
-                          </Button>
-                        ))}
+                    {conference.materials && (
+                      <div>
+                        <p className="text-sm font-medium text-gray-700 mb-2">Available Materials:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {conference.materials.map((material, i) => (
+                            <Button key={i} size="sm" variant="outline">
+                              {material}
+                              <ExternalLink className="h-3 w-3 ml-1" />
+                            </Button>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </Card>
                 ))}
               </div>

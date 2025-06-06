@@ -11,87 +11,87 @@ const Leadership = () => {
 
   const leadershipRoles = [
     {
-      position: 'Diretor Substituto da Diretoria de Qualidade de Vida (DIRVE)',
-      organization: 'Pró-reitoria de Assistência Estudantil - UFU',
-      period: '2021 - Atual',
+      position: t('deputyDirectorPosition') || 'Diretor Substituto da Diretoria de Qualidade de Vida (DIRVE)',
+      organization: t('proaeOrganization') || 'Pró-reitoria de Assistência Estudantil - UFU',
+      period: '2021 - 06/2025',
       achievements: [
-        'Coordenação de programas de qualidade de vida estudantil',
-        'Implementação de políticas de bem-estar',
-        'Gestão de equipes multidisciplinares',
-        'Desenvolvimento de projetos de apoio estudantil'
+        t('studentWelfareCoordination') || 'Coordenação de programas de qualidade de vida estudantil',
+        t('wellnessPolicyImplementation') || 'Implementação de políticas de bem-estar',
+        t('multidisciplinaryTeamManagement') || 'Gestão de equipes multidisciplinares',
+        t('studentSupportProjectDevelopment') || 'Desenvolvimento de projetos de apoio estudantil'
       ],
-      impact: 'Gestão Administrativa'
+      impact: t('administrativeManagement') || 'Gestão Administrativa'
     },
     {
-      position: 'Assessor do Reitor para Assuntos Estudantis',
-      organization: 'Universidade Federal de Uberlândia',
+      position: t('rectorAdvisorPosition') || 'Assessor do Reitor para Assuntos Estudantis',
+      organization: t('ufuOrganization') || 'Universidade Federal de Uberlândia',
       period: '2017 - 2025',
       achievements: [
-        'Trabalho na PROEXC (Pró-reitoria de Extensão e Cultura)',
-        'Atuação na PROAE (Pró-reitoria de Assistência Estudantil)',
-        'Coordenação da ASAES (Assessoria Administrativa da PROAE)',
-        'Desenvolvimento de políticas estudantis'
+        t('proexcWork') || 'Trabalho na PROEXC (Pró-reitoria de Extensão e Cultura)',
+        t('proaeWork') || 'Atuação na PROAE (Pró-reitoria de Assistência Estudantil)',
+        t('asaesCoordination') || 'Coordenação da ASAES (Assessoria Administrativa da PROAE)',
+        t('studentPolicyDevelopment') || 'Desenvolvimento de políticas estudantis'
       ],
-      impact: 'Liderança Estratégica'
+      impact: t('strategicLeadership') || 'Liderança Estratégica'
     },
     {
-      position: 'Coordenador do Programa de Pós-graduação em Engenharia Química',
+      position: t('graduateProgramCoordinator') || 'Coordenador do Programa de Pós-graduação em Engenharia Química',
       organization: 'FEQUI/UFU',
       period: '2010 - 2012',
       achievements: [
-        'Coordenação de programa de pós-graduação conceito CAPES 5',
-        'Gestão de mais de 100 estudantes de mestrado e doutorado',
-        'Implementação de melhorias curriculares',
-        'Fortalecimento da pesquisa e extensão'
+        t('capesLevel5Coordination') || 'Coordenação de programa de pós-graduação conceito CAPES 5',
+        t('studentManagement') || 'Gestão de mais de 100 estudantes de mestrado e doutorado',
+        t('curricularImprovements') || 'Implementação de melhorias curriculares',
+        t('researchExtensionStrengthening') || 'Fortalecimento da pesquisa e extensão'
       ],
-      impact: 'Excelência Acadêmica'
+      impact: t('academicExcellence') || 'Excelência Acadêmica'
     },
     {
-      position: 'Membro do Conselho Universitário',
+      position: t('universityCouncilMember') || 'Membro do Conselho Universitário',
       organization: 'UFU',
       period: '2010 - 2012',
       achievements: [
-        'Participação em decisões estratégicas da universidade',
-        'Representação da comunidade acadêmica',
-        'Contribuição para políticas institucionais',
-        'Assessoria em planejamento universitário'
+        t('strategicDecisionParticipation') || 'Participação em decisões estratégicas da universidade',
+        t('academicCommunityRepresentation') || 'Representação da comunidade acadêmica',
+        t('institutionalPolicyContribution') || 'Contribuição para políticas institucionais',
+        t('universityPlanningAdvice') || 'Assessoria em planejamento universitário'
       ],
-      impact: 'Governança Universitária'
+      impact: t('universityGovernance') || 'Governança Universitária'
     }
   ];
 
   const additionalRoles = [
-    'Coordenador do Grupo IV do Departamento de Engenharia Química',
-    'Membro de Comissão do INEP/MEC para autorização de funcionamento de Cursos',
-    'Representante docente no conselho da Faculdade de Engenharia Química (2001-2002)',
-    'Membro do Conselho de Pesquisa e Pós-graduação (2010-2012)',
-    'Substituto diretor da FEQUI no Conselho Diretor da UFU (2001-2005)',
-    'Presidente do Núcleo Docente Estruturante (NDE) do Curso de Engenharia Química',
-    'Coordenador do NUCOP (Núcleo de Modelagem, Controle e Otimização de Processos) (2005-2009)',
-    'Assessor Administrativo da Faculdade de Engenharia Química (2001-2005)',
-    'Membro da COPSIA - Comissão Permanente de Sindicância e Inquérito Administrativo (2022-2023)'
+    t('chemicalEngineeringGroupCoordinator') || 'Coordenador do Grupo IV do Departamento de Engenharia Química',
+    t('inepMecCommissionMember') || 'Membro de Comissão do INEP/MEC para autorização de funcionamento de Cursos',
+    t('facultyCouncilRepresentative') || 'Representante docente no conselho da Faculdade de Engenharia Química (2001-2002)',
+    t('researchCouncilMember') || 'Membro do Conselho de Pesquisa e Pós-graduação (2010-2012)',
+    t('fequiDirectorSubstitute') || 'Substituto diretor da FEQUI no Conselho Diretor da UFU (2001-2005)',
+    t('ndePresident') || 'Presidente do Núcleo Docente Estruturante (NDE) do Curso de Engenharia Química',
+    t('nucopCoordinator') || 'Coordenador do NUCOP (Núcleo de Modelagem, Controle e Otimização de Processos) (2005-2009)',
+    t('fequiAdministrativeAdvisor') || 'Assessor Administrativo da Faculdade de Engenharia Química (2001-2005)',
+    t('copsiaCommissionMember') || 'Membro da COPSIA - Comissão Permanente de Sindicância e Inquérito Administrativo (2022-2023)'
   ];
 
   const leadershipPhilosophy = [
     {
       icon: Users,
-      title: 'Liderança Colaborativa',
-      description: 'Construção de equipes inclusivas que aproveitam perspectivas e expertises diversas'
+      title: t('collaborativeLeadership') || 'Liderança Colaborativa',
+      description: t('collaborativeLeadershipDesc') || 'Construção de equipes inclusivas que aproveitam perspectivas e expertises diversas'
     },
     {
       icon: Target,
-      title: 'Orientado por Visão',
-      description: 'Estabelecimento de metas claras e inspiração de outros para alcançar objetivos ambiciosos'
+      title: t('visionDriven') || 'Orientado por Visão',
+      description: t('visionDrivenDesc') || 'Estabelecimento de metas claras e inspiração de outros para alcançar objetivos ambiciosos'
     },
     {
       icon: TrendingUp,
-      title: 'Melhoria Contínua',
-      description: 'Promoção da inovação e adaptação em ambientes em rápida mudança'
+      title: t('continuousImprovement') || 'Melhoria Contínua',
+      description: t('continuousImprovementDesc') || 'Promoção da inovação e adaptação em ambientes em rápida mudança'
     },
     {
       icon: Crown,
-      title: 'Base Ética',
-      description: 'Liderança com integridade e compromisso com a ética acadêmica e profissional'
+      title: t('ethicalFoundation') || 'Base Ética',
+      description: t('ethicalFoundationDesc') || 'Liderança com integridade e compromisso com a ética acadêmica e profissional'
     }
   ];
 
@@ -110,7 +110,7 @@ const Leadership = () => {
         {/* Leadership Philosophy */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Filosofia de Liderança
+            {t('leadershipPhilosophy') || 'Filosofia de Liderança'}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {leadershipPhilosophy.map((principle, index) => (
@@ -150,7 +150,7 @@ const Leadership = () => {
 
               <div>
                 <h4 className="text-lg font-semibold text-ufu-navy mb-3">
-                  Principais Realizações
+                  {t('mainAchievements') || 'Principais Realizações'}
                 </h4>
                 <ul className="space-y-2">
                   {role.achievements.map((achievement, achIndex) => (
@@ -168,7 +168,7 @@ const Leadership = () => {
         {/* Additional Roles */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Outras Posições de Liderança
+            {t('otherLeadershipPositions') || 'Outras Posições de Liderança'}
           </h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-2 gap-4">
@@ -185,29 +185,29 @@ const Leadership = () => {
         {/* Current Initiatives */}
         <div className="p-6 bg-ufu-light rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-4">
-            Iniciativas Atuais de Liderança
+            {t('currentLeadershipInitiatives') || 'Iniciativas Atuais de Liderança'}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-4 bg-white rounded-lg">
               <h3 className="font-semibold text-ufu-navy mb-2">
-                Projeto Proteger-se
+                {t('protegerseProject') || 'Projeto Proteger-se'}
               </h3>
               <p className="text-gray-600 text-sm mb-3">
-                Coordenação geral de projeto de extensão com mais de 7.000 pessoas atendidas
+                {t('protegerseProjectDesc') || 'Coordenação geral de projeto de extensão com mais de 7.000 pessoas atendidas'}
               </p>
               <Badge variant="outline" className="text-green-600 border-green-600">
-                Em Andamento
+                {t('ongoing') || 'Em Andamento'}
               </Badge>
             </div>
             <div className="p-4 bg-white rounded-lg">
               <h3 className="font-semibold text-ufu-navy mb-2">
-                Qualidade de Vida Estudantil
+                {t('studentWellnessProgram') || 'Qualidade de Vida Estudantil'}
               </h3>
               <p className="text-gray-600 text-sm mb-3">
-                Desenvolvimento de políticas e programas de bem-estar estudantil
+                {t('studentWellnessProgramDesc') || 'Desenvolvimento de políticas e programas de bem-estar estudantil'}
               </p>
               <Badge variant="outline" className="text-blue-600 border-blue-600">
-                Ativo
+                {t('active') || 'Ativo'}
               </Badge>
             </div>
           </div>

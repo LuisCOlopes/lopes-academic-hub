@@ -12,36 +12,52 @@ const Opportunities = () => {
 
   const opportunities = [
     {
-      type: 'Pós-doutorado',
-      title: 'Pesquisa em Controle de Processos',
-      description: 'Oportunidade para pesquisador pós-doutor em sistemas de controle avançado',
-      requirements: 'Doutorado em Engenharia Química ou áreas afins',
-      deadline: '2024-06-30',
-      funding: 'FAPEMIG/CNPq'
+      type: t('doctorateProgram'),
+      title: t('processControlResearch'),
+      description: t('processControlResearchDesc'),
+      requirements: t('processControlRequirements'),
+      deadline: '2024-12-31',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
-      type: 'Doutorado',
-      title: 'Otimização de Processos Químicos',
-      description: 'Vaga para doutorado em otimização e modelagem de processos industriais',
-      requirements: 'Mestrado em Engenharia Química',
-      deadline: '2024-05-15',
-      funding: 'CAPES'
+      type: t('mastersProgram'),
+      title: t('processDesignResearch'),
+      description: t('processDesignResearchDesc'),
+      requirements: t('processDesignRequirements'),
+      deadline: '2024-11-30',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
-      type: 'Mestrado',
-      title: 'Segurança de Processos',
-      description: 'Projeto de mestrado em análise de segurança e tolerância a falhas',
-      requirements: 'Graduação em Engenharia',
-      deadline: '2024-04-20',
-      funding: 'CNPq'
+      type: t('mastersProgram'),
+      title: t('energyTransitionResearch'),
+      description: t('energyTransitionResearchDesc'),
+      requirements: t('energyTransitionRequirements'),
+      deadline: '2024-11-30',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
-      type: 'Iniciação Científica',
-      title: 'Simulação de Processos',
-      description: 'Projeto de IC em simulação computacional de processos químicos',
-      requirements: 'Graduando em Engenharia Química',
-      deadline: '2024-03-30',
-      funding: 'FAPEMIG'
+      type: t('mastersProgram'),
+      title: t('processControlResearch'),
+      description: t('processControlResearchDesc'),
+      requirements: t('processControlRequirements'),
+      deadline: '2024-11-30',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
+    },
+    {
+      type: t('undergraduateResearch'),
+      title: t('aiApplicationResearch'),
+      description: t('aiApplicationResearchDesc'),
+      requirements: t('aiApplicationRequirements'),
+      deadline: '2024-10-31',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
+    },
+    {
+      type: t('undergraduateResearch'),
+      title: t('processControlResearch'),
+      description: t('processControlResearchDesc'),
+      requirements: t('aiApplicationRequirements'),
+      deadline: '2024-10-31',
+      funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     }
   ];
 
@@ -64,7 +80,7 @@ const Opportunities = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Badge variant="outline">{opportunity.type}</Badge>
-                    <span className="text-sm text-gray-500">Financiamento: {opportunity.funding}</span>
+                    <span className="text-sm text-gray-500">{t('funding')}: {opportunity.funding}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {opportunity.title}
@@ -73,18 +89,18 @@ const Opportunities = () => {
                     {opportunity.description}
                   </p>
                   <p className="text-sm text-gray-500 mb-2">
-                    <strong>Requisitos:</strong> {opportunity.requirements}
+                    <strong>{t('requirements')}:</strong> {opportunity.requirements}
                   </p>
                 </div>
                 <div className="text-right">
                   <div className="flex items-center gap-1 text-sm text-gray-500 mb-2">
                     <Calendar className="h-4 w-4" />
-                    Prazo: {new Date(opportunity.deadline).toLocaleDateString()}
+                    {t('deadline')}: {new Date(opportunity.deadline).toLocaleDateString()}
                   </div>
                 </div>
               </div>
               <Button className="bg-academic-blue hover:bg-academic-blue/90">
-                Candidatar-se
+                {t('applyNow')}
               </Button>
             </Card>
           ))}
@@ -94,34 +110,32 @@ const Opportunities = () => {
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-4">
               <GraduationCap className="h-6 w-6 text-academic-blue" />
-              <h2 className="text-xl font-semibold text-gray-900">Oportunidades de Pesquisa</h2>
+              <h2 className="text-xl font-semibold text-gray-900">{t('researchOpportunities')}</h2>
             </div>
             <p className="text-gray-600 mb-4">
-              Oferecemos oportunidades em diversas áreas da engenharia química, 
-              com foco em controle de processos, otimização e segurança industrial.
+              {t('researchOpportunitiesDesc')}
             </p>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>Iniciação Científica (PIBIC/PIBITI)</li>
-              <li>Mestrado Acadêmico</li>
-              <li>Doutorado</li>
-              <li>Pós-doutorado</li>
+              <li>{t('undergraduateResearch')} (PIBIC/PIBITI)</li>
+              <li>{t('mastersProgram')}</li>
+              <li>{t('doctorateProgram')}</li>
+              <li>{t('postdocProgram')}</li>
             </ul>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-4">
               <Briefcase className="h-6 w-6 text-academic-blue" />
-              <h2 className="text-xl font-semibold text-gray-900">Colaborações</h2>
+              <h2 className="text-xl font-semibold text-gray-900">{t('collaborations')}</h2>
             </div>
             <p className="text-gray-600 mb-4">
-              Estamos sempre abertos a novas colaborações com pesquisadores 
-              e instituições nacionais e internacionais.
+              {t('collaborationsDesc')}
             </p>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>Projetos de pesquisa conjunta</li>
-              <li>Intercâmbio acadêmico</li>
-              <li>Parcerias industriais</li>
-              <li>Consultoria técnica</li>
+              <li>{t('jointResearchProjects')}</li>
+              <li>{t('academicExchange')}</li>
+              <li>{t('industryPartnerships')}</li>
+              <li>{t('technicalConsulting')}</li>
             </ul>
           </Card>
         </div>

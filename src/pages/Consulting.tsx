@@ -38,19 +38,19 @@ const Consulting = () => {
       client: 'Petrobras',
       project: 'Sistema de Controle para Unidade de Destilação',
       year: '2023',
-      status: 'Concluído'
-    },
-    {
-      client: 'Vale',
-      project: 'Otimização de Processo de Flotação',
-      year: '2022',
-      status: 'Concluído'
+      status: t('completed')
     },
     {
       client: 'Braskem',
-      project: 'Análise de Segurança de Processo',
+      project: 'Otimização de Processo de Polimerização',
+      year: '2022',
+      status: t('completed')
+    },
+    {
+      client: 'Souza Cruz',
+      project: 'Análise de Segurança de Processo Industrial',
       year: '2024',
-      status: 'Em Andamento'
+      status: t('inProgress')
     }
   ];
 
@@ -68,7 +68,7 @@ const Consulting = () => {
 
         {/* Services */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Serviços Oferecidos</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('servicesOffered')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
@@ -97,7 +97,7 @@ const Consulting = () => {
 
         {/* Recent Projects */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Projetos Recentes</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('recentProjects')}</h2>
           <div className="space-y-4">
             {projects.map((project, index) => (
               <Card key={index} className="p-6">
@@ -107,7 +107,7 @@ const Consulting = () => {
                     <p className="text-academic-blue">{project.client}</p>
                     <p className="text-sm text-gray-500">{project.year}</p>
                   </div>
-                  <Badge variant={project.status === 'Concluído' ? 'default' : 'secondary'}>
+                  <Badge variant={project.status === t('completed') ? 'default' : 'secondary'}>
                     {project.status}
                   </Badge>
                 </div>
@@ -119,35 +119,35 @@ const Consulting = () => {
         {/* Process */}
         <section className="mb-12">
           <Card className="p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Processo de Consultoria</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('consultingProcess')}</h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-academic-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
                   1
                 </div>
-                <h3 className="font-semibold mb-2">Consulta Inicial</h3>
-                <p className="text-sm text-gray-600">Discussão do problema e objetivos</p>
+                <h3 className="font-semibold mb-2">{t('initialConsultation')}</h3>
+                <p className="text-sm text-gray-600">{t('initialConsultationDesc')}</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-academic-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
                   2
                 </div>
-                <h3 className="font-semibold mb-2">Análise</h3>
-                <p className="text-sm text-gray-600">Avaliação técnica detalhada</p>
+                <h3 className="font-semibold mb-2">{t('analysis')}</h3>
+                <p className="text-sm text-gray-600">{t('analysisDesc')}</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-academic-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
                   3
                 </div>
-                <h3 className="font-semibold mb-2">Desenvolvimento</h3>
-                <p className="text-sm text-gray-600">Implementação da solução</p>
+                <h3 className="font-semibold mb-2">{t('development')}</h3>
+                <p className="text-sm text-gray-600">{t('developmentDesc')}</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-academic-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">
                   4
                 </div>
-                <h3 className="font-semibold mb-2">Entrega</h3>
-                <p className="text-sm text-gray-600">Relatório final e treinamento</p>
+                <h3 className="font-semibold mb-2">{t('delivery')}</h3>
+                <p className="text-sm text-gray-600">{t('deliveryDesc')}</p>
               </div>
             </div>
           </Card>
@@ -156,13 +156,12 @@ const Consulting = () => {
         {/* Contact */}
         <section>
           <Card className="p-6 bg-academic-blue text-white">
-            <h2 className="text-2xl font-semibold mb-4">Interessado em Consultoria?</h2>
+            <h2 className="text-2xl font-semibold mb-4">{t('interestedInConsulting')}</h2>
             <p className="mb-4">
-              Entre em contato para discutir como posso ajudar com seus desafios 
-              em engenharia química e controle de processos.
+              {t('contactForConsulting')}
             </p>
             <Button variant="secondary">
-              Entre em Contato
+              {t('contactUs')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Card>

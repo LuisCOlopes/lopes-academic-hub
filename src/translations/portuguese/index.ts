@@ -20,6 +20,8 @@ import { blogTranslations } from './blog';
 import { commonTranslations } from './common';
 import { speakingWorkshopsTranslations } from './speaking-workshops';
 import { mediaPodcastTranslations } from './media-podcast';
+import { consultingTranslations } from './consulting';
+import { opportunitiesTranslations } from './opportunities';
 
 export const ptTranslations = {
   ...navigationTranslations,
@@ -43,4 +45,6 @@ export const ptTranslations = {
   ...commonTranslations,
   ...speakingWorkshopsTranslations,
   ...mediaPodcastTranslations,
+  ...consultingTranslations,
+  ...opportunitiesTranslations,
 };
