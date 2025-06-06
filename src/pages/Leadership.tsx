@@ -36,7 +36,7 @@ const Leadership = () => {
     {
       title: 'Diretor Substituto da Diretoria de Qualidade de Vida (DIRVE)',
       institution: 'Pró-reitoria de Assistência Estudantil - UFU',
-      period: '2021 - Atual',
+      period: '2021 - 06/2025',
       type: 'Gestão Administrativa',
       achievements: [
         'Coordenação de programas de qualidade de vida estudantil',
