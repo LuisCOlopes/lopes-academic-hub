@@ -112,27 +112,27 @@ const Leadership = () => {
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Liderança
+          <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
+            {t('leadershipTitle')}
           </h1>
-          <p className="text-lg text-gray-600">
-            Experiência em liderança acadêmica e profissional promovendo inovação e excelência
+          <p className="text-lg text-academic-gray-medium">
+            {t('leadershipSubtitle')}
           </p>
         </div>
 
         {/* Filosofia de Liderança */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-ufu-navy mb-6">
             Filosofia de Liderança
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {leadershipPhilosophy.map((item, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 border-academic-blue/20 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-4">
                   <item.icon className="h-8 w-8 text-academic-blue mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <h3 className="font-semibold text-ufu-navy mb-2">{item.title}</h3>
+                    <p className="text-academic-gray-medium">{item.description}</p>
                   </div>
                 </div>
               </Card>
@@ -144,29 +144,29 @@ const Leadership = () => {
         <section className="mb-12">
           <div className="space-y-8">
             {mainPositions.map((position, index) => (
-              <Card key={index} className="p-8">
+              <Card key={index} className="p-8 border-academic-blue/20 hover:shadow-lg transition-shadow">
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{position.title}</h3>
+                      <h3 className="text-xl font-semibold text-ufu-navy">{position.title}</h3>
                       <p className="text-academic-blue font-medium">{position.institution}</p>
                     </div>
-                    <Badge variant="default" className="text-sm">
+                    <Badge variant="default" className="text-sm bg-academic-blue text-white">
                       {position.period}
                     </Badge>
                   </div>
-                  <Badge variant="secondary" className="mb-4">
+                  <Badge variant="secondary" className="mb-4 bg-academic-teal text-ufu-navy">
                     {position.type}
                   </Badge>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Principais Realizações</h4>
+                  <h4 className="font-semibold text-ufu-navy mb-3">Principais Realizações</h4>
                   <ul className="space-y-2">
                     {position.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                        <span className="text-gray-700">{achievement}</span>
+                        <span className="text-academic-gray-medium">{achievement}</span>
                       </li>
                     ))}
                   </ul>
@@ -178,15 +178,15 @@ const Leadership = () => {
 
         {/* Outras Posições de Liderança */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-ufu-navy mb-6">
             Outras Posições de Liderança
           </h2>
-          <Card className="p-6">
+          <Card className="p-6 border-academic-blue/20">
             <ul className="space-y-3">
               {otherPositions.map((position, index) => (
                 <li key={index} className="flex items-start space-x-2">
                   <Building2 className="h-4 w-4 text-academic-blue mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{position}</span>
+                  <span className="text-academic-gray-medium">{position}</span>
                 </li>
               ))}
             </ul>
@@ -195,19 +195,20 @@ const Leadership = () => {
 
         {/* Iniciativas Atuais de Liderança */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-ufu-navy mb-6">
             Iniciativas Atuais de Liderança
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {currentInitiatives.map((initiative, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 border-academic-blue/20 hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-semibold text-gray-900">{initiative.title}</h3>
-                  <Badge variant={initiative.status === 'Em Andamento' ? 'default' : 'secondary'}>
+                  <h3 className="font-semibold text-ufu-navy">{initiative.title}</h3>
+                  <Badge variant={initiative.status === 'Em Andamento' ? 'default' : 'secondary'} 
+                         className={initiative.status === 'Em Andamento' ? 'bg-academic-blue text-white' : 'bg-academic-teal text-ufu-navy'}>
                     {initiative.status}
                   </Badge>
                 </div>
-                <p className="text-gray-600">{initiative.description}</p>
+                <p className="text-academic-gray-medium">{initiative.description}</p>
               </Card>
             ))}
           </div>
