@@ -12,10 +12,31 @@ const Research = () => {
 
   const currentProjects = [
     {
-      title: 'Sistema Autônomo de Separação de Sólidos Gerados na Perfuração',
-      status: 'Em andamento',
+      title: t('autonomousSystemProject'),
+      status: t('ongoing'),
       period: '2025-atual',
-      description: 'Desenvolvimento de sistema autônomo para separação de sólidos na perfuração de poços de petróleo'
+      description: t('autonomousSystemDescription')
+    },
+    {
+      title: t('dynamicOperabilityProject'),
+      status: t('ongoing'),
+      period: '2024-atual',
+      description: t('dynamicOperabilityDescription'),
+      funding: 'CNPq, CAPES, FAPEMIG'
+    },
+    {
+      title: t('faultTolerantControlProject'),
+      status: t('ongoing'),
+      period: '2012-atual',
+      description: t('faultTolerantControlDescription'),
+      funding: 'CNPq, CAPES, FAPEMIG'
+    },
+    {
+      title: t('artificialIntelligenceProject'),
+      status: t('ongoing'),
+      period: '2022-atual',
+      description: t('artificialIntelligenceDescription'),
+      funding: 'CNPq, CAPES, FAPEMIG'
     }
   ];
 
@@ -73,9 +94,14 @@ const Research = () => {
                       <p className="text-ufu-blue mb-3">
                         {project.description}
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-ufu-blue">
+                      <div className="flex items-center gap-4 text-sm text-ufu-blue mb-2">
                         <span>{project.period}</span>
                       </div>
+                      {project.funding && (
+                        <div className="text-sm text-ufu-blue">
+                          <strong>{t('funding')}:</strong> {project.funding}
+                        </div>
+                      )}
                     </div>
                     <Badge className="bg-green-100 text-green-800">
                       {project.status}
@@ -94,18 +120,18 @@ const Research = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="p-6 text-center">
                 <BookOpen className="h-12 w-12 text-ufu-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-ufu-navy mb-2">Controle de Processos</h3>
-                <p className="text-ufu-blue text-sm">Sistemas de controle avançado para processos químicos</p>
+                <h3 className="font-semibold text-ufu-navy mb-2">{t('processControlArea')}</h3>
+                <p className="text-ufu-blue text-sm">{t('processControlDescription')}</p>
               </Card>
               <Card className="p-6 text-center">
                 <TrendingUp className="h-12 w-12 text-ufu-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-ufu-navy mb-2">Otimização</h3>
-                <p className="text-ufu-blue text-sm">Otimização de processos industriais</p>
+                <h3 className="font-semibold text-ufu-navy mb-2">{t('optimizationArea')}</h3>
+                <p className="text-ufu-blue text-sm">{t('optimizationDescription')}</p>
               </Card>
               <Card className="p-6 text-center">
                 <Award className="h-12 w-12 text-ufu-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-ufu-navy mb-2">Segurança</h3>
-                <p className="text-ufu-blue text-sm">Segurança e tolerância a falhas</p>
+                <h3 className="font-semibold text-ufu-navy mb-2">{t('safetyArea')}</h3>
+                <p className="text-ufu-blue text-sm">{t('safetyDescription')}</p>
               </Card>
             </div>
           </div>

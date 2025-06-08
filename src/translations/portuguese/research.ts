@@ -20,4 +20,26 @@ export const researchTranslations = {
   researchMetrics: 'Métricas de Pesquisa',
   publications: 'Publicações',
   students: 'Estudantes Orientados',
+  ongoing: 'Em andamento',
+  
+  // Projects
+  autonomousSystemProject: 'Sistema Autônomo de Separação de Sólidos Gerados na Perfuração',
+  autonomousSystemDescription: 'Desenvolvimento de sistema autônomo para separação de sólidos na perfuração de poços de petróleo',
+  
+  dynamicOperabilityProject: 'Operabilidade Dinâmica de Processos Químicos',
+  dynamicOperabilityDescription: 'Desenvolvimento de ferramentas de avaliação de operabilidade dinâmica em cenários de falhas, para sistemas não quadrados e com multiplicidade de entradas e de saídas',
+  
+  faultTolerantControlProject: 'Controle Tolerante a Falhas',
+  faultTolerantControlDescription: 'Desenvolvimento de estratégias e metodologias para detecção de falhas e para projetar sistemas de controle tolerantes a falhas',
+  
+  artificialIntelligenceProject: 'Aplicação de Inteligência Artificial (IA) em Processos Industriais',
+  artificialIntelligenceDescription: 'Desenvolvimento de estratégias e metodologias de IA para detecção e diagnóstico de falhas e para projetar sistemas de controle autônomos',
+  
+  // Research areas
+  processControlArea: 'Controle de Processos',
+  processControlDescription: 'Sistemas de controle avançado para processos químicos',
+  optimizationArea: 'Otimização',
+  optimizationDescription: 'Otimização de processos industriais',
+  safetyArea: 'Segurança',
+  safetyDescription: 'Segurança e tolerância a falhas',
 };

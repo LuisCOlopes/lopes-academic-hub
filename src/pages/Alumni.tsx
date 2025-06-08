@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -12,16 +11,16 @@ const Alumni = () => {
   // Dissertações Orientadas
   const mastersDissertations = [
     { name: 'Stella Ramos Tavares', thesis: 'Modelagem e Controle de Processos para a produção de substâncias enantiomericamente enriquecidas', year: 2018, funding: 'FAPEMIG' },
-    { name: 'Rosiane Ribeiro Rocha', thesis: 'Controle Preditivo Distribuído de Processos Lineares', year: 2014, funding: 'CAPES' },
+    { name: 'Rosiane Ribeiro Rocha', thesis: 'Controle Preditivo Distribuído de Processos Lineares', year: 2014, funding: 'CAPES', currentPosition: 'IFES' },
     { name: 'Larissa Cardoso Santos', thesis: 'Desenvolvimento de Sensores Virtuais Baseados em Vetores Suporte', year: 2014 },
     { name: 'Diogo R. Rezende', thesis: 'Modelagem e Simulação da Secagem de Frutos de Café em um Secador de Bandejas Vibradas', year: 2011 },
-    { name: 'Matheus Henrique Granzotto', thesis: 'Controle com Aprendizado Iterativo para Processos em Batelada', year: 2010, funding: 'CAPES' },
-    { name: 'Nádia Guimarães Sousa', thesis: 'Propagação de Comportamento Anormal em Sistemas Híbridos Dinâmicos', year: 2010, funding: 'CAPES' },
-    { name: 'Anamaria de Oliveira Caetano', thesis: 'Simulação e Controle de Sistemas Híbridos', year: 2010, funding: 'FAPEMIG' },
-    { name: 'Lucas Lacerda Gomes Reis', thesis: 'Controle Tolerante com Reconfiguração Estrutural Acoplado a Sistema de Diagnóstico de Falhas', year: 2008, funding: 'CAPES' },
-    { name: 'Davi Leonardo de Souza', thesis: 'Análise do Desempenho de Sistemas de Controle', year: 2007, funding: 'CNPq' },
+    { name: 'Matheus Henrique Granzotto', thesis: 'Controle com Aprendizado Iterativo para Processos em Batelada', year: 2010, funding: 'CAPES', currentPosition: 'UFVJM' },
+    { name: 'Nádia Guimarães Sousa', thesis: 'Propagação de Comportamento Anormal em Sistemas Híbridos Dinâmicos', year: 2010, funding: 'CAPES', currentPosition: 'UFTM' },
+    { name: 'Anamaria de Oliveira Caetano', thesis: 'Simulação e Controle de Sistemas Híbridos', year: 2010, funding: 'FAPEMIG', currentPosition: 'UFVJM' },
+    { name: 'Lucas Lacerda Gomes Reis', thesis: 'Controle Tolerante com Reconfiguração Estrutural Acoplado a Sistema de Diagnóstico de Falhas', year: 2008, funding: 'CAPES', currentPosition: 'Aspen (USA)' },
+    { name: 'Davi Leonardo de Souza', thesis: 'Análise do Desempenho de Sistemas de Controle', year: 2007, funding: 'CNPq', currentPosition: 'UFTM' },
     { name: 'Fanny Ferreira Melo Fávero de Fravet', thesis: 'Modelagem e Simulação do Processo de Esterilização Térmica em Batelada de Vegetais em Conserva', year: 2006 },
-    { name: 'Márcio de Andrade Batista', thesis: 'Estudo da Imobilização de Células de Saccharomyces cerevisiae em Gel de Alginato de Cálcio no Processo de Fermentação Alcoólica', year: 2005, funding: 'CAPES' }
+    { name: 'Márcio de Andrade Batista', thesis: 'Estudo da Imobilização de Células de Saccharomyces cerevisiae em Gel de Alginato de Cálcio no Processo de Fermentação Alcoólica', year: 2005, funding: 'CAPES', currentPosition: 'UFMS' }
   ];
 
   // Dissertações Coorientadas
@@ -34,26 +33,26 @@ const Alumni = () => {
     { name: 'Juliana Rodrigues Lira', thesis: 'Efeito das condições operacionais sobre o desempenho de sedimentadores operando com suspensões previamente floculadas', year: 2010, funding: 'CAPES' },
     { name: 'Claudia Gonçalves de Azevedo', thesis: 'Simulação do Sedimentador Contínuo', year: 2009, funding: 'CNPq' },
     { name: 'Patrícia Tavares Cordeiro', thesis: 'Estudo cinético da fermentação alcoólica por levedura imobilizada em alginato de sódio', year: 2008, funding: 'CNPq' },
-    { name: 'Fran Sérgio Lobato', thesis: 'Abordagem Algébrico Diferencial na Otimização Dinâmica de Sistemas', year: 2004, funding: 'CAPES' }
+    { name: 'Fran Sérgio Lobato', thesis: 'Abordagem Algébrico Diferencial na Otimização Dinâmica de Sistemas', year: 2004, funding: 'CAPES', currentPosition: 'UFU' }
   ];
 
   // Doutores Formados - Orientações
   const phdSupervised = [
-    { name: 'Matheus Henrique Granzotto', thesis: 'Inteligência Artificial Aplicada à Detecção e Diagnóstico de Falhas em Processos Químicos', year: 2020 },
+    { name: 'Matheus Henrique Granzotto', thesis: 'Inteligência Artificial Aplicada à Detecção e Diagnóstico de Falhas em Processos Químicos', year: 2020, currentPosition: 'UFVJM' },
     { name: 'Cleuton Luis Nascentes', thesis: 'Separação sólido-fluído de perfuração em peneiras vibratórias', year: 2019, funding: 'Petrobras' },
-    { name: 'Rosiane Ribeiro Rocha', thesis: 'Controle Preditivo Distribuído de Processos Não Lineares', year: 2018, funding: 'CAPES' },
-    { name: 'Nádia Guimarães Sousa', thesis: 'Desenvolvimento de Sistemas de Controle Tolerante a Falhas por Alocação de Controle', year: 2014, funding: 'CAPES' },
-    { name: 'Davi Leonardo de Souza', thesis: 'Monitoramento e Avaliação de Sistemas de Controle', year: 2011, funding: 'CNPq' }
+    { name: 'Rosiane Ribeiro Rocha', thesis: 'Controle Preditivo Distribuído de Processos Não Lineares', year: 2018, funding: 'CAPES', currentPosition: 'IFES' },
+    { name: 'Nádia Guimarães Sousa', thesis: 'Desenvolvimento de Sistemas de Controle Tolerante a Falhas por Alocação de Controle', year: 2014, funding: 'CAPES', currentPosition: 'UFTM' },
+    { name: 'Davi Leonardo de Souza', thesis: 'Monitoramento e Avaliação de Sistemas de Controle', year: 2011, funding: 'CNPq', currentPosition: 'UFTM' }
   ];
 
   // Doutores Formados - Coorientações
   const phdCoSupervised = [
-    { name: 'Luis Paulo Fagundes', thesis: 'Seleção Aleatória da Estrutura de Modelos com Auxílio da Taxa de Redução do Erro e Herança Genética', year: 2022, area: 'Engenharia Elétrica' },
+    { name: 'Luis Paulo Fagundes', thesis: 'Seleção Aleatória da Estrutura de Modelos com Auxílio da Taxa de Redução do Erro e Herança Genética', year: 2022, area: 'Engenharia Elétrica', currentPosition: 'IFTM' },
     { name: 'Rafael Monteiro Jorge Alves Souza', thesis: 'Sistema de Detecção de Fonte de Odor Utilizando Quadricópteros', year: 2022, area: 'Engenharia Elétrica' },
-    { name: 'Gabriela Vieira Lima', thesis: 'Planejamento de trajetórias para quadricópteros em tarefas de perseguição', year: 2019, area: 'Engenharia Elétrica' },
-    { name: 'Thiago Vaz da Costa', thesis: 'Estudo e Implementação de Estruturas de Controle Reconfigurável aplicado a Processos Químicos', year: 2014, area: 'Engenharia Química - UNICAMP', funding: 'FAPESP' },
-    { name: 'Cláudio Homero Ferreira da Silva', thesis: 'Uma Contribuição ao Estudo de Robustez em Controladores Preditivo', year: 2008 },
-    { name: 'Fábio de Oliveira Arouca', thesis: 'Uma Contribuição ao Estudo da Sedimentação Gravitacional em Batelada', year: 2007, funding: 'CNPq' }
+    { name: 'Gabriela Vieira Lima', thesis: 'Planejamento de trajetórias para quadricópteros em tarefas de perseguição', year: 2019, area: 'Engenharia Elétrica', currentPosition: 'UFU' },
+    { name: 'Thiago Vaz da Costa', thesis: 'Estudo e Implementação de Estruturas de Controle Reconfigurável aplicado a Processos Químicos', year: 2014, area: 'Engenharia Química - UNICAMP', funding: 'FAPESP', currentPosition: 'UFU' },
+    { name: 'Cláudio Homero Ferreira da Silva', thesis: 'Uma Contribuição ao Estudo de Robustez em Controladores Preditivo', year: 2008, currentPosition: 'CEMIG S.A.' },
+    { name: 'Fábio de Oliveira Arouca', thesis: 'Uma Contribuição ao Estudo da Sedimentação Gravitacional em Batelada', year: 2007, funding: 'CNPq', currentPosition: 'UFU' }
   ];
 
   // Especialistas Orientados
@@ -84,6 +83,37 @@ const Alumni = () => {
     { number: '11', label: t('mastersOrientated'), icon: GraduationCap },
     { number: '9', label: t('mastersCoOriented'), icon: GraduationCap }
   ];
+
+  const renderAlumniCard = (graduate: any, index: number, badgeText: string, badgeColor: string) => (
+    <Card key={index} className="p-4">
+      <div className="flex items-start justify-between mb-3">
+        <div className="flex-1">
+          <h4 className="font-semibold text-ufu-navy">{graduate.name}</h4>
+          {graduate.currentPosition && (
+            <div className="flex items-center mt-1 mb-2">
+              <Building className="h-4 w-4 text-ufu-blue mr-1" />
+              <span className="text-sm text-ufu-blue font-medium">{graduate.currentPosition}</span>
+            </div>
+          )}
+          <Badge variant="outline" className="mt-1">{badgeText}</Badge>
+        </div>
+      </div>
+      <p className="text-ufu-blue text-sm mb-2"><strong>{graduate.thesis ? t('thesis') : t('dissertation')}:</strong> {graduate.thesis}</p>
+      <div className="flex items-center gap-4 text-sm">
+        <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
+        {graduate.area && (
+          <Badge variant="outline" className="text-xs">
+            {graduate.area}
+          </Badge>
+        )}
+        {graduate.funding && (
+          <Badge variant="outline" className="text-xs">
+            {graduate.funding}
+          </Badge>
+        )}
+      </div>
+    </Card>
+  );
 
   return (
     <AcademicLayout>
@@ -144,25 +174,9 @@ const Alumni = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('phdSupervised')}</h2>
             <div className="grid gap-4">
-              {phdSupervised.map((graduate, index) => (
-                <Card key={index} className="p-4">
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                      <p className="text-ufu-blue text-sm mb-2"><strong>{t('thesis')}:</strong> {graduate.thesis}</p>
-                      <div className="flex items-center gap-4 text-sm">
-                        <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
-                        {graduate.funding && (
-                          <Badge variant="outline" className="text-xs">
-                            {graduate.funding}
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
-                    <Badge className="bg-ufu-blue text-white">{t('doctorate')}</Badge>
-                  </div>
-                </Card>
-              ))}
+              {phdSupervised.map((graduate, index) => 
+                renderAlumniCard(graduate, index, t('doctorate'), 'bg-ufu-blue text-white')
+              )}
             </div>
           </div>
 
@@ -170,30 +184,9 @@ const Alumni = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('phdCoSupervised')}</h2>
             <div className="grid gap-4">
-              {phdCoSupervised.map((graduate, index) => (
-                <Card key={index} className="p-4">
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                      <p className="text-ufu-blue text-sm mb-2"><strong>{t('thesis')}:</strong> {graduate.thesis}</p>
-                      <div className="flex items-center gap-4 text-sm">
-                        <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
-                        {graduate.area && (
-                          <Badge variant="outline" className="text-xs">
-                            {graduate.area}
-                          </Badge>
-                        )}
-                        {graduate.funding && (
-                          <Badge variant="outline" className="text-xs">
-                            {graduate.funding}
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
-                    <Badge className="bg-ufu-blue text-white">{t('doctorateCoSupervision')}</Badge>
-                  </div>
-                </Card>
-              ))}
+              {phdCoSupervised.map((graduate, index) => 
+                renderAlumniCard(graduate, index, t('doctorateCoSupervision'), 'bg-ufu-blue text-white')
+              )}
             </div>
           </div>
 
@@ -201,23 +194,9 @@ const Alumni = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('mastersSupervised')}</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {mastersDissertations.map((graduate, index) => (
-                <Card key={index} className="p-4">
-                  <div className="mb-3">
-                    <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                    <p className="text-ufu-blue text-sm mb-2"><strong>{t('dissertation')}:</strong> {graduate.thesis}</p>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
-                      {graduate.funding && (
-                        <Badge variant="outline" className="text-xs">
-                          {graduate.funding}
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                  <Badge className="bg-green-100 text-green-800">{t('masters')}</Badge>
-                </Card>
-              ))}
+              {mastersDissertations.map((graduate, index) => 
+                renderAlumniCard(graduate, index, t('masters'), 'bg-green-100 text-green-800')
+              )}
             </div>
           </div>
 
@@ -225,28 +204,9 @@ const Alumni = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">{t('mastersCoSupervised')}</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {mastersCoSupervised.map((graduate, index) => (
-                <Card key={index} className="p-4">
-                  <div className="mb-3">
-                    <h3 className="text-lg font-semibold text-ufu-navy mb-1">{graduate.name}</h3>
-                    <p className="text-ufu-blue text-sm mb-2"><strong>{t('dissertation')}:</strong> {graduate.thesis}</p>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="text-ufu-navy font-medium">{t('year')}: {graduate.year}</span>
-                      {graduate.area && (
-                        <Badge variant="outline" className="text-xs">
-                          {graduate.area}
-                        </Badge>
-                      )}
-                      {graduate.funding && (
-                        <Badge variant="outline" className="text-xs">
-                          {graduate.funding}
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                  <Badge className="bg-green-100 text-green-800">{t('mastersCoSupervision')}</Badge>
-                </Card>
-              ))}
+              {mastersCoSupervised.map((graduate, index) => 
+                renderAlumniCard(graduate, index, t('mastersCoSupervision'), 'bg-green-100 text-green-800')
+              )}
             </div>
           </div>
 
