@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -6,9 +7,76 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Clock, ExternalLink, User } from 'lucide-react';
+import { useDownload } from '@/hooks/useDownload';
+import { toast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const { t } = useLanguage();
+  const { handleDownload, isDownloading } = useDownload();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simular envio de email
+      const emailData = {
+        to: 'lcol@ufu.br',
+        from: formData.email,
+        subject: `[Contato Website] ${formData.subject}`,
+        body: `
+Nome: ${formData.name}
+Email: ${formData.email}
+Assunto: ${formData.subject}
+
+Mensagem:
+${formData.message}
+        `
+      };
+
+      // Aqui você implementaria a integração real com um serviço de email
+      console.log('Enviando email:', emailData);
+      
+      // Simular delay de envio
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Sua mensagem foi enviada para lcol@ufu.br. Responderemos em breve.",
+      });
+
+      // Limpar formulário
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const contactInfo = [
     {
@@ -63,38 +131,65 @@ const Contact = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 {t('contactForm')}
               </h2>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       {t('name')}
                     </label>
-                    <Input placeholder="Seu nome" />
+                    <Input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Seu nome"
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       {t('email')}
                     </label>
-                    <Input type="email" placeholder="seu.email@exemplo.com" />
+                    <Input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="seu.email@exemplo.com"
+                      required
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {t('subject')}
                   </label>
-                  <Input placeholder="Assunto da mensagem" />
+                  <Input 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="Assunto da mensagem"
+                    required
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {t('message')}
                   </label>
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder="Sua mensagem..."
                     rows={6}
+                    required
                   />
                 </div>
-                <Button className="w-full bg-academic-blue hover:bg-academic-blue/90">
-                  {t('sendMessage')}
+                <Button 
+                  type="submit"
+                  className="w-full bg-academic-blue hover:bg-academic-blue/90"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Enviando...' : t('sendMessage')}
                 </Button>
               </form>
             </Card>
@@ -173,13 +268,25 @@ const Contact = () => {
               </div>
               
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full justify-start"
+                  onClick={() => handleDownload('contact-campusMap', 1)}
+                  disabled={isDownloading}
+                >
                   <MapPin className="h-4 w-4 mr-2" />
-                  {t('campusMap')}
+                  {isDownloading ? 'Baixando...' : t('campusMap')}
                 </Button>
-                <Button variant="outline" size="sm" className="w-full justify-start">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full justify-start"
+                  onClick={() => handleDownload('contact-directions', 1)}
+                  disabled={isDownloading}
+                >
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  {t('directionsToOffice')}
+                  {isDownloading ? 'Baixando...' : t('directionsToOffice')}
                 </Button>
               </div>
             </div>

@@ -1,13 +1,15 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BookOpen, Code, Video, GraduationCap, Download, ExternalLink, Youtube } from 'lucide-react';
+import { useDownload } from '@/hooks/useDownload';
+import { validateYouTubeUrl } from '@/utils/downloadUtils';
 
 const StudentResources = () => {
   const { t } = useLanguage();
+  const { handleDownload, isDownloading } = useDownload();
 
   const processControlVideos = [
     {
@@ -75,6 +77,14 @@ const StudentResources = () => {
     }
   ];
 
+  const handleYouTubeClick = (url: string) => {
+    if (validateYouTubeUrl(url)) {
+      window.open(url, '_blank');
+    } else {
+      console.error('URL do YouTube inválida:', url);
+    }
+  };
+
   return (
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
@@ -119,9 +129,14 @@ const StudentResources = () => {
                     <span className="mx-2">•</span>
                     <span>156 downloads</span>
                   </div>
-                  <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
+                  <Button 
+                    size="sm" 
+                    className="bg-academic-blue hover:bg-academic-blue/90"
+                    onClick={() => handleDownload('studentResources-processControl', 1)}
+                    disabled={isDownloading}
+                  >
                     <Download className="h-4 w-4 mr-1" />
-                    {t('download')}
+                    {isDownloading ? 'Baixando...' : t('download')}
                   </Button>
                 </div>
               </Card>
@@ -301,7 +316,7 @@ const StudentResources = () => {
                     <Button 
                       size="sm" 
                       className="bg-red-600 hover:bg-red-700 text-white"
-                      onClick={() => window.open(video.url, '_blank')}
+                      onClick={() => handleYouTubeClick(video.url)}
                     >
                       <Youtube className="h-4 w-4 mr-1" />
                       {t('watch')}
@@ -345,7 +360,7 @@ const StudentResources = () => {
                     <Button 
                       size="sm" 
                       className="bg-red-600 hover:bg-red-700 text-white"
-                      onClick={() => window.open(video.url, '_blank')}
+                      onClick={() => handleYouTubeClick(video.url)}
                     >
                       <Youtube className="h-4 w-4 mr-1" />
                       {t('watch')}
@@ -387,9 +402,14 @@ const StudentResources = () => {
                     <span className="mx-2">•</span>
                     <span>92 downloads</span>
                   </div>
-                  <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
+                  <Button 
+                    size="sm" 
+                    className="bg-academic-blue hover:bg-academic-blue/90"
+                    onClick={() => handleDownload('studentResources-processControl', 1)}
+                    disabled={isDownloading}
+                  >
                     <Download className="h-4 w-4 mr-1" />
-                    {t('material')}
+                    {isDownloading ? 'Baixando...' : t('material')}
                   </Button>
                 </div>
               </Card>

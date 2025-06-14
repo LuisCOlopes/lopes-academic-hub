@@ -6,9 +6,12 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Download, FileText, Video, Calculator, Youtube } from 'lucide-react';
+import { useDownload } from '@/hooks/useDownload';
+import { validateYouTubeUrl } from '@/utils/downloadUtils';
 
 const Material = () => {
   const { t } = useLanguage();
+  const { handleDownload, isDownloading } = useDownload();
 
   const materials = [
     {
@@ -20,14 +23,18 @@ const Material = () => {
           description: 'Material completo sobre controle PID e controle avançado',
           type: 'PDF',
           size: '2.4 MB',
-          downloads: 156
+          downloads: 156,
+          downloadKey: 'material-courseNotes',
+          itemNumber: 1
         },
         {
           title: 'Otimização de Processos',
           description: 'Técnicas de otimização aplicadas à engenharia química',
           type: 'PDF',
           size: '1.8 MB',
-          downloads: 89
+          downloads: 89,
+          downloadKey: 'material-courseNotes',
+          itemNumber: 2
         }
       ]
     },
@@ -40,14 +47,18 @@ const Material = () => {
           description: 'Scripts para simulação de processos químicos',
           type: 'ZIP',
           size: '3.2 MB',
-          downloads: 234
+          downloads: 234,
+          downloadKey: 'material-computationalCodes',
+          itemNumber: 1
         },
         {
           title: 'Controladores PID em Python',
           description: 'Implementação de controladores em Python',
           type: 'ZIP',
           size: '1.1 MB',
-          downloads: 167
+          downloads: 167,
+          downloadKey: 'material-computationalCodes',
+          itemNumber: 2
         }
       ]
     },
@@ -60,14 +71,18 @@ const Material = () => {
           description: 'Problemas resolvidos e propostos',
           type: 'PDF',
           size: '1.5 MB',
-          downloads: 203
+          downloads: 203,
+          downloadKey: 'material-exercises',
+          itemNumber: 1
         },
         {
           title: 'Estudos de Caso',
           description: 'Casos práticos da indústria química',
           type: 'PDF',
           size: '2.1 MB',
-          downloads: 145
+          downloads: 145,
+          downloadKey: 'material-exercises',
+          itemNumber: 2
         }
       ]
     },
@@ -149,6 +164,14 @@ const Material = () => {
     }
   ];
 
+  const handleYouTubeClick = (url: string) => {
+    if (validateYouTubeUrl(url)) {
+      window.open(url, '_blank');
+    } else {
+      console.error('URL do YouTube inválida:', url);
+    }
+  };
+
   return (
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
@@ -197,7 +220,7 @@ const Material = () => {
                           <Button 
                             size="sm" 
                             className="bg-red-600 hover:bg-red-700 text-white"
-                            onClick={() => window.open(item.url, '_blank')}
+                            onClick={() => handleYouTubeClick(item.url)}
                           >
                             <Youtube className="h-4 w-4 mr-1" />
                             {t('watch')}
@@ -210,9 +233,14 @@ const Material = () => {
                             <span className="mx-2">•</span>
                             <span>{item.downloads} downloads</span>
                           </div>
-                          <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
+                          <Button 
+                            size="sm" 
+                            className="bg-academic-blue hover:bg-academic-blue/90"
+                            onClick={() => handleDownload(item.downloadKey, item.itemNumber)}
+                            disabled={isDownloading}
+                          >
                             <Download className="h-4 w-4 mr-1" />
-                            {t('download')}
+                            {isDownloading ? 'Baixando...' : t('download')}
                           </Button>
                         </>
                       )}
