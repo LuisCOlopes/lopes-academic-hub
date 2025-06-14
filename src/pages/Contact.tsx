@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Clock, ExternalLink, User, GraduationCap } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ExternalLink, User } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -34,33 +33,13 @@ const Contact = () => {
 
   const relevantLinks = [
     {
-      name: t('universityProfile'),
-      url: 'https://www.ufu.br',
-      icon: GraduationCap
-    },
-    {
-      name: t('researchGate'),
-      url: 'https://www.researchgate.net',
-      icon: User
-    },
-    {
-      name: t('googleScholar'),
-      url: 'https://scholar.google.com',
-      icon: User
-    },
-    {
       name: t('linkedin'),
       url: 'https://www.linkedin.com/in/luís-cláudio-oliveira-lopes-a1b28414',
       icon: User
     },
     {
-      name: t('orcid'),
-      url: 'https://orcid.org',
-      icon: User
-    },
-    {
-      name: t('lattes'),
-      url: 'http://lattes.cnpq.br',
+      name: 'MS Teams',
+      url: 'https://teams.microsoft.com/l/chat/0/0?users=lcol@ufu.br',
       icon: User
     }
   ];
