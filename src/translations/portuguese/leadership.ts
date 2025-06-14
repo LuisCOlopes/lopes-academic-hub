@@ -11,4 +11,5 @@ export const leadershipTranslations = {
   institutionalDevelopment: 'Desenvolvimento Institucional',
   academicGovernance: 'Governança Acadêmica',
   researchLeadership: 'Liderança em Pesquisa',
+  currentLeadershipInitiatives: 'Iniciativas Atuais de Liderança',
 };
