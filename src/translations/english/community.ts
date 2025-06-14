@@ -1,6 +1,26 @@
 
 export const communityTranslations = {
   // Community Page
-  communityTitle: 'Academic Community',
+  communityTitle: 'Community',
   communitySubtitle: 'Connecting researchers and professionals in the field',
+  peopleImpacted: 'People Impacted',
+  activePartnerships: 'Active Partnerships',
+  eventsOrganized: 'Events Organized',
+  resourcesShared: 'Resources Shared',
+  communityInitiatives: 'Community Initiatives',
+  participants: 'participants',
+  active: 'Active',
+  completed: 'Completed',
+  participate: 'Participate',
+  partnershipsAndCollaborations: 'Partnerships and Collaborations',
+  howToParticipate: 'How to Participate',
+  joinAcademicCommunity: 'Join our academic community and contribute to the advancement of chemical engineering',
+  events: 'Events',
+  participateInSeminars: 'Participate in seminars and workshops',
+  collaboration: 'Collaboration',
+  collaborateInProjects: 'Collaborate in research projects',
+  mentoring: 'Mentoring',
+  receiveMentoring: 'Receive or offer mentoring',
+  contactUs: 'Contact Us',
+  learnMore: 'Learn More',
 };

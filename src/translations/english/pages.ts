@@ -1,3 +1,4 @@
+
 export const pagesTranslations = {
   // Page titles and general content
   aboutTitle: 'About',
@@ -5,6 +6,11 @@ export const pagesTranslations = {
   biography: 'Biography',
   education: 'Education',
   researchInterests: 'Research Interests',
+  awardsTitle: 'Awards & Rewards',
+  awardsSubtitle: 'Recommendations for excellence in research and teaching',
+  publicationsTitle: 'Publications',
+  publicationsDescription: 'Scientific articles and contributions to academic literature',
+  newsDescription: 'Latest news and updates from the academic world',
   
   // Alumni page translations
   alumniTitle: 'Alumni and Supervisions',

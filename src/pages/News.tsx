@@ -4,77 +4,77 @@ import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, ExternalLink } from 'lucide-react';
 
 const News = () => {
   const { t } = useLanguage();
 
   const newsItems = [
     {
-      title: t('newResearchGrantSustainable') || 'Nova Bolsa de Pesquisa Concedida para Processos Químicos Sustentáveis',
-      excerpt: t('researchGrantExcerpt') || 'Recebido financiamento de R$ 2,5 milhões do CNPq para desenvolver processos de fabricação química ambientalmente amigáveis.',
+      title: 'O Futuro da Engenharia Química',
+      excerpt: 'Explorando as tendências e inovações que estão moldando o futuro da engenharia química, incluindo sustentabilidade, automação e biotecnologia.',
       date: '2024-01-20',
-      category: t('research') || 'Pesquisa',
-      author: 'Prof. Academic Name',
+      category: 'Inovação',
+      author: 'BetaEQ',
+      link: 'https://betaeq.com.br/o-futuro-da-engenharia-quimica/',
       featured: true
     },
     {
-      title: t('bestTeachingAwardUFU') || 'Reconhecimento do Prêmio de Melhor Ensino na UFU',
-      excerpt: t('teachingAwardExcerpt') || 'Homenageado com o Prêmio de Excelência em Ensino por abordagens inovadoras na educação em engenharia química.',
+      title: 'Indústria química brasileira enfrenta desafios e oportunidades',
+      excerpt: 'Esta notícia do Sebrae aborda a importância da transformação digital e da inovação na indústria química brasileira, destacando a necessidade de otimização da operação para evitar perdas.',
       date: '2024-01-15',
-      category: t('awards') || 'Prêmios',
-      author: 'University Communications'
+      category: 'Indústria',
+      author: 'Sebrae',
+      link: 'https://sebrae.com.br/sites/PortalSebrae/artigos/industria-quimica-brasileira-enfrenta-desafios-e-oportunidades,6822922a889b6810VgnVCM1000001b00320aRCRD'
     },
     {
-      title: t('internationalCollaborationEuropean') || 'Colaboração Internacional com Universidades Europeias',
-      excerpt: t('collaborationExcerpt') || 'Assinados acordos de parceria com instituições europeias líderes para pesquisa conjunta e programas de intercâmbio estudantil.',
+      title: 'O que é química aplicada: Entenda sua importância',
+      excerpt: 'Este artigo da Minas Labor explora o papel da tecnologia na química aplicada, mencionando ferramentas como modelagem computacional e espectroscopia avançada, além da automação de laboratórios para otimizar processos.',
       date: '2024-01-10',
-      category: t('collaboration') || 'Colaboração',
-      author: 'Prof. Academic Name'
+      category: 'Pesquisa',
+      author: 'Minas Labor',
+      link: '#'
     },
     {
-      title: t('studentTeamWinsNational') || 'Equipe de Estudantes Vence Competição Nacional de Engenharia',
-      excerpt: t('studentCompetitionExcerpt') || 'Nossa equipe de graduação garantiu o primeiro lugar na Competição Brasileira de Estudantes de Engenharia Química.',
+      title: 'Inovação química: o que é, os desafios e a importância',
+      excerpt: 'O Blog AEVO discute a importância da inovação química para o desenvolvimento de materiais avançados, como polímeros, compostos de carbono e materiais inteligentes, que impulsionam setores como eletrônica e saúde.',
       date: '2024-01-05',
-      category: t('students') || 'Estudantes',
-      author: 'Team Advisor'
+      category: 'Inovação',
+      author: 'AEVO',
+      link: 'https://blog.aevo.com.br/inovacao-quimica/'
     },
     {
-      title: t('newLabEquipmentInstallation') || 'Instalação de Novos Equipamentos de Laboratório Concluída',
-      excerpt: t('labEquipmentExcerpt') || 'Sistemas de controle de processos de última geração agora operacionais em nosso laboratório avançado de engenharia química.',
+      title: 'Tecnologias Verdes na Indústria Química: Avanços e Desafios',
+      excerpt: 'BetaEQ aborda o uso de tecnologias verdes na indústria química, incluindo sensores inteligentes, sistemas de monitoramento e reciclagem química para a redução do consumo de energia e água, além do tratamento de resíduos.',
       date: '2023-12-20',
-      category: t('infrastructure') || 'Infraestrutura',
-      author: 'Lab Manager'
+      category: 'Sustentabilidade',
+      author: 'BetaEQ',
+      link: 'https://betaeq.com.br/tecnologias-verdes-na-industria-quimica-avancos-e-desafios/'
     },
     {
-      title: t('publishedResearchGreenChemistry') || 'Pesquisa Publicada sobre Aplicações de Química Verde',
-      excerpt: t('greenChemistryExcerpt') || 'Últimas descobertas sobre desenvolvimento de catalisadores sustentáveis publicadas em revista internacional de primeira linha.',
+      title: 'Engenheiros Químicos e a Economia Circular: Desafios e Oportunidades',
+      excerpt: 'A BetaEQ explora o papel dos engenheiros químicos no desenvolvimento de processos que minimizam a geração de resíduos, promovendo a reutilização e reciclagem de materiais, com foco na economia circular.',
       date: '2023-12-15',
-      category: t('publications') || 'Publicações',
-      author: 'Prof. Academic Name'
+      category: 'Sustentabilidade',
+      author: 'BetaEQ',
+      link: 'https://betaeq.com.br/engenheiros-quimicos-e-a-economia-circular-desafios-e-oportunidades/'
     }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'Pesquisa': 'bg-blue-100 text-blue-800',
-      'Research': 'bg-blue-100 text-blue-800',
-      'Investigación': 'bg-blue-100 text-blue-800',
-      'Prêmios': 'bg-yellow-100 text-yellow-800',
-      'Awards': 'bg-yellow-100 text-yellow-800',
-      'Premios': 'bg-yellow-100 text-yellow-800',
-      'Colaboração': 'bg-green-100 text-green-800',
-      'Collaboration': 'bg-green-100 text-green-800',
-      'Colaboración': 'bg-green-100 text-green-800',
-      'Estudantes': 'bg-purple-100 text-purple-800',
-      'Students': 'bg-purple-100 text-purple-800',
-      'Estudiantes': 'bg-purple-100 text-purple-800',
-      'Infraestrutura': 'bg-gray-100 text-gray-800',
-      'Infrastructure': 'bg-gray-100 text-gray-800',
-      'Infraestructura': 'bg-gray-100 text-gray-800',
-      'Publicações': 'bg-red-100 text-red-800',
-      'Publications': 'bg-red-100 text-red-800',
-      'Publicaciones': 'bg-red-100 text-red-800'
+      'Inovação': 'bg-blue-100 text-blue-800',
+      'Innovation': 'bg-blue-100 text-blue-800',
+      'Innovación': 'bg-blue-100 text-blue-800',
+      'Indústria': 'bg-purple-100 text-purple-800',
+      'Industry': 'bg-purple-100 text-purple-800',
+      'Industria': 'bg-purple-100 text-purple-800',
+      'Pesquisa': 'bg-green-100 text-green-800',
+      'Research': 'bg-green-100 text-green-800',
+      'Investigación': 'bg-green-100 text-green-800',
+      'Sustentabilidade': 'bg-emerald-100 text-emerald-800',
+      'Sustainability': 'bg-emerald-100 text-emerald-800',
+      'Sostenibilidad': 'bg-emerald-100 text-emerald-800'
     };
     return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
@@ -124,9 +124,14 @@ const News = () => {
                       <User className="h-4 w-4" />
                       {item.author}
                     </div>
-                    <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium"
+                    >
+                      {t('readMore') || 'Leia mais'} <ExternalLink className="h-4 w-4" />
+                    </a>
                   </div>
                 </Card>
               ))}
@@ -166,9 +171,14 @@ const News = () => {
                       <User className="h-4 w-4" />
                       {item.author}
                     </div>
-                    <button className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium">
-                      {t('readMore') || 'Leia mais'} <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-academic-blue hover:text-blue-700 font-medium"
+                    >
+                      {t('readMore') || 'Leia mais'} <ExternalLink className="h-4 w-4" />
+                    </a>
                   </div>
                 </Card>
               ))}
