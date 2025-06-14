@@ -69,5 +69,30 @@ export const pagesTranslations = {
   fundamentalTheory: 'Teoría Fundamental',
   methodsAndSolutions: 'Métodos y Soluciones',
   applicationsAndCases: 'Aplicaciones y Casos',
-  advancedTopics: 'Temas Avanzados'
+  advancedTopics: 'Temas Avanzados',
+  
+  // Hobbies page
+  hobbiesTitle: 'Pasatiempos',
+  hobbiesSubtitle: 'Intereses personales y actividades que enriquecen mi vida académica',
+  cinema: 'Cine',
+  cinemaDescription: 'Apreciación de películas de diversos géneros, especialmente dramas y ciencia ficción.',
+  music: 'Música',
+  musicDescription: 'Tocar guitarra y disfrutar diversos géneros musicales para relajación.',
+  reading: 'Lectura',
+  readingDescription: 'Además de literatura técnica, disfruto ficción y libros históricos.',
+  travel: 'Viajes',
+  travelDescription: 'Explorar nuevos lugares y culturas, frecuentemente combinando con actividades académicas.',
+  classicMovies: 'Películas clásicas',
+  nationalCinema: 'Cine nacional',
+  scienceFiction: 'Ciencia ficción',
+  classicalGuitar: 'Guitarra clásica',
+  brazilianMusic: 'Música brasileña',
+  jazzAppreciation: 'Apreciación del jazz',
+  historicalFiction: 'Ficción histórica',
+  biographies: 'Biografías',
+  culturalExperiences: 'Experiencias culturales',
+  academicConferences: 'Conferencias académicas',
+  natureExploration: 'Exploración de la naturaleza',
+  workLifeBalance: 'Equilibrio entre Trabajo y Vida Personal',
+  workLifeBalanceDescription: 'Mantener un equilibrio saludable entre responsabilidades académicas e intereses personales es esencial para la creatividad y el bienestar. Estas actividades proporcionan inspiración y nuevas perspectivas que frecuentemente enriquecen mi trabajo académico.'
 };

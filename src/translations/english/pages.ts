@@ -69,5 +69,30 @@ export const pagesTranslations = {
   fundamentalTheory: 'Fundamental Theory',
   methodsAndSolutions: 'Methods and Solutions',
   applicationsAndCases: 'Applications and Cases',
-  advancedTopics: 'Advanced Topics'
+  advancedTopics: 'Advanced Topics',
+  
+  // Hobbies page
+  hobbiesTitle: 'Hobbies',
+  hobbiesSubtitle: 'Personal interests and activities that enrich my academic life',
+  cinema: 'Cinema',
+  cinemaDescription: 'Appreciation of films from various genres, especially dramas and science fiction.',
+  music: 'Music',
+  musicDescription: 'Playing guitar and enjoying various musical genres for relaxation.',
+  reading: 'Reading',
+  readingDescription: 'Beyond technical literature, I enjoy fiction and historical books.',
+  travel: 'Travel',
+  travelDescription: 'Exploring new places and cultures, often combining with academic activities.',
+  classicMovies: 'Classic films',
+  nationalCinema: 'National cinema',
+  scienceFiction: 'Science fiction',
+  classicalGuitar: 'Classical guitar',
+  brazilianMusic: 'Brazilian music',
+  jazzAppreciation: 'Jazz appreciation',
+  historicalFiction: 'Historical fiction',
+  biographies: 'Biographies',
+  culturalExperiences: 'Cultural experiences',
+  academicConferences: 'Academic conferences',
+  natureExploration: 'Nature exploration',
+  workLifeBalance: 'Work-Life Balance',
+  workLifeBalanceDescription: 'Maintaining a healthy balance between academic responsibilities and personal interests is essential for creativity and well-being. These activities provide inspiration and new perspectives that often enrich my academic work.'
 };

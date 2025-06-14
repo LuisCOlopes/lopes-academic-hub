@@ -10,28 +10,28 @@ const Hobbies = () => {
 
   const hobbies = [
     {
-      title: 'Cinema',
-      description: 'Apreciação de filmes de diversos gêneros, especialmente dramas e ficção científica.',
+      title: t('cinema'),
+      description: t('cinemaDescription'),
       icon: Film,
-      activities: ['Filmes clássicos', 'Cinema nacional', 'Ficção científica']
+      activities: [t('classicMovies'), t('nationalCinema'), t('scienceFiction')]
     },
     {
-      title: 'Música',
-      description: 'Tocar violão e apreciar diversos gêneros musicais para relaxamento.',
+      title: t('music'),
+      description: t('musicDescription'),
       icon: Music,
-      activities: ['Violão clássico', 'Música brasileira', 'Apreciação de jazz']
+      activities: [t('classicalGuitar'), t('brazilianMusic'), t('jazzAppreciation')]
     },
     {
-      title: 'Leitura',
-      description: 'Além da literatura técnica, gosto de ficção e livros históricos.',
+      title: t('reading'),
+      description: t('readingDescription'),
       icon: BookOpen,
-      activities: ['Ficção histórica', 'Ficção científica', 'Biografias']
+      activities: [t('historicalFiction'), t('scienceFiction'), t('biographies')]
     },
     {
-      title: 'Viagens',
-      description: 'Explorar novos lugares e culturas, frequentemente combinando com atividades acadêmicas.',
+      title: t('travel'),
+      description: t('travelDescription'),
       icon: MapPin,
-      activities: ['Experiências culturais', 'Conferências acadêmicas', 'Exploração da natureza']
+      activities: [t('culturalExperiences'), t('academicConferences'), t('natureExploration')]
     }
   ];
 
@@ -75,12 +75,10 @@ const Hobbies = () => {
 
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-            Equilíbrio entre Trabalho e Vida Pessoal
+            {t('workLifeBalance')}
           </h2>
           <p className="text-gray-600">
-            Manter um equilíbrio saudável entre responsabilidades acadêmicas e interesses pessoais 
-            é essencial para a criatividade e bem-estar. Essas atividades proporcionam inspiração e 
-            perspectivas novas que frequentemente enriquecem meu trabalho acadêmico.
+            {t('workLifeBalanceDescription')}
           </p>
         </div>
       </div>
