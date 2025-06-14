@@ -3,7 +3,8 @@ import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { BookOpen, Users, FileText, Link, Calculator, Cpu, Beaker, Settings } from 'lucide-react';
+import { BookOpen, Users, FileText, Calculator, Cpu, Beaker, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Teaching = () => {
   const { t } = useLanguage();
@@ -12,26 +13,29 @@ const Teaching = () => {
     {
       code: "FEQUI31030",
       name: t('processDesignCourse') || "Projeto de Processos da Indústria Química",
-      level: t('undergraduate') || "Undergraduate",
+      level: t('undergraduate') || "Graduação",
       semester: "2024/2",
       students: 24,
-      description: t('processDesignDescription') || "PPIQ - Projeto de processos industriais químicos"
+      description: t('processDesignDescription') || "PPIQ - Projeto de processos industriais químicos",
+      syllabusPath: "/syllabus/ppiq"
     },
     {
       code: "FEQUI31022",
       name: t('chemicalProcessControl2') || "Controle de Processos Químicos II",
-      level: t('undergraduate') || "Undergraduate", 
+      level: t('undergraduate') || "Graduação", 
       semester: "2024/2",
       students: 13,
-      description: t('advancedProcessControl') || "CPQ II - Controle avançado de processos"
+      description: t('advancedProcessControl') || "CPQ II - Controle avançado de processos",
+      syllabusPath: "/syllabus/cpq2"
     },
     {
       code: "PEQ003",
       name: t('mathematicalMethods') || "Métodos Matemáticos em Engenharia Química",
-      level: t('graduate') || "Graduate",
+      level: t('graduate') || "Pós-graduação",
       semester: "2024/2",
       students: 8,
-      description: t('mathematicalMethodsDescription') || "Métodos matemáticos aplicados à engenharia química"
+      description: t('mathematicalMethodsDescription') || "Métodos matemáticos aplicados à engenharia química",
+      syllabusPath: "/syllabus/peq003"
     }
   ];
 
@@ -75,11 +79,13 @@ const Teaching = () => {
                   </div>
                   <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
                     <span>📅 {course.semester}</span>
-                    <span>👥 {course.students} {t('students')}</span>
+                    <span>👥 {course.students} {t('students') || 'estudantes'}</span>
                   </div>
-                  <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue">
-                    {t('viewSyllabus')}
-                  </Button>
+                  <Link to={course.syllabusPath}>
+                    <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue hover:bg-academic-blue hover:text-white">
+                      {t('viewSyllabus') || 'Ver Ementa'}
+                    </Button>
+                  </Link>
                 </Card>
               ))}
             </div>
