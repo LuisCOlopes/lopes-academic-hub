@@ -1,37 +1,54 @@
 
 export const researchTranslations = {
-  // Research Page
+  // Research page
   researchTitle: 'Investigación',
+  researchSubtitle: 'Áreas de investigación y proyectos en curso',
   currentResearch: 'Investigación Actual',
-  citations: 'Citas',
-  students: 'Estudiantes Supervisados',
-  funding: 'Financiamiento',
-  researchSubtitle: 'Avances en ingeniería de procesos químicos y tecnologías sostenibles',
   researchAreas: 'Áreas de Investigación',
-  currentProjects: 'Proyectos Actuales',
-  researchInterests: 'Intereses de Investigación',
-  researchMetrics: 'Métricas de Investigación',
-  publications: 'Publicaciones',
-  ongoing: 'En curso',
+  processControl: 'Control de Procesos',
+  processOptimization: 'Optimización de Procesos',
+  faultTolerance: 'Tolerancia a Fallos',
+  systemsEngineering: 'Ingeniería de Sistemas',
   
-  // Projects
-  autonomousSystemProject: 'Sistema Autónomo para Separación de Sólidos de Perforación',
-  autonomousSystemDescription: 'Desarrollo de sistema autónomo para separación de sólidos en perforación de pozos petroleros',
+  // Publications page
+  publicationsTitle: 'Publicaciones',
+  publicationsDescription: 'Artículos científicos, capítulos de libros y trabajos académicos',
+  publicationsSubtitle: 'Artículos científicos y contribuciones académicas',
+  recentPublications: 'Publicaciones Recientes',
+  bookChapters: 'Capítulos de Libros',
+  academicProfiles: 'Perfiles Académicos',
+  totalPublications: 'Total de Publicaciones',
+  totalCitations: 'Total de Citas',
+  hIndex: 'Índice H',
+  i10Index: 'Índice i10',
+  viewPaper: 'Ver Artículo',
+  downloadPdf: 'Descargar PDF',
+  googleScholarDescription: 'Citas y métricas académicas',
+  researchGateDescription: 'Red de investigadores y colaboración',
+  lattesCvDescription: 'Currículum académico brasileño',
+  orcidDescription: 'Identificador digital de investigador',
+  visitProfile: 'Visitar Perfil',
   
-  dynamicOperabilityProject: 'Operabilidad Dinámica de Procesos Químicos',
-  dynamicOperabilityDescription: 'Desarrollo de herramientas de evaluación de operabilidad dinámica en escenarios de fallas, para sistemas no cuadrados con múltiples entradas y salidas',
+  // Projects page
+  projectsTitle: 'Proyectos',
+  projectsSubtitle: 'Proyectos de investigación activos y completados',
+  activeProjects: 'Proyectos Activos',
+  completedProjects: 'Proyectos Completados',
+  researchImpact: 'Impacto de la Investigación',
+  totalFunding: 'Financiamiento Total',
+  publicationsGenerated: 'Publicaciones Generadas',
+  graduateStudents: 'Estudiantes Graduados',
+  industrialPartnerships: 'Alianzas Industriales',
   
-  faultTolerantControlProject: 'Control Tolerante a Fallas',
-  faultTolerantControlDescription: 'Desarrollo de estrategias y metodologías para detección de fallas y diseño de sistemas de control tolerantes a fallas',
-  
-  artificialIntelligenceProject: 'Aplicación de Inteligencia Artificial (IA) en Procesos Industriales',
-  artificialIntelligenceDescription: 'Desarrollo de estrategias y metodologías de IA para detección y diagnóstico de fallas y diseño de sistemas de control autónomos',
-  
-  // Research areas
-  processControlArea: 'Control de Procesos',
-  processControlDescription: 'Sistemas de control avanzado para procesos químicos',
-  optimizationArea: 'Optimización',
-  optimizationDescription: 'Optimización de procesos industriales',
-  safetyArea: 'Seguridad',
-  safetyDescription: 'Seguridad y tolerancia a fallas',
+  // Alumni page
+  alumniTitle: 'Egresados',
+  alumniSubtitle: 'Estudiantes supervisados y su trayectoria académica',
+  supervisedStudents: 'Estudiantes Supervisados',
+  currentPosition: 'Posición Actual',
+  graduationYear: 'Año de Graduación',
+  thesisTitle: 'Título de Tesis',
+  currentWork: 'Trabajo Actual',
+  academicCareer: 'Carrera Académica',
+  industryCareer: 'Carrera en la Industria',
+  researchCareer: 'Carrera en Investigación',
 };

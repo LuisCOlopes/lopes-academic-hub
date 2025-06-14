@@ -159,12 +159,12 @@ const Projects = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               <Card className="p-6 text-center">
                 <Factory className="h-12 w-12 text-ufu-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-ufu-navy mb-2">Controle de Processos</h3>
+                <h3 className="font-semibold text-ufu-navy mb-2">{t('processControl')}</h3>
                 <p className="text-ufu-blue text-sm">Sistemas de controle avançado para processos químicos</p>
               </Card>
               <Card className="p-6 text-center">
                 <Zap className="h-12 w-12 text-ufu-blue mx-auto mb-4" />
-                <h3 className="font-semibold text-ufu-navy mb-2">Otimização</h3>
+                <h3 className="font-semibold text-ufu-navy mb-2">{t('processOptimization')}</h3>
                 <p className="text-ufu-blue text-sm">Otimização de processos industriais</p>
               </Card>
               <Card className="p-6 text-center">
