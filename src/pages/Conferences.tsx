@@ -128,21 +128,21 @@ const Conferences = () => {
             {t('conferencesTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            Speaking engagements, presentations, and conference participation
+            {t('conferencesSubtitle')}
           </p>
         </div>
 
         <Tabs defaultValue="conferences2025" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="conferences2025">Conferências 2025</TabsTrigger>
-            <TabsTrigger value="recent">Últimas Conferências</TabsTrigger>
+            <TabsTrigger value="conferences2025">{t('conferences2025')}</TabsTrigger>
+            <TabsTrigger value="recent">{t('recentConferences')}</TabsTrigger>
           </TabsList>
 
           <TabsContent value="conferences2025" className="space-y-8 mt-6">
             <section>
               <div className="flex items-center gap-2 mb-6">
                 <h2 className="text-2xl font-playfair font-bold text-gray-900">
-                  🇧🇷 Congressos no Brasil
+                  🇧🇷 {t('brazilConferences')}
                 </h2>
               </div>
               <div className="grid gap-6">
@@ -169,11 +169,11 @@ const Conferences = () => {
                     
                     <div className="space-y-3 mb-4">
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Organização:</p>
+                        <p className="text-sm font-medium text-gray-700">{t('organization')}:</p>
                         <p className="text-gray-600">{conference.organization}</p>
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Temas:</p>
+                        <p className="text-sm font-medium text-gray-700">{t('topics')}:</p>
                         <p className="text-gray-600">{conference.topics}</p>
                       </div>
                     </div>
@@ -191,7 +191,7 @@ const Conferences = () => {
             <section>
               <div className="flex items-center gap-2 mb-6">
                 <h2 className="text-2xl font-playfair font-bold text-gray-900">
-                  🌍 Congressos Internacionais
+                  🌍 {t('internationalConferences')}
                 </h2>
               </div>
               <div className="grid gap-6">
@@ -218,11 +218,11 @@ const Conferences = () => {
                     
                     <div className="space-y-3 mb-4">
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Organização:</p>
+                        <p className="text-sm font-medium text-gray-700">{t('organization')}:</p>
                         <p className="text-gray-600">{conference.organization}</p>
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Temas:</p>
+                        <p className="text-sm font-medium text-gray-700">{t('topics')}:</p>
                         <p className="text-gray-600">{conference.topics}</p>
                       </div>
                     </div>
@@ -239,13 +239,13 @@ const Conferences = () => {
 
             <div className="mt-12 p-6 bg-gray-50 rounded-lg">
               <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-                Oportunidades Valiosas
+                {t('valuableOpportunities')}
               </h2>
               <p className="text-gray-600 mb-4">
-                Esses eventos representam oportunidades valiosas para profissionais e acadêmicos atualizarem seus conhecimentos, apresentarem pesquisas e ampliarem suas redes de contato nas áreas de Engenharia Química e Controle de Processos.
+                {t('opportunitiesDescription')}
               </p>
               <p className="text-sm text-gray-500">
-                Para informações adicionais sobre submissão de trabalhos, inscrições ou outros detalhes específicos, entre em contato.
+                {t('additionalInfo')}
               </p>
             </div>
           </TabsContent>
@@ -253,7 +253,7 @@ const Conferences = () => {
           <TabsContent value="recent" className="space-y-6 mt-6">
             <section>
               <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                Últimas Conferências
+                {t('recentConferences')}
               </h2>
               <div className="grid gap-6">
                 {recentConferences.map((conference, index) => (
@@ -280,13 +280,13 @@ const Conferences = () => {
                     </div>
                     
                     <div className="mb-4">
-                      <p className="text-sm font-medium text-gray-700">Topic:</p>
+                      <p className="text-sm font-medium text-gray-700">{t('topic')}:</p>
                       <p className="text-gray-600">{conference.topic}</p>
                     </div>
                     
                     {conference.materials && (
                       <div>
-                        <p className="text-sm font-medium text-gray-700 mb-2">Available Materials:</p>
+                        <p className="text-sm font-medium text-gray-700 mb-2">{t('availableMaterials')}:</p>
                         <div className="flex flex-wrap gap-2">
                           {conference.materials.map((material, i) => (
                             <Button key={i} size="sm" variant="outline">
@@ -309,20 +309,20 @@ const Conferences = () => {
             {t('speakingOpportunities')}
           </h2>
           <p className="text-gray-600 mb-4">
-            Interested in having me speak at your conference or event? I'm always open to sharing knowledge and insights.
+            {t('speakingOpportunitiesDescription')}
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Keynote Presentations</h3>
-              <p className="text-sm text-gray-600">Strategic insights and industry vision</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('keynoteSpeeches')}</h3>
+              <p className="text-sm text-gray-600">{t('keynoteDescription')}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Technical Sessions</h3>
-              <p className="text-sm text-gray-600">Deep-dive research presentations</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('technicalSessions')}</h3>
+              <p className="text-sm text-gray-600">{t('technicalDescription')}</p>
             </div>
             <div className="p-4 bg-white rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Panel Discussions</h3>
-              <p className="text-sm text-gray-600">Interactive expert discussions</p>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('panelDiscussions')}</h3>
+              <p className="text-sm text-gray-600">{t('panelDescription')}</p>
             </div>
           </div>
         </div>
