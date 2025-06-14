@@ -5,7 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Download, FileText, Video, Calculator } from 'lucide-react';
+import { BookOpen, Download, FileText, Video, Calculator, Youtube } from 'lucide-react';
 
 const Material = () => {
   const { t } = useLanguage();
@@ -77,10 +77,73 @@ const Material = () => {
       items: [
         {
           title: 'Introdução ao Controle de Processos',
-          description: 'Série de vídeos sobre fundamentos',
-          type: 'MP4',
-          size: '450 MB',
-          downloads: 312
+          description: 'Conceitos fundamentais de controle',
+          type: 'YouTube',
+          url: 'https://youtu.be/94AG13FOuLE',
+          videoId: '94AG13FOuLE'
+        },
+        {
+          title: 'Simulação de Processos',
+          description: 'Técnicas de simulação aplicadas',
+          type: 'YouTube',
+          url: 'https://youtu.be/zN5l9xt7J4Y',
+          videoId: 'zN5l9xt7J4Y'
+        },
+        {
+          title: 'Controle PID',
+          description: 'Controladores PID em processos químicos',
+          type: 'YouTube',
+          url: 'https://youtu.be/_AOhsOwpA8E',
+          videoId: '_AOhsOwpA8E'
+        },
+        {
+          title: 'Otimização de Processos',
+          description: 'Métodos de otimização em engenharia',
+          type: 'YouTube',
+          url: 'https://youtu.be/zDUU55n4CBA',
+          videoId: 'zDUU55n4CBA'
+        },
+        {
+          title: 'Modelagem Matemática',
+          description: 'Fundamentos de modelagem de processos',
+          type: 'YouTube',
+          url: 'https://youtu.be/yU85HXzb8uw',
+          videoId: 'yU85HXzb8uw'
+        },
+        {
+          title: 'Controle Avançado',
+          description: 'Técnicas avançadas de controle',
+          type: 'YouTube',
+          url: 'https://youtu.be/05QptEIRJUI',
+          videoId: '05QptEIRJUI'
+        },
+        {
+          title: 'Análise de Sistemas',
+          description: 'Análise dinâmica de sistemas',
+          type: 'YouTube',
+          url: 'https://youtu.be/wzDM3aQqOxg',
+          videoId: 'wzDM3aQqOxg'
+        },
+        {
+          title: 'Instrumentação Industrial',
+          description: 'Instrumentos e sensores industriais',
+          type: 'YouTube',
+          url: 'https://youtu.be/reQ2ZXUmtv0',
+          videoId: 'reQ2ZXUmtv0'
+        },
+        {
+          title: 'Automação de Processos',
+          description: 'Sistemas de automação industrial',
+          type: 'YouTube',
+          url: 'https://youtu.be/4FRTXzXPTbA',
+          videoId: '4FRTXzXPTbA'
+        },
+        {
+          title: 'Redes Industriais',
+          description: 'Comunicação em sistemas industriais',
+          type: 'YouTube',
+          url: 'https://youtu.be/_wnUGvXo6Co',
+          videoId: '_wnUGvXo6Co'
         }
       ]
     }
@@ -126,15 +189,33 @@ const Material = () => {
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="text-xs text-gray-500">
-                        <span>{item.size}</span>
-                        <span className="mx-2">•</span>
-                        <span>{item.downloads} downloads</span>
-                      </div>
-                      <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
-                        <Download className="h-4 w-4 mr-1" />
-                        {t('download')}
-                      </Button>
+                      {item.type === 'YouTube' ? (
+                        <>
+                          <div className="text-xs text-gray-500">
+                            <span>Vídeo educacional</span>
+                          </div>
+                          <Button 
+                            size="sm" 
+                            className="bg-red-600 hover:bg-red-700 text-white"
+                            onClick={() => window.open(item.url, '_blank')}
+                          >
+                            <Youtube className="h-4 w-4 mr-1" />
+                            Assistir
+                          </Button>
+                        </>
+                      ) : (
+                        <>
+                          <div className="text-xs text-gray-500">
+                            <span>{item.size}</span>
+                            <span className="mx-2">•</span>
+                            <span>{item.downloads} downloads</span>
+                          </div>
+                          <Button size="sm" className="bg-academic-blue hover:bg-academic-blue/90">
+                            <Download className="h-4 w-4 mr-1" />
+                            {t('download')}
+                          </Button>
+                        </>
+                      )}
                     </div>
                   </Card>
                 ))}
