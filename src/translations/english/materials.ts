@@ -52,5 +52,27 @@ export const materialsTranslations = {
   energyTransitionDescription: 'Decarbonization and process electrification',
   material: 'Material',
   seeOnGitHub: 'See on GitHub',
-  watchOnYouTube: 'Watch on YouTube'
+  watchOnYouTube: 'Watch on YouTube',
+  
+  // Specific video titles and descriptions
+  videoControlIntro: 'Introduction to Process Control',
+  videoControlIntroDesc: 'Fundamental control concepts',
+  videoSimulation: 'Process Simulation',
+  videoSimulationDesc: 'Applied simulation techniques',
+  videoPidControl: 'PID Control',
+  videoPidControlDesc: 'PID controllers in chemical processes',
+  videoOptimization: 'Process Optimization',
+  videoOptimizationDesc: 'Optimization methods in engineering',
+  videoModeling: 'Mathematical Modeling',
+  videoModelingDesc: 'Fundamentals of process modeling',
+  videoAdvancedControl: 'Advanced Control',
+  videoAdvancedControlDesc: 'Advanced control techniques',
+  videoSystemAnalysis: 'System Analysis',
+  videoSystemAnalysisDesc: 'Dynamic system analysis',
+  videoInstrumentation: 'Industrial Instrumentation',
+  videoInstrumentationDesc: 'Industrial instruments and sensors',
+  videoAutomation: 'Process Automation',
+  videoAutomationDesc: 'Industrial automation systems',
+  videoNetworks: 'Industrial Networks',
+  videoNetworksDesc: 'Communication in industrial systems'
 };

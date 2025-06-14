@@ -13,7 +13,7 @@ export const materialsTranslations = {
   educationalPurpose: 'Material destinado exclusivamente para fins educacionais',
   citeSource: 'Cite a fonte ao utilizar o material em trabalhos acadêmicos',
   commercialUse: 'Uso comercial não autorizado sem permissão prévia',
-  reportIssues: 'Relate problemas ou sugestões para:',
+  reportIssues: 'Relate problemas ou sugerências para:',
   
   // Student Resources page
   studentResourcesTitle: 'Recursos para Estudantes',
@@ -52,5 +52,27 @@ export const materialsTranslations = {
   energyTransitionDescription: 'Descarbonização e eletrificação de processos',
   material: 'Material',
   seeOnGitHub: 'Ver no GitHub',
-  watchOnYouTube: 'Ver no YouTube'
+  watchOnYouTube: 'Ver no YouTube',
+  
+  // Specific video titles and descriptions
+  videoControlIntro: 'Introdução ao Controle de Processos',
+  videoControlIntroDesc: 'Conceitos fundamentais de controle',
+  videoSimulation: 'Simulação de Processos',
+  videoSimulationDesc: 'Técnicas de simulação aplicadas',
+  videoPidControl: 'Controle PID',
+  videoPidControlDesc: 'Controladores PID em processos químicos',
+  videoOptimization: 'Otimização de Processos',
+  videoOptimizationDesc: 'Métodos de otimização em engenharia',
+  videoModeling: 'Modelagem Matemática',
+  videoModelingDesc: 'Fundamentos de modelagem de processos',
+  videoAdvancedControl: 'Controle Avançado',
+  videoAdvancedControlDesc: 'Técnicas avançadas de controle',
+  videoSystemAnalysis: 'Análise de Sistemas',
+  videoSystemAnalysisDesc: 'Análise dinâmica de sistemas',
+  videoInstrumentation: 'Instrumentação Industrial',
+  videoInstrumentationDesc: 'Instrumentos e sensores industriais',
+  videoAutomation: 'Automação de Processos',
+  videoAutomationDesc: 'Sistemas de automação industrial',
+  videoNetworks: 'Redes Industriais',
+  videoNetworksDesc: 'Comunicação em sistemas industriais'
 };
