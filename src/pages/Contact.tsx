@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -9,13 +8,16 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Clock, ExternalLink, User } from 'lucide-react';
 import { useDownload } from '@/hooks/useDownload';
 import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const { t } = useLanguage();
   const { handleDownload, isDownloading } = useDownload();
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    institution: '',
     subject: '',
     message: ''
   });
@@ -34,27 +36,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simular envio de email
-      const emailData = {
-        to: 'lcol@ufu.br',
-        from: formData.email,
-        subject: `[Contato Website] ${formData.subject}`,
-        body: `
-Nome: ${formData.name}
-Email: ${formData.email}
-Assunto: ${formData.subject}
-
-Mensagem:
-${formData.message}
-        `
-      };
-
-      // Aqui você implementaria a integração real com um serviço de email
-      console.log('Enviando email:', emailData);
+      console.log('Submitting contact message:', formData);
       
-      // Simular delay de envio
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const { data: result, error } = await supabase.functions.invoke('submit-forms', {
+        body: {
+          type: 'contact-message',
+          data: formData,
+        },
+      });
 
+      if (error) {
+        console.error('Submission error:', error);
+        toast({
+          title: "Erro ao enviar mensagem",
+          description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      console.log('Submission successful:', result);
       toast({
         title: "Mensagem enviada com sucesso!",
         description: "Sua mensagem foi enviada para lcol@ufu.br. Responderemos em breve.",
@@ -62,15 +63,18 @@ ${formData.message}
 
       // Limpar formulário
       setFormData({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
+        institution: '',
         subject: '',
         message: ''
       });
     } catch (error) {
+      console.error('Unexpected error:', error);
       toast({
         title: "Erro ao enviar mensagem",
-        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+        description: "Ocorreu um erro inesperado. Tente novamente mais tarde.",
         variant: "destructive",
       });
     } finally {
@@ -135,11 +139,11 @@ ${formData.message}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('name')}
+                      Nome *
                     </label>
                     <Input 
-                      name="name"
-                      value={formData.name}
+                      name="firstName"
+                      value={formData.firstName}
                       onChange={handleInputChange}
                       placeholder="Seu nome"
                       required
@@ -147,21 +151,44 @@ ${formData.message}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('email')}
+                      Sobrenome *
                     </label>
                     <Input 
-                      type="email" 
-                      name="email"
-                      value={formData.email}
+                      name="lastName"
+                      value={formData.lastName}
                       onChange={handleInputChange}
-                      placeholder="seu.email@exemplo.com"
+                      placeholder="Seu sobrenome"
                       required
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('subject')}
+                    {t('email')} *
+                  </label>
+                  <Input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="seu.email@exemplo.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Instituição
+                  </label>
+                  <Input 
+                    name="institution"
+                    value={formData.institution}
+                    onChange={handleInputChange}
+                    placeholder="Sua instituição ou empresa"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t('subject')} *
                   </label>
                   <Input 
                     name="subject"
@@ -173,7 +200,7 @@ ${formData.message}
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('message')}
+                    {t('message')} *
                   </label>
                   <Textarea 
                     name="message"
