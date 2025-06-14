@@ -18,6 +18,8 @@ export const materialsTranslations = {
   // Student Resources page
   studentResourcesTitle: 'Student Resources',
   studentResourcesSubtitle: 'Support materials and academic resources',
+  educationalMaterialTitle: 'Educational Materials',
+  educationalMaterialSubtitle: 'Educational resources to support teaching and learning',
   handbooks: 'Handbooks',
   handbooksDescription: 'Educational material for courses',
   computationalCodes: 'Computational Codes',
@@ -54,25 +56,27 @@ export const materialsTranslations = {
   seeOnGitHub: 'See on GitHub',
   watchOnYouTube: 'Watch on YouTube',
   
-  // Specific video titles and descriptions
-  videoControlIntro: 'Introduction to Process Control',
-  videoControlIntroDesc: 'Fundamental control concepts',
-  videoSimulation: 'Process Simulation',
-  videoSimulationDesc: 'Applied simulation techniques',
-  videoPidControl: 'PID Control',
-  videoPidControlDesc: 'PID controllers in chemical processes',
-  videoOptimization: 'Process Optimization',
-  videoOptimizationDesc: 'Optimization methods in engineering',
-  videoModeling: 'Mathematical Modeling',
-  videoModelingDesc: 'Fundamentals of process modeling',
-  videoAdvancedControl: 'Advanced Control',
-  videoAdvancedControlDesc: 'Advanced control techniques',
-  videoSystemAnalysis: 'System Analysis',
-  videoSystemAnalysisDesc: 'Dynamic system analysis',
-  videoInstrumentation: 'Industrial Instrumentation',
-  videoInstrumentationDesc: 'Industrial instruments and sensors',
-  videoAutomation: 'Process Automation',
-  videoAutomationDesc: 'Industrial automation systems',
-  videoNetworks: 'Industrial Networks',
-  videoNetworksDesc: 'Communication in industrial systems'
+  // Specific video titles and descriptions - Process Control
+  videoControlIntro: 'Chemical Process Control - Introduction - Class 1',
+  videoControlIntroDesc: 'Fundamental concepts of chemical process control',
+  videoClassification: 'Chemical Process Control - Classification and Degrees of Freedom - Class 2',
+  videoClassificationDesc: 'System classification and degrees of freedom analysis',
+  videoSelectiveControl: 'Chemical Process Control - Review on Selective Control',
+  videoSelectiveControlDesc: 'Review of selective control concepts',
+  videoCascadeRatio: 'Chemical Process Control - Cascade and Ratio Control',
+  videoCascadeRatioDesc: 'Cascade control and ratio control strategies',
+  videoFeedforward: 'Chemical Process Control - Feedforward Control',
+  videoFeedforwardDesc: 'Implementation and application of feedforward control',
+  
+  // Specific video titles and descriptions - Instrumentation
+  videoInstrumentationIntro: 'Instrumentation - Part I - Introduction',
+  videoInstrumentationIntroDesc: 'Introduction to industrial instrumentation concepts',
+  videoInstrumentationPressure: 'Instrumentation - Part II - Pressure',
+  videoInstrumentationPressureDesc: 'Pressure measurement and control in industrial processes',
+  videoInstrumentationTemperature: 'Instrumentation - Part III - Temperature',
+  videoInstrumentationTemperatureDesc: 'Temperature measurement instruments',
+  videoInstrumentationFlow: 'Instrumentation - Part IV - Flow',
+  videoInstrumentationFlowDesc: 'Flow measurement in industrial systems',
+  videoInstrumentationLevel: 'Instrumentation - Part V - Level',
+  videoInstrumentationLevelDesc: 'Instrumentation for level measurement and control'
 };

@@ -1,3 +1,4 @@
+
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,7 +9,7 @@ import { BookOpen, Code, Video, GraduationCap, Download, ExternalLink, Youtube }
 const StudentResources = () => {
   const { t } = useLanguage();
 
-  const videosList = [
+  const processControlVideos = [
     {
       title: t('videoControlIntro'),
       description: t('videoControlIntroDesc'),
@@ -16,58 +17,61 @@ const StudentResources = () => {
       videoId: '94AG13FOuLE'
     },
     {
-      title: t('videoSimulation'),
-      description: t('videoSimulationDesc'),
+      title: t('videoClassification'),
+      description: t('videoClassificationDesc'),
       url: 'https://youtu.be/zN5l9xt7J4Y',
       videoId: 'zN5l9xt7J4Y'
     },
     {
-      title: t('videoPidControl'),
-      description: t('videoPidControlDesc'),
+      title: t('videoSelectiveControl'),
+      description: t('videoSelectiveControlDesc'),
       url: 'https://youtu.be/_AOhsOwpA8E',
       videoId: '_AOhsOwpA8E'
     },
     {
-      title: t('videoOptimization'),
-      description: t('videoOptimizationDesc'),
+      title: t('videoCascadeRatio'),
+      description: t('videoCascadeRatioDesc'),
       url: 'https://youtu.be/zDUU55n4CBA',
       videoId: 'zDUU55n4CBA'
     },
     {
-      title: t('videoModeling'),
-      description: t('videoModelingDesc'),
+      title: t('videoFeedforward'),
+      description: t('videoFeedforwardDesc'),
       url: 'https://youtu.be/yU85HXzb8uw',
       videoId: 'yU85HXzb8uw'
-    },
+    }
+  ];
+
+  const instrumentationVideos = [
     {
-      title: t('videoAdvancedControl'),
-      description: t('videoAdvancedControlDesc'),
-      url: 'https://youtu.be/05QptEIRJUI',
-      videoId: '05QptEIRJUI'
-    },
-    {
-      title: t('videoSystemAnalysis'),
-      description: t('videoSystemAnalysisDesc'),
-      url: 'https://youtu.be/wzDM3aQqOxg',
-      videoId: 'wzDM3aQqOxg'
-    },
-    {
-      title: t('videoInstrumentation'),
-      description: t('videoInstrumentationDesc'),
-      url: 'https://youtu.be/reQ2ZXUmtv0',
-      videoId: 'reQ2ZXUmtv0'
-    },
-    {
-      title: t('videoAutomation'),
-      description: t('videoAutomationDesc'),
+      title: t('videoInstrumentationIntro'),
+      description: t('videoInstrumentationIntroDesc'),
       url: 'https://youtu.be/4FRTXzXPTbA',
       videoId: '4FRTXzXPTbA'
     },
     {
-      title: t('videoNetworks'),
-      description: t('videoNetworksDesc'),
+      title: t('videoInstrumentationPressure'),
+      description: t('videoInstrumentationPressureDesc'),
       url: 'https://youtu.be/_wnUGvXo6Co',
       videoId: '_wnUGvXo6Co'
+    },
+    {
+      title: t('videoInstrumentationTemperature'),
+      description: t('videoInstrumentationTemperatureDesc'),
+      url: 'https://youtu.be/reQ2ZXUmtv0',
+      videoId: 'reQ2ZXUmtv0'
+    },
+    {
+      title: t('videoInstrumentationFlow'),
+      description: t('videoInstrumentationFlowDesc'),
+      url: 'https://youtu.be/05QptEIRJUI',
+      videoId: '05QptEIRJUI'
+    },
+    {
+      title: t('videoInstrumentationLevel'),
+      description: t('videoInstrumentationLevelDesc'),
+      url: 'https://youtu.be/wzDM3aQqOxg',
+      videoId: 'wzDM3aQqOxg'
     }
   ];
 
@@ -264,19 +268,63 @@ const StudentResources = () => {
             </div>
           </Card>
 
-          {/* Educational Videos Section */}
+          {/* Educational Videos Section - Controle de Processos */}
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-red-600 rounded-lg">
                 <Video className="h-6 w-6 text-white" />
               </div>
               <h2 className="text-2xl font-semibold text-gray-900">
-                {t('educationalVideos')}
+                {t('educationalVideos')} - Controle de Processos
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              {videosList.map((video, index) => (
+              {processControlVideos.map((video, index) => (
+                <Card key={index} className="p-4 border">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 mb-1">
+                        {video.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        {video.description}
+                      </p>
+                    </div>
+                    <Badge variant="outline">YouTube</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-gray-500">
+                      <span>Vídeo educacional</span>
+                    </div>
+                    <Button 
+                      size="sm" 
+                      className="bg-red-600 hover:bg-red-700 text-white"
+                      onClick={() => window.open(video.url, '_blank')}
+                    >
+                      <Youtube className="h-4 w-4 mr-1" />
+                      {t('watch')}
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </Card>
+
+          {/* Educational Videos Section - Instrumentação */}
+          <Card className="p-6">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-red-600 rounded-lg">
+                <Video className="h-6 w-6 text-white" />
+              </div>
+              <h2 className="text-2xl font-semibold text-gray-900">
+                {t('educationalVideos')} - Instrumentação
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {instrumentationVideos.map((video, index) => (
                 <Card key={index} className="p-4 border">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">

@@ -18,6 +18,8 @@ export const materialsTranslations = {
   // Student Resources page
   studentResourcesTitle: 'Recursos para Estudantes',
   studentResourcesSubtitle: 'Material de apoio e recursos acadêmicos',
+  educationalMaterialTitle: 'Material Educacional',
+  educationalMaterialSubtitle: 'Recursos didáticos para apoio ao ensino e aprendizagem',
   handbooks: 'Apostilas',
   handbooksDescription: 'Material didático para disciplinas',
   computationalCodes: 'Códigos Computacionais',
@@ -54,25 +56,27 @@ export const materialsTranslations = {
   seeOnGitHub: 'Ver no GitHub',
   watchOnYouTube: 'Ver no YouTube',
   
-  // Specific video titles and descriptions
-  videoControlIntro: 'Introdução ao Controle de Processos',
-  videoControlIntroDesc: 'Conceitos fundamentais de controle',
-  videoSimulation: 'Simulação de Processos',
-  videoSimulationDesc: 'Técnicas de simulação aplicadas',
-  videoPidControl: 'Controle PID',
-  videoPidControlDesc: 'Controladores PID em processos químicos',
-  videoOptimization: 'Otimização de Processos',
-  videoOptimizationDesc: 'Métodos de otimização em engenharia',
-  videoModeling: 'Modelagem Matemática',
-  videoModelingDesc: 'Fundamentos de modelagem de processos',
-  videoAdvancedControl: 'Controle Avançado',
-  videoAdvancedControlDesc: 'Técnicas avançadas de controle',
-  videoSystemAnalysis: 'Análise de Sistemas',
-  videoSystemAnalysisDesc: 'Análise dinâmica de sistemas',
-  videoInstrumentation: 'Instrumentação Industrial',
-  videoInstrumentationDesc: 'Instrumentos e sensores industriais',
-  videoAutomation: 'Automação de Processos',
-  videoAutomationDesc: 'Sistemas de automação industrial',
-  videoNetworks: 'Redes Industriais',
-  videoNetworksDesc: 'Comunicação em sistemas industriais'
+  // Specific video titles and descriptions - Controle de Processos
+  videoControlIntro: 'Controle de Processos Químicos - Introdução - Aula 1',
+  videoControlIntroDesc: 'Conceitos fundamentais de controle de processos químicos',
+  videoClassification: 'Controle de Processos Químicos - Classificação e Graus de Liberdade - Aula 2',
+  videoClassificationDesc: 'Classificação de sistemas e análise de graus de liberdade',
+  videoSelectiveControl: 'Controle de Processos Químicos - Revisão sobre Controle Seletivo',
+  videoSelectiveControlDesc: 'Revisão dos conceitos de controle seletivo',
+  videoCascadeRatio: 'Controle de Processos Químicos - Controle Cascata e de Razão',
+  videoCascadeRatioDesc: 'Estratégias de controle cascata e controle de razão',
+  videoFeedforward: 'Controle de Processos Químicos - Controle Feedforward',
+  videoFeedforwardDesc: 'Implementação e aplicação do controle feedforward',
+  
+  // Specific video titles and descriptions - Instrumentação
+  videoInstrumentationIntro: 'Instrumentação - parte I - Introdução',
+  videoInstrumentationIntroDesc: 'Introdução aos conceitos de instrumentação industrial',
+  videoInstrumentationPressure: 'Instrumentação - parte II - Pressão',
+  videoInstrumentationPressureDesc: 'Medição e controle de pressão em processos industriais',
+  videoInstrumentationTemperature: 'Instrumentação - parte III - Temperatura',
+  videoInstrumentationTemperatureDesc: 'Instrumentos para medição de temperatura',
+  videoInstrumentationFlow: 'Instrumentação - parte IV - Vazão',
+  videoInstrumentationFlowDesc: 'Medição de vazão em sistemas industriais',
+  videoInstrumentationLevel: 'Instrumentação - parte V - Nível',
+  videoInstrumentationLevelDesc: 'Instrumentação para medição e controle de nível'
 };
