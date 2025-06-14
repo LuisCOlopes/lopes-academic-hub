@@ -1,4 +1,3 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -77,15 +76,15 @@ const StudentResources = () => {
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('materialTitle')}
+            {t('educationalMaterialTitle')}
           </h1>
           <p className="text-lg text-gray-600">
-            {t('materialSubtitle')}
+            {t('educationalMaterialSubtitle')}
           </p>
         </div>
 
         <div className="grid gap-8">
-          {/* Apostilas */}
+          {/* Course Notes Section */}
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-academic-blue rounded-lg">
@@ -177,7 +176,7 @@ const StudentResources = () => {
             </div>
           </Card>
 
-          {/* Códigos Computacionais */}
+          {/* Computational Codes Section */}
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-academic-blue rounded-lg">
@@ -265,7 +264,7 @@ const StudentResources = () => {
             </div>
           </Card>
 
-          {/* Vídeos Educacionais */}
+          {/* Educational Videos Section */}
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-red-600 rounded-lg">
@@ -309,7 +308,7 @@ const StudentResources = () => {
             </div>
           </Card>
 
-          {/* Minicursos */}
+          {/* Mini-courses Section */}
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-academic-blue rounded-lg">
@@ -410,7 +409,7 @@ const StudentResources = () => {
             <p>• {t('educationalPurpose')}</p>
             <p>• {t('citeSource')}</p>
             <p>• {t('commercialUse')}</p>
-            <p>• {t('reportIssues')} lclaudio@ufu.br</p>
+            <p>• {t('reportIssues')} lcol@ufu.br</p>
           </div>
         </div>
       </div>
