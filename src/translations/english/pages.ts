@@ -5,16 +5,16 @@ export const pagesTranslations = {
   
   // About page
   aboutTitle: 'About',
-  aboutSubtitle: 'Get to know my academic and professional journey',
+  aboutSubtitle: 'Learn about my academic and professional journey',
   academicFormation: 'Academic Formation',
   phdChemicalEngineering: 'PhD in Chemical Engineering',
-  mastersChemicalEngineering: 'Masters in Chemical Engineering', 
+  mastersChemicalEngineering: 'Masters in Chemical Engineering',
   bachelorChemicalEngineering: 'Bachelor in Chemical Engineering',
   federalUniversityRio: 'Federal University of Rio de Janeiro (UFRJ)',
   
   // Awards page
-  awardsTitle: 'Awards & Rewards',
-  awardsSubtitle: 'Recommendations for excellence in research and teaching',
+  awardsTitle: 'Awards and Recognition',
+  awardsSubtitle: 'Recognition for excellence in research and teaching',
   
   // News page
   newsTitle: 'News',
@@ -23,10 +23,10 @@ export const pagesTranslations = {
   
   // Blog page
   blogTitle: 'Blog',
-  blogSubtitle: 'Insights and thoughts on chemical engineering and education',
+  blogSubtitle: 'Reflections and thoughts on chemical engineering and education',
   
   // Meeting page
-  meetingTitle: 'Schedule Meeting',
+  meetingTitle: 'Request Meeting',
   meetingSubtitle: 'Request a meeting to discuss research, collaboration or academic matters',
   firstName: 'First Name',
   lastName: 'Last Name',
@@ -38,10 +38,10 @@ export const pagesTranslations = {
   message: 'Message',
   requestMeeting: 'Request Meeting',
   importantInformation: 'Important Information',
-  meetingGuidelines: 'Please allow 2-3 business days for response. Meetings are typically scheduled during business hours (9 AM - 5 PM, Monday-Friday).',
+  meetingGuidelines: 'Please allow 2-3 business days for response. Meetings are typically scheduled during business hours (9am to 5pm, Monday to Friday).',
   
   // Material page
-  materialTitle: 'Educational Materials',
+  materialTitle: 'Educational Material',
   materialSubtitle: 'Resources and materials for chemical engineering education',
   courseMaterials: 'Course Materials',
   courseMaterialsDescription: 'Slides, notes and references for all courses',
@@ -50,7 +50,7 @@ export const pagesTranslations = {
   studentProjects: 'Student Projects',
   studentProjectsDescription: 'Works and projects developed by students',
   assignments: 'Assignments',
-  assignmentsDescription: 'Exercises and assignments for download',
+  assignmentsDescription: 'Exercises and activities for download',
   access: 'Access',
   explore: 'Explore',
   download: 'Download',
@@ -63,18 +63,18 @@ export const pagesTranslations = {
   brazilConferences: 'Conferences in Brazil',
   internationalConferences: 'International Conferences',
   valuableOpportunities: 'Valuable Opportunities',
-  opportunitiesDescription: 'These events represent valuable opportunities for professionals and academics to update their knowledge, present research and expand their contact networks in the areas of Chemical Engineering and Process Control.',
-  additionalInfo: 'For additional information about paper submission, registration or other specific details, please contact.',
+  opportunitiesDescription: 'These events represent valuable opportunities for professionals and academics to update their knowledge, present research and expand their networks in Chemical Engineering and Process Control areas.',
+  additionalInfo: 'For additional information about paper submission, registration or other specific details, please contact us.',
   organization: 'Organization',
   topics: 'Topics',
   speakingOpportunities: 'Speaking Opportunities',
-  speakingOpportunitiesDescription: 'Interested in having me speak at your conference or event? I\'m always open to sharing knowledge and insights.',
-  keynoteSpeeches: 'Keynote Presentations',
+  speakingOpportunitiesDescription: 'Interested in having me as a speaker at your conference or event? I am always open to sharing knowledge and insights.',
+  keynoteSpeeches: 'Keynote Speeches',
   keynoteDescription: 'Strategic insights and industry vision',
   technicalSessions: 'Technical Sessions',
-  technicalDescription: 'Deep-dive research presentations',
+  technicalDescription: 'Detailed research presentations',
   panelDiscussions: 'Panel Discussions',
-  panelDescription: 'Interactive expert discussions',
+  panelDescription: 'Interactive discussions among experts',
   topic: 'Topic',
   availableMaterials: 'Available Materials',
   
@@ -94,12 +94,12 @@ export const pagesTranslations = {
   cinema: 'Cinema',
   cinemaDescription: 'Appreciation of films from various genres, especially dramas and science fiction.',
   music: 'Music',
-  musicDescription: 'Playing guitar and enjoying various musical genres for relaxation.',
+  musicDescription: 'Playing guitar and appreciating various musical genres for relaxation.',
   reading: 'Reading',
-  readingDescription: 'Beyond technical literature, I enjoy fiction and historical books.',
+  readingDescription: 'Besides technical literature, I enjoy fiction and historical books.',
   travel: 'Travel',
   travelDescription: 'Exploring new places and cultures, often combining with academic activities.',
-  classicMovies: 'Classic films',
+  classicMovies: 'Classic movies',
   nationalCinema: 'National cinema',
   scienceFiction: 'Science fiction',
   classicalGuitar: 'Classical guitar',

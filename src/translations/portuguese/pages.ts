@@ -14,7 +14,7 @@ export const pagesTranslations = {
   
   // Awards page
   awardsTitle: 'Prêmios e Reconhecimentos',
-  awardsSubtitle: 'Recomendações pela excelência em pesquisa e ensino',
+  awardsSubtitle: 'Reconhecimento pela excelência em pesquisa e ensino',
   
   // News page
   newsTitle: 'Notícias',
