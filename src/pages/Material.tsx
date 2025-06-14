@@ -200,7 +200,7 @@ const Material = () => {
                             onClick={() => window.open(item.url, '_blank')}
                           >
                             <Youtube className="h-4 w-4 mr-1" />
-                            Assistir
+                            {t('watch')}
                           </Button>
                         </>
                       ) : (
