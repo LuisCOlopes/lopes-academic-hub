@@ -12,6 +12,8 @@ import GeneralStatistics from '@/components/alumni/GeneralStatistics';
 const Alumni = () => {
   const { t } = useLanguage();
 
+  console.log('Alumni component rendering, language context available:', !!t);
+
   return (
     <AcademicLayout>
       <div className="min-h-screen bg-gradient-to-br from-ufu-light to-white p-6">

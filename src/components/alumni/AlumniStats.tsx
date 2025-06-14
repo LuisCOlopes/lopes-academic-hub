@@ -7,6 +7,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const AlumniStats = () => {
   const { t } = useLanguage();
 
+  console.log('AlumniStats component rendering, t function available:', !!t);
+
   const stats = [
     { number: '5', label: t('doctorsSupervised'), icon: GraduationCap },
     { number: '6', label: t('doctorsCoSupervised'), icon: GraduationCap },
