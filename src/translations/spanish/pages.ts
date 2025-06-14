@@ -10,6 +10,37 @@ export const pagesTranslations = {
   publicationsDescription: 'Artículos científicos y contribuciones a la literatura académica',
   newsDescription: 'Últimas noticias y actualizaciones del mundo académico',
   
+  // Meeting page translations
+  meetingTitle: 'Solicitar Reunión',
+  meetingSubtitle: 'Programar una reunión para discusiones académicas o colaboraciones',
+  firstName: 'Nombre',
+  lastName: 'Apellido',
+  emailAddress: 'Dirección de Email',
+  institution: 'Institución',
+  importantInformation: 'Información Importante',
+  requestMeeting: 'Solicitar Reunión',
+  submitRequest: 'Enviar Solicitud',
+  sending: 'Enviando...',
+  
+  // Material page translations
+  educationalMaterials: 'Material Educativo',
+  materialsSubtitle: 'Recursos educativos para apoyo en enseñanza y aprendizaje',
+  handbooks: 'Manuales',
+  computationalCodes: 'Códigos Computacionales',
+  videos: 'Videos',
+  shortCourses: 'Cursos Cortos',
+  
+  // Conferences page translations
+  conferencesTitle: 'Conferencias',
+  conferences2025: 'Conferencias 2025',
+  recentConferences: 'Conferencias Recientes',
+  speakingOpportunities: 'Oportunidades de Charlas',
+  
+  // Leadership page translations
+  leadershipPhilosophy: 'Filosofía de Liderazgo',
+  otherLeadershipPositions: 'Otras Posiciones de Liderazgo',
+  currentLeadershipInitiatives: 'Iniciativas Actuales de Liderazgo',
+  
   // Alumni page translations
   alumniTitle: 'Egresados y Orientaciones',
   alumniSubtitle: 'Registro completo de orientaciones académicas realizadas',
@@ -86,8 +117,6 @@ export const pagesTranslations = {
   // Other pages
   opportunitiesTitle: 'Oportunidades',
   opportunitiesSubtitle: 'Oportunidades de investigación y colaboración disponibles',
-  meetingTitle: 'Solicitar Reunión',
-  meetingSubtitle: 'Programar una reunión para discusiones académicas o colaboraciones',
   consultingTitle: 'Consultoría',
   consultingSubtitle: 'Servicios especializados en ingeniería química y control de procesos',
   hobbiesTitle: 'Intereses Personales',

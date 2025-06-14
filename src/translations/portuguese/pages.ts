@@ -10,6 +10,37 @@ export const pagesTranslations = {
   publicationsDescription: 'Artigos científicos e contribuições para a literatura acadêmica',
   newsDescription: 'Últimas notícias e atualizações do mundo acadêmico',
   
+  // Meeting page translations
+  meetingTitle: 'Solicitar Reunião',
+  meetingSubtitle: 'Programe uma reunião para discussões acadêmicas ou colaborações',
+  firstName: 'Nome',
+  lastName: 'Sobrenome',
+  emailAddress: 'Endereço de Email',
+  institution: 'Instituição',
+  importantInformation: 'Informações Importantes',
+  requestMeeting: 'Solicitar Reunião',
+  submitRequest: 'Enviar Solicitação',
+  sending: 'Enviando...',
+  
+  // Material page translations
+  educationalMaterials: 'Material Educacional',
+  materialsSubtitle: 'Recursos didáticos para apoio ao ensino e aprendizagem',
+  handbooks: 'Apostilas',
+  computationalCodes: 'Códigos Computacionais',
+  videos: 'Vídeos',
+  shortCourses: 'Minicursos',
+  
+  // Conferences page translations
+  conferencesTitle: 'Conferências',
+  conferences2025: 'Conferências 2025',
+  recentConferences: 'Últimas Conferências',
+  speakingOpportunities: 'Oportunidades de Palestras',
+  
+  // Leadership page translations
+  leadershipPhilosophy: 'Filosofia de Liderança',
+  otherLeadershipPositions: 'Outras Posições de Liderança',
+  currentLeadershipInitiatives: 'Iniciativas Atuais de Liderança',
+  
   // Alumni page translations
   alumniTitle: 'Ex-Alunos e Orientações',
   alumniSubtitle: 'Registro completo de orientações acadêmicas realizadas',
@@ -86,8 +117,6 @@ export const pagesTranslations = {
   // Other pages
   opportunitiesTitle: 'Oportunidades',
   opportunitiesSubtitle: 'Oportunidades de pesquisa e colaboração disponíveis',
-  meetingTitle: 'Solicitar Reunião',
-  meetingSubtitle: 'Programe uma reunião para discussões acadêmicas ou colaborações',
   consultingTitle: 'Consultoria',
   consultingSubtitle: 'Serviços especializados em engenharia química e controle de processos',
   hobbiesTitle: 'Interesses Pessoais',

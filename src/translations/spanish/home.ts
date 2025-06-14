@@ -21,6 +21,7 @@ export const homeTranslations = {
   researchFunding: 'Financiamiento de Investigación',
   interestedInCollaboration: '¿Interesado en Colaboración?',
   requestMeeting: 'Solicitar Reunión',
+  viewFullProfile: 'Ver Perfil Completo',
   
   // Stats and metrics
   citations: 'Citas',
@@ -35,4 +36,11 @@ export const homeTranslations = {
   mentoring: 'Mentoría',
   comments: 'comentarios',
   minRead: 'min de lectura',
+  
+  // About page - Academic Formation
+  academicFormation: 'Formación Académica',
+  phdChemicalEngineering: 'Doctorado en Ingeniería Química',
+  federalUniversityRio: 'Universidad Federal de Río de Janeiro (UFRJ)',
+  mastersChemicalEngineering: 'Maestría en Ingeniería Química',
+  bachelorChemicalEngineering: 'Licenciatura en Ingeniería Química',
 };

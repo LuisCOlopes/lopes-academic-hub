@@ -16,14 +16,14 @@ const CurrentInitiatives = () => {
     {
       title: 'Qualidade de Vida Estudantil',
       description: 'Desenvolvimento de políticas e programas de bem-estar estudantil',
-      status: 'Ativo'
+      status: 'Encerrada em 12/06/2025'
     }
   ];
 
   return (
     <section>
       <h2 className="text-2xl font-semibold text-ufu-navy mb-6">
-        Iniciativas Atuais de Liderança
+        {t('currentLeadershipInitiatives')}
       </h2>
       <div className="grid md:grid-cols-2 gap-6">
         {currentInitiatives.map((initiative, index) => (
@@ -31,7 +31,7 @@ const CurrentInitiatives = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-ufu-navy">{initiative.title}</h3>
               <Badge variant={initiative.status === 'Em Andamento' ? 'default' : 'secondary'} 
-                     className={initiative.status === 'Em Andamento' ? 'bg-academic-blue text-white' : 'bg-academic-teal text-ufu-navy'}>
+                     className={initiative.status === 'Em Andamento' ? 'bg-academic-blue text-white' : 'bg-gray-100 text-gray-700'}>
                 {initiative.status}
               </Badge>
             </div>

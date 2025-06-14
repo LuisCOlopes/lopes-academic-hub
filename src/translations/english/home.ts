@@ -21,6 +21,7 @@ export const homeTranslations = {
   researchFunding: 'Research Funding',
   interestedInCollaboration: 'Interested in Collaboration?',
   requestMeeting: 'Request Meeting',
+  viewFullProfile: 'View Full Profile',
   
   // Stats and metrics
   citations: 'Citations',
@@ -35,4 +36,11 @@ export const homeTranslations = {
   mentoring: 'Mentoring',
   comments: 'comments',
   minRead: 'min read',
+  
+  // About page - Academic Formation
+  academicFormation: 'Academic Formation',
+  phdChemicalEngineering: 'PhD in Chemical Engineering',
+  federalUniversityRio: 'Federal University of Rio de Janeiro (UFRJ)',
+  mastersChemicalEngineering: 'Masters in Chemical Engineering',
+  bachelorChemicalEngineering: 'Bachelor in Chemical Engineering',
 };

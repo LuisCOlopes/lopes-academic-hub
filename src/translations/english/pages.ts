@@ -1,4 +1,3 @@
-
 export const pagesTranslations = {
   // Page titles and general content
   aboutTitle: 'About',
@@ -11,6 +10,37 @@ export const pagesTranslations = {
   publicationsTitle: 'Publications',
   publicationsDescription: 'Scientific articles and contributions to academic literature',
   newsDescription: 'Latest news and updates from the academic world',
+  
+  // Meeting page translations
+  meetingTitle: 'Request Meeting',
+  meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
+  firstName: 'First Name',
+  lastName: 'Last Name',
+  emailAddress: 'Email Address',
+  institution: 'Institution',
+  importantInformation: 'Important Information',
+  requestMeeting: 'Request Meeting',
+  submitRequest: 'Submit Request',
+  sending: 'Sending...',
+  
+  // Material page translations
+  educationalMaterials: 'Educational Materials',
+  materialsSubtitle: 'Educational resources for teaching and learning support',
+  handbooks: 'Handbooks',
+  computationalCodes: 'Computational Codes',
+  videos: 'Videos',
+  shortCourses: 'Short Courses',
+  
+  // Conferences page translations
+  conferencesTitle: 'Conferences',
+  conferences2025: 'Conferences 2025',
+  recentConferences: 'Recent Conferences',
+  speakingOpportunities: 'Speaking Opportunities',
+  
+  // Leadership page translations
+  leadershipPhilosophy: 'Leadership Philosophy',
+  otherLeadershipPositions: 'Other Leadership Positions',
+  currentLeadershipInitiatives: 'Current Leadership Initiatives',
   
   // Alumni page translations
   alumniTitle: 'Alumni and Supervisions',
@@ -88,8 +118,6 @@ export const pagesTranslations = {
   // Other pages
   opportunitiesTitle: 'Opportunities',
   opportunitiesSubtitle: 'Available research and collaboration opportunities',
-  meetingTitle: 'Request Meeting',
-  meetingSubtitle: 'Schedule a meeting for academic discussions or collaborations',
   consultingTitle: 'Consulting',
   consultingSubtitle: 'Specialized services in chemical engineering and process control',
   hobbiesTitle: 'Personal Interests',

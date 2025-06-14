@@ -34,4 +34,14 @@ export const teachingTranslations = {
   access: 'Access',
   explore: 'Explore',
   download: 'Download',
+  
+  // Syllabus content
+  syllabusContent: 'Syllabus Content',
+  courseContent: 'Course Content',
+  introduction: 'Introduction',
+  basicAspects: 'Basic Aspects',
+  fundamentalTheory: 'Fundamental Theory',
+  methodsAndSolutions: 'Methods and Solutions',
+  applicationsAndCases: 'Applications and Cases',
+  advancedTopics: 'Advanced Topics',
 };
