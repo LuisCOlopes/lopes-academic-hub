@@ -1,18 +1,11 @@
-
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
-  const { t } = useLanguage();
-
-  const getCurrentLanguage = () => {
-    return localStorage.getItem('preferred-language') || 'pt';
-  };
+  const { t, language } = useLanguage();
 
   const getEducationContent = () => {
-    const lang = getCurrentLanguage();
-    
     const education = {
       pt: {
         phd: 'Doutorado em Engenharia Química',
@@ -46,12 +39,10 @@ const About = () => {
       }
     };
 
-    return education[lang] || education.pt;
+    return education[language] || education.pt;
   };
 
   const getResearchInterests = () => {
-    const lang = getCurrentLanguage();
-    
     const interests = {
       pt: [
         'Engenharia e Otimização de Processos',
@@ -79,19 +70,17 @@ const About = () => {
       ]
     };
 
-    return interests[lang] || interests.pt;
+    return interests[language] || interests.pt;
   };
 
   const getBiographyText = () => {
-    const lang = getCurrentLanguage();
-    
     const bio = {
       pt: 'Professor Titular de Engenharia Química na Universidade Federal de Uberlândia (UFU), especializado em controle de processos, otimização e tecnologias sustentáveis. Com mais de 25 anos de experiência acadêmica, dedica-se ao desenvolvimento de soluções inovadoras para a indústria química e ao ensino de excelência.',
       en: 'Full Professor of Chemical Engineering at the Federal University of Uberlândia (UFU), specialized in process control, optimization and sustainable technologies. With over 25 years of academic experience, dedicated to developing innovative solutions for the chemical industry and excellence in teaching.',
       es: 'Profesor Titular de Ingeniería Química en la Universidad Federal de Uberlândia (UFU), especializado en control de procesos, optimización y tecnologías sostenibles. Con más de 25 años de experiencia académica, dedicado al desarrollo de soluciones innovadoras para la industria química y la excelencia en la enseñanza.'
     };
 
-    return bio[lang] || bio.pt;
+    return bio[language] || bio.pt;
   };
 
   const education = getEducationContent();

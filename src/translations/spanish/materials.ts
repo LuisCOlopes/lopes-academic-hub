@@ -13,4 +13,5 @@ export const materialsTranslations = {
   citeSource: 'Cite la fuente al usar en trabajos académicos',
   commercialUse: 'El uso comercial requiere autorización previa',
   reportIssues: 'Reportar problemas o sugerencias a',
+  download: 'Descargar',
 };

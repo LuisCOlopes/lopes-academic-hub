@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -16,7 +15,7 @@ const SpeakingWorkshops = () => {
       title: 'Controle Cooperativo Distribuído de Sistemas Dinâmicos',
       year: 2020,
       event: '27º SEMINÁRIO DE CONTROLE LADES GIMSCOP',
-      url: 'https://youtu.be/W_4S1V_31-A?si=U-U2xrbX407LyYPH'
+      url: 'https://youtu.be/W_4S1V_31-A?si=NPP-kSrQ6KA2B9Tp'
     },
     {
       title: 'Uma breve visita às pesquisas em controle de processos',
@@ -206,7 +205,11 @@ const SpeakingWorkshops = () => {
                     
                     {lecture.url && (
                       <div className="pt-2">
-                        <Button size="sm" variant="outline">
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => window.open(lecture.url, '_blank')}
+                        >
                           <ExternalLink className="h-4 w-4 mr-2" />
                           {t('availableAt')}
                         </Button>

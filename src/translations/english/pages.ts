@@ -4,11 +4,7 @@ export const pagesTranslations = {
   aboutSubtitle: 'Academic and Professional Journey',
   biography: 'Biography',
   education: 'Education',
-  awardsTitle: 'Awards and Recognition',
-  awardsSubtitle: 'Recognition for excellence in research and teaching',
-  publicationsTitle: 'Publications',
-  publicationsDescription: 'Scientific articles and contributions to academic literature',
-  newsDescription: 'Latest news and updates from the academic world',
+  researchInterests: 'Research Interests',
   
   // Alumni page translations
   alumniTitle: 'Alumni and Supervisions',
