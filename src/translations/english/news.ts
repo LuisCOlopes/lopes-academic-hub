@@ -1,0 +1,28 @@
+
+export const newsTranslations = {
+  // News page
+  newsTitle: 'News',
+  newsSubtitle: 'Latest news and updates from our research group and academic activities',
+  featuredNews: 'Featured News',
+  recentNews: 'Recent News',
+  newResearchGrantSustainable: 'New Research Grant Awarded for Sustainable Chemical Processes',
+  researchGrantExcerpt: 'Received R$ 2.5 million funding from CNPq to develop environmentally friendly chemical manufacturing processes.',
+  bestTeachingAwardUFU: 'Best Teaching Award Recognition at UFU',
+  teachingAwardExcerpt: 'Honored with the Teaching Excellence Award for innovative approaches in chemical engineering education.',
+  internationalCollaborationEuropean: 'International Collaboration with European Universities',
+  collaborationExcerpt: 'Signed partnership agreements with leading European institutions for joint research and student exchange programs.',
+  studentTeamWinsNational: 'Student Team Wins National Engineering Competition',
+  studentCompetitionExcerpt: 'Our undergraduate team secured first place in the Brazilian Chemical Engineering Student Competition.',
+  newLabEquipmentInstallation: 'New Laboratory Equipment Installation Completed',
+  labEquipmentExcerpt: 'State-of-the-art process control systems are now operational in our advanced chemical engineering laboratory.',
+  publishedResearchGreenChemistry: 'Published Research on Green Chemistry Applications',
+  greenChemistryExcerpt: 'Latest findings on sustainable catalyst development published in top-tier international journal.',
+  subscribeToUpdates: 'Subscribe to Updates',
+  stayInformedResearch: 'Stay informed about our latest research developments, achievements, and academic activities.',
+  enterEmailAddress: 'Enter your email address',
+  subscribe: 'Subscribe',
+  breakingNews: 'Breaking News',
+  pressReleases: 'Press Releases',
+  researchUpdates: 'Research Updates',
+  academicAchievements: 'Academic Achievements',
+};

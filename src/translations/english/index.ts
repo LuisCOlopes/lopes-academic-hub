@@ -16,6 +16,10 @@ import { speakingWorkshopsTranslations } from './speaking-workshops';
 import { mediaPodcastTranslations } from './media-podcast';
 import { consultingTranslations } from './consulting';
 import { opportunitiesTranslations } from './opportunities';
+import { newsTranslations } from './news';
+import { blogTranslations } from './blog';
+import { involvementTranslations } from './involvement';
+import { communityTranslations } from './community';
 
 export const enTranslations = {
   ...navigationTranslations,
@@ -35,4 +39,8 @@ export const enTranslations = {
   ...mediaPodcastTranslations,
   ...consultingTranslations,
   ...opportunitiesTranslations,
+  ...newsTranslations,
+  ...blogTranslations,
+  ...involvementTranslations,
+  ...communityTranslations,
 };

@@ -1,13 +1,38 @@
+
 export const homeTranslations = {
-  welcome: 'Welcome',
-  description: 'Official academic website',
-  
+  // Academic Homepage
   professor: 'Professor',
   chemicalEngineering: 'Chemical Engineering',
   federalUniversity: 'Federal University of Uberlândia',
-  bio: 'Full Professor at the Chemical Engineering Department of the Federal University of Uberlândia (UFU), with expertise in Process Control, Modeling and Simulation, and Energy Transition. Develops research in industrial process optimization and fault-tolerant systems.',
-  viewFullProfile: 'View Full Profile',
-  contact: 'Contact',
-  contactInfo: 'Contact Information',
-  researchInterests: 'Research Interests',
+  bio: 'With over 30 years of experience in chemical engineering, I am dedicated to advancing research in process control, industrial safety, and sustainable technologies. My work focuses on developing innovative solutions that bridge academic excellence with real-world industrial applications.',
+  exploreMyResearch: 'Explore My Research',
+  contactMe: 'Contact Me',
+  exploreMyAcademicWork: 'Explore My Academic Work',
+  researchDescription: 'Advanced research in process control, industrial safety, and sustainable technologies',
+  teachingDescription: 'Innovative approaches to chemical engineering education and student development',
+  researchHighlights: 'Research Highlights',
+  researchFocus: 'My research focuses on developing innovative solutions for the chemical industry, with emphasis on sustainability, safety, and technological advancement.',
+  processControl: 'Process Control',
+  industrialSafety: 'Industrial Safety',
+  wasteManagement: 'Waste Management',
+  greenTechnology: 'Green Technology',
+  yearsOfExperience: 'Years of Experience',
+  publications: 'Publications',
+  researchFunding: 'Research Funding',
+  interestedInCollaboration: 'Interested in Collaboration?',
+  requestMeeting: 'Request Meeting',
+  
+  // Stats and metrics
+  citations: 'Citations',
+  collaborations: 'Collaborations',
+  students: 'Students Supervised',
+  projects: 'Active Projects',
+  
+  // Common translations
+  education: 'Education',
+  sustainability: 'Sustainability',
+  collaboration: 'Collaboration',
+  mentoring: 'Mentoring',
+  comments: 'comments',
+  minRead: 'min read',
 };

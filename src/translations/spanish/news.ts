@@ -1,0 +1,28 @@
+
+export const newsTranslations = {
+  // News page
+  newsTitle: 'Noticias',
+  newsSubtitle: 'Últimas noticias y actualizaciones de nuestro grupo de investigación y actividades académicas',
+  featuredNews: 'Noticia Destacada',
+  recentNews: 'Noticias Recientes',
+  newResearchGrantSustainable: 'Nueva Beca de Investigación Otorgada para Procesos Químicos Sostenibles',
+  researchGrantExcerpt: 'Recibido financiamiento de R$ 2,5 millones del CNPq para desarrollar procesos de fabricación química ambientalmente amigables.',
+  bestTeachingAwardUFU: 'Reconocimiento del Premio de Mejor Enseñanza en la UFU',
+  teachingAwardExcerpt: 'Honrado con el Premio de Excelencia en Enseñanza por enfoques innovadores en la educación de ingeniería química.',
+  internationalCollaborationEuropean: 'Colaboración Internacional con Universidades Europeas',
+  collaborationExcerpt: 'Firmados acuerdos de asociación con instituciones europeas líderes para investigación conjunta y programas de intercambio estudiantil.',
+  studentTeamWinsNational: 'Equipo de Estudiantes Gana Competencia Nacional de Ingeniería',
+  studentCompetitionExcerpt: 'Nuestro equipo de pregrado aseguró el primer lugar en la Competencia Brasileña de Estudiantes de Ingeniería Química.',
+  newLabEquipmentInstallation: 'Instalación de Nuevos Equipos de Laboratorio Completada',
+  labEquipmentExcerpt: 'Sistemas de control de procesos de vanguardia ahora operacionales en nuestro laboratorio avanzado de ingeniería química.',
+  publishedResearchGreenChemistry: 'Investigación Publicada sobre Aplicaciones de Química Verde',
+  greenChemistryExcerpt: 'Últimos hallazgos sobre desarrollo de catalizadores sostenibles publicados en revista internacional de primer nivel.',
+  subscribeToUpdates: 'Suscríbete a Actualizaciones',
+  stayInformedResearch: 'Mantente informado sobre nuestros últimos desarrollos de investigación, logros y actividades académicas.',
+  enterEmailAddress: 'Ingresa tu dirección de email',
+  subscribe: 'Suscribirse',
+  breakingNews: 'Noticias de Última Hora',
+  pressReleases: 'Comunicados de Prensa',
+  researchUpdates: 'Actualizaciones de Investigación',
+  academicAchievements: 'Logros Académicos',
+};
