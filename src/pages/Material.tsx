@@ -370,7 +370,7 @@ const Material = () => {
                       <div className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                         <p className="text-gray-700">
-                          {t('reportIssues')} <a href="mailto:lclaudio@ufu.br" className="text-blue-600 hover:text-blue-800 font-medium">lclaudio@ufu.br</a>
+                          {t('reportIssues')} <a href="mailto:lcol@ufu.br" className="text-blue-600 hover:text-blue-800 font-medium">lcol@ufu.br</a>
                         </p>
                       </div>
                     </div>
