@@ -19,7 +19,9 @@ export const pagesTranslations = {
   
   // Awards page
   awardsTitle: 'Prêmios e Reconhecimentos',
-  awardsSubtitle: 'Reconhecimento pela excelência em pesquisa e ensino',
+  awardsSubtitle: 'Reconhecimento pela excelência em pesquisa, ensino e serviços acadêmicos',
+  awardsAndDistinctions: 'Prêmios e Distinções',
+  recognitionsAndServices: 'Reconhecimentos e Serviços Acadêmicos',
   
   // News page
   newsTitle: 'Notícias',
@@ -90,7 +92,7 @@ export const pagesTranslations = {
   
   // Material page
   materialTitle: 'Material Educacional',
-  materialSubtitle: 'Recursos e materiais para educação em engenharia química',
+  materialSubtitle: 'Recursos didáticos para apoio ao ensino e aprendizagem em engenharia química',
   courseMaterials: 'Materiais de Curso',
   courseMaterialsDescription: 'Slides, notas e referências para todos os cursos',
   computationalCodes: 'Códigos Computacionais',
@@ -104,8 +106,8 @@ export const pagesTranslations = {
   download: 'Download',
   
   // Conferences page
-  conferencesTitle: 'Congressos',
-  conferencesSubtitle: 'Participação em congressos nacionais e internacionais',
+  conferencesTitle: 'Congressos e Conferências',
+  conferencesSubtitle: 'Participação em eventos científicos nacionais e internacionais',
   conferences2025: 'Congressos 2025',
   recentConferences: 'Últimos Congressos',
   brazilConferences: 'Congressos no Brasil',
@@ -137,8 +139,8 @@ export const pagesTranslations = {
   advancedTopics: 'Tópicos Avançados',
   
   // Hobbies page
-  hobbiesTitle: 'Hobbies',
-  hobbiesSubtitle: 'Interesses pessoais e atividades que enriquecem minha vida acadêmica',
+  hobbiesTitle: 'Hobbies e Interesses Pessoais',
+  hobbiesSubtitle: 'Atividades e interesses que enriquecem minha perspectiva acadêmica e pessoal',
   cinema: 'Cinema',
   cinemaDescription: 'Apreciação de filmes de diversos gêneros, especialmente dramas e ficção científica.',
   music: 'Música',
