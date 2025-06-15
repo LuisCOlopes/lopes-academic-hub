@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Academic from "./pages/Academic";
 import About from "./pages/About";
@@ -36,6 +37,8 @@ import Awards from "./pages/Awards";
 import Conferences from "./pages/Conferences";
 import StudentResources from "./pages/StudentResources";
 import EnergyTransition from "./pages/EnergyTransition";
+import Auth from "./pages/Auth";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 // Syllabus pages
@@ -48,52 +51,58 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/academic" element={<Academic />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/teaching" element={<Teaching />} />
-            <Route path="/material" element={<Material />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/publications" element={<Publications />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/alumni" element={<Alumni />} />
-            <Route path="/speaking" element={<Speaking />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="/leadership" element={<Leadership />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/media" element={<Media />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/workshops" element={<Workshops />} />
-            <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/podcast" element={<Podcast />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/speaking-workshops" element={<SpeakingWorkshops />} />
-            <Route path="/media-podcast" element={<MediaPodcast />} />
-            <Route path="/consulting" element={<Consulting />} />
-            <Route path="/opportunities" element={<Opportunities />} />
-            <Route path="/meeting" element={<Meeting />} />
-            <Route path="/hobbies" element={<Hobbies />} />
-            <Route path="/awards" element={<Awards />} />
-            <Route path="/conferences" element={<Conferences />} />
-            <Route path="/student-resources" element={<StudentResources />} />
-            <Route path="/energy-transition" element={<EnergyTransition />} />
-            
-            {/* Syllabus routes */}
-            <Route path="/syllabus/ppiq" element={<PPIQ />} />
-            <Route path="/syllabus/cpq2" element={<CPQ2 />} />
-            <Route path="/syllabus/peq003" element={<PEQ003 />} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/academic" element={<Academic />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/teaching" element={<Teaching />} />
+              <Route path="/material" element={<Material />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/publications" element={<Publications />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/alumni" element={<Alumni />} />
+              <Route path="/speaking" element={<Speaking />} />
+              <Route path="/service" element={<Service />} />
+              <Route path="/leadership" element={<Leadership />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/media" element={<Media />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/workshops" element={<Workshops />} />
+              <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/podcast" element={<Podcast />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/speaking-workshops" element={<SpeakingWorkshops />} />
+              <Route path="/media-podcast" element={<MediaPodcast />} />
+              <Route path="/consulting" element={<Consulting />} />
+              <Route path="/opportunities" element={<Opportunities />} />
+              <Route path="/meeting" element={<Meeting />} />
+              <Route path="/hobbies" element={<Hobbies />} />
+              <Route path="/awards" element={<Awards />} />
+              <Route path="/conferences" element={<Conferences />} />
+              <Route path="/student-resources" element={<StudentResources />} />
+              <Route path="/energy-transition" element={<EnergyTransition />} />
+              
+              {/* Auth routes */}
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              
+              {/* Syllabus routes */}
+              <Route path="/syllabus/ppiq" element={<PPIQ />} />
+              <Route path="/syllabus/cpq2" element={<CPQ2 />} />
+              <Route path="/syllabus/peq003" element={<PEQ003 />} />
+              
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
     </LanguageProvider>
   </QueryClientProvider>
 );

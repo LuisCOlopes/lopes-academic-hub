@@ -1,112 +1,121 @@
 
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarHeader,
-  SidebarFooter,
-} from '@/components/ui/sidebar';
+import { Link, useLocation } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
-import { 
-  Home, 
-  Users, 
-  Book, 
-  BookOpen, 
-  FileText, 
-  Contact,
-  Calendar,
-  Newspaper,
-  Youtube,
+import AuthButton from './AuthButton';
+import {
+  Home,
+  User,
+  BookOpen,
+  GraduationCap,
+  FileText,
+  Users,
+  Mail,
   Award,
-  Mic
+  Briefcase,
+  Crown,
+  Newspaper,
+  Camera,
+  Heart,
+  Wrench,
+  Calendar,
+  Target,
+  Mic,
+  PenTool,
+  Video,
+  MessageSquare,
+  HelpCircle,
+  Coffee,
+  Trophy,
+  Presentation,
+  BookmarkPlus,
+  Lightbulb,
+  NotFound
 } from 'lucide-react';
 
-const AcademicSidebar: React.FC = () => {
-  const navigate = useNavigate();
+const AcademicSidebar = () => {
   const location = useLocation();
   const { t } = useLanguage();
 
-  const menuItems = [
-    { title: t('home'), url: '/', icon: Home },
-    { title: t('about'), url: '/about', icon: Users },
-    { title: t('research'), url: '/research', icon: Book },
-    { title: t('projects'), url: '/projects', icon: BookOpen },
-    { title: t('opportunities'), url: '/opportunities', icon: FileText },
-    { title: t('requestMeeting'), url: '/meeting', icon: Calendar },
-    { title: t('teaching'), url: '/teaching', icon: Book },
-    { title: t('studentResources'), url: '/student-resources', icon: BookOpen },
-    { title: t('publications'), url: '/publications', icon: FileText },
-    { title: t('conferences'), url: '/conferences', icon: Calendar },
-    { title: t('speakingWorkshops'), url: '/speaking-workshops', icon: Mic },
-    { title: t('consulting'), url: '/consulting', icon: FileText },
-    { title: t('team'), url: '/team', icon: Users },
-    { title: t('alumni'), url: '/alumni', icon: Users },
-    { title: t('awards'), url: '/awards', icon: Award },
-    { title: t('service'), url: '/service', icon: FileText },
-    { title: t('leadership'), url: '/leadership', icon: Users },
-    { title: t('getInvolved'), url: '/get-involved', icon: Users },
-    { title: t('community'), url: '/community', icon: Users },
-    { title: t('mediaWorkshops'), url: '/media-podcast', icon: Youtube },
-    { title: t('hobbies'), url: '/hobbies', icon: Users },
-    { title: t('contact'), url: '/contact', icon: Contact },
-    { title: t('news'), url: '/news', icon: Newspaper },
-    { title: t('blog'), url: '/blog', icon: FileText },
+  const navigation = [
+    { name: t('home'), href: '/', icon: Home },
+    { name: t('academicProfile'), href: '/academic', icon: User },
+    { name: t('about'), href: '/about', icon: BookOpen },
+    { name: t('research'), href: '/research', icon: Target },
+    { name: t('publications'), href: '/publications', icon: FileText },
+    { name: t('projects'), href: '/projects', icon: Briefcase },
+    { name: t('teaching'), href: '/teaching', icon: GraduationCap },
+    { name: t('materials'), href: '/material', icon: BookmarkPlus },
+    { name: t('team'), href: '/team', icon: Users },
+    { name: t('alumni'), href: '/alumni', icon: Award },
+    { name: t('speaking'), href: '/speaking', icon: Mic },
+    { name: t('service'), href: '/service', icon: Heart },
+    { name: t('leadership'), href: '/leadership', icon: Crown },
+    { name: t('news'), href: '/news', icon: Newspaper },
+    { name: t('media'), href: '/media', icon: Camera },
+    { name: t('community'), href: '/community', icon: Users },
+    { name: t('workshops'), href: '/workshops', icon: Wrench },
+    { name: t('involvement'), href: '/get-involved', icon: HelpCircle },
+    { name: t('podcast'), href: '/podcast', icon: Mic },
+    { name: t('blog'), href: '/blog', icon: PenTool },
+    { name: t('speakingWorkshops'), href: '/speaking-workshops', icon: Presentation },
+    { name: t('mediaPodcast'), href: '/media-podcast', icon: Video },
+    { name: t('consulting'), href: '/consulting', icon: Briefcase },
+    { name: t('opportunities'), href: '/opportunities', icon: Lightbulb },
+    { name: t('meeting'), href: '/meeting', icon: Calendar },
+    { name: t('hobbies'), href: '/hobbies', icon: Coffee },
+    { name: t('awards'), href: '/awards', icon: Trophy },
+    { name: t('conferences'), href: '/conferences', icon: Presentation },
+    { name: t('studentResources'), href: '/student-resources', icon: BookOpen },
+    { name: t('energyTransition'), href: '/energy-transition', icon: Lightbulb },
+    { name: t('contact'), href: '/contact', icon: Mail },
   ];
 
   return (
-    <Sidebar className="bg-gradient-to-b from-ufu-navy to-ufu-blue">
-      <SidebarHeader className="p-6">
-        <div className="text-center">
-          <h2 className="text-xl font-playfair font-bold text-white mb-2">
-            Prof. Luís Cláudio
-          </h2>
-          <p className="text-ufu-light text-sm">Chemical Engineering</p>
-          <div className="mt-4">
+    <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+      <div className="flex flex-col flex-grow bg-white border-r border-gray-200 pt-5 pb-4 overflow-y-auto">
+        <div className="flex items-center flex-shrink-0 px-4">
+          <Link to="/" className="text-xl font-playfair font-bold text-ufu-navy">
+            Prof. Website
+          </Link>
+        </div>
+        
+        <div className="mt-5 px-4">
+          <div className="flex items-center gap-2 mb-4">
             <LanguageSelector />
+            <AuthButton />
           </div>
         </div>
-      </SidebarHeader>
-      
-      <SidebarContent className="px-3">
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-ufu-light font-semibold">
-            {t('academicHub')}
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    onClick={() => navigate(item.url)}
-                    className={`text-white hover:bg-white/20 transition-colors ${
-                      location.pathname === item.url ? 'bg-white/30' : ''
-                    }`}
-                  >
-                    <item.icon className="h-4 w-4" />
-                    <span className="text-sm">{item.title}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-      
-      <SidebarFooter className="p-4">
-        <div className="text-center text-ufu-light text-xs">
-          <p>© 2024 Prof. Luís Cláudio</p>
-          <p>UFU - Chemical Engineering</p>
-        </div>
-      </SidebarFooter>
-    </Sidebar>
+
+        <nav className="mt-5 flex-1 px-2 space-y-1">
+          {navigation.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={cn(
+                  isActive
+                    ? 'bg-ufu-light text-ufu-navy'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                  'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                )}
+              >
+                <item.icon
+                  className={cn(
+                    isActive ? 'text-ufu-navy' : 'text-gray-400 group-hover:text-gray-500',
+                    'mr-3 flex-shrink-0 h-4 w-4'
+                  )}
+                />
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </div>
   );
 };
 
