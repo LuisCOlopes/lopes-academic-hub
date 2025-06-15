@@ -8,6 +8,12 @@ export const homeTranslations = {
   exploreMyResearch: 'Explore Minha Pesquisa',
   contactMe: 'Entre em Contato',
   
+  // Landing page specific
+  viewFullProfile: 'Ver Perfil Completo',
+  contact: 'Contato',
+  contactInfo: 'Informações de Contato',
+  researchInterests: 'Interesses de Pesquisa',
+  
   // Academic work section
   exploreMyAcademicWork: 'Explore Meu Trabalho Acadêmico',
   research: 'Pesquisa',
