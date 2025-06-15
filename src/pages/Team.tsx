@@ -37,6 +37,10 @@ const Team = () => {
     {
       name: 'Pedro Gelson Morais',
       project: 'Integração de rotas tecnológicas de coprocessamento de bio-óleo em unidades de hidrotratamento em refinarias de petróleo angolanas'
+    },
+    {
+      name: 'Hermano da Silveira',
+      project: 'Modelagem e Simulação de Reator de Pirólise de Resíduos Urbanos em Reator de Leito Fluidizado Circulante'
     }
   ];
 
