@@ -1,4 +1,3 @@
-
 export const contactTranslations = {
   // Contact Page
   contactTitle: 'Contato',
@@ -28,4 +27,5 @@ export const contactTranslations = {
   campusMap: 'Mapa do Campus',
   directionsToOffice: 'Direções para o Escritório',
   route: 'Rota',
+  fullAddress: 'Endereço Completo',
 };

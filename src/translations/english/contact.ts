@@ -1,4 +1,3 @@
-
 export const contactTranslations = {
   // Contact Page
   contactTitle: 'Contact',
@@ -28,4 +27,5 @@ export const contactTranslations = {
   campusMap: 'Campus Map',
   directionsToOffice: 'Directions to Office',
   route: 'Route',
+  fullAddress: 'Full Address',
 };

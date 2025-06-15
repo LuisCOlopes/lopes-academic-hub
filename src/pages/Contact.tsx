@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -284,7 +283,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
               <div className="mb-6">
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Endereço Completo</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">{t('fullAddress')}</h3>
                 <p className="text-gray-600 mb-4">
                   Faculdade de Engenharia Química<br />
                   Universidade Federal de Uberlândia<br />
