@@ -35,14 +35,57 @@ export const pagesTranslations = {
   firstName: 'First Name',
   lastName: 'Last Name',
   email: 'Email',
+  emailAddress: 'Email Address',
   institution: 'Institution',
   meetingType: 'Meeting Type',
+  meetingFormat: 'Meeting Format',
   preferredDate: 'Preferred Date',
   preferredTime: 'Preferred Time',
+  subject: 'Subject/Meeting Objective',
+  description: 'Detailed Description',
+  additionalInfo: 'Additional Information',
   message: 'Message',
   requestMeeting: 'Request Meeting',
+  sendRequest: 'Send Request',
+  sending: 'Sending...',
   importantInformation: 'Important Information',
   meetingGuidelines: 'Please allow 2-3 business days for response. Meetings are typically scheduled during business hours (9am to 5pm, Monday to Friday).',
+  
+  // Meeting form placeholders and labels
+  firstNamePlaceholder: 'Your first name',
+  lastNamePlaceholder: 'Your last name',
+  emailPlaceholder: 'your.email@example.com',
+  institutionPlaceholder: 'Your institution or company',
+  subjectPlaceholder: 'Briefly describe what you would like to discuss in the meeting...',
+  descriptionPlaceholder: 'Describe in detail the purpose of the meeting and specific topics to be discussed...',
+  additionalInfoPlaceholder: 'Any additional relevant information (documents, links, specific context, etc.)',
+  
+  // Meeting format options
+  inPerson: 'In Person (UFU)',
+  msTeams: 'MS Teams',
+  googleMeet: 'Google Meet',
+  
+  // Meeting type options
+  academicDiscussion: 'Academic Discussion',
+  researchGuidance: 'Research Guidance',
+  collaboration: 'Collaboration',
+  consulting: 'Consulting',
+  other: 'Other',
+  selectMeetingType: 'Select meeting type',
+  
+  // Meeting info
+  meetingDuration: 'Meetings typically last 30-60 minutes',
+  responseTime: 'Response within 48 hours',
+  locationInfo: 'In person or virtual (as available)',
+  officeHours: 'Office Hours',
+  mondayToFriday: 'Monday to Friday:',
+  timeRange: '8:00 AM - 5:00 PM',
+  locationLabel: 'Location:',
+  locationValue: 'Chemical Engineering Faculty, UFU',
+  roomLabel: 'Room:',
+  roomValue: 'By appointment',
+  directContact: 'Direct Contact',
+  urgentQuestions: 'For urgent questions or clarifications:',
   
   // Material page
   materialTitle: 'Educational Material',

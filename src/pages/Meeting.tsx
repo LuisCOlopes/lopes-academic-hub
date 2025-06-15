@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -78,7 +79,7 @@ const Meeting = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             <Card className="p-6">
-              <h2 className="text-2xl font-semibold text-ufu-navy mb-6">Solicitar Reunião</h2>
+              <h2 className="text-2xl font-semibold text-ufu-navy mb-6">{t('requestMeeting')}</h2>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -90,7 +91,7 @@ const Meeting = () => {
                         <FormItem>
                           <FormLabel>{t('firstName')} *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Seu nome" {...field} />
+                            <Input placeholder={t('firstNamePlaceholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -103,7 +104,7 @@ const Meeting = () => {
                         <FormItem>
                           <FormLabel>{t('lastName')} *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Seu sobrenome" {...field} />
+                            <Input placeholder={t('lastNamePlaceholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -118,7 +119,7 @@ const Meeting = () => {
                       <FormItem>
                         <FormLabel>{t('emailAddress')} *</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="seu.email@exemplo.com" {...field} />
+                          <Input type="email" placeholder={t('emailPlaceholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -132,7 +133,7 @@ const Meeting = () => {
                       <FormItem>
                         <FormLabel>{t('institution')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Sua instituição ou empresa" {...field} />
+                          <Input placeholder={t('institutionPlaceholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -144,7 +145,7 @@ const Meeting = () => {
                     name="meetingFormat"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Formato da Reunião *</FormLabel>
+                        <FormLabel>{t('meetingFormat')} *</FormLabel>
                         <FormControl>
                           <RadioGroup
                             onValueChange={field.onChange}
@@ -155,21 +156,21 @@ const Meeting = () => {
                               <RadioGroupItem value="presencial" id="presencial" />
                               <Label htmlFor="presencial" className="flex items-center gap-2">
                                 <MapPin className="h-4 w-4" />
-                                Presencial (UFU)
+                                {t('inPerson')}
                               </Label>
                             </div>
                             <div className="flex items-center space-x-2">
                               <RadioGroupItem value="teams" id="teams" />
                               <Label htmlFor="teams" className="flex items-center gap-2">
                                 <Video className="h-4 w-4" />
-                                MS Teams
+                                {t('msTeams')}
                               </Label>
                             </div>
                             <div className="flex items-center space-x-2">
                               <RadioGroupItem value="meet" id="meet" />
                               <Label htmlFor="meet" className="flex items-center gap-2">
                                 <Users className="h-4 w-4" />
-                                Google Meet
+                                {t('googleMeet')}
                               </Label>
                             </div>
                           </RadioGroup>
@@ -184,19 +185,19 @@ const Meeting = () => {
                     name="meetingType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Tipo de Reunião</FormLabel>
+                        <FormLabel>{t('meetingType')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Selecione o tipo de reunião" />
+                              <SelectValue placeholder={t('selectMeetingType')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="academic">Discussão Acadêmica</SelectItem>
-                            <SelectItem value="research">Orientação de Pesquisa</SelectItem>
-                            <SelectItem value="collaboration">Colaboração</SelectItem>
-                            <SelectItem value="consulting">Consultoria</SelectItem>
-                            <SelectItem value="other">Outro</SelectItem>
+                            <SelectItem value="academic">{t('academicDiscussion')}</SelectItem>
+                            <SelectItem value="research">{t('researchGuidance')}</SelectItem>
+                            <SelectItem value="collaboration">{t('collaboration')}</SelectItem>
+                            <SelectItem value="consulting">{t('consulting')}</SelectItem>
+                            <SelectItem value="other">{t('other')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -210,7 +211,7 @@ const Meeting = () => {
                       name="preferredDate"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Data Preferida *</FormLabel>
+                          <FormLabel>{t('preferredDate')} *</FormLabel>
                           <FormControl>
                             <Input type="date" {...field} />
                           </FormControl>
@@ -223,7 +224,7 @@ const Meeting = () => {
                       name="preferredTime"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Horário Preferido *</FormLabel>
+                          <FormLabel>{t('preferredTime')} *</FormLabel>
                           <FormControl>
                             <Input type="time" {...field} />
                           </FormControl>
@@ -238,9 +239,9 @@ const Meeting = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Assunto/Objetivo da Reunião *</FormLabel>
+                        <FormLabel>{t('subject')} *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Descreva brevemente o que gostaria de discutir na reunião..." {...field} />
+                          <Input placeholder={t('subjectPlaceholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -252,10 +253,10 @@ const Meeting = () => {
                     name="description"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Descrição Detalhada</FormLabel>
+                        <FormLabel>{t('description')}</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Descreva detalhadamente o objetivo da reunião e tópicos específicos a serem discutidos..."
+                            placeholder={t('descriptionPlaceholder')}
                             rows={4}
                             {...field}
                           />
@@ -270,10 +271,10 @@ const Meeting = () => {
                     name="additionalInfo"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Informações Adicionais</FormLabel>
+                        <FormLabel>{t('additionalInfo')}</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Qualquer informação adicional relevante (documentos, links, contexto específico, etc.)"
+                            placeholder={t('additionalInfoPlaceholder')}
                             rows={3}
                             {...field}
                           />
@@ -288,7 +289,7 @@ const Meeting = () => {
                     className="w-full bg-ufu-blue hover:bg-ufu-navy text-white"
                     disabled={form.formState.isSubmitting}
                   >
-                    {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Solicitação'}
+                    {form.formState.isSubmitting ? t('sending') : t('sendRequest')}
                   </Button>
                 </form>
               </Form>
@@ -296,36 +297,36 @@ const Meeting = () => {
 
             <div className="space-y-6">
               <Card className="p-6">
-                <h3 className="text-lg font-semibold text-ufu-navy mb-4">Informações Importantes</h3>
+                <h3 className="text-lg font-semibold text-ufu-navy mb-4">{t('importantInformation')}</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-ufu-blue">
                     <Clock className="h-4 w-4" />
-                    <span>Reuniões geralmente duram 30-60 minutos</span>
+                    <span>{t('meetingDuration')}</span>
                   </div>
                   <div className="flex items-center gap-2 text-ufu-blue">
                     <Calendar className="h-4 w-4" />
-                    <span>Resposta em até 48 horas</span>
+                    <span>{t('responseTime')}</span>
                   </div>
                   <div className="flex items-center gap-2 text-ufu-blue">
                     <MapPin className="h-4 w-4" />
-                    <span>Presencial ou virtual (conforme disponibilidade)</span>
+                    <span>{t('locationInfo')}</span>
                   </div>
                 </div>
               </Card>
 
               <Card className="p-6">
-                <h3 className="text-lg font-semibold text-ufu-navy mb-4">Horário de Atendimento</h3>
+                <h3 className="text-lg font-semibold text-ufu-navy mb-4">{t('officeHours')}</h3>
                 <div className="space-y-2 text-ufu-blue">
-                  <p><strong>Segunda a Sexta:</strong> 8:00 - 17:00</p>
-                  <p><strong>Localização:</strong> Faculdade de Engenharia Química, UFU</p>
-                  <p><strong>Sala:</strong> Por agendamento</p>
+                  <p><strong>{t('mondayToFriday')}</strong> {t('timeRange')}</p>
+                  <p><strong>{t('locationLabel')}</strong> {t('locationValue')}</p>
+                  <p><strong>{t('roomLabel')}</strong> {t('roomValue')}</p>
                 </div>
               </Card>
 
               <Card className="p-6 bg-ufu-light">
-                <h3 className="text-lg font-semibold text-ufu-navy mb-2">Contato Direto</h3>
+                <h3 className="text-lg font-semibold text-ufu-navy mb-2">{t('directContact')}</h3>
                 <p className="text-ufu-navy mb-3">
-                  Para questões urgentes ou esclarecimentos:
+                  {t('urgentQuestions')}
                 </p>
                 <p className="text-ufu-blue font-medium">
                   📞 +55 (34) 3239-4292<br/>

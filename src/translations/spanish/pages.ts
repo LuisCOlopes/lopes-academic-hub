@@ -35,14 +35,57 @@ export const pagesTranslations = {
   firstName: 'Nombre',
   lastName: 'Apellido',
   email: 'Correo Electrónico',
+  emailAddress: 'Dirección de Correo Electrónico',
   institution: 'Institución',
   meetingType: 'Tipo de Reunión',
+  meetingFormat: 'Formato de Reunión',
   preferredDate: 'Fecha Preferida',
   preferredTime: 'Hora Preferida',
+  subject: 'Asunto/Objetivo de la Reunión',
+  description: 'Descripción Detallada',
+  additionalInfo: 'Información Adicional',
   message: 'Mensaje',
   requestMeeting: 'Solicitar Reunión',
+  sendRequest: 'Enviar Solicitud',
+  sending: 'Enviando...',
   importantInformation: 'Información Importante',
   meetingGuidelines: 'Por favor, permita 2-3 días hábiles para respuesta. Las reuniones típicamente se programan durante horario comercial (9am a 5pm, lunes a viernes).',
+  
+  // Meeting form placeholders and labels
+  firstNamePlaceholder: 'Tu nombre',
+  lastNamePlaceholder: 'Tu apellido',
+  emailPlaceholder: 'tu.email@ejemplo.com',
+  institutionPlaceholder: 'Tu institución o empresa',
+  subjectPlaceholder: 'Describe brevemente lo que te gustaría discutir en la reunión...',
+  descriptionPlaceholder: 'Describe detalladamente el propósito de la reunión y temas específicos a discutir...',
+  additionalInfoPlaceholder: 'Cualquier información adicional relevante (documentos, enlaces, contexto específico, etc.)',
+  
+  // Meeting format options
+  inPerson: 'Presencial (UFU)',
+  msTeams: 'MS Teams',
+  googleMeet: 'Google Meet',
+  
+  // Meeting type options
+  academicDiscussion: 'Discusión Académica',
+  researchGuidance: 'Orientación de Investigación',
+  collaboration: 'Colaboración',
+  consulting: 'Consultoría',
+  other: 'Otro',
+  selectMeetingType: 'Seleccionar tipo de reunión',
+  
+  // Meeting info
+  meetingDuration: 'Las reuniones típicamente duran 30-60 minutos',
+  responseTime: 'Respuesta en 48 horas',
+  locationInfo: 'Presencial o virtual (según disponibilidad)',
+  officeHours: 'Horario de Oficina',
+  mondayToFriday: 'Lunes a Viernes:',
+  timeRange: '8:00 AM - 5:00 PM',
+  locationLabel: 'Ubicación:',
+  locationValue: 'Facultad de Ingeniería Química, UFU',
+  roomLabel: 'Sala:',
+  roomValue: 'Con cita previa',
+  directContact: 'Contacto Directo',
+  urgentQuestions: 'Para preguntas urgentes o aclaraciones:',
   
   // Material page
   materialTitle: 'Material Educativo',
