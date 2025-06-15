@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -311,7 +312,7 @@ const Contact = () => {
                   onClick={() => window.open('https://maps.app.goo.gl/BTPtReXhUnfjhmrb7', '_blank')}
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  Rota
+                  {t('route')}
                 </Button>
               </div>
             </div>

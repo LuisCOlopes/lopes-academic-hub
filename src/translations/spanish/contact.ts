@@ -27,4 +27,5 @@ export const contactTranslations = {
   officeLocation: 'Ubicación de la Oficina',
   campusMap: 'Mapa del Campus',
   directionsToOffice: 'Direcciones a la Oficina',
+  route: 'Ruta',
 };
