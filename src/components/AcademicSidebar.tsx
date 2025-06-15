@@ -80,26 +80,33 @@ const AcademicSidebar = () => {
   ];
 
   return (
-    <Sidebar>
-      <SidebarHeader className="p-4">
-        <Link to="/" className="text-xl font-playfair font-bold text-ufu-navy">
-          Prof. Website
+    <Sidebar className="bg-gradient-to-b from-ufu-navy to-ufu-blue border-r-2 border-ufu-teal/20">
+      <SidebarHeader className="p-6 bg-ufu-navy/95">
+        <Link to="/" className="text-2xl font-playfair font-bold text-ufu-light hover:text-ufu-teal transition-colors">
+          {t('academicHub')}
         </Link>
         <div className="mt-4">
           <LanguageSelector />
         </div>
       </SidebarHeader>
       
-      <SidebarContent>
-        <SidebarMenu>
+      <SidebarContent className="bg-gradient-to-b from-ufu-blue to-ufu-navy">
+        <SidebarMenu className="space-y-1 px-3">
           {navigation.map((item) => {
             const isActive = location.pathname === item.href;
             return (
               <SidebarMenuItem key={item.name}>
-                <SidebarMenuButton asChild isActive={isActive}>
-                  <Link to={item.href}>
-                    <item.icon className="h-4 w-4" />
-                    <span>{item.name}</span>
+                <SidebarMenuButton 
+                  asChild 
+                  isActive={isActive}
+                  className={cn(
+                    "w-full rounded-lg transition-all duration-200 text-ufu-light hover:bg-ufu-teal/20 hover:text-white",
+                    isActive && "bg-ufu-teal text-ufu-navy font-semibold shadow-md"
+                  )}
+                >
+                  <Link to={item.href} className="flex items-center gap-3 px-3 py-2">
+                    <item.icon className="h-5 w-5" />
+                    <span className="text-sm">{item.name}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

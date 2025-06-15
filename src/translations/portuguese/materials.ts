@@ -1,4 +1,3 @@
-
 export const materialsTranslations = {
   // Material page
   materialTitle: 'Material Educacional',
@@ -13,7 +12,7 @@ export const materialsTranslations = {
   educationalPurpose: 'Material destinado exclusivamente para fins educacionais',
   citeSource: 'Cite a fonte ao utilizar o material em trabalhos acadêmicos',
   commercialUse: 'Uso comercial não autorizado sem permissão prévia',
-  reportIssues: 'Relate problemas ou sugerências para:',
+  reportIssues: 'Relate problemas ou sugestões para:',
   
   // Student Resources page
   studentResourcesTitle: 'Recursos para Estudantes',

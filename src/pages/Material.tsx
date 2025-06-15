@@ -2,10 +2,10 @@
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Download, FileText, Video, Calculator, Youtube } from 'lucide-react';
+import { BookOpen, Download, FileText, Video, Calculator, Youtube, Info } from 'lucide-react';
 import { useDownload } from '@/hooks/useDownload';
 import { validateYouTubeUrl } from '@/utils/downloadUtils';
 
@@ -17,6 +17,7 @@ const Material = () => {
     {
       category: t('courseNotes'),
       icon: BookOpen,
+      color: 'bg-blue-500',
       items: [
         {
           title: 'Controle de Processos Químicos - Apostila Completa',
@@ -59,6 +60,7 @@ const Material = () => {
     {
       category: t('computationalCodesTitle'),
       icon: Calculator,
+      color: 'bg-green-500',
       items: [
         {
           title: 'Códigos Scilab - Controle de Processos',
@@ -101,6 +103,7 @@ const Material = () => {
     {
       category: t('exercises'),
       icon: FileText,
+      color: 'bg-purple-500',
       items: [
         {
           title: 'Lista de Exercícios - Controle de Processos',
@@ -134,6 +137,7 @@ const Material = () => {
     {
       category: t('educationalVideos'),
       icon: Video,
+      color: 'bg-red-500',
       items: [
         {
           title: 'Controle de Processos Químicos - Introdução - Aula 1',
@@ -233,94 +237,148 @@ const Material = () => {
 
   return (
     <AcademicLayout>
-      <div className="p-6 max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            {t('materialTitle')}
-          </h1>
-          <p className="text-lg text-gray-600">
-            {t('materialSubtitle')}
-          </p>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="container mx-auto px-4 py-8">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold text-gray-800 mb-4">
+              {t('materialTitle')}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('materialSubtitle')}
+            </p>
+          </div>
 
-        <div className="grid gap-8">
-          {materials.map((category, index) => (
-            <Card key={index} className="p-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-academic-blue rounded-lg">
-                  <category.icon className="h-6 w-6 text-white" />
+          {/* Materials Grid */}
+          <div className="space-y-12">
+            {materials.map((category, index) => (
+              <Card key={index} className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
+                <CardHeader className="pb-6">
+                  <div className="flex items-center gap-4">
+                    <div className={`p-3 rounded-xl ${category.color} text-white shadow-md`}>
+                      <category.icon className="h-8 w-8" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-3xl text-gray-800">
+                        {category.category}
+                      </CardTitle>
+                      <p className="text-gray-600 mt-1">
+                        {category.items.length} {category.items.length === 1 ? 'item' : 'itens'} disponível{category.items.length === 1 ? '' : 's'}
+                      </p>
+                    </div>
+                  </div>
+                </CardHeader>
+
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.items.map((item, itemIndex) => (
+                      <Card key={itemIndex} className="group hover:shadow-xl transition-all duration-300 border hover:border-gray-300 bg-white">
+                        <CardContent className="p-6">
+                          <div className="flex items-start justify-between mb-4">
+                            <Badge 
+                              variant="secondary" 
+                              className={`${item.type === 'YouTube' ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-700'} font-medium`}
+                            >
+                              {item.type}
+                            </Badge>
+                          </div>
+                          
+                          <h3 className="font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                            {item.title}
+                          </h3>
+                          
+                          <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                            {item.description}
+                          </p>
+                          
+                          <div className="flex items-center justify-between pt-4 border-t">
+                            {item.type === 'YouTube' ? (
+                              <>
+                                <div className="text-xs text-gray-500 flex items-center gap-1">
+                                  <Video className="h-3 w-3" />
+                                  <span>Vídeo educacional</span>
+                                </div>
+                                <Button 
+                                  size="sm" 
+                                  className="bg-red-600 hover:bg-red-700 text-white shadow-md"
+                                  onClick={() => handleYouTubeClick(item.url)}
+                                >
+                                  <Youtube className="h-4 w-4 mr-2" />
+                                  {t('watch')}
+                                </Button>
+                              </>
+                            ) : (
+                              <>
+                                <div className="text-xs text-gray-500">
+                                  <div className="flex items-center gap-1 mb-1">
+                                    <FileText className="h-3 w-3" />
+                                    <span>{item.size}</span>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <Download className="h-3 w-3" />
+                                    <span>{item.downloads} downloads</span>
+                                  </div>
+                                </div>
+                                <Button 
+                                  size="sm" 
+                                  className="bg-blue-600 hover:bg-blue-700 text-white shadow-md"
+                                  onClick={() => handleDownload(item.downloadKey, item.itemNumber)}
+                                  disabled={isDownloading}
+                                >
+                                  <Download className="h-4 w-4 mr-2" />
+                                  {isDownloading ? 'Baixando...' : t('download')}
+                                </Button>
+                              </>
+                            )}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Usage Policy Section */}
+          <Card className="mt-16 shadow-lg border-0 bg-gradient-to-r from-blue-50 to-indigo-50">
+            <CardContent className="p-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 rounded-xl">
+                  <Info className="h-6 w-6 text-blue-600" />
                 </div>
-                <h2 className="text-2xl font-semibold text-gray-900">
-                  {category.category}
-                </h2>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {category.items.map((item, itemIndex) => (
-                  <Card key={itemIndex} className="p-4 border">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 mb-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 mb-2">
-                          {item.description}
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                    {t('usagePolicy')}
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                        <p className="text-gray-700">{t('educationalPurpose')}</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                        <p className="text-gray-700">{t('citeSource')}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                        <p className="text-gray-700">{t('commercialUse')}</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                        <p className="text-gray-700">
+                          {t('reportIssues')} <a href="mailto:lclaudio@ufu.br" className="text-blue-600 hover:text-blue-800 font-medium">lclaudio@ufu.br</a>
                         </p>
                       </div>
-                      <Badge variant="outline">{item.type}</Badge>
                     </div>
-                    
-                    <div className="flex items-center justify-between">
-                      {item.type === 'YouTube' ? (
-                        <>
-                          <div className="text-xs text-gray-500">
-                            <span>Vídeo educacional</span>
-                          </div>
-                          <Button 
-                            size="sm" 
-                            className="bg-red-600 hover:bg-red-700 text-white"
-                            onClick={() => handleYouTubeClick(item.url)}
-                          >
-                            <Youtube className="h-4 w-4 mr-1" />
-                            {t('watch')}
-                          </Button>
-                        </>
-                      ) : (
-                        <>
-                          <div className="text-xs text-gray-500">
-                            <span>{item.size}</span>
-                            <span className="mx-2">•</span>
-                            <span>{item.downloads} downloads</span>
-                          </div>
-                          <Button 
-                            size="sm" 
-                            className="bg-academic-blue hover:bg-academic-blue/90"
-                            onClick={() => handleDownload(item.downloadKey, item.itemNumber)}
-                            disabled={isDownloading}
-                          >
-                            <Download className="h-4 w-4 mr-1" />
-                            {isDownloading ? 'Baixando...' : t('download')}
-                          </Button>
-                        </>
-                      )}
-                    </div>
-                  </Card>
-                ))}
+                  </div>
+                </div>
               </div>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            {t('usagePolicy')}
-          </h2>
-          <div className="text-gray-600 space-y-2">
-            <p>• {t('educationalPurpose')}</p>
-            <p>• {t('citeSource')}</p>
-            <p>• {t('commercialUse')}</p>
-            <p>• {t('reportIssues')} lclaudio@ufu.br</p>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </AcademicLayout>
