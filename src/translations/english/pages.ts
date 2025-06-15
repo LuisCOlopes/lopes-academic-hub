@@ -1,4 +1,3 @@
-
 export const pagesTranslations = {
   // Common
   backToTop: 'Back to Top',
@@ -19,7 +18,9 @@ export const pagesTranslations = {
   
   // Awards page
   awardsTitle: 'Awards and Recognition',
-  awardsSubtitle: 'Recognition for excellence in research and teaching',
+  awardsSubtitle: 'Recognition for excellence in research, teaching, and academic services',
+  awardsAndDistinctions: 'Awards and Distinctions',
+  recognitionsAndServices: 'Recognition and Academic Services',
   
   // News page
   newsTitle: 'News',
