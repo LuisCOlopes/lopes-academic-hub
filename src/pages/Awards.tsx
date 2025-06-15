@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -160,7 +159,7 @@ const Awards = () => {
         {/* Awards Section */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Prêmios e Distinções
+            {t('awardsAndDistinctions')}
           </h2>
           <div className="grid gap-6">
             {awards.map((award, index) => (
@@ -216,7 +215,7 @@ const Awards = () => {
         {/* Recognitions Section */}
         <div>
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            Reconhecimentos e Serviços Acadêmicos
+            {t('recognitionsAndServices')}
           </h2>
           <div className="grid gap-6">
             {recognitions.map((recognition, index) => (

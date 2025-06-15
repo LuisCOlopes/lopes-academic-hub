@@ -161,5 +161,62 @@ export const pagesTranslations = {
   academicConferences: 'Conferências acadêmicas',
   natureExploration: 'Exploração da natureza',
   workLifeBalance: 'Equilíbrio entre Trabalho e Vida Pessoal',
-  workLifeBalanceDescription: 'Manter um equilíbrio saudável entre responsabilidades acadêmicas e interesses pessoais é essencial para a criatividade e bem-estar. Essas atividades proporcionam inspiração e perspectivas novas que frequentemente enriquecem meu trabalho acadêmico.'
+  workLifeBalanceDescription: 'Manter um equilíbrio saudável entre responsabilidades acadêmicas e interesses pessoais é essencial para a criatividade e bem-estar. Essas atividades proporcionam inspiração e perspectivas novas que frequentemente enriquecem meu trabalho acadêmico.',
+  
+  // Research page
+  researchTitle: 'Pesquisa',
+  researchSubtitle: 'Áreas de pesquisa e projetos em desenvolvimento',
+  currentProjects: 'Projetos Atuais',
+  researchAreas: 'Áreas de Pesquisa',
+  publications: 'Publicações',
+  
+  // Teaching page  
+  teachingTitle: 'Ensino',
+  teachingSubtitle: 'Disciplinas ministradas e metodologia de ensino',
+  currentCourses: 'Disciplinas Atuais',
+  teachingPhilosophy: 'Filosofia de Ensino',
+  courseEvaluations: 'Avaliações de Curso',
+  
+  // Publications page
+  publicationsTitle: 'Publicações',
+  publicationsSubtitle: 'Artigos científicos, livros e trabalhos acadêmicos',
+  journalArticles: 'Artigos em Periódicos',
+  conferenceProceedings: 'Anais de Congressos',
+  books: 'Livros',
+  chapters: 'Capítulos de Livro',
+  
+  // Projects page
+  projectsTitle: 'Projetos',
+  projectsSubtitle: 'Projetos de pesquisa e desenvolvimento tecnológico',
+  activeProjects: 'Projetos Ativos',
+  completedProjects: 'Projetos Concluídos',
+  collaborations: 'Colaborações',
+  
+  // Team page
+  teamTitle: 'Equipe',
+  teamSubtitle: 'Estudantes de graduação, pós-graduação e colaboradores',
+  currentStudents: 'Estudantes Atuais',
+  pastStudents: 'Ex-Estudantes',
+  collaborators: 'Colaboradores',
+  
+  // Service page
+  serviceTitle: 'Serviços à Comunidade',
+  serviceSubtitle: 'Contribuições para a comunidade acadêmica e científica',
+  editorialBoards: 'Conselhos Editoriais',
+  reviewerActivities: 'Atividades de Revisão',
+  committeeMemberships: 'Participação em Comitês',
+  
+  // Leadership page
+  leadershipTitle: 'Liderança',
+  leadershipSubtitle: 'Posições de liderança e gestão acadêmica',
+  currentPositions: 'Posições Atuais',
+  pastPositions: 'Posições Anteriores',
+  initiatives: 'Iniciativas',
+  
+  // Speaking page
+  speakingTitle: 'Palestras',
+  speakingSubtitle: 'Palestras, conferências e apresentações',
+  upcomingTalks: 'Próximas Palestras',
+  pastTalks: 'Palestras Anteriores',
+  invitationRequests: 'Solicitações de Palestra'
 };
