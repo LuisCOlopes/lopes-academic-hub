@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -7,7 +6,12 @@ import { Badge } from '@/components/ui/badge';
 import { Mail, ExternalLink, GraduationCap } from 'lucide-react';
 
 const Team = () => {
-  const { t } = useLanguage();
+  console.log('Team component rendering...');
+  
+  const languageContext = useLanguage();
+  console.log('Language context:', languageContext);
+  
+  const { t } = languageContext;
 
   const undergraduateStudents = [
     {
