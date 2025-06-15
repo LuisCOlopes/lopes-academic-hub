@@ -13,6 +13,7 @@ export const researchTranslations = {
   // Research metrics and projects
   researchMetrics: 'Métricas de Pesquisa',
   currentProjects: 'Projetos Atuais',
+  projects: 'Projetos',
   publications: 'Publicações',
   citations: 'Citações',
   students: 'Estudantes',

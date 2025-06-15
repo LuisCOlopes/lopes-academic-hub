@@ -13,6 +13,7 @@ export const researchTranslations = {
   // Research metrics and projects
   researchMetrics: 'Research Metrics',
   currentProjects: 'Current Projects',
+  projects: 'Projects',
   publications: 'Publications',
   citations: 'Citations',
   students: 'Students',
@@ -20,7 +21,7 @@ export const researchTranslations = {
   ongoing: 'Ongoing',
   
   // Project titles
-  autonomousSystemProject: 'Autonomous System Development',
+  autonomousSystemProject: 'Autonomous Systems Development',
   dynamicOperabilityProject: 'Dynamic Operability Analysis',
   faultTolerantControlProject: 'Fault Tolerant Control Systems',
   artificialIntelligenceProject: 'Artificial Intelligence in Process Control',
@@ -28,7 +29,7 @@ export const researchTranslations = {
   // Project descriptions
   autonomousSystemDescription: 'Development of autonomous systems for chemical process control with advanced monitoring and decision-making capabilities.',
   dynamicOperabilityDescription: 'Analysis and optimization of dynamic operability in chemical processes to improve flexibility and performance.',
-  faultTolerantControlDescription: 'Design of fault-tolerant control systems to ensure safe and reliable operation of chemical processes.',
+  faultTolerantControlDescription: 'Design of fault tolerant control systems to ensure safe and reliable operation of chemical processes.',
   artificialIntelligenceDescription: 'Application of artificial intelligence techniques in process control and optimization for enhanced automation.',
   
   // Research areas detailed
@@ -53,7 +54,7 @@ export const researchTranslations = {
   viewPaper: 'View Paper',
   downloadPdf: 'Download PDF',
   googleScholarDescription: 'Citations and academic metrics',
-  researchGateDescription: 'Researcher network and collaboration',
+  researchGateDescription: 'Research network and collaboration',
   lattesCvDescription: 'Brazilian academic curriculum',
   orcidDescription: 'Digital researcher identifier',
   visitProfile: 'Visit Profile',
@@ -81,20 +82,20 @@ export const researchTranslations = {
   industryCareer: 'Industry Career',
   researchCareer: 'Research Career',
   // Alumni section subtitles
-  orientationFlowcharts: 'Orientation Flowcharts',
+  orientationFlowcharts: 'Supervision Flowcharts',
   alumniStats: 'Alumni Statistics',
   generalStatistics: 'General Statistics',
-  mastersStudents: 'Master\'s Students',
+  mastersStudents: 'Masters Students',
   specialistStudents: 'Specialist Students',
   // New Alumni translations
-  phdSupervised: 'PhD Graduates - Supervised',
-  phdCoSupervised: 'PhD Graduates - Co-supervised',
-  mastersSupervised: 'Master\'s Dissertations - Supervised',
-  mastersCoSupervised: 'Master\'s Dissertations - Co-supervised',
-  doctorate: 'PhD',
-  doctorateCoSupervision: 'PhD (Co-supervision)',
-  masters: 'Master\'s',
-  mastersCoSupervision: 'Master\'s (Co-supervision)',
+  phdSupervised: 'PhDs Graduated - Supervisions',
+  phdCoSupervised: 'PhDs Graduated - Co-supervisions',
+  mastersSupervised: 'Masters Supervised',
+  mastersCoSupervised: 'Masters Co-supervised',
+  doctorate: 'Doctorate',
+  doctorateCoSupervision: 'Doctorate (Co-supervision)',
+  masters: 'Masters',
+  mastersCoSupervision: 'Masters (Co-supervision)',
   // Additional missing translations
   completedOrientations: 'Completed Supervisions',
   completedOrientationsPart1: 'Completed Supervisions - Part 1',

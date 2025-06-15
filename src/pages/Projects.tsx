@@ -83,10 +83,10 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Active Projects */}
+          {/* Projects */}
           <div className="mb-12">
             <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-              {t('activeProjects')}
+              {t('projects')}
             </h2>
             <div className="grid gap-6">
               {activeProjects.map((project, index) => (
