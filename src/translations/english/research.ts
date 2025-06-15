@@ -10,6 +10,35 @@ export const researchTranslations = {
   faultTolerance: 'Fault Tolerance',
   systemsEngineering: 'Systems Engineering',
   
+  // Research metrics and projects
+  researchMetrics: 'Research Metrics',
+  currentProjects: 'Current Projects',
+  publications: 'Publications',
+  citations: 'Citations',
+  students: 'Students',
+  funding: 'Funding',
+  ongoing: 'Ongoing',
+  
+  // Project titles
+  autonomousSystemProject: 'Autonomous System Development',
+  dynamicOperabilityProject: 'Dynamic Operability Analysis',
+  faultTolerantControlProject: 'Fault Tolerant Control Systems',
+  artificialIntelligenceProject: 'Artificial Intelligence in Process Control',
+  
+  // Project descriptions
+  autonomousSystemDescription: 'Development of autonomous systems for chemical process control with advanced monitoring and decision-making capabilities.',
+  dynamicOperabilityDescription: 'Analysis and optimization of dynamic operability in chemical processes to improve flexibility and performance.',
+  faultTolerantControlDescription: 'Design of fault-tolerant control systems to ensure safe and reliable operation of chemical processes.',
+  artificialIntelligenceDescription: 'Application of artificial intelligence techniques in process control and optimization for enhanced automation.',
+  
+  // Research areas detailed
+  processControlArea: 'Process Control',
+  processControlDescription: 'Advanced control strategies for chemical processes',
+  optimizationArea: 'Process Optimization',
+  optimizationDescription: 'Mathematical optimization techniques for industrial processes',
+  safetyArea: 'Process Safety',
+  safetyDescription: 'Safety analysis and fault tolerance in chemical systems',
+  
   // Publications page
   publicationsTitle: 'Publications',
   publicationsDescription: 'Scientific articles, book chapters and academic works',

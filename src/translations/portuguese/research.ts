@@ -10,6 +10,35 @@ export const researchTranslations = {
   faultTolerance: 'Tolerância a Falhas',
   systemsEngineering: 'Engenharia de Sistemas',
   
+  // Research metrics and projects
+  researchMetrics: 'Métricas de Pesquisa',
+  currentProjects: 'Projetos Atuais',
+  publications: 'Publicações',
+  citations: 'Citações',
+  students: 'Estudantes',
+  funding: 'Financiamento',
+  ongoing: 'Em andamento',
+  
+  // Project titles
+  autonomousSystemProject: 'Desenvolvimento de Sistemas Autônomos',
+  dynamicOperabilityProject: 'Análise de Operabilidade Dinâmica',
+  faultTolerantControlProject: 'Sistemas de Controle Tolerantes a Falhas',
+  artificialIntelligenceProject: 'Inteligência Artificial em Controle de Processos',
+  
+  // Project descriptions
+  autonomousSystemDescription: 'Desenvolvimento de sistemas autônomos para controle de processos químicos com capacidades avançadas de monitoramento e tomada de decisão.',
+  dynamicOperabilityDescription: 'Análise e otimização da operabilidade dinâmica em processos químicos para melhorar flexibilidade e desempenho.',
+  faultTolerantControlDescription: 'Projeto de sistemas de controle tolerantes a falhas para garantir operação segura e confiável de processos químicos.',
+  artificialIntelligenceDescription: 'Aplicação de técnicas de inteligência artificial em controle e otimização de processos para automação aprimorada.',
+  
+  // Research areas detailed
+  processControlArea: 'Controle de Processos',
+  processControlDescription: 'Estratégias avançadas de controle para processos químicos',
+  optimizationArea: 'Otimização de Processos',
+  optimizationDescription: 'Técnicas de otimização matemática para processos industriais',
+  safetyArea: 'Segurança de Processos',
+  safetyDescription: 'Análise de segurança e tolerância a falhas em sistemas químicos',
+  
   // Publications page
   publicationsTitle: 'Publicações',
   publicationsDescription: 'Artigos científicos, capítulos de livros e trabalhos acadêmicos',
