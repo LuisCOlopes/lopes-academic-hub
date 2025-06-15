@@ -214,9 +214,51 @@ export const pagesTranslations = {
   initiatives: 'Iniciativas',
   
   // Speaking page
-  speakingTitle: 'Palestras',
-  speakingSubtitle: 'Palestras, conferências e apresentações',
+  speakingTitle: 'Palestras e Apresentações',
+  speakingSubtitle: 'Compartilhando conhecimento através de palestras e apresentações acadêmicas',
   upcomingTalks: 'Próximas Palestras',
   pastTalks: 'Palestras Anteriores',
-  invitationRequests: 'Solicitações de Palestra'
+  invitationRequests: 'Solicitações de Palestra',
+  lecturesSection: 'Palestras',
+  miniCoursesSection: 'Minicursos',
+  expertiseAreas: 'Áreas de Especialização',
+  speakingStats: 'Estatísticas de Palestras',
+  totalPresentations: 'Total de Apresentações',
+  countries: 'Países',
+  keynoteAddresses: 'Palestras Principais',
+  bookSpeakingEngagement: 'Agendar Palestra',
+  contactForSpeaking: 'Contato para Palestras',
+  availableForSpeaking: 'Disponível para palestras em conferências e eventos acadêmicos',
+  
+  // Speaking page statistics
+  totalLectures: 'Total de Palestras',
+  totalMiniCourses: 'Total de Minicursos',
+  yearsOfActivity: 'Anos de Atividade',
+  participantsImpacted: 'Participantes Impactados',
+  
+  // Speaking page fields
+  year: 'Ano',
+  duration: 'Duração',
+  location: 'Local',
+  event: 'Evento',
+  promoter: 'Inst. promotora/financiadora',
+  availableAt: 'Disponível em',
+  hours: 'horas',
+  days: 'dias',
+  city: 'Cidade',
+  type: 'Tipo',
+  audience: 'Público',
+  participants: 'Participantes',
+  institution: 'Instituição',
+  collaborator: 'Colaborador',
+  topics: 'Tópicos',
+  
+  // Additional common terms
+  more: 'Mais',
+  less: 'Menos',
+  show: 'Mostrar',
+  hide: 'Esconder',
+  statistics: 'Estatísticas',
+  available: 'Disponível',
+  contact: 'Contato'
 };

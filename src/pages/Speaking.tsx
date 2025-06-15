@@ -247,8 +247,8 @@ const Speaking = () => {
 
         <Tabs defaultValue="lectures" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="lectures">Palestras</TabsTrigger>
-            <TabsTrigger value="minicourses">Minicursos</TabsTrigger>
+            <TabsTrigger value="lectures">{t('lecturesSection')}</TabsTrigger>
+            <TabsTrigger value="minicourses">{t('miniCoursesSection')}</TabsTrigger>
           </TabsList>
           
           <TabsContent value="lectures" className="space-y-6 mt-6">
@@ -279,7 +279,7 @@ const Speaking = () => {
                         )}
                         {lecture.location && (
                           <p className="text-sm text-gray-600 mb-1">
-                            <strong>Local:</strong> {lecture.location}
+                            <strong>{t('location')}:</strong> {lecture.location}
                           </p>
                         )}
                       </div>
@@ -287,7 +287,7 @@ const Speaking = () => {
                       <div>
                         {lecture.promoter && (
                           <p className="text-sm text-gray-600 mb-1">
-                            <strong>Inst. promotora/financiadora:</strong> {lecture.promoter}
+                            <strong>{t('promoter')}:</strong> {lecture.promoter}
                           </p>
                         )}
                         <div className="flex gap-2 mb-2">
@@ -307,7 +307,7 @@ const Speaking = () => {
                           onClick={() => window.open(lecture.url, '_blank')}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Disponível em
+                          {t('availableAt')}
                         </Button>
                       </div>
                     )}
@@ -336,12 +336,12 @@ const Speaking = () => {
                       <div>
                         {course.type && (
                           <p className="text-sm text-gray-600 mb-2">
-                            <strong>Tipo:</strong> {course.type}
+                            <strong>{t('type')}:</strong> {course.type}
                           </p>
                         )}
                         {course.institution && (
                           <p className="text-sm text-gray-600 mb-2">
-                            <strong>Instituição:</strong> {course.institution}
+                            <strong>{t('institution')}:</strong> {course.institution}
                           </p>
                         )}
                       </div>
@@ -350,13 +350,13 @@ const Speaking = () => {
                         {course.duration && (
                           <div className="flex items-center gap-1 text-sm text-gray-600 mb-2">
                             <Clock className="h-4 w-4" />
-                            <strong>Duração:</strong> {course.duration}
+                            <strong>{t('duration')}:</strong> {course.duration}
                           </div>
                         )}
                         {course.participants && (
                           <div className="flex items-center gap-1 text-sm text-gray-600 mb-2">
                             <Users className="h-4 w-4" />
-                            <strong>Participantes:</strong> {course.participants}
+                            <strong>{t('participants')}:</strong> {course.participants}
                           </div>
                         )}
                       </div>
@@ -364,12 +364,12 @@ const Speaking = () => {
                       <div>
                         {course.collaborator && (
                           <p className="text-sm text-gray-600 mb-2">
-                            <strong>Colaborador:</strong> {course.collaborator}
+                            <strong>{t('collaborator')}:</strong> {course.collaborator}
                           </p>
                         )}
                         {course.topics && (
                           <div className="mb-2">
-                            <p className="text-sm font-medium text-gray-700 mb-1">Tópicos:</p>
+                            <p className="text-sm font-medium text-gray-700 mb-1">{t('topics')}:</p>
                             <div className="flex flex-wrap gap-1">
                               {course.topics.map((topic, i) => (
                                 <Badge key={i} variant="outline" className="text-xs">
@@ -401,22 +401,22 @@ const Speaking = () => {
           </Card>
 
           <Card className="p-6 bg-gradient-to-r from-ufu-blue to-ufu-navy text-white">
-            <h2 className="text-xl font-bold mb-4">Estatísticas</h2>
+            <h2 className="text-xl font-bold mb-4">{t('statistics')}</h2>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span>Total de Palestras:</span>
+                <span>{t('totalLectures')}:</span>
                 <span className="font-semibold">{lectures.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>Total de Minicursos:</span>
+                <span>{t('totalMiniCourses')}:</span>
                 <span className="font-semibold">{miniCourses.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>Anos de Atividade:</span>
+                <span>{t('yearsOfActivity')}:</span>
                 <span className="font-semibold">2002-2020</span>
               </div>
               <div className="flex justify-between">
-                <span>Participantes Impactados:</span>
+                <span>{t('participantsImpacted')}:</span>
                 <span className="font-semibold">500+</span>
               </div>
             </div>

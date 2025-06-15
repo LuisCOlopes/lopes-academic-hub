@@ -2,7 +2,7 @@
 export const speakingTranslations = {
   // Speaking page
   speakingTitle: 'Palestras e Apresentações',
-  speakingSubtitle: 'Compartilhando conhecimento através de palestras e apresentações',
+  speakingSubtitle: 'Compartilhando conhecimento através de palestras e apresentações acadêmicas',
   recentUpcomingEngagements: 'Engajamentos Recentes e Futuros',
   expertiseAreas: 'Áreas de Especialização',
   bookSpeakingEngagement: 'Agendar Palestra',
@@ -12,6 +12,36 @@ export const speakingTranslations = {
   totalPresentations: 'Total de Apresentações',
   countries: 'Países',
   keynoteAddresses: 'Palestras Principais',
+  
+  // Speaking content sections
+  lecturesSection: 'Palestras',
+  miniCoursesSection: 'Minicursos',
+  
+  // Speaking statistics
+  totalLectures: 'Total de Palestras',
+  totalMiniCourses: 'Total de Minicursos',
+  yearsOfActivity: 'Anos de Atividade',
+  participantsImpacted: 'Participantes Impactados',
+  statistics: 'Estatísticas',
+  
+  // Speaking fields and labels
+  year: 'Ano',
+  duration: 'Duração',
+  location: 'Local',
+  event: 'Evento',
+  promoter: 'Inst. promotora/financiadora',
+  availableAt: 'Disponível em',
+  hours: 'horas',
+  days: 'dias',
+  city: 'Cidade',
+  type: 'Tipo',
+  audience: 'Público',
+  participants: 'Participantes',
+  institution: 'Instituição',
+  collaborator: 'Colaborador',
+  topics: 'Tópicos',
+  
+  // Legacy content for compatibility
   sustainableChemicalEngineering: 'Engenharia Química Sustentável: Perspectivas Futuras',
   internationalChemicalConference: 'Conferência Internacional de Engenharia Química',
   keynote: 'Palestra Principal',
