@@ -1,4 +1,3 @@
-
 import { navigationTranslations } from './navigation';
 import { homeTranslations } from './home';
 import { researchTranslations } from './research';
@@ -20,8 +19,9 @@ import { newsTranslations } from './news';
 import { blogTranslations } from './blog';
 import { involvementTranslations } from './involvement';
 import { communityTranslations } from './community';
+import { publicationsTranslations } from './publications';
 
-export const esTranslations = {
+export const es = {
   ...navigationTranslations,
   ...homeTranslations,
   ...researchTranslations,
@@ -43,4 +43,5 @@ export const esTranslations = {
   ...blogTranslations,
   ...involvementTranslations,
   ...communityTranslations,
+  ...publicationsTranslations,
 };
