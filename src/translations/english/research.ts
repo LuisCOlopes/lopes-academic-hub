@@ -51,4 +51,10 @@ export const researchTranslations = {
   academicCareer: 'Academic Career',
   industryCareer: 'Industry Career',
   researchCareer: 'Research Career',
+  // Alumni section subtitles
+  orientationFlowcharts: 'Orientation Flowcharts',
+  alumniStats: 'Alumni Statistics',
+  generalStatistics: 'General Statistics',
+  mastersStudents: 'Master\'s Students',
+  specialistStudents: 'Specialist Students',
 };

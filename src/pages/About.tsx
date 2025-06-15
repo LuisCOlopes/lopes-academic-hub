@@ -1,3 +1,4 @@
+
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -147,14 +148,14 @@ const About = () => {
 
             {/* Academic Formation Tree */}
             <Card className="p-8">
-              <h2 className="text-2xl font-semibold text-ufu-navy mb-6">Formação Acadêmica</h2>
+              <h2 className="text-2xl font-semibold text-ufu-navy mb-6">{t('academicGenealogy')}</h2>
               <div className="text-center">
                 <img 
                   src="/lovable-uploads/96d398a5-52eb-4cbf-a85b-e813132bfd77.png" 
-                  alt="Árvore Genealógica Acadêmica" 
+                  alt={t('academicGenealogy')}
                   className="mx-auto max-w-full h-auto rounded-lg"
                 />
-                <p className="text-sm text-ufu-blue mt-4">Árvore genealógica acadêmica mostrando a linhagem de formação</p>
+                <p className="text-sm text-ufu-blue mt-4">{t('academicGenealogyDescription')}</p>
               </div>
             </Card>
           </div>

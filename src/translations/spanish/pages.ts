@@ -1,4 +1,3 @@
-
 export const pagesTranslations = {
   // Common
   backToTop: 'Volver Arriba',
@@ -11,6 +10,11 @@ export const pagesTranslations = {
   mastersChemicalEngineering: 'Maestría en Ingeniería Química',
   bachelorChemicalEngineering: 'Licenciatura en Ingeniería Química',
   federalUniversityRio: 'Universidad Federal de Río de Janeiro (UFRJ)',
+  biography: 'Biografía',
+  education: 'Educación',
+  researchInterests: 'Intereses de Investigación',
+  academicGenealogy: 'Árbol Genealógico Académico',
+  academicGenealogyDescription: 'Árbol genealógico académico mostrando el linaje de formación',
   
   // Awards page
   awardsTitle: 'Premios y Reconocimientos',

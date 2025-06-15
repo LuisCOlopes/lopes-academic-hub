@@ -1,4 +1,3 @@
-
 export const pagesTranslations = {
   // Common
   backToTop: 'Back to Top',
@@ -7,10 +6,15 @@ export const pagesTranslations = {
   aboutTitle: 'About',
   aboutSubtitle: 'Learn about my academic and professional journey',
   academicFormation: 'Academic Formation',
-  phdChemicalEngineering: 'PhD in Chemical Engineering',
-  mastersChemicalEngineering: 'Masters in Chemical Engineering',
-  bachelorChemicalEngineering: 'Bachelor in Chemical Engineering',
+  phdChemicalEngineering: 'Ph.D. in Chemical Engineering',
+  mastersChemicalEngineering: 'M.Sc. in Chemical Engineering',
+  bachelorChemicalEngineering: 'B.Sc. in Chemical Engineering',
   federalUniversityRio: 'Federal University of Rio de Janeiro (UFRJ)',
+  biography: 'Biography',
+  education: 'Education',
+  researchInterests: 'Research Interests',
+  academicGenealogy: 'Academic Genealogical Tree',
+  academicGenealogyDescription: 'Academic genealogical tree showing the formation lineage',
   
   // Awards page
   awardsTitle: 'Awards and Recognition',
