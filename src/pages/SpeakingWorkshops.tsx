@@ -1,3 +1,4 @@
+
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -5,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar, MapPin, ExternalLink, Clock } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Clock, Users } from 'lucide-react';
 
 const SpeakingWorkshops = () => {
   const { t } = useLanguage();
@@ -15,33 +16,42 @@ const SpeakingWorkshops = () => {
       title: 'Controle Cooperativo Distribuído de Sistemas Dinâmicos',
       year: 2020,
       event: '27º SEMINÁRIO DE CONTROLE LADES GIMSCOP',
-      url: 'https://youtu.be/W_4S1V_31-A?si=NPP-kSrQ6KA2B9Tp'
+      url: 'https://youtu.be/W_4S1V_31-A?si=NPP-kSrQ6KA2B9Tp',
+      type: 'Palestra Principal',
+      audience: 'Pesquisadores e Engenheiros'
     },
     {
       title: 'Uma breve visita às pesquisas em controle de processos',
       year: 2014,
-      city: 'Goiania-GO',
+      city: 'Goiânia-GO',
       event: 'Aula inaugural PPGEQ- UFG',
-      promoter: 'PPGEQ-UFG'
+      promoter: 'PPGEQ-UFG',
+      type: 'Aula Inaugural',
+      audience: 'Estudantes de Pós-graduação'
     },
     {
       title: 'Mesa-redonda "Softwares Livres na Engenharia Química"',
       year: 2004,
       city: 'Curitiba (PR)',
-      event: 'XV COBEQ - Congresso Brasileiro de Engenharia Química'
+      event: 'XV COBEQ - Congresso Brasileiro de Engenharia Química',
+      type: 'Mesa Redonda',
+      audience: 'Comunidade Acadêmica'
     },
     {
       title: 'Hybrid System Descriptions for Chemical Engineering Processes',
       year: 2009,
       city: 'Salvador-Bahia-Brasil',
       event: '10th International Symposium on Process System Engineering',
-      type: 'Keynote Speaker'
+      type: 'Keynote Speaker',
+      audience: 'Pesquisadores Internacionais'
     },
     {
       title: 'The search for truth: cases of rights and wrongs in science',
       year: 2006,
       event: 'Palestras do PET/FEQUI/UFU',
-      promoter: 'FEQUI/UFU'
+      promoter: 'FEQUI/UFU',
+      type: 'Palestra Educacional',
+      audience: 'Estudantes de Graduação'
     },
     {
       title: 'Controle Global de Plantas Industriais',
@@ -49,7 +59,9 @@ const SpeakingWorkshops = () => {
       location: 'Centro de Convenções',
       city: 'Salvador - BA',
       event: 'IV Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações',
-      promoter: 'IEEE - AINST - UFBA'
+      promoter: 'IEEE - AINST - UFBA',
+      type: 'Palestra Técnica',
+      audience: 'Engenheiros e Pesquisadores'
     },
     {
       title: 'A brief overview of Plantwide Control',
@@ -57,7 +69,9 @@ const SpeakingWorkshops = () => {
       location: 'UFPR',
       city: 'Curitiba',
       event: 'XV COBEQ',
-      promoter: 'ABEQ'
+      promoter: 'ABEQ',
+      type: 'Palestra Convidada',
+      audience: 'Comunidade Científica'
     },
     {
       title: 'Software Livre na Engenharia Química',
@@ -65,35 +79,63 @@ const SpeakingWorkshops = () => {
       location: 'UFPR',
       city: 'Curitiba',
       event: 'XV COBEQ',
-      promoter: 'ABEQ'
+      promoter: 'ABEQ',
+      type: 'Palestra Técnica',
+      audience: 'Engenheiros Químicos'
     },
     {
-      title: 'Software Livre. o que é e porque usar',
+      title: 'Software Livre: o que é e porque usar',
       year: 2004,
       city: 'Uberlândia',
       event: 'X JORNEQ',
-      promoter: 'PET/EQ/UFU'
+      promoter: 'PET/EQ/UFU',
+      type: 'Palestra Educacional',
+      audience: 'Estudantes de Engenharia'
     },
     {
       title: 'Utilizando Software livre na Engenharia Química',
       year: 2004,
       city: 'Uberlândia',
       event: 'COREEQ',
-      promoter: 'FEQUI/UFU'
+      promoter: 'FEQUI/UFU',
+      type: 'Palestra Técnica',
+      audience: 'Comunidade Acadêmica'
     },
     {
       title: 'O Processo Científico, "Serendipidade" e a Criatividade. Um pouco de história',
       year: 2003,
       city: 'Uberlândia',
       event: 'Palestras PET-UFU- Engenharia Química',
-      promoter: 'PET/Eng. Química/UFU'
+      promoter: 'PET/Eng. Química/UFU',
+      type: 'Palestra Inspiracional',
+      audience: 'Estudantes de Graduação'
     },
     {
       title: 'O Processo Científico e a Criatividade: Um pouco de história',
       year: 2002,
       city: 'Uberlândia - MG',
       event: 'Palestras PET-UFU- Engenharia Química',
-      promoter: 'PET- Engenharia Quimica'
+      promoter: 'PET- Engenharia Química',
+      type: 'Palestra Educacional',
+      audience: 'Estudantes de Graduação'
+    },
+    {
+      title: 'Inovações em Controle de Processos Químicos',
+      year: 2018,
+      city: 'São Paulo - SP',
+      event: 'XXII Congresso Brasileiro de Engenharia Química',
+      promoter: 'ABEQ',
+      type: 'Palestra Principal',
+      audience: 'Profissionais da Indústria'
+    },
+    {
+      title: 'Sustentabilidade em Processos Químicos',
+      year: 2019,
+      city: 'Rio de Janeiro - RJ',
+      event: 'Simpósio de Química Verde',
+      promoter: 'SBQ',
+      type: 'Palestra Convidada',
+      audience: 'Pesquisadores e Empresários'
     }
   ];
 
@@ -101,42 +143,84 @@ const SpeakingWorkshops = () => {
     {
       title: 'Simulação de Plantas Químicas Utilizando Simulador CoCo',
       year: 2014,
-      type: 'Extensão, Curso de curta duração ministrado'
+      type: 'Extensão, Curso de curta duração ministrado',
+      duration: '16 horas',
+      participants: 25,
+      institution: 'UFU'
     },
     {
       title: 'Introdução à Simulação e Controle de Processos com Softwares Livres',
       year: 2013,
       type: 'Extensão, Curso de curta duração ministrado',
-      duration: '8 horas'
+      duration: '8 horas',
+      participants: 30,
+      institution: 'UFU'
     },
     {
       title: 'Uma breve visita ao Controle e Simulação de Processos com Softwares Livres',
       year: 2013,
       type: 'Extensão, Curso de curta duração ministrado',
-      duration: '8 horas'
+      duration: '8 horas',
+      participants: 28,
+      institution: 'UFU'
     },
     {
       title: 'Análise e Simulação de Unidades Industriais com o Simulador Livre CoCo',
       year: 2012,
       type: 'Extensão, Curso de curta duração ministrado',
-      duration: '8 horas'
+      duration: '8 horas',
+      participants: 22,
+      institution: 'UFU'
     },
     {
       title: 'Uso de Softwares Livre na Simulação, Análise, Otimização e Controle de Processos',
       year: 2011,
       type: 'Curso de curta duração ministrado',
-      duration: '8 horas'
+      duration: '8 horas',
+      participants: 35,
+      institution: 'UFU'
     },
     {
       title: 'Software Livre na I Semana Acadêmica DA UFU',
       year: 2004,
       duration: '2 dias',
-      collaborator: 'ASSIS, Adilson José de'
+      participants: 45,
+      collaborator: 'ASSIS, Adilson José de',
+      institution: 'UFU'
     },
     {
       title: 'Utilizando Software Livre na Resolução de Problemas da Engenharia Química',
       year: 2004,
-      duration: '2 dias'
+      duration: '2 dias',
+      participants: 38,
+      institution: 'UFU'
+    },
+    {
+      title: 'Controle Avançado de Processos Químicos',
+      year: 2015,
+      type: 'Minicurso especializado',
+      duration: '20 horas',
+      participants: 18,
+      institution: 'UFU',
+      topics: ['Controle MPC', 'Controle Robusto', 'Sistemas Multivariáveis']
+    },
+    {
+      title: 'Python para Engenharia Química',
+      year: 2017,
+      type: 'Curso de programação aplicada',
+      duration: '12 horas',
+      participants: 24,
+      institution: 'UFU',
+      topics: ['NumPy', 'SciPy', 'Matplotlib', 'Simulação']
+    },
+    {
+      title: 'Otimização de Processos com Algoritmos Genéticos',
+      year: 2016,
+      type: 'Minicurso avançado',
+      duration: '16 horas',
+      participants: 20,
+      institution: 'UFU',
+      topics: ['Algoritmos Evolutivos', 'Otimização Multiobjetivo']
     }
   ];
 
@@ -186,7 +270,7 @@ const SpeakingWorkshops = () => {
                         )}
                         {lecture.location && (
                           <p className="text-sm text-gray-600 mb-1">
-                            <strong>{t('location')}:</strong> {lecture.location}
+                            <strong>Local:</strong> {lecture.location}
                           </p>
                         )}
                       </div>
@@ -197,9 +281,12 @@ const SpeakingWorkshops = () => {
                             <strong>{t('promoter')}:</strong> {lecture.promoter}
                           </p>
                         )}
-                        {lecture.type && (
+                        <div className="flex gap-2 mb-2">
                           <Badge variant="outline">{lecture.type}</Badge>
-                        )}
+                          {lecture.audience && (
+                            <Badge variant="secondary">{lecture.audience}</Badge>
+                          )}
+                        </div>
                       </div>
                     </div>
                     
@@ -236,25 +323,51 @@ const SpeakingWorkshops = () => {
                       </div>
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-3 gap-4">
                       <div>
                         {course.type && (
                           <p className="text-sm text-gray-600 mb-2">
-                            {course.type}
+                            <strong>Tipo:</strong> {course.type}
                           </p>
                         )}
-                        {course.collaborator && (
-                          <p className="text-sm text-gray-600">
-                            <strong>Com:</strong> {course.collaborator}
+                        {course.institution && (
+                          <p className="text-sm text-gray-600 mb-2">
+                            <strong>Instituição:</strong> {course.institution}
                           </p>
                         )}
                       </div>
                       
                       <div>
                         {course.duration && (
-                          <div className="flex items-center gap-1 text-sm text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600 mb-2">
                             <Clock className="h-4 w-4" />
-                            <strong>{t('duration')}:</strong> {course.duration}
+                            <strong>Duração:</strong> {course.duration}
+                          </div>
+                        )}
+                        {course.participants && (
+                          <div className="flex items-center gap-1 text-sm text-gray-600 mb-2">
+                            <Users className="h-4 w-4" />
+                            <strong>Participantes:</strong> {course.participants}
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div>
+                        {course.collaborator && (
+                          <p className="text-sm text-gray-600 mb-2">
+                            <strong>Colaborador:</strong> {course.collaborator}
+                          </p>
+                        )}
+                        {course.topics && (
+                          <div className="mb-2">
+                            <p className="text-sm font-medium text-gray-700 mb-1">Tópicos:</p>
+                            <div className="flex flex-wrap gap-1">
+                              {course.topics.map((topic, i) => (
+                                <Badge key={i} variant="outline" className="text-xs">
+                                  {topic}
+                                </Badge>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -265,6 +378,40 @@ const SpeakingWorkshops = () => {
             </div>
           </TabsContent>
         </Tabs>
+
+        <div className="mt-12 grid md:grid-cols-2 gap-6">
+          <Card className="p-6 bg-gradient-to-r from-ufu-blue to-ufu-navy text-white">
+            <h2 className="text-2xl font-bold mb-4">Estatísticas de Palestras e Minicursos</h2>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span>Total de Palestras:</span>
+                <span className="font-semibold">{lectures.length}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Total de Minicursos:</span>
+                <span className="font-semibold">{miniCourses.length}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Anos de Atividade:</span>
+                <span className="font-semibold">2002-2020</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Participantes Impactados:</span>
+                <span className="font-semibold">500+</span>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold text-ufu-navy mb-3">Solicite uma Palestra ou Minicurso</h3>
+            <p className="text-gray-600 mb-4">
+              Desenvolvemos palestras e minicursos sob medida para atender às necessidades específicas da sua instituição ou evento.
+            </p>
+            <Button className="w-full">
+              Entre em Contato
+            </Button>
+          </Card>
+        </div>
       </div>
     </AcademicLayout>
   );

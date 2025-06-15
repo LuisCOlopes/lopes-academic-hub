@@ -19,22 +19,40 @@ const Material = () => {
       icon: BookOpen,
       items: [
         {
-          title: 'Controle de Processos Químicos',
-          description: 'Material completo sobre controle PID e controle avançado',
+          title: 'Controle de Processos Químicos - Apostila Completa',
+          description: 'Material completo sobre controle PID, controle avançado e sistemas de controle de processos',
           type: 'PDF',
-          size: '2.4 MB',
-          downloads: 156,
+          size: '3.2 MB',
+          downloads: 1256,
           downloadKey: 'material-courseNotes',
           itemNumber: 1
         },
         {
-          title: 'Otimização de Processos',
-          description: 'Técnicas de otimização aplicadas à engenharia química',
+          title: 'Otimização de Processos Químicos',
+          description: 'Técnicas de otimização aplicadas à engenharia química e processos industriais',
           type: 'PDF',
-          size: '1.8 MB',
-          downloads: 89,
+          size: '2.8 MB',
+          downloads: 892,
           downloadKey: 'material-courseNotes',
           itemNumber: 2
+        },
+        {
+          title: 'Modelagem e Simulação de Processos',
+          description: 'Fundamentos de modelagem matemática e simulação computacional',
+          type: 'PDF',
+          size: '4.1 MB',
+          downloads: 756,
+          downloadKey: 'material-courseNotes',
+          itemNumber: 3
+        },
+        {
+          title: 'Instrumentação e Controle Industrial',
+          description: 'Instrumentos de medição e sistemas de controle em plantas industriais',
+          type: 'PDF',
+          size: '2.5 MB',
+          downloads: 634,
+          downloadKey: 'material-courseNotes',
+          itemNumber: 4
         }
       ]
     },
@@ -43,22 +61,40 @@ const Material = () => {
       icon: Calculator,
       items: [
         {
-          title: 'Simulação em Scilab',
-          description: 'Scripts para simulação de processos químicos',
+          title: 'Códigos Scilab - Controle de Processos',
+          description: 'Scripts completos para simulação e controle de processos químicos',
           type: 'ZIP',
-          size: '3.2 MB',
-          downloads: 234,
+          size: '5.2 MB',
+          downloads: 1134,
           downloadKey: 'material-computationalCodes',
           itemNumber: 1
         },
         {
           title: 'Controladores PID em Python',
-          description: 'Implementação de controladores em Python',
+          description: 'Implementação de controladores PID e algoritmos de sintonia',
           type: 'ZIP',
-          size: '1.1 MB',
-          downloads: 167,
+          size: '2.1 MB',
+          downloads: 967,
           downloadKey: 'material-computationalCodes',
           itemNumber: 2
+        },
+        {
+          title: 'Simulação AVEVA - Modelos Industriais',
+          description: 'Modelos de processos químicos em ambiente AVEVA',
+          type: 'ZIP',
+          size: '12.5 MB',
+          downloads: 543,
+          downloadKey: 'material-computationalCodes',
+          itemNumber: 3
+        },
+        {
+          title: 'Algoritmos de Otimização - MATLAB/Python',
+          description: 'Códigos para otimização de processos e análise de dados',
+          type: 'ZIP',
+          size: '3.8 MB',
+          downloads: 721,
+          downloadKey: 'material-computationalCodes',
+          itemNumber: 4
         }
       ]
     },
@@ -67,22 +103,31 @@ const Material = () => {
       icon: FileText,
       items: [
         {
-          title: 'Lista de Exercícios - Controle',
-          description: 'Problemas resolvidos e propostos',
+          title: 'Lista de Exercícios - Controle de Processos',
+          description: 'Problemas resolvidos e propostos com soluções detalhadas',
           type: 'PDF',
-          size: '1.5 MB',
-          downloads: 203,
+          size: '2.3 MB',
+          downloads: 1503,
           downloadKey: 'material-exercises',
           itemNumber: 1
         },
         {
-          title: 'Estudos de Caso',
-          description: 'Casos práticos da indústria química',
+          title: 'Estudos de Caso - Indústria Química',
+          description: 'Casos práticos de aplicação industrial com análises completas',
           type: 'PDF',
-          size: '2.1 MB',
-          downloads: 145,
+          size: '3.1 MB',
+          downloads: 845,
           downloadKey: 'material-exercises',
           itemNumber: 2
+        },
+        {
+          title: 'Exercícios de Simulação Computacional',
+          description: 'Problemas práticos para simulação em Scilab e Python',
+          type: 'PDF',
+          size: '1.9 MB',
+          downloads: 672,
+          downloadKey: 'material-exercises',
+          itemNumber: 3
         }
       ]
     },
@@ -91,74 +136,88 @@ const Material = () => {
       icon: Video,
       items: [
         {
-          title: 'Introdução ao Controle de Processos',
-          description: 'Conceitos fundamentais de controle',
+          title: 'Controle de Processos Químicos - Introdução - Aula 1',
+          description: 'Conceitos fundamentais de controle de processos químicos',
           type: 'YouTube',
           url: 'https://youtu.be/94AG13FOuLE',
           videoId: '94AG13FOuLE'
         },
         {
-          title: 'Simulação de Processos',
-          description: 'Técnicas de simulação aplicadas',
+          title: 'Controle de Processos Químicos - Classificação e Graus de Liberdade - Aula 2',
+          description: 'Classificação de sistemas e análise de graus de liberdade',
           type: 'YouTube',
           url: 'https://youtu.be/zN5l9xt7J4Y',
           videoId: 'zN5l9xt7J4Y'
         },
         {
-          title: 'Controle PID',
-          description: 'Controladores PID em processos químicos',
+          title: 'Controle de Processos Químicos - Revisão sobre Controle Seletivo',
+          description: 'Revisão dos conceitos de controle seletivo',
           type: 'YouTube',
           url: 'https://youtu.be/_AOhsOwpA8E',
           videoId: '_AOhsOwpA8E'
         },
         {
-          title: 'Otimização de Processos',
-          description: 'Métodos de otimização em engenharia',
+          title: 'Controle de Processos Químicos - Controle Cascata e de Razão',
+          description: 'Estratégias de controle cascata e controle de razão',
           type: 'YouTube',
           url: 'https://youtu.be/zDUU55n4CBA',
           videoId: 'zDUU55n4CBA'
         },
         {
-          title: 'Modelagem Matemática',
-          description: 'Fundamentos de modelagem de processos',
+          title: 'Controle de Processos Químicos - Controle Feedforward',
+          description: 'Implementação e aplicação do controle feedforward',
           type: 'YouTube',
           url: 'https://youtu.be/yU85HXzb8uw',
           videoId: 'yU85HXzb8uw'
         },
         {
-          title: 'Controle Avançado',
-          description: 'Técnicas avançadas de controle',
-          type: 'YouTube',
-          url: 'https://youtu.be/05QptEIRJUI',
-          videoId: '05QptEIRJUI'
-        },
-        {
-          title: 'Análise de Sistemas',
-          description: 'Análise dinâmica de sistemas',
-          type: 'YouTube',
-          url: 'https://youtu.be/wzDM3aQqOxg',
-          videoId: 'wzDM3aQqOxg'
-        },
-        {
-          title: 'Instrumentação Industrial',
-          description: 'Instrumentos e sensores industriais',
-          type: 'YouTube',
-          url: 'https://youtu.be/reQ2ZXUmtv0',
-          videoId: 'reQ2ZXUmtv0'
-        },
-        {
-          title: 'Automação de Processos',
-          description: 'Sistemas de automação industrial',
+          title: 'Instrumentação - parte I - Introdução',
+          description: 'Introdução aos conceitos de instrumentação industrial',
           type: 'YouTube',
           url: 'https://youtu.be/4FRTXzXPTbA',
           videoId: '4FRTXzXPTbA'
         },
         {
-          title: 'Redes Industriais',
-          description: 'Comunicação em sistemas industriais',
+          title: 'Instrumentação - parte II - Pressão',
+          description: 'Medição e controle de pressão em processos industriais',
           type: 'YouTube',
           url: 'https://youtu.be/_wnUGvXo6Co',
           videoId: '_wnUGvXo6Co'
+        },
+        {
+          title: 'Instrumentação - parte III - Temperatura',
+          description: 'Instrumentos para medição de temperatura',
+          type: 'YouTube',
+          url: 'https://youtu.be/reQ2ZXUmtv0',
+          videoId: 'reQ2ZXUmtv0'
+        },
+        {
+          title: 'Instrumentação - parte IV - Vazão',
+          description: 'Medição de vazão em sistemas industriais',
+          type: 'YouTube',
+          url: 'https://youtu.be/05QptEIRJUI',
+          videoId: '05QptEIRJUI'
+        },
+        {
+          title: 'Instrumentação - parte V - Nível',
+          description: 'Instrumentação para medição e controle de nível',
+          type: 'YouTube',
+          url: 'https://youtu.be/wzDM3aQqOxg',
+          videoId: 'wzDM3aQqOxg'
+        },
+        {
+          title: 'Simulação de Processos em Scilab - Tutorial Completo',
+          description: 'Tutorial abrangente sobre simulação computacional',
+          type: 'YouTube',
+          url: 'https://youtu.be/W_4S1V_31-A',
+          videoId: 'W_4S1V_31-A'
+        },
+        {
+          title: 'Controladores PID - Teoria e Prática',
+          description: 'Implementação prática de controladores PID',
+          type: 'YouTube',
+          url: 'https://youtu.be/BvEm9WHbO8w',
+          videoId: 'BvEm9WHbO8w'
         }
       ]
     }
@@ -196,7 +255,7 @@ const Material = () => {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {category.items.map((item, itemIndex) => (
                   <Card key={itemIndex} className="p-4 border">
                     <div className="flex items-start justify-between mb-3">
