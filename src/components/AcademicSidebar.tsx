@@ -75,7 +75,6 @@ const AcademicSidebar = () => {
     { name: t('awards'), href: '/awards', icon: Trophy },
     { name: t('conferences'), href: '/conferences', icon: Presentation },
     { name: t('studentResources'), href: '/student-resources', icon: BookOpen },
-    { name: t('energyTransition'), href: '/energy-transition', icon: Lightbulb },
     { name: t('contact'), href: '/contact', icon: Mail },
   ];
 

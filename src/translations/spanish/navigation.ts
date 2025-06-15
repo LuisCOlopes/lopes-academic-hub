@@ -37,5 +37,4 @@ export const navigationTranslations = {
   materials: 'Materiales',
   material: 'Materiales',
   meeting: 'Reunión',
-  energyTransition: 'Transición Energética',
 };

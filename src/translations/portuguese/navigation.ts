@@ -15,7 +15,6 @@ export const navigationTranslations = {
   projects: 'Projetos',
   team: 'Equipe',
   opportunities: 'Oportunidades',
-  energyTransition: 'Transição Energética',
   meeting: 'Reunião',
   studentResources: 'Recursos para Estudantes',
   alumni: 'Ex-alunos',

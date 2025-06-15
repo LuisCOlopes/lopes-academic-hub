@@ -35,7 +35,6 @@ import Hobbies from "./pages/Hobbies";
 import Awards from "./pages/Awards";
 import Conferences from "./pages/Conferences";
 import StudentResources from "./pages/StudentResources";
-import EnergyTransition from "./pages/EnergyTransition";
 import NotFound from "./pages/NotFound";
 
 // Syllabus pages
@@ -83,7 +82,6 @@ const App = () => (
             <Route path="/awards" element={<Awards />} />
             <Route path="/conferences" element={<Conferences />} />
             <Route path="/student-resources" element={<StudentResources />} />
-            <Route path="/energy-transition" element={<EnergyTransition />} />
             
             {/* Syllabus routes */}
             <Route path="/syllabus/ppiq" element={<PPIQ />} />
