@@ -208,20 +208,6 @@ const Material = () => {
           type: 'YouTube',
           url: 'https://youtu.be/wzDM3aQqOxg',
           videoId: 'wzDM3aQqOxg'
-        },
-        {
-          title: 'Simulação de Processos em Scilab - Tutorial Completo',
-          description: 'Tutorial abrangente sobre simulação computacional',
-          type: 'YouTube',
-          url: 'https://youtu.be/W_4S1V_31-A',
-          videoId: 'W_4S1V_31-A'
-        },
-        {
-          title: 'Controladores PID - Teoria e Prática',
-          description: 'Implementação prática de controladores PID',
-          type: 'YouTube',
-          url: 'https://youtu.be/BvEm9WHbO8w',
-          videoId: 'BvEm9WHbO8w'
         }
       ]
     }
