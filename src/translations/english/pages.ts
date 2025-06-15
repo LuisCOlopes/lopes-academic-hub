@@ -1,3 +1,4 @@
+
 export const pagesTranslations = {
   // Common
   backToTop: 'Back to Top',
@@ -111,7 +112,7 @@ export const pagesTranslations = {
   internationalConferences: 'International Conferences',
   valuableOpportunities: 'Valuable Opportunities',
   opportunitiesDescription: 'These events represent valuable opportunities for professionals and academics to update their knowledge, present research and expand their networks in Chemical Engineering and Process Control areas.',
-  additionalInfo: 'For additional information about paper submission, registration or other specific details, please contact us.',
+  conferenceAdditionalInfo: 'For additional information about paper submission, registration or other specific details, please contact us.',
   organization: 'Organization',
   topics: 'Topics',
   speakingOpportunities: 'Speaking Opportunities',

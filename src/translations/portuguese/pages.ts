@@ -1,3 +1,4 @@
+
 export const pagesTranslations = {
   // Common
   backToTop: 'Voltar ao Topo',
@@ -111,7 +112,7 @@ export const pagesTranslations = {
   internationalConferences: 'Congressos Internacionais',
   valuableOpportunities: 'Oportunidades Valiosas',
   opportunitiesDescription: 'Esses eventos representam oportunidades valiosas para profissionais e acadêmicos atualizarem seus conhecimentos, apresentarem pesquisas e ampliarem suas redes de contato nas áreas de Engenharia Química e Controle de Processos.',
-  additionalInfo: 'Para informações adicionais sobre submissão de trabalhos, inscrições ou outros detalhes específicos, entre em contato.',
+  conferenceAdditionalInfo: 'Para informações adicionais sobre submissão de trabalhos, inscrições ou outros detalhes específicos, entre em contato.',
   organization: 'Organização',
   topics: 'Temas',
   speakingOpportunities: 'Oportunidades de Palestras',
