@@ -34,7 +34,6 @@ import {
   Coffee,
   Trophy,
   Presentation,
-  BookmarkPlus,
   Lightbulb
 } from 'lucide-react';
 
@@ -50,7 +49,7 @@ const AcademicSidebar = () => {
     { name: t('publications'), href: '/publications', icon: FileText },
     { name: t('projects'), href: '/projects', icon: Briefcase },
     { name: t('teaching'), href: '/teaching', icon: GraduationCap },
-    { name: t('materials'), href: '/material', icon: BookmarkPlus },
+    { name: t('studentResources'), href: '/student-resources', icon: BookOpen },
     { name: t('team'), href: '/team', icon: Users },
     { name: t('alumni'), href: '/alumni', icon: Award },
     { name: t('service'), href: '/service', icon: Heart },
@@ -68,7 +67,6 @@ const AcademicSidebar = () => {
     { name: t('hobbies'), href: '/hobbies', icon: Coffee },
     { name: t('awards'), href: '/awards', icon: Trophy },
     { name: t('conferences'), href: '/conferences', icon: Presentation },
-    { name: t('studentResources'), href: '/student-resources', icon: BookOpen },
     { name: t('contact'), href: '/contact', icon: Mail },
   ];
 

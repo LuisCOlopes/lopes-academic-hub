@@ -16,7 +16,7 @@ export const navigationTranslations = {
   team: 'Equipe',
   opportunities: 'Oportunidades',
   meeting: 'Reunião',
-  studentResources: 'Recursos para Estudantes',
+  studentResources: 'Material Educacional',
   alumni: 'Ex-alunos',
   podcast: 'Podcast',
   news: 'Notícias',
