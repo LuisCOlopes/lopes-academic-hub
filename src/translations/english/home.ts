@@ -1,46 +1,38 @@
 
 export const homeTranslations = {
-  // Academic Homepage
+  // Navigation and basic elements
   professor: 'Professor',
   chemicalEngineering: 'Chemical Engineering',
   federalUniversity: 'Federal University of Uberlândia',
-  bio: 'With over 30 years of experience in chemical engineering, I am dedicated to advancing research in process control, industrial safety, and sustainable technologies. My work focuses on developing innovative solutions that bridge academic excellence with real-world industrial applications.',
+  bio: 'Specialist in chemical process control, optimization and industrial safety with over 30 years of experience in research and teaching. Focus on fault-tolerant systems and green technologies.',
   exploreMyResearch: 'Explore My Research',
   contactMe: 'Contact Me',
+  
+  // Academic work section
   exploreMyAcademicWork: 'Explore My Academic Work',
-  researchDescription: 'Advanced research in process control, industrial safety, and sustainable technologies',
-  teachingDescription: 'Innovative approaches to chemical engineering education and student development',
+  research: 'Research',
+  researchDescription: 'Research areas and innovative projects in chemical engineering',
+  publications: 'Publications',
+  publicationsDescription: 'Scientific articles and academic contributions',
+  teaching: 'Teaching',
+  teachingDescription: 'Courses and educational materials for engineering education',
+  news: 'News',
+  newsDescription: 'Explore News in Process Systems Engineering (PSE)',
+  learnMore: 'Learn More',
+  
+  // Research highlights
   researchHighlights: 'Research Highlights',
-  researchFocus: 'My research focuses on developing innovative solutions for the chemical industry, with emphasis on sustainability, safety, and technological advancement.',
+  researchFocus: 'My research focuses on developing advanced control systems for chemical processes, with emphasis on safety, sustainability and operational efficiency.',
   processControl: 'Process Control',
   industrialSafety: 'Industrial Safety',
   wasteManagement: 'Waste Management',
   greenTechnology: 'Green Technology',
+  
+  // Stats section
   yearsOfExperience: 'Years of Experience',
-  publications: 'Publications',
   researchFunding: 'Research Funding',
+  
+  // Collaboration section
   interestedInCollaboration: 'Interested in Collaboration?',
   requestMeeting: 'Request Meeting',
-  viewFullProfile: 'View Full Profile',
-  
-  // Stats and metrics
-  citations: 'Citations',
-  collaborations: 'Collaborations',
-  students: 'Students Supervised',
-  projects: 'Active Projects',
-  
-  // Common translations
-  education: 'Education',
-  sustainability: 'Sustainability',
-  collaboration: 'Collaboration',
-  mentoring: 'Mentoring',
-  comments: 'comments',
-  minRead: 'min read',
-  
-  // About page - Academic Formation
-  academicFormation: 'Academic Formation',
-  phdChemicalEngineering: 'PhD in Chemical Engineering',
-  federalUniversityRio: 'Federal University of Rio de Janeiro (UFRJ)',
-  mastersChemicalEngineering: 'Masters in Chemical Engineering',
-  bachelorChemicalEngineering: 'Bachelor in Chemical Engineering',
 };
