@@ -7,6 +7,7 @@ import { materialsTranslations } from './materials';
 import { teamTranslations } from './team';
 import { contactTranslations } from './contact';
 import { pagesTranslations } from './pages';
+import { awardsTranslations } from './awards';
 import { speakingTranslations } from './speaking';
 import { serviceTranslations } from './service';
 import { leadershipTranslations } from './leadership';
@@ -32,6 +33,7 @@ export const pt = {
   ...teamTranslations,
   ...contactTranslations,
   ...pagesTranslations,
+  ...awardsTranslations,
   ...speakingTranslations,
   ...serviceTranslations,
   ...leadershipTranslations,

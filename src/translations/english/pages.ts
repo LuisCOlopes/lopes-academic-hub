@@ -16,12 +16,6 @@ export const pagesTranslations = {
   academicGenealogy: 'Academic Genealogical Tree',
   academicGenealogyDescription: 'Academic genealogical tree showing the formation lineage',
   
-  // Awards page
-  awardsTitle: 'Awards and Recognition',
-  awardsSubtitle: 'Recognition for excellence in research, teaching, and academic services',
-  awardsAndDistinctions: 'Awards and Distinctions',
-  recognitionsAndServices: 'Recognition and Academic Services',
-  
   // News page
   newsTitle: 'News',
   newsSubtitle: 'Latest updates and developments in chemical engineering',

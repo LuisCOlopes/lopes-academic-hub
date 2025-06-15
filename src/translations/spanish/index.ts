@@ -1,3 +1,4 @@
+
 import { navigationTranslations } from './navigation';
 import { homeTranslations } from './home';
 import { researchTranslations } from './research';
@@ -6,6 +7,7 @@ import { materialsTranslations } from './materials';
 import { teamTranslations } from './team';
 import { contactTranslations } from './contact';
 import { pagesTranslations } from './pages';
+import { awardsTranslations } from './awards';
 import { speakingTranslations } from './speaking';
 import { serviceTranslations } from './service';
 import { leadershipTranslations } from './leadership';
@@ -30,6 +32,7 @@ export const es = {
   ...teamTranslations,
   ...contactTranslations,
   ...pagesTranslations,
+  ...awardsTranslations,
   ...speakingTranslations,
   ...serviceTranslations,
   ...leadershipTranslations,
