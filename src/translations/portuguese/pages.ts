@@ -249,9 +249,7 @@ export const pagesTranslations = {
   type: 'Tipo',
   audience: 'Público',
   participants: 'Participantes',
-  institution: 'Instituição',
   collaborator: 'Colaborador',
-  topics: 'Tópicos',
   
   // Additional common terms
   more: 'Mais',
