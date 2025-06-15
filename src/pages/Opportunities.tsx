@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -9,6 +10,7 @@ import { Calendar, Users, GraduationCap, Briefcase } from 'lucide-react';
 
 const Opportunities = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const opportunities = [
     {
@@ -16,7 +18,7 @@ const Opportunities = () => {
       title: t('processControlResearch'),
       description: t('processControlResearchDesc'),
       requirements: t('processControlRequirements'),
-      deadline: '2024-12-31',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
@@ -24,7 +26,7 @@ const Opportunities = () => {
       title: t('processDesignResearch'),
       description: t('processDesignResearchDesc'),
       requirements: t('processDesignRequirements'),
-      deadline: '2024-11-30',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
@@ -32,7 +34,7 @@ const Opportunities = () => {
       title: t('energyTransitionResearch'),
       description: t('energyTransitionResearchDesc'),
       requirements: t('energyTransitionRequirements'),
-      deadline: '2024-11-30',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
@@ -40,7 +42,7 @@ const Opportunities = () => {
       title: t('processControlResearch'),
       description: t('processControlResearchDesc'),
       requirements: t('processControlRequirements'),
-      deadline: '2024-11-30',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
@@ -48,7 +50,7 @@ const Opportunities = () => {
       title: t('aiApplicationResearch'),
       description: t('aiApplicationResearchDesc'),
       requirements: t('aiApplicationRequirements'),
-      deadline: '2024-10-31',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     },
     {
@@ -56,10 +58,14 @@ const Opportunities = () => {
       title: t('processControlResearch'),
       description: t('processControlResearchDesc'),
       requirements: t('aiApplicationRequirements'),
-      deadline: '2024-10-31',
+      deadline: '2025',
       funding: 'FAPEMIG/CAPES/CNPq/Petrobras'
     }
   ];
+
+  const handleApplyNow = () => {
+    navigate('/contact');
+  };
 
   return (
     <AcademicLayout>
@@ -95,11 +101,14 @@ const Opportunities = () => {
                 <div className="text-right">
                   <div className="flex items-center gap-1 text-sm text-gray-500 mb-2">
                     <Calendar className="h-4 w-4" />
-                    {t('deadline')}: {new Date(opportunity.deadline).toLocaleDateString()}
+                    {t('deadline')}: {opportunity.deadline}
                   </div>
                 </div>
               </div>
-              <Button className="bg-academic-blue hover:bg-academic-blue/90">
+              <Button 
+                className="bg-academic-blue hover:bg-academic-blue/90"
+                onClick={handleApplyNow}
+              >
                 {t('applyNow')}
               </Button>
             </Card>
