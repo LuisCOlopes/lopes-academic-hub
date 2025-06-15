@@ -31,8 +31,7 @@ import {
   Trophy,
   Presentation,
   BookmarkPlus,
-  Lightbulb,
-  NotFound
+  Lightbulb
 } from 'lucide-react';
 
 const AcademicSidebar = () => {

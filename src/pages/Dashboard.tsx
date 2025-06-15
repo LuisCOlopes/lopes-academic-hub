@@ -79,10 +79,34 @@ const Dashboard = () => {
     }
   };
 
-  const updateStatus = async (table: string, id: string, status: string) => {
+  const updateContactMessageStatus = async (id: string, status: string) => {
     try {
       const { error } = await supabase
-        .from(table)
+        .from('contact_messages')
+        .update({ status, updated_at: new Date().toISOString() })
+        .eq('id', id);
+
+      if (error) throw error;
+
+      toast({
+        title: 'Status atualizado',
+        description: 'Status foi atualizado com sucesso.',
+      });
+
+      fetchData();
+    } catch (error) {
+      toast({
+        title: 'Erro',
+        description: 'Erro ao atualizar status.',
+        variant: 'destructive',
+      });
+    }
+  };
+
+  const updateMeetingRequestStatus = async (id: string, status: string) => {
+    try {
+      const { error } = await supabase
+        .from('meeting_requests')
         .update({ status, updated_at: new Date().toISOString() })
         .eq('id', id);
 
@@ -216,13 +240,13 @@ const Dashboard = () => {
                             <Button
                               size="sm"
                               variant="outline"
-                              onClick={() => updateStatus('contact_messages', message.id, 'read')}
+                              onClick={() => updateContactMessageStatus(message.id, 'read')}
                             >
                               Marcar como Lida
                             </Button>
                             <Button
                               size="sm"
-                              onClick={() => updateStatus('contact_messages', message.id, 'resolved')}
+                              onClick={() => updateContactMessageStatus(message.id, 'resolved')}
                             >
                               Resolver
                             </Button>
@@ -275,13 +299,13 @@ const Dashboard = () => {
                             <Button
                               size="sm"
                               variant="outline"
-                              onClick={() => updateStatus('meeting_requests', request.id, 'confirmed')}
+                              onClick={() => updateMeetingRequestStatus(request.id, 'confirmed')}
                             >
                               Confirmar
                             </Button>
                             <Button
                               size="sm"
-                              onClick={() => updateStatus('meeting_requests', request.id, 'completed')}
+                              onClick={() => updateMeetingRequestStatus(request.id, 'completed')}
                             >
                               Completar
                             </Button>
