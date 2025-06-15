@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -17,6 +16,13 @@ const Research = () => {
       status: t('ongoing'),
       period: '2025-atual',
       description: t('autonomousSystemDescription')
+    },
+    {
+      title: t('energyTransitionProject'),
+      status: t('ongoing'),
+      period: '2024-atual',
+      description: t('energyTransitionDescription'),
+      funding: 'CNPq, CAPES, FAPEMIG'
     },
     {
       title: t('dynamicOperabilityProject'),

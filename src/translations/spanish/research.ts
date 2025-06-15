@@ -1,4 +1,3 @@
-
 export const researchTranslations = {
   // Research page
   researchTitle: 'Investigación',
@@ -22,12 +21,14 @@ export const researchTranslations = {
   
   // Project titles
   autonomousSystemProject: 'Desarrollo de Sistemas Autónomos',
+  energyTransitionProject: 'Transición Energética',
   dynamicOperabilityProject: 'Análisis de Operabilidad Dinámica',
   faultTolerantControlProject: 'Sistemas de Control Tolerantes a Fallas',
   artificialIntelligenceProject: 'Inteligencia Artificial en Control de Procesos',
   
   // Project descriptions
   autonomousSystemDescription: 'Desarrollo de sistemas autónomos para control de procesos químicos con capacidades avanzadas de monitoreo y toma de decisiones.',
+  energyTransitionDescription: 'Co-procesamiento, Descarbonización de Procesos',
   dynamicOperabilityDescription: 'Análisis y optimización de la operabilidad dinámica en procesos químicos para mejorar la flexibilidad y el rendimiento.',
   faultTolerantControlDescription: 'Diseño de sistemas de control tolerantes a fallas para garantizar la operación segura y confiable de procesos químicos.',
   artificialIntelligenceDescription: 'Aplicación de técnicas de inteligencia artificial en control y optimización de procesos para automatización mejorada.',
