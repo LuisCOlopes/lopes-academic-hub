@@ -1,3 +1,4 @@
+
 export const materialsTranslations = {
   // Material page
   materialTitle: 'Material Educacional',

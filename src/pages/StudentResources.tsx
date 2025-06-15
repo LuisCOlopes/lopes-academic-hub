@@ -455,7 +455,7 @@ const StudentResources = () => {
             <p>• Material destinado exclusivamente para fins educacionais</p>
             <p>• Cite a fonte ao utilizar o material em trabalhos acadêmicos</p>
             <p>• Uso comercial não autorizado sem permissão prévia</p>
-            <p>• Relate problemas ou sugerências para: lclaudio@ufu.br</p>
+            <p>• Relate problemas ou sugestões para: <a href="mailto:lcol@ufu.br" className="text-blue-600 hover:text-blue-800 font-medium">lcol@ufu.br</a></p>
           </div>
         </div>
       </div>
