@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
-import AuthButton from './AuthButton';
 import {
   Home,
   User,
@@ -82,10 +81,7 @@ const AcademicSidebar = () => {
         </div>
         
         <div className="mt-5 px-4">
-          <div className="flex items-center gap-2 mb-4">
-            <LanguageSelector />
-            <AuthButton />
-          </div>
+          <LanguageSelector />
         </div>
 
         <nav className="mt-5 flex-1 px-2 space-y-1">
