@@ -10,18 +10,16 @@ import { pagesTranslations } from './pages';
 import { speakingTranslations } from './speaking';
 import { serviceTranslations } from './service';
 import { leadershipTranslations } from './leadership';
-import { newsTranslations } from './news';
-import { mediaTranslations } from './media';
-import { communityTranslations } from './community';
 import { workshopsTranslations } from './workshops';
-import { involvementTranslations } from './involvement';
-import { podcastTranslations } from './podcast';
-import { blogTranslations } from './blog';
 import { commonTranslations } from './common';
 import { speakingWorkshopsTranslations } from './speaking-workshops';
 import { mediaPodcastTranslations } from './media-podcast';
 import { consultingTranslations } from './consulting';
 import { opportunitiesTranslations } from './opportunities';
+import { newsTranslations } from './news';
+import { blogTranslations } from './blog';
+import { involvementTranslations } from './involvement';
+import { communityTranslations } from './community';
 
 export const ptTranslations = {
   ...navigationTranslations,
@@ -35,16 +33,14 @@ export const ptTranslations = {
   ...speakingTranslations,
   ...serviceTranslations,
   ...leadershipTranslations,
-  ...newsTranslations,
-  ...mediaTranslations,
-  ...communityTranslations,
   ...workshopsTranslations,
-  ...involvementTranslations,
-  ...podcastTranslations,
-  ...blogTranslations,
   ...commonTranslations,
   ...speakingWorkshopsTranslations,
   ...mediaPodcastTranslations,
   ...consultingTranslations,
   ...opportunitiesTranslations,
+  ...newsTranslations,
+  ...blogTranslations,
+  ...involvementTranslations,
+  ...communityTranslations,
 };
