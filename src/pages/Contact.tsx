@@ -299,21 +299,19 @@ const Contact = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full justify-start"
-                  onClick={() => handleDownload('contact-campusMap', 1)}
-                  disabled={isDownloading}
+                  onClick={() => window.open('https://ufu.br/sites/default/files/2024-06/mapa_campus_santa_monica_0.pdf', '_blank')}
                 >
                   <MapPin className="h-4 w-4 mr-2" />
-                  {isDownloading ? 'Baixando...' : t('campusMap')}
+                  {t('campusMap')}
                 </Button>
                 <Button 
                   variant="outline" 
                   size="sm" 
                   className="w-full justify-start"
-                  onClick={() => handleDownload('contact-directions', 1)}
-                  disabled={isDownloading}
+                  onClick={() => window.open('https://maps.app.goo.gl/BTPtReXhUnfjhmrb7', '_blank')}
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  {isDownloading ? 'Baixando...' : t('directionsToOffice')}
+                  Rota
                 </Button>
               </div>
             </div>
