@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import AcademicLayout from '@/components/AcademicLayout';
@@ -12,13 +11,16 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Calendar, Clock, MapPin, Video, Users } from 'lucide-react';
+import { Calendar, Clock, MapPin, Video, Users, Shield } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { meetingRequestSchema, type MeetingRequestForm } from '@/lib/validations';
 
 const Meeting = () => {
   const { t } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitCount, setSubmitCount] = useState(0);
+  const [lastSubmitTime, setLastSubmitTime] = useState<number | null>(null);
   
   const form = useForm<MeetingRequestForm>({
     resolver: zodResolver(meetingRequestSchema),
@@ -37,7 +39,31 @@ const Meeting = () => {
     },
   });
 
+  // Client-side rate limiting (basic protection)
+  const canSubmit = () => {
+    const now = Date.now();
+    const COOLDOWN_PERIOD = 30 * 1000; // 30 seconds between submissions
+    const MAX_SUBMISSIONS = 3; // max 3 submissions per session
+    
+    if (lastSubmitTime && now - lastSubmitTime < COOLDOWN_PERIOD) {
+      return false;
+    }
+    
+    if (submitCount >= MAX_SUBMISSIONS) {
+      return false;
+    }
+    
+    return true;
+  };
+
   const onSubmit = async (data: MeetingRequestForm) => {
+    if (!canSubmit()) {
+      toast.error('Aguarde antes de enviar outra solicitação.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
     try {
       console.log('Submitting meeting request:', data);
       
@@ -50,19 +76,36 @@ const Meeting = () => {
 
       if (error) {
         console.error('Submission error:', error);
-        toast.error('Erro ao enviar solicitação. Tente novamente.');
+        
+        // Handle specific error types
+        if (error.message?.includes('429') || error.message?.includes('rate limit')) {
+          toast.error('Muitas tentativas. Tente novamente em alguns minutos.');
+        } else if (error.message?.includes('400')) {
+          toast.error('Dados inválidos. Verifique os campos e tente novamente.');
+        } else {
+          toast.error('Erro ao enviar solicitação. Tente novamente.');
+        }
         return;
       }
 
       console.log('Submission successful:', result);
       toast.success('Solicitação enviada com sucesso! Você receberá uma resposta em até 48 horas.');
+      
+      // Update submission tracking
+      setSubmitCount(prev => prev + 1);
+      setLastSubmitTime(Date.now());
+      
       form.reset();
       
     } catch (error) {
       console.error('Unexpected error:', error);
       toast.error('Erro inesperado. Tente novamente.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
+  const isSubmitDisabled = isSubmitting || !canSubmit();
 
   return (
     <AcademicLayout>
@@ -286,11 +329,18 @@ const Meeting = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-ufu-blue hover:bg-ufu-navy text-white"
-                    disabled={form.formState.isSubmitting}
+                    className="w-full bg-ufu-blue hover:bg-ufu-navy text-white disabled:opacity-50"
+                    disabled={isSubmitDisabled}
                   >
-                    {form.formState.isSubmitting ? t('sending') : t('sendRequest')}
+                    {isSubmitting ? t('sending') : t('sendRequest')}
                   </Button>
+                  
+                  {submitCount >= 3 && (
+                    <div className="flex items-center gap-2 text-amber-600 text-sm">
+                      <Shield className="h-4 w-4" />
+                      <span>Limite de envios atingido para esta sessão</span>
+                    </div>
+                  )}
                 </form>
               </Form>
             </Card>
