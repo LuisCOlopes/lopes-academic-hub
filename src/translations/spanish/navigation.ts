@@ -2,6 +2,8 @@
 export const navigationTranslations = {
   // Navigation
   home: 'Inicio',
+  academic: 'Académico',
+  academicProfile: 'Perfil Académico',
   about: 'Acerca de',
   research: 'Investigación',
   projects: 'Proyectos',
@@ -20,6 +22,7 @@ export const navigationTranslations = {
   service: 'Servicios',
   leadership: 'Liderazgo',
   getInvolved: 'Participa',
+  involvement: 'Participa',
   community: 'Comunidad',
   podcast: 'Podcast',
   media: 'Medios',
@@ -30,4 +33,9 @@ export const navigationTranslations = {
   academicHub: 'Hub Académico',
   speakingWorkshops: 'Conferencias & Talleres',
   mediaWorkshops: 'Medios & Podcast',
+  mediaPodcast: 'Medios & Podcast',
+  materials: 'Materiales',
+  material: 'Materiales',
+  meeting: 'Reunión',
+  energyTransition: 'Transición Energética',
 };
