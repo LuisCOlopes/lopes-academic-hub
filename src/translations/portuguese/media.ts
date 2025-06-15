@@ -36,4 +36,5 @@ export const mediaTranslations = {
   videoInterviews: 'Entrevistas em Vídeo',
   podcastAppearances: 'Aparições em Podcast',
   mediaKit: 'Kit de Mídia',
+  pressReleases: 'Comunicados à Imprensa'
 };

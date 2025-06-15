@@ -21,6 +21,7 @@ import { blogTranslations } from './blog';
 import { involvementTranslations } from './involvement';
 import { communityTranslations } from './community';
 import { publicationsTranslations } from './publications';
+import { mediaTranslations } from './media';
 
 export const pt = {
   ...navigationTranslations,
@@ -45,4 +46,5 @@ export const pt = {
   ...involvementTranslations,
   ...communityTranslations,
   ...publicationsTranslations,
+  ...mediaTranslations,
 };
