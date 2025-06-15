@@ -86,4 +86,13 @@ export const researchTranslations = {
   generalStatistics: 'General Statistics',
   mastersStudents: 'Master\'s Students',
   specialistStudents: 'Specialist Students',
+  // New Alumni translations
+  phdSupervised: 'PhD Graduates - Supervised',
+  phdCoSupervised: 'PhD Graduates - Co-supervised',
+  mastersSupervised: 'Master\'s Dissertations - Supervised',
+  mastersCoSupervised: 'Master\'s Dissertations - Co-supervised',
+  doctorate: 'PhD',
+  doctorateCoSupervision: 'PhD (Co-supervision)',
+  masters: 'Master\'s',
+  mastersCoSupervision: 'Master\'s (Co-supervision)',
 };

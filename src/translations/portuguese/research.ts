@@ -86,4 +86,13 @@ export const researchTranslations = {
   generalStatistics: 'Estatísticas Gerais',
   mastersStudents: 'Estudantes de Mestrado',
   specialistStudents: 'Estudantes de Especialização',
+  // New Alumni translations
+  phdSupervised: 'Doutores Formados - Orientações',
+  phdCoSupervised: 'Doutores Formados - Coorientações',
+  mastersSupervised: 'Dissertações Orientadas',
+  mastersCoSupervised: 'Dissertações Coorientadas',
+  doctorate: 'Doutorado',
+  doctorateCoSupervision: 'Doutorado (Coorientação)',
+  masters: 'Mestrado',
+  mastersCoSupervision: 'Mestrado (Coorientação)',
 };
