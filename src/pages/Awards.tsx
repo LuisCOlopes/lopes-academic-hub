@@ -12,7 +12,9 @@ const Awards = () => {
   const awards = [
     {
       year: '2024',
-      title: 'Poster Destaque no III PSE-BR',
+      title: t('language') === 'pt' ? 'Poster Destaque no III PSE-BR' :
+             t('language') === 'en' ? 'Outstanding Poster at III PSE-BR' :
+             'Póster Destacado en III PSE-BR',
       organization: 'Process Systems Engineering Brasil',
       description: t('language') === 'pt' ? 'Reconhecimento por pesquisa de destaque em engenharia de sistemas de processos' : 
                    t('language') === 'en' ? 'Recognition for outstanding research in process systems engineering' :
@@ -22,8 +24,12 @@ const Awards = () => {
     },
     {
       year: '2022',
-      title: '1º Lugar Dissertação de Mestrado FEELT',
-      organization: 'Faculdade de Engenharia Elétrica - UFU',
+      title: t('language') === 'pt' ? '1º Lugar Dissertação de Mestrado FEELT' :
+             t('language') === 'en' ? '1st Place Master\'s Dissertation FEELT' :
+             '1er Lugar Tesis de Maestría FEELT',
+      organization: t('language') === 'pt' ? 'Faculdade de Engenharia Elétrica - UFU' :
+                    t('language') === 'en' ? 'Faculty of Electrical Engineering - UFU' :
+                    'Facultad de Ingeniería Eléctrica - UFU',
       description: t('language') === 'pt' ? 'Orientação premiada: "Controle tolerante de quadricópteros em cenários com falhas em atuadores e sensores" - Autor: Kenji Fabiano Ávila Okada' :
                    t('language') === 'en' ? 'Award-winning supervision: "Fault-tolerant control of quadcopters in scenarios with actuator and sensor failures" - Author: Kenji Fabiano Ávila Okada' :
                    'Supervisión premiada: "Control tolerante a fallas de cuadricópteros en escenarios con fallas en actuadores y sensores" - Autor: Kenji Fabiano Ávila Okada',
@@ -45,8 +51,12 @@ const Awards = () => {
     },
     {
       year: '1997',
-      title: 'Outstanding Performance in the Qualifying/General Examination',
-      organization: 'Chemical Engineering Department at LU (E.U.A.)',
+      title: t('language') === 'pt' ? 'Prêmio - Outstanding Performance in the Qualifying/General Examination' :
+             t('language') === 'en' ? 'Outstanding Performance in the Qualifying/General Examination' :
+             'Premio - Desempeño Excepcional en el Examen de Calificación/General',
+      organization: t('language') === 'pt' ? 'Chemical Engineering Department at LU (E.U.A.)' :
+                    t('language') === 'en' ? 'Chemical Engineering Department at LU (USA)' :
+                    'Departamento de Ingeniería Química at LU (EE.UU.)',
       description: t('language') === 'pt' ? 'Desempenho excepcional no exame de qualificação geral' :
                    t('language') === 'en' ? 'Outstanding performance in the qualifying/general examination' :
                    'Desempeño excepcional en el examen de calificación general',
@@ -54,7 +64,9 @@ const Awards = () => {
     },
     {
       year: '2012',
-      title: 'Prêmio Chemtech de Incentivo à Pesquisa',
+      title: t('language') === 'pt' ? 'Prêmio Chemtech de Incentivo à Pesquisa' :
+             t('language') === 'en' ? 'Chemtech Research Incentive Award' :
+             'Premio Chemtech de Incentivo a la Investigación',
       organization: 'ABEQ - Chemtech',
       description: t('language') === 'pt' ? 'Reconhecimento em Simulação, Otimização e Controle de Processos' :
                    t('language') === 'en' ? 'Recognition in Simulation, Optimization and Process Control' :
@@ -63,7 +75,9 @@ const Awards = () => {
     },
     {
       year: '2007',
-      title: 'Artigo de Destaque V SNCA',
+      title: t('language') === 'pt' ? 'Artigo de Destaque V SNCA' :
+             t('language') === 'en' ? 'Outstanding Article V SNCA' :
+             'Artículo Destacado V SNCA',
       organization: 'AINST-IEEE-UFBA',
       description: t('language') === 'pt' ? 'Artigo destacado no V Seminário Nacional de Controle e Automação' :
                    t('language') === 'en' ? 'Featured article at the V National Seminar on Control and Automation' :
@@ -72,7 +86,9 @@ const Awards = () => {
     },
     {
       year: '2003',
-      title: '2º Melhor Artigo do III Seminário Nacional',
+      title: t('language') === 'pt' ? '2º Melhor Artigo do III Seminário Nacional' :
+             t('language') === 'en' ? '2nd Best Paper of the III National Seminar' :
+             '2do Mejor Artículo del III Seminario Nacional',
       organization: 'AINST, IEEE e UFBA',
       description: t('language') === 'pt' ? 'Segundo melhor artigo do III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações' :
                    t('language') === 'en' ? 'Second best paper of the III National Seminar on Industrial, Electrical and Telecommunications Control and Automation' :
@@ -93,12 +109,14 @@ const Awards = () => {
         {
           journal: 'Ciência & Engenharia',
           role: t('editor'),
-          period: '15+ anos - ' + t('current')
+          period: '15+ ' + (t('language') === 'pt' ? 'anos' : t('language') === 'en' ? 'years' : 'años') + ' - ' + t('current')
         }
       ]
     },
     {
-      title: 'Revisor Ad Hoc',
+      title: t('language') === 'pt' ? 'Revisor Ad Hoc' :
+             t('language') === 'en' ? 'Ad Hoc Reviewer' :
+             'Revisor Ad Hoc',
       organization: 'Chemical Engineering Science, Industrial & Engineering Chemistry Research',
       period: '2015 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
       description: t('language') === 'pt' ? 'Revisor de artigos científicos em periódicos internacionais de alto impacto' :
@@ -221,7 +239,13 @@ const Awards = () => {
                         className="inline-flex items-center gap-2 text-ufu-blue hover:text-ufu-navy text-sm"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        {award.link.includes('repositorio.ufu.br') ? 'Link para download' : 'Visitar Site'}
+                        {award.link.includes('repositorio.ufu.br') ? 
+                          (t('language') === 'pt' ? 'Link para download' : 
+                           t('language') === 'en' ? 'Download link' : 
+                           'Enlace de descarga') : 
+                          (t('language') === 'pt' ? 'Visitar Site' :
+                           t('language') === 'en' ? 'Visit Site' :
+                           'Visitar Sitio')}
                       </a>
                     )}
                   </div>

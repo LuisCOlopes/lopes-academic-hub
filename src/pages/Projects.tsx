@@ -12,24 +12,36 @@ const Projects = () => {
 
   const activeProjects = [
     {
-      title: t('autonomousSystemProject'),
-      description: t('autonomousSystemDescription'),
+      title: t('language') === 'pt' ? 'Sistemas Autônomos Avançados' :
+             t('language') === 'en' ? 'Advanced Autonomous Systems' :
+             'Sistemas Autónomos Avanzados',
+      description: t('language') === 'pt' ? 'Desenvolvimento de sistemas autônomos para controle de processos químicos com capacidades avançadas de monitoramento e tomada de decisões.' :
+                   t('language') === 'en' ? 'Development of autonomous systems for chemical process control with advanced monitoring and decision-making capabilities.' :
+                   'Desarrollo de sistemas autónomos para control de procesos químicos con capacidades avanzadas de monitoreo y toma de decisiones.',
       funding: 'R$ 450.000',
       duration: '2023-2025',
       team: 4,
       status: 'active'
     },
     {
-      title: t('energyTransitionProject'),
-      description: t('energyTransitionDescription'),
+      title: t('language') === 'pt' ? 'Transição Energética Sustentável' :
+             t('language') === 'en' ? 'Sustainable Energy Transition' :
+             'Transición Energética Sostenible',
+      description: t('language') === 'pt' ? 'Pesquisa focada na transição para fontes de energia renovável em processos industriais.' :
+                   t('language') === 'en' ? 'Research focused on transition to renewable energy sources in industrial processes.' :
+                   'Investigación enfocada en la transición a fuentes de energía renovable en procesos industriales.',
       funding: 'R$ 320.000',
       duration: '2024-2026',
       team: 3,
       status: 'active'
     },
     {
-      title: t('dynamicOperabilityProject'),
-      description: t('dynamicOperabilityDescription'),
+      title: t('language') === 'pt' ? 'Análise de Operabilidade Dinâmica' :
+             t('language') === 'en' ? 'Dynamic Operability Analysis' :
+             'Análisis de Operabilidad Dinámica',
+      description: t('language') === 'pt' ? 'Análise e otimização da operabilidade dinâmica em processos químicos para melhorar flexibilidade e desempenho.' :
+                   t('language') === 'en' ? 'Analysis and optimization of dynamic operability in chemical processes to improve flexibility and performance.' :
+                   'Análisis y optimización de la operabilidad dinámica en procesos químicos para mejorar flexibilidad y rendimiento.',
       funding: 'R$ 280.000',
       duration: '2023-2024',
       team: 2,
@@ -39,8 +51,12 @@ const Projects = () => {
 
   const completedProjects = [
     {
-      title: t('faultTolerantControlProject'),
-      description: t('faultTolerantControlDescription'),
+      title: t('language') === 'pt' ? 'Controle Tolerante a Falhas' :
+             t('language') === 'en' ? 'Fault-Tolerant Control Systems' :
+             'Sistemas de Control Tolerantes a Fallas',
+      description: t('language') === 'pt' ? 'Desenvolvimento de sistemas de controle tolerantes a falhas para garantir operação segura e confiável de processos químicos.' :
+                   t('language') === 'en' ? 'Development of fault-tolerant control systems to ensure safe and reliable operation of chemical processes.' :
+                   'Desarrollo de sistemas de control tolerantes a fallas para garantizar operación segura y confiable de procesos químicos.',
       funding: 'R$ 380.000',
       duration: '2020-2023',
       team: 5,
@@ -48,8 +64,12 @@ const Projects = () => {
       status: 'completed'
     },
     {
-      title: t('artificialIntelligenceProject'),
-      description: t('artificialIntelligenceDescription'),
+      title: t('language') === 'pt' ? 'Inteligência Artificial em Controle' :
+             t('language') === 'en' ? 'Artificial Intelligence in Control' :
+             'Inteligencia Artificial en Control',
+      description: t('language') === 'pt' ? 'Aplicação de técnicas de inteligência artificial em controle e otimização de processos para automação aprimorada.' :
+                   t('language') === 'en' ? 'Application of artificial intelligence techniques in process control and optimization for enhanced automation.' :
+                   'Aplicación de técnicas de inteligencia artificial en control y optimización de procesos para automatización mejorada.',
       funding: 'R$ 420.000',
       duration: '2019-2022',
       team: 6,
@@ -128,7 +148,9 @@ const Projects = () => {
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
-                    Ver Detalhes
+                    {t('language') === 'pt' ? 'Ver Detalhes' :
+                     t('language') === 'en' ? 'View Details' :
+                     'Ver Detalles'}
                   </Button>
                 </Card>
               ))}
@@ -145,7 +167,11 @@ const Projects = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
-                        <Badge variant="secondary">{t('completedProjects').split(' ')[0]}</Badge>
+                        <Badge variant="secondary">
+                          {t('language') === 'pt' ? 'Concluído' :
+                           t('language') === 'en' ? 'Completed' :
+                           'Completado'}
+                        </Badge>
                       </div>
                       <p className="text-gray-600 mb-4">{project.description}</p>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-500">
@@ -169,7 +195,9 @@ const Projects = () => {
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
-                    Ver Resultados
+                    {t('language') === 'pt' ? 'Ver Resultados' :
+                     t('language') === 'en' ? 'View Results' :
+                     'Ver Resultados'}
                   </Button>
                 </Card>
               ))}
