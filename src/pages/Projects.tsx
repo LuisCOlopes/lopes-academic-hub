@@ -128,7 +128,11 @@ const Projects = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
-                        <Badge className="bg-green-100 text-green-800">{t('ongoing')}</Badge>
+                        <Badge className="bg-green-100 text-green-800">
+                          {t('language') === 'pt' ? 'Em Andamento' :
+                           t('language') === 'en' ? 'Ongoing' :
+                           'En Curso'}
+                        </Badge>
                       </div>
                       <p className="text-gray-600 mb-4">{project.description}</p>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-500">
@@ -138,7 +142,7 @@ const Projects = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           <Users className="h-4 w-4" />
-                          {project.team} {t('students')}
+                          {project.team} {t('language') === 'pt' ? 'estudantes' : t('language') === 'en' ? 'students' : 'estudiantes'}
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
@@ -181,7 +185,7 @@ const Projects = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           <Users className="h-4 w-4" />
-                          {project.team} {t('students')}
+                          {project.team} {t('language') === 'pt' ? 'estudantes' : t('language') === 'en' ? 'students' : 'estudiantes'}
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
@@ -189,7 +193,7 @@ const Projects = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           <BookOpen className="h-4 w-4" />
-                          {project.publications} {t('publications')}
+                          {project.publications} {t('language') === 'pt' ? 'publicações' : t('language') === 'en' ? 'publications' : 'publicaciones'}
                         </div>
                       </div>
                     </div>
