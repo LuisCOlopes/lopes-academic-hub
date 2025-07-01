@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -142,16 +141,6 @@ const Awards = () => {
       description: t('language') === 'pt' ? 'Escolhido como paraninfo pelos formandos de Engenharia Química' :
                    t('language') === 'en' ? 'Chosen as graduation speaker by Chemical Engineering graduates' :
                    'Elegido como padrino por los graduados de Ingeniería Química'
-    },
-    {
-      title: t('language') === 'pt' ? 'Membro de Comitê Científico' :
-             t('language') === 'en' ? 'Scientific Committee Member' :
-             'Miembro del Comité Científico',
-      organization: 'COBEQ, ENBEQ, PSE',
-      period: '2010 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
-      description: t('language') === 'pt' ? 'Participação em comitês científicos de congressos nacionais e internacionais' :
-                   t('language') === 'en' ? 'Participation in scientific committees of national and international conferences' :
-                   'Participación en comités científicos de congresos nacionales e internacionales'
     }
   ];
 
