@@ -1,3 +1,4 @@
+
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -13,7 +14,9 @@ const Awards = () => {
       year: '2024',
       title: 'Poster Destaque no III PSE-BR',
       organization: 'Process Systems Engineering Brasil',
-      description: 'Reconhecimento por pesquisa de destaque em engenharia de sistemas de processos',
+      description: t('language') === 'pt' ? 'Reconhecimento por pesquisa de destaque em engenharia de sistemas de processos' : 
+                   t('language') === 'en' ? 'Recognition for outstanding research in process systems engineering' :
+                   'Reconocimiento por investigación destacada en ingeniería de sistemas de procesos',
       type: 'research',
       location: 'São Paulo'
     },
@@ -21,100 +24,123 @@ const Awards = () => {
       year: '2022',
       title: '1º Lugar Dissertação de Mestrado FEELT',
       organization: 'Faculdade de Engenharia Elétrica - UFU',
-      description: 'Orientação premiada: "Controle tolerante de quadricópteros em cenários com falhas em atuadores e sensores" - Autor: Kenji Fabiano Ávila Okada',
+      description: t('language') === 'pt' ? 'Orientação premiada: "Controle tolerante de quadricópteros em cenários com falhas em atuadores e sensores" - Autor: Kenji Fabiano Ávila Okada' :
+                   t('language') === 'en' ? 'Award-winning supervision: "Fault-tolerant control of quadcopters in scenarios with actuator and sensor failures" - Author: Kenji Fabiano Ávila Okada' :
+                   'Supervisión premiada: "Control tolerante a fallas de cuadricópteros en escenarios con fallas en actuadores y sensores" - Autor: Kenji Fabiano Ávila Okada',
       type: 'teaching',
       link: 'https://repositorio.ufu.br/handle/123456789/34929',
-      details: 'Orientador: Prof. Dr. Aniel Silva de Morais, Coorientador: Prof. Dr. Luís Cláudio Oliveira Lopes'
+      details: t('language') === 'pt' ? 'Orientador: Prof. Dr. Aniel Silva de Morais, Coorientador: Prof. Dr. Luís Cláudio Oliveira Lopes' :
+               t('language') === 'en' ? 'Supervisor: Prof. Dr. Aniel Silva de Morais, Co-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes' :
+               'Supervisor: Prof. Dr. Aniel Silva de Morais, Co-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes'
     },
     {
-      year: '2020',
-      title: 'Menção Honrosa - Orientação de TCC',
-      organization: 'Faculdade de Engenharia Química - UFU',
-      description: 'Reconhecimento pela excelência na orientação de Trabalho de Conclusão de Curso',
-      type: 'teaching'
+      year: '1997',
+      title: 'Phi Beta Delta Honor for International Scholars, Beta Pi Chapter of Phi Beta Delta LU (E.U.A.)',
+      organization: 'Louisiana University',
+      description: t('language') === 'pt' ? 'Honra internacional para acadêmicos destacados' :
+                   t('language') === 'en' ? 'International honor for outstanding scholars' :
+                   'Honor internacional para académicos destacados',
+      type: 'research'
     },
     {
-      year: '2018',
-      title: 'Prêmio de Excelência em Ensino',
-      organization: 'Universidade Federal de Uberlândia',
-      description: 'Reconhecimento pela dedicação e inovação no ensino de engenharia química',
-      type: 'teaching'
+      year: '1997',
+      title: 'Outstanding Performance in the Qualifying/General Examination',
+      organization: 'Chemical Engineering Department at LU (E.U.A.)',
+      description: t('language') === 'pt' ? 'Desempenho excepcional no exame de qualificação geral' :
+                   t('language') === 'en' ? 'Outstanding performance in the qualifying/general examination' :
+                   'Desempeño excepcional en el examen de calificación general',
+      type: 'research'
     },
     {
       year: '2015',
-      title: 'Melhor Trabalho em Controle de Processos',
+      title: t('language') === 'pt' ? 'Melhor Trabalho em Controle de Processos' :
+             t('language') === 'en' ? 'Best Work in Process Control' :
+             'Mejor Trabajo en Control de Procesos',
       organization: 'COBEQ - Congresso Brasileiro de Engenharia Química',
-      description: 'Trabalho premiado em sessão técnica de controle de processos químicos',
+      description: t('language') === 'pt' ? 'Trabalho premiado em sessão técnica de controle de processos químicos' :
+                   t('language') === 'en' ? 'Award-winning work in technical session on chemical process control' :
+                   'Trabajo premiado en sesión técnica de control de procesos químicos',
       type: 'research'
     },
     {
       year: '2012',
       title: 'Prêmio Chemtech de Incentivo à Pesquisa',
       organization: 'ABEQ - Chemtech',
-      description: 'Reconhecimento em Simulação, Otimização e Controle de Processos',
-      type: 'research'
-    },
-    {
-      year: '2010',
-      title: 'Bolsa de Produtividade em Pesquisa',
-      organization: 'CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico',
-      description: 'Reconhecimento pela produtividade e excelência em pesquisa científica',
-      type: 'fellowship'
-    },
-    {
-      year: '2008',
-      title: 'Prêmio Jovem Pesquisador',
-      organization: 'ABEQ - Associação Brasileira de Engenharia Química',
-      description: 'Reconhecimento como jovem pesquisador promissor na área de engenharia química',
+      description: t('language') === 'pt' ? 'Reconhecimento em Simulação, Otimização e Controle de Processos' :
+                   t('language') === 'en' ? 'Recognition in Simulation, Optimization and Process Control' :
+                   'Reconocimiento en Simulación, Optimización y Control de Procesos',
       type: 'research'
     },
     {
       year: '2007',
       title: 'Artigo de Destaque V SNCA',
       organization: 'AINST-IEEE-UFBA',
-      description: 'Artigo destacado no V Seminário Nacional de Controle e Automação',
-      type: 'research'
-    },
-    {
-      year: '2005',
-      title: 'Melhor Apresentação Oral',
-      organization: 'ENBEQ - Encontro Brasileiro de Engenharia Química',
-      description: 'Reconhecimento pela qualidade da apresentação em congresso nacional',
+      description: t('language') === 'pt' ? 'Artigo destacado no V Seminário Nacional de Controle e Automação' :
+                   t('language') === 'en' ? 'Featured article at the V National Seminar on Control and Automation' :
+                   'Artículo destacado en el V Seminario Nacional de Control y Automatización',
       type: 'research'
     },
     {
       year: '2003',
       title: '2º Melhor Artigo do III Seminário Nacional',
       organization: 'AINST, IEEE e UFBA',
-      description: 'Segundo melhor artigo do III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações',
+      description: t('language') === 'pt' ? 'Segundo melhor artigo do III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações' :
+                   t('language') === 'en' ? 'Second best paper of the III National Seminar on Industrial, Electrical and Telecommunications Control and Automation' :
+                   'Segundo mejor artículo del III Seminario Nacional de Control y Automatización Industrial, Eléctrica y de Telecomunicaciones',
       type: 'research'
     }
   ];
 
   const recognitions = [
     {
-      title: 'Membro do Conselho Editorial',
-      organization: 'Revista Brasileira de Engenharia Química',
-      period: '2020 - presente',
-      description: 'Participação no conselho editorial da principal revista da área no Brasil'
+      title: t('language') === 'pt' ? 'Membro do Conselho Editorial' :
+             t('language') === 'en' ? 'Editorial Board Member' :
+             'Miembro del Consejo Editorial',
+      organization: t('language') === 'pt' ? 'Revista Brasileira de Engenharia Química' :
+                    t('language') === 'en' ? 'Brazilian Journal of Chemical Engineering' :
+                    'Revista Brasileña de Ingeniería Química',
+      period: '2020 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
+      description: t('language') === 'pt' ? 'Participação no conselho editorial da principal revista da área no Brasil' :
+                   t('language') === 'en' ? 'Participation in the editorial board of the main journal in the field in Brazil' :
+                   'Participación en el consejo editorial de la principal revista del área en Brasil'
     },
     {
       title: 'Revisor Ad Hoc',
       organization: 'Chemical Engineering Science, Industrial & Engineering Chemistry Research',
-      period: '2015 - presente',
-      description: 'Revisor de artigos científicos em periódicos internacionais de alto impacto'
+      period: '2015 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
+      description: t('language') === 'pt' ? 'Revisor de artigos científicos em periódicos internacionais de alto impacto' :
+                   t('language') === 'en' ? 'Reviewer of scientific articles in high-impact international journals' :
+                   'Revisor de artículos científicos en revistas internacionales de alto impacto'
     },
     {
-      title: 'Coordenador de Área',
-      organization: 'CAPES - Engenharia Química',
-      period: '2018 - 2022',
-      description: 'Coordenação de área na avaliação de programas de pós-graduação'
+      title: t('language') === 'pt' ? 'Professor Homenageado Formandos Engenharia Química UFU' :
+             t('language') === 'en' ? 'Honored Professor Chemical Engineering Graduates UFU' :
+             'Profesor Homenajeado Graduados Ingeniería Química UFU',
+      organization: 'UFU',
+      period: '1993-1, 1993-2, 1995',
+      description: t('language') === 'pt' ? 'Reconhecimento pelos formandos de Engenharia Química' :
+                   t('language') === 'en' ? 'Recognition by Chemical Engineering graduates' :
+                   'Reconocimiento por los graduados de Ingeniería Química'
     },
     {
-      title: 'Membro de Comitê Científico',
+      title: t('language') === 'pt' ? 'Professor Paraninfo Formandos Engenharia Química UFU' :
+             t('language') === 'en' ? 'Graduation Speaker Chemical Engineering UFU' :
+             'Profesor Padrino Graduados Ingeniería Química UFU',
+      organization: 'UFU',
+      period: '1994, 1995, 2005',
+      description: t('language') === 'pt' ? 'Escolhido como paraninfo pelos formandos de Engenharia Química' :
+                   t('language') === 'en' ? 'Chosen as graduation speaker by Chemical Engineering graduates' :
+                   'Elegido como padrino por los graduados de Ingeniería Química'
+    },
+    {
+      title: t('language') === 'pt' ? 'Membro de Comitê Científico' :
+             t('language') === 'en' ? 'Scientific Committee Member' :
+             'Miembro del Comité Científico',
       organization: 'COBEQ, ENBEQ, PSE',
-      period: '2010 - presente',
-      description: 'Participação em comitês científicos de congressos nacionais e internacionais'
+      period: '2010 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
+      description: t('language') === 'pt' ? 'Participação em comitês científicos de congressos nacionais e internacionais' :
+                   t('language') === 'en' ? 'Participation in scientific committees of national and international conferences' :
+                   'Participación en comités científicos de congresos nacionales e internacionales'
     }
   ];
 

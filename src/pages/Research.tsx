@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -9,6 +10,7 @@ import { BookOpen, Award, TrendingUp, Users, ExternalLink, Zap, Leaf, Factory, L
 
 const Research = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const currentProjects = [
     {
@@ -46,6 +48,14 @@ const Research = () => {
       funding: 'CNPq, CAPES, FAPEMIG'
     }
   ];
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
+  const handlePublicationsClick = () => {
+    navigate('/publications');
+  };
 
   return (
     <AcademicLayout>
@@ -315,18 +325,24 @@ const Research = () => {
           <Card className="p-8 mt-8 bg-gradient-to-r from-green-50 to-blue-50">
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-ufu-navy mb-4">
-                Interessado em Colaborar?
+                {t('interestedInCollaboration')}
               </h3>
               <p className="text-ufu-blue mb-6">
-                Estou sempre aberto a discutir oportunidades de pesquisa e parcerias 
-                em projetos relacionados à transição energética.
+                {t('collaborationDescription')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-ufu-teal hover:bg-ufu-teal/90 text-white">
-                  Entre em Contato
+                <Button 
+                  className="bg-ufu-teal hover:bg-ufu-teal/90 text-white"
+                  onClick={handleContactClick}
+                >
+                  {t('contactMe')}
                 </Button>
-                <Button variant="outline" className="border-ufu-teal text-ufu-teal hover:bg-ufu-teal/10">
-                  Saiba Mais sobre Pesquisas
+                <Button 
+                  variant="outline" 
+                  className="border-ufu-teal text-ufu-teal hover:bg-ufu-teal/10"
+                  onClick={handlePublicationsClick}
+                >
+                  {t('learnMoreResearch')}
                 </Button>
               </div>
             </div>

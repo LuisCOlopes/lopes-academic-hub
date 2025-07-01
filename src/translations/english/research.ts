@@ -1,3 +1,4 @@
+
 export const researchTranslations = {
   // Research page
   researchTitle: 'Research',
@@ -35,7 +36,7 @@ export const researchTranslations = {
   
   // Research areas detailed
   processControlArea: 'Process Control',
-  processControlDescription: 'Advanced control strategies for chemical processes',
+  processControlDescription: 'Development and Application of Process Control to Industrial Processes',
   optimizationArea: 'Process Optimization',
   optimizationDescription: 'Mathematical optimization techniques for industrial processes',
   safetyArea: 'Process Safety',
@@ -117,4 +118,10 @@ export const researchTranslations = {
   specialistsFormed: 'Specialists Formed',
   doctorsFormed: 'Doctors Formed',
   mastersFormed: 'Masters Formed',
+  
+  // Collaboration section - New translations
+  interestedInCollaboration: 'Interested in Collaboration?',
+  collaborationDescription: 'I am always open to discussing research opportunities and partnerships in projects related to energy transition.',
+  contactMe: 'Contact Me',
+  learnMoreResearch: 'Learn More about Research',
 };
