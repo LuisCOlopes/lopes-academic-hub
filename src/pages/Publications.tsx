@@ -1,3 +1,4 @@
+
 import AcademicLayout from '@/components/AcademicLayout';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,7 +17,9 @@ const Publications = () => {
       volume: "15",
       pages: "100229",
       type: "Journal Article",
-      doi: "10.1016/j.dche.2025.100229"
+      doi: "10.1016/j.dche.2025.100229",
+      paperUrl: "https://doi.org/10.1016/j.dche.2025.100229",
+      pdfUrl: "https://www.sciencedirect.com/science/article/pii/S2772508125000134/pdfft?md5=ebd7fc256361b889db4c04255b62686c&pid=1-s2.0-S2772508125000134-main.pdf"
     },
     {
       title: "Simulation of carbon monoxide dispersion released from a fleet in urban environment",
@@ -25,7 +28,9 @@ const Publications = () => {
       year: 2025,
       volume: "42",
       pages: "1",
-      type: "Journal Article"
+      type: "Journal Article",
+      doi: "10.1007/s43153-025-00534-7",
+      paperUrl: "https://doi.org/10.1007/s43153-025-00534-7"
     },
     {
       title: "Detecção e diagnóstico de falhas em processos químicos: aplicação de inteligência artificial",
@@ -35,7 +40,8 @@ const Publications = () => {
       volume: "22",
       pages: "e3805",
       type: "Journal Article",
-      doi: "10.55905/oelv22n3-137"
+      doi: "10.55905/oelv22n3-137",
+      paperUrl: "https://doi.org/10.55905/oelv22n3-137"
     },
     {
       title: "Fault-Tolerant Control for Quadcopters Under Actuator and Sensor Faults",
@@ -45,7 +51,9 @@ const Publications = () => {
       volume: "24",
       pages: "7299 - 22",
       type: "Journal Article",
-      doi: "10.3390/s24227299"
+      doi: "10.3390/s24227299",
+      paperUrl: "https://doi.org/10.3390/s24227299",
+      pdfUrl: "https://www.mdpi.com/1424-8220/24/22/7299"
     },
     {
       title: "Detection of Volatile Organic Compounds (VOCs) in Indoor Environments Using Nano Quadcopter",
@@ -55,7 +63,9 @@ const Publications = () => {
       volume: "7",
       pages: "660",
       type: "Journal Article",
-      doi: "10.3390/drones7110660"
+      doi: "10.3390/drones7110660",
+      paperUrl: "https://doi.org/10.3390/drones7110660",
+      pdfUrl: "https://www.mdpi.com/2504-446X/7/11/660"
     },
     {
       title: "Mathematical modeling of solids-drilling fluid separation in shale shakers in oil fields: A state of art review",
@@ -65,7 +75,8 @@ const Publications = () => {
       volume: "208",
       pages: "109270",
       type: "Journal Article",
-      doi: "10.1016/j.petrol.2021.109270"
+      doi: "10.1016/j.petrol.2021.109270",
+      paperUrl: "https://doi.org/10.1016/j.petrol.2021.109270"
     },
     {
       title: "Modified Artificial Potential Field for the Path Planning of Aircraft Swarms in Three-Dimensional Environments",
@@ -75,7 +86,9 @@ const Publications = () => {
       volume: "22",
       pages: "1558",
       type: "Journal Article",
-      doi: "10.3390/s22041558"
+      doi: "10.3390/s22041558",
+      paperUrl: "https://doi.org/10.3390/s22041558",
+      pdfUrl: "https://www.mdpi.com/1424-8220/22/4/1558"
     },
     {
       title: "Enhanced algorithm for randomised model structure selection",
@@ -85,7 +98,8 @@ const Publications = () => {
       volume: "53",
       pages: "1 - 20",
       type: "Journal Article",
-      doi: "10.1080/00207721.2021.1988755"
+      doi: "10.1080/00207721.2021.1988755",
+      paperUrl: "https://doi.org/10.1080/00207721.2021.1988755"
     },
     {
       title: "Fault-tolerant control by means of moving horizon virtual actuators: Concepts and experimental investigation",
@@ -95,7 +109,8 @@ const Publications = () => {
       volume: "107",
       pages: "104683",
       type: "Journal Article",
-      doi: "10.1016/j.conengprac.2020.104683"
+      doi: "10.1016/j.conengprac.2020.104683",
+      paperUrl: "https://doi.org/10.1016/j.conengprac.2020.104683"
     }
   ];
 
@@ -116,7 +131,8 @@ const Publications = () => {
       authors: "ROCHA, ROSIANE R.; OLIVEIRA-LOPES, LUÍS C.",
       publisher: "Elsevier",
       year: 2018,
-      pages: "727-732"
+      pages: "727-732",
+      chapterUrl: "https://doi.org/10.1016/B978-0-444-64241-7.50116-6"
     },
     {
       title: "A Closed-loop Dynamic Rescheduling Strategy Applied to Chemical Production Problems",
@@ -124,7 +140,8 @@ const Publications = () => {
       authors: "de Paula, Frederico S.; Neiro, Sérgio M.S.; Murata, Valéria V.; OLIVEIRA-LOPES, LUÍS C.",
       publisher: "Elsevier",
       year: 2018,
-      pages: "1369-1374"
+      pages: "1369-1374",
+      chapterUrl: "https://doi.org/10.1016/B978-0-444-64241-7.50223-8"
     },
     {
       title: "A Cooperative Distributed Model Predictive Control for Nonlinear Systems with Automatic Partitioning",
@@ -132,7 +149,8 @@ const Publications = () => {
       authors: "ROCHA, ROSIANE R.; OLIVEIRA-LOPES, LUÍS C.",
       publisher: "Elsevier",
       year: 2016,
-      pages: "2205-2210"
+      pages: "2205-2210",
+      chapterUrl: "https://doi.org/10.1016/B978-0-444-63428-3.50372-6"
     },
     {
       title: "Nonconventional Renewable Sources in Brazil and Their Impact on the Success of Bioenergy",
@@ -141,7 +159,8 @@ const Publications = () => {
       editors: "S. S. da Silva; A. K. Chandel",
       publisher: "Springer International Publishing",
       year: 2014,
-      pages: "413-435"
+      pages: "413-435",
+      chapterUrl: "https://link.springer.com/book/10.1007/978-3-319-05020-1"
     },
     {
       title: "Reconfigurable stabilizing control applied to a neutralization process",
@@ -149,7 +168,8 @@ const Publications = () => {
       authors: "COSTA, THIAGO V.; Fileti, Ana M.F.; OLIVEIRA-LOPES, LUÍS C.; SILVA, FLÁVIO V.",
       publisher: "Elsevier",
       year: 2012,
-      pages: "1652-1656"
+      pages: "1652-1656",
+      chapterUrl: "https://doi.org/10.1016/B978-0-444-59506-5.50161-9"
     },
     {
       title: "On l1-Predictive Control of Mixed-Logical Dynamical Systems",
@@ -157,7 +177,8 @@ const Publications = () => {
       authors: "de Souza Júnior, David L.; OLIVEIRA-LOPES, LUÍS C.",
       publisher: "Elsevier",
       year: 2009,
-      pages: "1401-1406"
+      pages: "1401-1406",
+      chapterUrl: "https://doi.org/10.1016/S1570-7946(09)70624-8"
     },
     {
       title: "Hybrid System Descriptions for Chemical Engineering Processes",
@@ -165,7 +186,8 @@ const Publications = () => {
       authors: "OLIVEIRA-LOPES, LUÍS C.",
       publisher: "Elsevier",
       year: 2009,
-      pages: "101-106"
+      pages: "101-106",
+      chapterUrl: "https://doi.org/10.1016/S1570-7946(09)70237-8"
     }
   ];
 
@@ -186,19 +208,19 @@ const Publications = () => {
           <section className="mb-12">
             <div className="grid md:grid-cols-4 gap-6">
               <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-academic-blue mb-2">50+</div>
+                <div className="text-3xl font-bold text-academic-blue mb-2">180+</div>
                 <div className="text-gray-600">{t('totalPublications')}</div>
               </Card>
               <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-academic-blue mb-2">1,200+</div>
+                <div className="text-3xl font-bold text-academic-blue mb-2">600+</div>
                 <div className="text-gray-600">{t('totalCitations')}</div>
               </Card>
               <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-academic-blue mb-2">18</div>
+                <div className="text-3xl font-bold text-academic-blue mb-2">12</div>
                 <div className="text-gray-600">{t('hIndex')}</div>
               </Card>
               <Card className="p-6 text-center">
-                <div className="text-3xl font-bold text-academic-blue mb-2">25</div>
+                <div className="text-3xl font-bold text-academic-blue mb-2">13</div>
                 <div className="text-gray-600">{t('i10Index')}</div>
               </Card>
             </div>
@@ -235,16 +257,28 @@ const Publications = () => {
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    {pub.doi && (
-                      <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue">
+                    {pub.paperUrl && (
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="text-academic-blue border-academic-blue"
+                        onClick={() => window.open(pub.paperUrl, '_blank')}
+                      >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         {t('viewPaper')}
                       </Button>
                     )}
-                    <Button variant="ghost" size="sm" className="text-gray-600">
-                      <FileText className="h-4 w-4 mr-2" />
-                      {t('downloadPdf')}
-                    </Button>
+                    {pub.pdfUrl && (
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="text-gray-600"
+                        onClick={() => window.open(pub.pdfUrl, '_blank')}
+                      >
+                        <FileText className="h-4 w-4 mr-2" />
+                        {t('downloadPdf')}
+                      </Button>
+                    )}
                   </div>
                 </Card>
               ))}
@@ -268,10 +302,17 @@ const Publications = () => {
                     {chapter.volume && <span>Vol. {chapter.volume}</span>}
                     <span>pp. {chapter.pages}</span>
                   </div>
-                  <Button variant="outline" size="sm" className="text-academic-blue border-academic-blue">
-                    <Link className="h-4 w-4 mr-2" />
-                    View Chapter
-                  </Button>
+                  {chapter.chapterUrl && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="text-academic-blue border-academic-blue"
+                      onClick={() => window.open(chapter.chapterUrl, '_blank')}
+                    >
+                      <Link className="h-4 w-4 mr-2" />
+                      {t('viewChapter')}
+                    </Button>
+                  )}
                 </Card>
               ))}
             </div>

@@ -5,4 +5,8 @@ export const awardsTranslations = {
   awardsSubtitle: 'Reconocimiento por excelencia en investigación, enseñanza y servicios académicos',
   awardsAndDistinctions: 'Premios y Distinciones',
   recognitionsAndServices: 'Reconocimientos y Servicios Académicos',
+  editorialWork: 'Trabajo Editorial',
+  associateEditor: 'Editor Asociado',
+  editor: 'Editor',
+  current: 'Actual',
 };

@@ -36,11 +36,12 @@ const Awards = () => {
     {
       year: '1997',
       title: 'Phi Beta Delta Honor for International Scholars, Beta Pi Chapter of Phi Beta Delta LU (E.U.A.)',
-      organization: 'Louisiana University',
+      organization: 'Lehigh University',
       description: t('language') === 'pt' ? 'Honra internacional para acadêmicos destacados' :
                    t('language') === 'en' ? 'International honor for outstanding scholars' :
                    'Honor internacional para académicos destacados',
-      type: 'research'
+      type: 'research',
+      link: 'https://www2.lehigh.edu/'
     },
     {
       year: '1997',
@@ -49,17 +50,6 @@ const Awards = () => {
       description: t('language') === 'pt' ? 'Desempenho excepcional no exame de qualificação geral' :
                    t('language') === 'en' ? 'Outstanding performance in the qualifying/general examination' :
                    'Desempeño excepcional en el examen de calificación general',
-      type: 'research'
-    },
-    {
-      year: '2015',
-      title: t('language') === 'pt' ? 'Melhor Trabalho em Controle de Processos' :
-             t('language') === 'en' ? 'Best Work in Process Control' :
-             'Mejor Trabajo en Control de Procesos',
-      organization: 'COBEQ - Congresso Brasileiro de Engenharia Química',
-      description: t('language') === 'pt' ? 'Trabalho premiado em sessão técnica de controle de processos químicos' :
-                   t('language') === 'en' ? 'Award-winning work in technical session on chemical process control' :
-                   'Trabajo premiado en sesión técnica de control de procesos químicos',
       type: 'research'
     },
     {
@@ -93,16 +83,19 @@ const Awards = () => {
 
   const recognitions = [
     {
-      title: t('language') === 'pt' ? 'Membro do Conselho Editorial' :
-             t('language') === 'en' ? 'Editorial Board Member' :
-             'Miembro del Consejo Editorial',
-      organization: t('language') === 'pt' ? 'Revista Brasileira de Engenharia Química' :
-                    t('language') === 'en' ? 'Brazilian Journal of Chemical Engineering' :
-                    'Revista Brasileña de Ingeniería Química',
-      period: '2020 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
-      description: t('language') === 'pt' ? 'Participação no conselho editorial da principal revista da área no Brasil' :
-                   t('language') === 'en' ? 'Participation in the editorial board of the main journal in the field in Brazil' :
-                   'Participación en el consejo editorial de la principal revista del área en Brasil'
+      title: t('editorialWork'),
+      items: [
+        {
+          journal: 'Brazilian Journal of Chemical Engineering',
+          role: t('associateEditor'),
+          period: '2009 - 2013'
+        },
+        {
+          journal: 'Ciência & Engenharia',
+          role: t('editor'),
+          period: '15+ anos - ' + t('current')
+        }
+      ]
     },
     {
       title: 'Revisor Ad Hoc',
@@ -228,7 +221,7 @@ const Awards = () => {
                         className="inline-flex items-center gap-2 text-ufu-blue hover:text-ufu-navy text-sm"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        Link para download
+                        {award.link.includes('repositorio.ufu.br') ? 'Link para download' : 'Visitar Site'}
                       </a>
                     )}
                   </div>
@@ -252,20 +245,38 @@ const Awards = () => {
                   </div>
                   
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-semibold text-ufu-navy">
-                        {recognition.title}
-                      </h3>
-                      <Badge variant="outline">{recognition.period}</Badge>
-                    </div>
+                    <h3 className="text-xl font-semibold text-ufu-navy mb-3">
+                      {recognition.title}
+                    </h3>
                     
-                    <p className="text-ufu-blue font-medium mb-2">
-                      {recognition.organization}
-                    </p>
-                    
-                    <p className="text-gray-600">
-                      {recognition.description}
-                    </p>
+                    {recognition.items ? (
+                      <div className="space-y-3">
+                        {recognition.items.map((item, itemIndex) => (
+                          <div key={itemIndex} className="border-l-2 border-ufu-blue pl-4">
+                            <p className="text-ufu-blue font-medium">{item.journal}</p>
+                            <p className="text-gray-600">{item.role} ({item.period})</p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <>
+                        {recognition.period && (
+                          <Badge variant="outline" className="mb-2">{recognition.period}</Badge>
+                        )}
+                        
+                        {recognition.organization && (
+                          <p className="text-ufu-blue font-medium mb-2">
+                            {recognition.organization}
+                          </p>
+                        )}
+                        
+                        {recognition.description && (
+                          <p className="text-gray-600">
+                            {recognition.description}
+                          </p>
+                        )}
+                      </>
+                    )}
                   </div>
                 </div>
               </Card>

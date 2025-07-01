@@ -13,6 +13,7 @@ export const publicationsTranslations = {
   viewPaper: 'View Paper',
   downloadPdf: 'Download PDF',
   visitProfile: 'Visit Profile',
+  viewChapter: 'View Chapter',
   googleScholarDescription: 'Access my complete metrics and citations on Google Scholar.',
   researchGateDescription: 'Connect with me and access my work on ResearchGate.',
   lattesCvDescription: 'Complete curriculum on CNPq Lattes platform.',
