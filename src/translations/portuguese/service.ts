@@ -1,6 +1,7 @@
 
 export const serviceTranslations = {
   // Service page
+  serviceTitle: 'Serviços',
   servicesProvided: 'Serviços Prestados',
   servicesSubtitle: 'Contribuições para a comunidade acadêmica e científica',
   consultingAndReview: 'Consultoria e Revisão',
@@ -36,4 +37,7 @@ export const serviceTranslations = {
   committeeParticipation: 'Participação em comitês',
   projectReview: 'Revisão de Projetos',
   panelServices: 'Serviços de painel',
+  leadershipTitle: 'Liderança',
+  leadershipSubtitle: 'Experiência em liderança acadêmica e administrativa',
+  currentLeadershipInitiatives: 'Iniciativas Atuais de Liderança',
 };

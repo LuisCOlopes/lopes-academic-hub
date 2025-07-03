@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -224,6 +223,38 @@ const SpeakingWorkshops = () => {
     }
   ];
 
+  const getStatisticsLabels = () => ({
+    totalLectures: t('language') === 'en' ? 'Total Lectures:' : 
+                   t('language') === 'es' ? 'Total de Conferencias:' : 
+                   'Total de Palestras:',
+    totalMiniCourses: t('language') === 'en' ? 'Total Mini-courses:' : 
+                      t('language') === 'es' ? 'Total de Mini-cursos:' : 
+                      'Total de Minicursos:',
+    yearsOfActivity: t('language') === 'en' ? 'Years of Activity:' : 
+                     t('language') === 'es' ? 'Años de Actividad:' : 
+                     'Anos de Atividade:',
+    participantsImpacted: t('language') === 'en' ? 'Participants Impacted:' : 
+                          t('language') === 'es' ? 'Participantes Impactados:' : 
+                          'Participantes Impactados:',
+    businessDays: t('language') === 'en' ? 'business days' : 
+                  t('language') === 'es' ? 'días hábiles' : 
+                  'dias úteis',
+    statisticsTitle: t('language') === 'en' ? 'Lectures and Mini-courses Statistics' : 
+                     t('language') === 'es' ? 'Estadísticas de Conferencias y Mini-cursos' : 
+                     'Estatísticas de Palestras e Minicursos',
+    requestTitle: t('language') === 'en' ? 'Request a Lecture or Mini-course' : 
+                  t('language') === 'es' ? 'Solicita una Conferencia o Mini-curso' : 
+                  'Solicite uma Palestra ou Minicurso',
+    requestDescription: t('language') === 'en' ? 'We develop customized lectures and mini-courses to meet the specific needs of your institution or event.' : 
+                        t('language') === 'es' ? 'Desarrollamos conferencias y mini-cursos personalizados para satisfacer las necesidades específicas de su institución o evento.' : 
+                        'Desenvolvemos palestras e minicursos sob medida para atender às necessidades específicas da sua instituição ou evento.',
+    contactButton: t('language') === 'en' ? 'Get in Touch' : 
+                   t('language') === 'es' ? 'Ponte en Contacto' : 
+                   'Entre em Contato'
+  });
+
+  const stats = getStatisticsLabels();
+
   return (
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
@@ -270,7 +301,7 @@ const SpeakingWorkshops = () => {
                         )}
                         {lecture.location && (
                           <p className="text-sm text-gray-600 mb-1">
-                            <strong>Local:</strong> {lecture.location}
+                            <strong>{t('location')}:</strong> {lecture.location}
                           </p>
                         )}
                       </div>
@@ -341,7 +372,7 @@ const SpeakingWorkshops = () => {
                         {course.duration && (
                           <div className="flex items-center gap-1 text-sm text-gray-600 mb-2">
                             <Clock className="h-4 w-4" />
-                            <strong>Duração:</strong> {course.duration}
+                            <strong>{t('duration')}:</strong> {course.duration}
                           </div>
                         )}
                         {course.participants && (
@@ -381,34 +412,34 @@ const SpeakingWorkshops = () => {
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           <Card className="p-6 bg-gradient-to-r from-ufu-blue to-ufu-navy text-white">
-            <h2 className="text-2xl font-bold mb-4">Estatísticas de Palestras e Minicursos</h2>
+            <h2 className="text-2xl font-bold mb-4">{stats.statisticsTitle}</h2>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span>Total de Palestras:</span>
+                <span>{stats.totalLectures}</span>
                 <span className="font-semibold">{lectures.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>Total de Minicursos:</span>
+                <span>{stats.totalMiniCourses}</span>
                 <span className="font-semibold">{miniCourses.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>Anos de Atividade:</span>
+                <span>{stats.yearsOfActivity}</span>
                 <span className="font-semibold">2002-2020</span>
               </div>
               <div className="flex justify-between">
-                <span>Participantes Impactados:</span>
+                <span>{stats.participantsImpacted}</span>
                 <span className="font-semibold">500+</span>
               </div>
             </div>
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold text-ufu-navy mb-3">Solicite uma Palestra ou Minicurso</h3>
+            <h3 className="text-xl font-semibold text-ufu-navy mb-3">{stats.requestTitle}</h3>
             <p className="text-gray-600 mb-4">
-              Desenvolvemos palestras e minicursos sob medida para atender às necessidades específicas da sua instituição ou evento.
+              {stats.requestDescription}
             </p>
             <Button className="w-full">
-              Entre em Contato
+              {stats.contactButton}
             </Button>
           </Card>
         </div>

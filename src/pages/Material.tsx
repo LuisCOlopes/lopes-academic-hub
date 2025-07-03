@@ -20,8 +20,8 @@ const Material = () => {
       color: 'bg-blue-500',
       items: [
         {
-          title: 'Controle de Processos Químicos - Apostila Completa',
-          description: 'Material completo sobre controle PID, controle avançado e sistemas de controle de processos',
+          title: t('processControl'),
+          description: t('processControlDescription'),
           type: 'PDF',
           size: '3.2 MB',
           downloads: 1256,
@@ -29,8 +29,8 @@ const Material = () => {
           itemNumber: 1
         },
         {
-          title: 'Otimização de Processos Químicos',
-          description: 'Técnicas de otimização aplicadas à engenharia química e processos industriais',
+          title: t('processOptimization'),
+          description: t('processOptimizationDescription'),
           type: 'PDF',
           size: '2.8 MB',
           downloads: 892,
@@ -38,8 +38,8 @@ const Material = () => {
           itemNumber: 2
         },
         {
-          title: 'Modelagem e Simulação de Processos',
-          description: 'Fundamentos de modelagem matemática e simulação computacional',
+          title: t('modelingSimulation'),
+          description: t('modelingSimulationDescription'),
           type: 'PDF',
           size: '4.1 MB',
           downloads: 756,
@@ -63,8 +63,8 @@ const Material = () => {
       color: 'bg-green-500',
       items: [
         {
-          title: 'Códigos Scilab - Controle de Processos',
-          description: 'Scripts completos para simulação e controle de processos químicos',
+          title: t('scilabCodes'),
+          description: t('scilabCodesDescription'),
           type: 'ZIP',
           size: '5.2 MB',
           downloads: 1134,
@@ -72,8 +72,8 @@ const Material = () => {
           itemNumber: 1
         },
         {
-          title: 'Controladores PID em Python',
-          description: 'Implementação de controladores PID e algoritmos de sintonia',
+          title: t('pythonScripts'),
+          description: t('pythonScriptsDescription'),
           type: 'ZIP',
           size: '2.1 MB',
           downloads: 967,
@@ -81,8 +81,8 @@ const Material = () => {
           itemNumber: 2
         },
         {
-          title: 'Simulação AVEVA - Modelos Industriais',
-          description: 'Modelos de processos químicos em ambiente AVEVA',
+          title: t('aveva'),
+          description: t('avevaDescription'),
           type: 'ZIP',
           size: '12.5 MB',
           downloads: 543,
@@ -115,8 +115,8 @@ const Material = () => {
           itemNumber: 1
         },
         {
-          title: 'Estudos de Caso - Indústria Química',
-          description: 'Casos práticos de aplicação industrial com análises completas',
+          title: t('practicalCases'),
+          description: t('practicalCasesDescription'),
           type: 'PDF',
           size: '3.1 MB',
           downloads: 845,
@@ -140,71 +140,71 @@ const Material = () => {
       color: 'bg-red-500',
       items: [
         {
-          title: 'Controle de Processos Químicos - Introdução - Aula 1',
-          description: 'Conceitos fundamentais de controle de processos químicos',
+          title: t('videoControlIntro'),
+          description: t('videoControlIntroDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/94AG13FOuLE',
           videoId: '94AG13FOuLE'
         },
         {
-          title: 'Controle de Processos Químicos - Classificação e Graus de Liberdade - Aula 2',
-          description: 'Classificação de sistemas e análise de graus de liberdade',
+          title: t('videoClassification'),
+          description: t('videoClassificationDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/zN5l9xt7J4Y',
           videoId: 'zN5l9xt7J4Y'
         },
         {
-          title: 'Controle de Processos Químicos - Revisão sobre Controle Seletivo',
-          description: 'Revisão dos conceitos de controle seletivo',
+          title: t('videoSelectiveControl'),
+          description: t('videoSelectiveControlDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/_AOhsOwpA8E',
           videoId: '_AOhsOwpA8E'
         },
         {
-          title: 'Controle de Processos Químicos - Controle Cascata e de Razão',
-          description: 'Estratégias de controle cascata e controle de razão',
+          title: t('videoCascadeRatio'),
+          description: t('videoCascadeRatioDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/zDUU55n4CBA',
           videoId: 'zDUU55n4CBA'
         },
         {
-          title: 'Controle de Processos Químicos - Controle Feedforward',
-          description: 'Implementação e aplicação do controle feedforward',
+          title: t('videoFeedforward'),
+          description: t('videoFeedforwardDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/yU85HXzb8uw',
           videoId: 'yU85HXzb8uw'
         },
         {
-          title: 'Instrumentação - parte I - Introdução',
-          description: 'Introdução aos conceitos de instrumentação industrial',
+          title: t('videoInstrumentationIntro'),
+          description: t('videoInstrumentationIntroDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/4FRTXzXPTbA',
           videoId: '4FRTXzXPTbA'
         },
         {
-          title: 'Instrumentação - parte II - Pressão',
-          description: 'Medição e controle de pressão em processos industriais',
+          title: t('videoInstrumentationPressure'),
+          description: t('videoInstrumentationPressureDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/_wnUGvXo6Co',
           videoId: '_wnUGvXo6Co'
         },
         {
-          title: 'Instrumentação - parte III - Temperatura',
-          description: 'Instrumentos para medição de temperatura',
+          title: t('videoInstrumentationTemperature'),
+          description: t('videoInstrumentationTemperatureDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/reQ2ZXUmtv0',
           videoId: 'reQ2ZXUmtv0'
         },
         {
-          title: 'Instrumentação - parte IV - Vazão',
-          description: 'Medição de vazão em sistemas industriais',
+          title: t('videoInstrumentationFlow'),
+          description: t('videoInstrumentationFlowDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/05QptEIRJUI',
           videoId: '05QptEIRJUI'
         },
         {
-          title: 'Instrumentação - parte V - Nível',
-          description: 'Instrumentação para medição e controle de nível',
+          title: t('videoInstrumentationLevel'),
+          description: t('videoInstrumentationLevelDesc'),
           type: 'YouTube',
           url: 'https://youtu.be/wzDM3aQqOxg',
           videoId: 'wzDM3aQqOxg'
