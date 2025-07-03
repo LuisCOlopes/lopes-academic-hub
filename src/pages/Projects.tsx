@@ -144,7 +144,7 @@ const Projects = () => {
       description: language === 'pt' ? 'Desenvolvimento de sistemas autônomos para controle de processos químicos com capacidades avançadas de monitoramento e tomada de decisões.' :
                    language === 'en' ? 'Development of autonomous systems for chemical process control with advanced monitoring and decision-making capabilities.' :
                    'Desarrollo de sistemas autónomos para control de procesos químicos con capacidades avanzadas de monitoreo y toma de decisiones.',
-      duration: '2023-2025',
+      duration: '2025-2029',
       status: 'active'
     },
     {
@@ -154,7 +154,7 @@ const Projects = () => {
       description: language === 'pt' ? 'Pesquisa focada na transição para fontes de energia renovável em processos industriais.' :
                    language === 'en' ? 'Research focused on transition to renewable energy sources in industrial processes.' :
                    'Investigación enfocada en la transición a fuentes de energía renovable en procesos industriales.',
-      duration: '2024-2026',
+      duration: '2025-2029',
       status: 'active'
     },
     {
@@ -164,22 +164,8 @@ const Projects = () => {
       description: language === 'pt' ? 'Análise e otimização da operabilidade dinâmica em processos químicos para melhorar flexibilidade e desempenho.' :
                    language === 'en' ? 'Analysis and optimization of dynamic operability in chemical processes to improve flexibility and performance.' :
                    'Análisis y optimización de la operabilidad dinámica en procesos químicos para mejorar flexibilidad y rendimiento.',
-      duration: '2023-2024',
+      duration: '2024-2028',
       status: 'active'
-    }
-  ];
-
-  const completedProjects = [
-    {
-      title: language === 'pt' ? 'Controle Tolerante a Falhas' :
-             language === 'en' ? 'Fault-Tolerant Control Systems' :
-             'Sistemas de Control Tolerantes a Fallas',
-      description: language === 'pt' ? 'Desenvolvimento de sistemas de controle tolerantes a falhas para garantir operação segura e confiável de processos químicos.' :
-                   language === 'en' ? 'Development of fault-tolerant control systems to ensure safe and reliable operation of chemical processes.' :
-                   'Desarrollo de sistemas de control tolerantes a fallas para garantizar operación segura y confiable de procesos químicos.',
-      duration: '2020-2023',
-      publications: 8,
-      status: 'completed'
     },
     {
       title: language === 'pt' ? 'Inteligência Artificial em Controle' :
@@ -188,8 +174,52 @@ const Projects = () => {
       description: language === 'pt' ? 'Aplicação de técnicas de inteligência artificial em controle e otimização de processos para automação aprimorada.' :
                    language === 'en' ? 'Application of artificial intelligence techniques in process control and optimization for enhanced automation.' :
                    'Aplicación de técnicas de inteligencia artificial en control y optimización de procesos para automatización mejorada.',
-      duration: '2019-2022',
-      publications: 12,
+      duration: '2019-2029',
+      status: 'active'
+    },
+    {
+      title: language === 'pt' ? 'Controle Tolerante a Falhas' :
+             language === 'en' ? 'Fault-Tolerant Control Systems' :
+             'Sistemas de Control Tolerantes a Fallas',
+      description: language === 'pt' ? 'Desenvolvimento de sistemas de controle tolerantes a falhas para garantir operação segura e confiável de processos químicos.' :
+                   language === 'en' ? 'Development of fault-tolerant control systems to ensure safe and reliable operation of chemical processes.' :
+                   'Desarrollo de sistemas de control tolerantes a fallas para garantizar operación segura y confiable de procesos químicos.',
+      duration: '2020-2029',
+      status: 'active'
+    },
+    {
+      title: language === 'pt' ? 'Análise de Processos Químicos: Modelagem e Controle' :
+             language === 'en' ? 'Chemical Process Analysis: Modeling and Control' :
+             'Análisis de Procesos Químicos: Modelado y Control',
+      description: language === 'pt' ? 'Desenvolvimento de modelos avançados e estratégias de controle para processos químicos complexos.' :
+                   language === 'en' ? 'Development of advanced models and control strategies for complex chemical processes.' :
+                   'Desarrollo de modelos avanzados y estrategias de control para procesos químicos complejos.',
+      duration: '2000-2029',
+      status: 'active'
+    }
+  ];
+
+  const completedProjects = [
+    {
+      title: language === 'pt' ? 'Controle Distribuído de Processos Químicos' :
+             language === 'en' ? 'Distributed Control of Chemical Processes' :
+             'Control Distribuido de Procesos Químicos',
+      description: language === 'pt' ? 'Desenvolvimento de sistemas de controle distribuído para processos químicos industriais com foco em eficiência e segurança.' :
+                   language === 'en' ? 'Development of distributed control systems for industrial chemical processes focusing on efficiency and safety.' :
+                   'Desarrollo de sistemas de control distribuido para procesos químicos industriales enfocándose en eficiencia y seguridad.',
+      duration: '2013-2019',
+      publications: 15,
+      status: 'completed'
+    },
+    {
+      title: language === 'pt' ? 'Controle Preditivo de Processos' :
+             language === 'en' ? 'Predictive Process Control' :
+             'Control Predictivo de Procesos',
+      description: language === 'pt' ? 'Implementação de algoritmos de controle preditivo para otimização de processos químicos e melhoria de desempenho.' :
+                   language === 'en' ? 'Implementation of predictive control algorithms for chemical process optimization and performance improvement.' :
+                   'Implementación de algoritmos de control predictivo para optimización de procesos químicos y mejora del rendimiento.',
+      duration: '2000-2010',
+      publications: 18,
       status: 'completed'
     }
   ];
