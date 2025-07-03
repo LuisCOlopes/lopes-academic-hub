@@ -1,3 +1,4 @@
+
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -11,11 +12,11 @@ const Awards = () => {
   const awards = [
     {
       year: '2024',
-      title: t('language') === 'pt' ? 'Poster Destaque no III PSE-BR' :
-             t('language') === 'en' ? 'Outstanding Poster at III PSE-BR' :
-             'Póster Destacado en III PSE-BR',
+      title: t('language') === 'pt' ? 'Pôster Destaque no III PSE-BR' :
+             t('language') === 'en' ? 'Outstanding Poster Award – III PSE-BR' :
+             'Póster Destacado en el III PSE-BR',
       organization: 'Process Systems Engineering Brasil',
-      description: t('language') === 'pt' ? 'Reconhecimento por pesquisa de destaque em engenharia de sistemas de processos' : 
+      description: t('language') === 'pt' ? 'Reconhecimento por pesquisa destacada em engenharia de sistemas de processos' : 
                    t('language') === 'en' ? 'Recognition for outstanding research in process systems engineering' :
                    'Reconocimiento por investigación destacada en ingeniería de sistemas de procesos',
       type: 'research',
@@ -23,42 +24,46 @@ const Awards = () => {
     },
     {
       year: '2022',
-      title: t('language') === 'pt' ? '1º Lugar Dissertação de Mestrado FEELT' :
-             t('language') === 'en' ? '1st Place Master\'s Dissertation FEELT' :
-             '1er Lugar Tesis de Maestría FEELT',
-      organization: t('language') === 'pt' ? 'Faculdade de Engenharia Elétrica - UFU' :
-                    t('language') === 'en' ? 'Faculty of Electrical Engineering - UFU' :
-                    'Facultad de Ingeniería Eléctrica - UFU',
-      description: t('language') === 'pt' ? 'Orientação premiada: "Controle tolerante de quadricópteros em cenários com falhas em atuadores e sensores" - Autor: Kenji Fabiano Ávila Okada' :
-                   t('language') === 'en' ? 'Award-winning supervision: "Fault-tolerant control of quadcopters in scenarios with actuator and sensor failures" - Author: Kenji Fabiano Ávila Okada' :
-                   'Supervisión premiada: "Control tolerante a fallas de cuadricópteros en escenarios con fallas en actuadores y sensores" - Autor: Kenji Fabiano Ávila Okada',
+      title: t('language') === 'pt' ? '1º Lugar – Tese de Mestrado FEELT' :
+             t('language') === 'en' ? '1st Place – Master\'s Thesis – FEELT' :
+             '1er Lugar – Tesis de Maestría – FEELT',
+      organization: t('language') === 'pt' ? 'Faculdade de Engenharia Elétrica – UFU' :
+                    t('language') === 'en' ? 'School of Electrical Engineering – UFU' :
+                    'Facultad de Ingeniería Eléctrica – UFU',
+      description: t('language') === 'pt' ? 'Supervisão premiada: "Controle tolerante a falhas de quadricópteros em cenários com falhas em atuadores e sensores"' :
+                   t('language') === 'en' ? 'Awarded supervision: "Controle tolerante a falhas de quadricópteros em cenários com falhas em atuadores e sensores" (Fault-tolerant control of quadcopters under actuator and sensor fault scenarios)' :
+                   'Supervisión premiada: "Control tolerante a fallas de cuadricópteros en escenarios con fallas en actuadores y sensores" (Controle tolerante a falhas de quadricópteros em cenários com falhas em atuadores e sensores)',
       type: 'teaching',
       link: 'https://repositorio.ufu.br/handle/123456789/34929',
-      details: t('language') === 'pt' ? 'Orientador: Prof. Dr. Aniel Silva de Morais, Coorientador: Prof. Dr. Luís Cláudio Oliveira Lopes' :
-               t('language') === 'en' ? 'Supervisor: Prof. Dr. Aniel Silva de Morais, Co-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes' :
-               'Supervisor: Prof. Dr. Aniel Silva de Morais, Co-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes'
+      details: t('language') === 'pt' ? 'Autor: Kenji Fabiano Ávila Okada\nSupervisor: Prof. Dr. Aniel Silva de Morais\nCo-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes' :
+               t('language') === 'en' ? 'Author: Kenji Fabiano Ávila Okada\nSupervisor: Prof. Dr. Aniel Silva de Morais\nCo-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes' :
+               'Autor: Kenji Fabiano Ávila Okada\nSupervisor: Prof. Dr. Aniel Silva de Morais\nCo-supervisor: Prof. Dr. Luís Cláudio Oliveira Lopes'
     },
     {
       year: '1997',
-      title: 'Phi Beta Delta Honor for International Scholars, Beta Pi Chapter of Phi Beta Delta LU (E.U.A.)',
-      organization: 'Lehigh University',
-      description: t('language') === 'pt' ? 'Honra internacional para acadêmicos destacados' :
-                   t('language') === 'en' ? 'International honor for outstanding scholars' :
-                   'Honor internacional para académicos destacados',
+      title: t('language') === 'pt' ? 'Phi Beta Delta – Honra Internacional para Pesquisadores Internacionais' :
+             t('language') === 'en' ? 'Phi Beta Delta – Honor for International Scholars' :
+             'Phi Beta Delta – Honor Internacional para Académicos',
+      organization: t('language') === 'pt' ? 'Capítulo Beta Pi – Lehigh University (EUA)' :
+                    t('language') === 'en' ? 'Beta Pi Chapter – Lehigh University (USA)' :
+                    'Capítulo Beta Pi – Lehigh University (EE.UU.)',
+      description: t('language') === 'pt' ? 'Reconhecimento internacional por excelência acadêmica' :
+                   t('language') === 'en' ? 'International recognition for outstanding scholarship' :
+                   'Reconocimiento internacional por logros académicos destacados',
       type: 'research',
       link: 'https://www2.lehigh.edu/'
     },
     {
       year: '1997',
-      title: t('language') === 'pt' ? 'Prêmio - Outstanding Performance in the Qualifying/General Examination' :
-             t('language') === 'en' ? 'Outstanding Performance in the Qualifying/General Examination' :
-             'Premio - Desempeño Excepcional en el Examen de Calificación/General',
-      organization: t('language') === 'pt' ? 'Chemical Engineering Department at LU (E.U.A.)' :
-                    t('language') === 'en' ? 'Chemical Engineering Department at LU (USA)' :
-                    'Departamento de Ingeniería Química at LU (EE.UU.)',
-      description: t('language') === 'pt' ? 'Desempenho excepcional no exame de qualificação geral' :
-                   t('language') === 'en' ? 'Outstanding performance in the qualifying/general examination' :
-                   'Desempeño excepcional en el examen de calificación general',
+      title: t('language') === 'pt' ? 'Prêmio – Desempenho Excepcional no Exame de Qualificação Geral' :
+             t('language') === 'en' ? 'Award – Outstanding Performance in Qualifying/General Examination' :
+             'Premio – Desempeño Excepcional en el Examen de Calificación General',
+      organization: t('language') === 'pt' ? 'Departamento de Engenharia Química – Lehigh University (EUA)' :
+                    t('language') === 'en' ? 'Department of Chemical Engineering – Lehigh University (USA)' :
+                    'Departamento de Ingeniería Química – Lehigh University (EE.UU.)',
+      description: t('language') === 'pt' ? 'Reconhecimento por desempenho excepcional no exame de qualificação' :
+                   t('language') === 'en' ? 'Award for outstanding performance in the general qualifying exam' :
+                   'Reconocimiento por desempeño sobresaliente en el examen de calificación',
       type: 'research'
     },
     {
@@ -66,49 +71,57 @@ const Awards = () => {
       title: t('language') === 'pt' ? 'Prêmio Chemtech de Incentivo à Pesquisa' :
              t('language') === 'en' ? 'Chemtech Research Incentive Award' :
              'Premio Chemtech de Incentivo a la Investigación',
-      organization: 'ABEQ - Chemtech',
+      organization: 'ABEQ – Chemtech',
       description: t('language') === 'pt' ? 'Reconhecimento em Simulação, Otimização e Controle de Processos' :
-                   t('language') === 'en' ? 'Recognition in Simulation, Optimization and Process Control' :
+                   t('language') === 'en' ? 'Recognition in Process Simulation, Optimization, and Control' :
                    'Reconocimiento en Simulación, Optimización y Control de Procesos',
       type: 'research'
     },
     {
       year: '2007',
-      title: t('language') === 'pt' ? 'Artigo de Destaque V SNCA' :
-             t('language') === 'en' ? 'Outstanding Article V SNCA' :
-             'Artículo Destacado V SNCA',
-      organization: 'AINST-IEEE-UFBA',
-      description: t('language') === 'pt' ? 'Artigo destacado no V Seminário Nacional de Controle e Automação' :
-                   t('language') === 'en' ? 'Featured article at the V National Seminar on Control and Automation' :
-                   'Artículo destacado en el V Seminario Nacional de Control y Automatización',
+      title: t('language') === 'pt' ? 'Artigo Destaque no V SNCA' :
+             t('language') === 'en' ? 'Highlighted Article – V SNCA' :
+             'Artículo Destacado – V SNCA',
+      organization: 'AINST – IEEE – UFBA',
+      description: t('language') === 'pt' ? 'Destaque no V Seminário Nacional de Controle e Automação' :
+                   t('language') === 'en' ? 'Featured paper at the V Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações' :
+                   'Artículo destacado en el V Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações',
       type: 'research'
     },
     {
       year: '2003',
-      title: t('language') === 'pt' ? '2º Melhor Artigo do III Seminário Nacional' :
-             t('language') === 'en' ? '2nd Best Paper of the III National Seminar' :
-             '2do Mejor Artículo del III Seminario Nacional',
-      organization: 'AINST, IEEE e UFBA',
+      title: t('language') === 'pt' ? '2º Melhor Artigo – III Seminário Nacional' :
+             t('language') === 'en' ? '2nd Best Paper – III Seminário Nacional' :
+             '2do Mejor Artículo – III Seminario Nacional',
+      organization: 'AINST – IEEE – UFBA',
       description: t('language') === 'pt' ? 'Segundo melhor artigo do III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações' :
-                   t('language') === 'en' ? 'Second best paper of the III National Seminar on Industrial, Electrical and Telecommunications Control and Automation' :
-                   'Segundo mejor artículo del III Seminario Nacional de Control y Automatización Industrial, Eléctrica y de Telecomunicaciones',
+                   t('language') === 'en' ? 'Second-best paper at the III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações' :
+                   'Segundo mejor artículo del III Seminário Nacional de Controle e Automação Industrial, Elétrica e de Telecomunicações',
       type: 'research'
     }
   ];
 
   const recognitions = [
     {
-      title: t('editorialWork'),
+      title: t('language') === 'pt' ? 'Editor de Periódicos' :
+             t('language') === 'en' ? 'Journal Editor' :
+             'Editor de Revistas',
       items: [
         {
           journal: 'Brazilian Journal of Chemical Engineering',
-          role: t('associateEditor'),
-          period: '2009 - 2013'
+          role: t('language') === 'pt' ? 'Editor Associado' :
+                t('language') === 'en' ? 'Associate Editor' :
+                'Editor Asociado',
+          period: '2009–2013'
         },
         {
           journal: 'Ciência & Engenharia',
-          role: t('editor'),
-          period: '15+ ' + (t('language') === 'pt' ? 'anos' : t('language') === 'en' ? 'years' : 'años') + ' - ' + t('current')
+          role: t('language') === 'pt' ? 'Editor' :
+                t('language') === 'en' ? 'Editor' :
+                'Editor',
+          period: t('language') === 'pt' ? '15+ anos – Atual' :
+                  t('language') === 'en' ? '15+ years – Present' :
+                  'más de 15 años – Actual'
         }
       ]
     },
@@ -116,31 +129,27 @@ const Awards = () => {
       title: t('language') === 'pt' ? 'Revisor Ad Hoc' :
              t('language') === 'en' ? 'Ad Hoc Reviewer' :
              'Revisor Ad Hoc',
-      organization: 'Chemical Engineering Science, Industrial & Engineering Chemistry Research',
-      period: '2015 - ' + (t('language') === 'pt' ? 'presente' : t('language') === 'en' ? 'present' : 'presente'),
-      description: t('language') === 'pt' ? 'Revisor de artigos científicos em periódicos internacionais de alto impacto' :
-                   t('language') === 'en' ? 'Reviewer of scientific articles in high-impact international journals' :
+      organization: t('language') === 'pt' ? 'Revistas: Chemical Engineering Science, Industrial & Engineering Chemistry Research, Automatica, Computers & Chemical Engineering, Journal of Process Control, AIChE Journal, Journal of Dynamic Systems, Measurement, and Control, etc.' :
+                    t('language') === 'en' ? 'Journals: Chemical Engineering Science, Industrial & Engineering Chemistry Research, Automatica, Computers & Chemical Engineering, Journal of Process Control, AIChE Journal, Journal of Dynamic Systems, Measurement, and Control, etc.' :
+                    'Revistas: Chemical Engineering Science, Industrial & Engineering Chemistry Research, Automatica, Computers & Chemical Engineering, Journal of Process Control, AIChE Journal, Journal of Dynamic Systems, Measurement, and Control, etc.',
+      period: t('language') === 'pt' ? '2015 – presente' :
+              t('language') === 'en' ? '2015 – present' :
+              '2015 – presente',
+      description: t('language') === 'pt' ? 'Revisor de artigos científicos em revistas internacionais de alto impacto' :
+                   t('language') === 'en' ? 'Reviewer for high-impact international scientific journals' :
                    'Revisor de artículos científicos en revistas internacionales de alto impacto'
     },
     {
-      title: t('language') === 'pt' ? 'Professor Homenageado Formandos Engenharia Química UFU' :
-             t('language') === 'en' ? 'Honored Professor Chemical Engineering Graduates UFU' :
-             'Profesor Homenajeado Graduados Ingeniería Química UFU',
-      organization: 'UFU',
-      period: '1993-1, 1993-2, 1995',
-      description: t('language') === 'pt' ? 'Reconhecimento pelos formandos de Engenharia Química' :
-                   t('language') === 'en' ? 'Recognition by Chemical Engineering graduates' :
-                   'Reconocimiento por los graduados de Ingeniería Química'
+      title: t('language') === 'pt' ? 'Professor Homenageado – Formandos de Engenharia Química – UFU' :
+             t('language') === 'en' ? 'Honored Professor – Chemical Engineering Graduates – UFU' :
+             'Profesor Homenajeado – Graduados de Ingeniería Química – UFU',
+      period: '1993-1, 1993-2, 1995'
     },
     {
-      title: t('language') === 'pt' ? 'Professor Paraninfo Formandos Engenharia Química UFU' :
-             t('language') === 'en' ? 'Graduation Speaker Chemical Engineering UFU' :
-             'Profesor Padrino Graduados Ingeniería Química UFU',
-      organization: 'UFU',
-      period: '1994, 1995, 2005',
-      description: t('language') === 'pt' ? 'Escolhido como paraninfo pelos formandos de Engenharia Química' :
-                   t('language') === 'en' ? 'Chosen as graduation speaker by Chemical Engineering graduates' :
-                   'Elegido como padrino por los graduados de Ingeniería Química'
+      title: t('language') === 'pt' ? 'Professor Padrinho – Formandos de Engenharia Química – UFU' :
+             t('language') === 'en' ? 'Patron Professor – Chemical Engineering Graduates – UFU' :
+             'Profesor Padrino – Graduados de Ingeniería Química – UFU',
+      period: '1994, 1995, 2005'
     }
   ];
 
@@ -170,22 +179,57 @@ const Awards = () => {
     }
   };
 
+  const getPageTitle = () => {
+    return t('language') === 'pt' ? 'Prêmios e Reconhecimentos' :
+           t('language') === 'en' ? 'Awards and Recognitions' :
+           'Premios y Reconocimientos';
+  };
+
+  const getPageSubtitle = () => {
+    return t('language') === 'pt' ? 'Reconhecimento pela excelência em pesquisa, ensino e serviços acadêmicos' :
+           t('language') === 'en' ? 'Acknowledgment for excellence in research, teaching, and academic service' :
+           'Reconocimiento por excelencia en investigación, docencia y servicios académicos';
+  };
+
+  const getAwardsTitle = () => {
+    return t('language') === 'pt' ? 'Prêmios e Distinções' :
+           t('language') === 'en' ? 'Honors and Distinctions' :
+           'Premios y Distinciones';
+  };
+
+  const getRecognitionsTitle = () => {
+    return t('language') === 'pt' ? 'Reconhecimentos e Serviços Acadêmicos' :
+           t('language') === 'en' ? 'Academic Recognition and Service' :
+           'Reconocimientos y Servicios Académicos';
+  };
+
+  const getLinkText = (url: string) => {
+    if (url.includes('repositorio.ufu.br')) {
+      return t('language') === 'pt' ? 'Download' :
+             t('language') === 'en' ? 'Download' :
+             'Descarga';
+    }
+    return t('language') === 'pt' ? 'Visitar' :
+           t('language') === 'en' ? 'Visit' :
+           'Visitar';
+  };
+
   return (
     <AcademicLayout>
       <div className="p-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-playfair font-bold text-ufu-navy mb-4">
-            {t('awardsTitle')}
+            {getPageTitle()}
           </h1>
           <p className="text-lg text-ufu-blue">
-            {t('awardsSubtitle')}
+            {getPageSubtitle()}
           </p>
         </div>
 
         {/* Awards Section */}
         <div className="mb-12">
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            {t('awardsAndDistinctions')}
+            {getAwardsTitle()}
           </h2>
           <div className="grid gap-6">
             {awards.map((award, index) => (
@@ -215,9 +259,9 @@ const Awards = () => {
                     </p>
 
                     {award.details && (
-                      <p className="text-sm text-gray-500 mb-3">
+                      <div className="text-sm text-gray-500 mb-3 whitespace-pre-line">
                         {award.details}
-                      </p>
+                      </div>
                     )}
 
                     {award.link && (
@@ -228,13 +272,7 @@ const Awards = () => {
                         className="inline-flex items-center gap-2 text-ufu-blue hover:text-ufu-navy text-sm"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        {award.link.includes('repositorio.ufu.br') ? 
-                          (t('language') === 'pt' ? 'Link para download' : 
-                           t('language') === 'en' ? 'Download link' : 
-                           'Enlace de descarga') : 
-                          (t('language') === 'pt' ? 'Visitar Site' :
-                           t('language') === 'en' ? 'Visit Site' :
-                           'Visitar Sitio')}
+                        {getLinkText(award.link)}
                       </a>
                     )}
                   </div>
@@ -247,7 +285,7 @@ const Awards = () => {
         {/* Recognitions Section */}
         <div>
           <h2 className="text-2xl font-playfair font-bold text-ufu-navy mb-6">
-            {t('recognitionsAndServices')}
+            {getRecognitionsTitle()}
           </h2>
           <div className="grid gap-6">
             {recognitions.map((recognition, index) => (
