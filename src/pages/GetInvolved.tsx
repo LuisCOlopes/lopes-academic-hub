@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -11,43 +12,43 @@ const GetInvolved = () => {
 
   const opportunities = [
     {
-      title: t('researchCollaboration') || 'Colaboração em Pesquisa',
-      description: t('researchCollaborationDesc') || 'Participe de nossos projetos de pesquisa em engenharia química e controle de processos',
+      title: t('researchCollaboration'),
+      description: t('researchCollaborationDesc'),
       icon: Lightbulb,
       activities: [
-        t('graduateResearchPositions') || 'Posições de pesquisa de pós-graduação',
-        t('postdocOpportunities') || 'Oportunidades de pós-doutorado', 
+        t('graduateResearchPositions'),
+        t('postdocOpportunities'), 
         t('industryPartnerships') || 'Parcerias com a indústria'
       ]
     },
     {
-      title: t('academicMentoring') || 'Mentoria Acadêmica',
-      description: t('academicMentoringDesc') || 'Participe de nossos programas de mentoria para estudantes e jovens pesquisadores',
+      title: t('academicMentoring'),
+      description: t('academicMentoringDesc'),
       icon: Users,
       activities: [
-        t('studentMentoring') || 'Mentoria de estudantes',
-        t('careerGuidance') || 'Orientação de carreira',
-        t('researchSupervision') || 'Supervisão de pesquisa'
+        t('studentMentoring'),
+        t('careerGuidance'),
+        t('researchSupervision')
       ]
     },
     {
-      title: t('educationalInitiatives') || 'Iniciativas Educacionais',
-      description: t('educationalInitiativesDesc') || 'Contribua para métodos de ensino inovadores e programas educacionais',
+      title: t('educationalInitiatives'),
+      description: t('educationalInitiativesDesc'),
       icon: BookOpen,
       activities: [
-        t('curriculumDevelopment') || 'Desenvolvimento curricular',
-        t('workshopFacilitation') || 'Facilitação de workshops',
-        t('onlineCourses') || 'Cursos online'
+        t('curriculumDevelopment'),
+        t('workshopFacilitation'),
+        t('onlineCourses')
       ]
     },
     {
-      title: t('professionalDevelopment') || 'Desenvolvimento Profissional',
-      description: t('professionalDevelopmentDesc') || 'Participe de oportunidades de crescimento profissional e networking',
+      title: t('professionalDevelopment'),
+      description: t('professionalDevelopmentDesc'),
       icon: Award,
       activities: [
-        t('conferenceParticipation') || 'Participação em conferências',
-        t('professionalSocieties') || 'Sociedades profissionais',
-        t('skillDevelopment') || 'Desenvolvimento de habilidades'
+        t('conferenceParticipation'),
+        t('professionalSocieties'),
+        t('skillDevelopment')
       ]
     }
   ];
@@ -84,8 +85,8 @@ const GetInvolved = () => {
                       <li key={i}>{activity}</li>
                     ))}
                   </ul>
-                  <Button size="sm" variant="outline">
-                    {t('learnMore')}
+                  <Button size="sm" variant="outline" asChild>
+                    <Link to="/contact">{t('contact')}</Link>
                   </Button>
                 </div>
               </div>
@@ -95,33 +96,33 @@ const GetInvolved = () => {
 
         <div className="space-y-8">
           <Card className="p-6 bg-gradient-to-r from-academic-blue to-blue-600 text-white">
-            <h2 className="text-2xl font-bold mb-4">{t('joinResearchNetwork') || 'Junte-se à Nossa Rede de Pesquisa'}</h2>
+            <h2 className="text-2xl font-bold mb-4">{t('joinResearchNetwork')}</h2>
             <p className="mb-4">
-              {t('joinResearchNetworkDesc') || 'Conecte-se com pesquisadores, profissionais da indústria e estudantes apaixonados por engenharia química e tecnologias sustentáveis.'}
+              {t('joinResearchNetworkDesc')}
             </p>
-            <Button variant="secondary">
-              {t('applyNow') || 'Candidate-se Agora'}
+            <Button variant="secondary" asChild>
+              <Link to="/contact">{t('applyNow')}</Link>
             </Button>
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forStudents') || 'Para Estudantes'}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forStudents')}</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• {t('researchInternships') || 'Estágios de pesquisa'}</li>
-                <li>• {t('graduateProgramOpportunities') || 'Oportunidades de programa de pós-graduação'}</li>
-                <li>• {t('academicMentoring') || 'Mentoria acadêmica'}</li>
-                <li>• {t('careerGuidance') || 'Orientação de carreira'}</li>
+                <li>• {t('researchInternships')}</li>
+                <li>• {t('graduateProgramOpportunities')}</li>
+                <li>• {t('academicMentoring')}</li>
+                <li>• {t('careerGuidance')}</li>
               </ul>
             </Card>
 
             <Card className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forProfessionals') || 'Para Profissionais'}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('forProfessionals')}</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• {t('industryCollaboration') || 'Colaboração com a indústria'}</li>
-                <li>• {t('consultingOpportunities') || 'Oportunidades de consultoria'}</li>
-                <li>• {t('professionalDevelopment') || 'Desenvolvimento profissional'}</li>
-                <li>• {t('knowledgeSharing') || 'Compartilhamento de conhecimento'}</li>
+                <li>• {t('industryCollaboration')}</li>
+                <li>• {t('consultingOpportunities')}</li>
+                <li>• {t('professionalDevelopment')}</li>
+                <li>• {t('knowledgeSharing')}</li>
               </ul>
             </Card>
           </div>

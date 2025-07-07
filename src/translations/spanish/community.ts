@@ -12,7 +12,7 @@ export const communityTranslations = {
   active: 'Activo',
   completed: 'Completado',
   participate: 'Participar',
-  partnershipsAndCollaborations: 'Asociaciones y Colaboraciones',
+  partnershipsAndCollaborations: 'Asociaciones',
   howToParticipate: 'Cómo Participar',
   joinAcademicCommunity: 'Únete a nuestra comunidad académica y contribuye al avance de la ingeniería química',
   events: 'Eventos',
@@ -21,6 +21,7 @@ export const communityTranslations = {
   collaborateInProjects: 'Colabora en proyectos de investigación',
   mentoring: 'Mentoría',
   receiveMentoring: 'Recibe u ofrece mentoría',
-  contactUs: 'Contáctanos',
-  learnMore: 'Saber Más',
+  contactUs: 'Contacto',
+  learnMore: 'Contacto',
+  contact: 'Contacto',
 };

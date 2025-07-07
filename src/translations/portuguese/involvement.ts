@@ -24,7 +24,7 @@ export const involvementTranslations = {
   skillDevelopment: 'Desenvolvimento de habilidades',
   joinResearchNetwork: 'Junte-se à Nossa Rede de Pesquisa',
   joinResearchNetworkDesc: 'Conecte-se com pesquisadores, profissionais da indústria e estudantes apaixonados por engenharia química e tecnologias sustentáveis.',
-  applyNow: 'Candidate-se Agora',
+  applyNow: 'Contato',
   forStudents: 'Para Estudantes',
   researchInternships: 'Estágios de pesquisa',
   graduateProgramOpportunities: 'Oportunidades de programa de pós-graduação',
@@ -32,4 +32,6 @@ export const involvementTranslations = {
   industryCollaboration: 'Colaboração com a indústria',
   consultingOpportunities: 'Oportunidades de consultoria',
   knowledgeSharing: 'Compartilhamento de conhecimento',
+  contact: 'Contato',
+  learnMore: 'Contato',
 };
