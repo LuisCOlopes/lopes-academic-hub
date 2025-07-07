@@ -169,7 +169,11 @@ const Community = () => {
                       <img 
                         src={association.image} 
                         alt={association.name}
-                        className="h-20 w-auto object-contain"
+                        className={`w-auto object-contain ${
+                          association.name.includes('ABEQ') ? 'h-12' :
+                          association.name.includes('IEEE') && !association.name.includes('Control') ? 'h-30' :
+                          'h-20'
+                        }`}
                       />
                     </div>
                   )}
