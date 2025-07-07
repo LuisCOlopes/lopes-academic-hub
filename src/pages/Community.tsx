@@ -169,7 +169,7 @@ const Community = () => {
                       <img 
                         src={association.image} 
                         alt={association.name}
-                        className="h-12 w-auto object-contain"
+                        className="h-20 w-auto object-contain"
                       />
                     </div>
                   )}
