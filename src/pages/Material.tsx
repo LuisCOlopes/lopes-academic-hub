@@ -225,7 +225,6 @@ const Material = () => {
     <AcademicLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-4 py-8">
-          {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold text-gray-800 mb-4">
               {t('materialTitle')}
@@ -235,7 +234,6 @@ const Material = () => {
             </p>
           </div>
 
-          {/* Materials Grid */}
           <div className="space-y-12">
             {materials.map((category, index) => (
               <Card key={index} className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
@@ -326,7 +324,6 @@ const Material = () => {
             ))}
           </div>
 
-          {/* Usage Policy Section */}
           <Card className="mt-16 shadow-lg border-0 bg-gradient-to-r from-blue-50 to-indigo-50">
             <CardContent className="p-8">
               <div className="flex items-start gap-4">
