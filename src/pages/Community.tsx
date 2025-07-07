@@ -41,14 +41,14 @@ const Community = () => {
       type: 'Associação Nacional',
       country: 'Brasil',
       url: 'https://abeq.org.br/',
-      image: '/lovable-uploads/logo-abeq.png'
+      image: '/lovable-uploads/638ca686-6022-49f6-a6a6-1b92c6d1d2e3.png'
     },
     {
       name: 'IEEE - Institute of Electrical and Electronics Engineers',
       type: 'Associação Internacional',
       country: 'Internacional',
       url: 'https://www.ieee.org/',
-      image: '/lovable-uploads/ieee.png'
+      image: '/lovable-uploads/a349ad0a-8de3-4ae2-b17e-d0395fa9b12f.png'
     },
     {
       name: 'IEEE Control System Society',
