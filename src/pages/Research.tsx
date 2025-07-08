@@ -155,7 +155,7 @@ const Research = () => {
                   <Button 
                     onClick={() => navigate('/contact')}
                     size="lg"
-                    className="academic-gradient text-white hover:scale-105 transition-transform"
+                    className="bg-white text-academic-blue hover:bg-gray-100 hover:scale-105 transition-all"
                   >
                     <BookOpen className="mr-2 h-5 w-5" />
                     {t('contactMe')}
@@ -164,7 +164,7 @@ const Research = () => {
                     onClick={() => navigate('/publications')}
                     variant="outline"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-academic-blue"
+                    className="border-white text-white bg-transparent hover:bg-white hover:text-academic-blue transition-all"
                   >
                     {t('learnMoreResearch')}
                     <ArrowRight className="ml-2 h-4 w-4" />
