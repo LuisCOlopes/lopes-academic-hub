@@ -111,7 +111,7 @@ const Research = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('currentProjects')}</h2>
             <div className="space-y-6">
               {currentProjects.map((project, index) => <Card key={index} className="p-6">
-                  <div className="flex justify-between items-start mb-4 bg-ufu-blue">
+                  <div className="flex justify-between items-start mb-4 bg-slate-100">
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
                       <p className="text-gray-600 mb-3">{project.description}</p>
