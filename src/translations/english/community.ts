@@ -24,4 +24,14 @@ export const communityTranslations = {
   contactUs: 'Contact',
   learnMore: 'Contact',
   contact: 'Contact',
+  visitSite: 'Visit site',
+  
+  // Association descriptions
+  abeqDescription: 'Main chemical engineering association in Brazil',
+  ieeeDescription: 'World\'s largest technical professional organization',
+  ieeeControlDescription: 'Society focused on control systems and automation',
+  siamDescription: 'Society for applied and industrial mathematics',
+  abengeDescription: 'Association dedicated to engineering education',
+  aicheDescription: 'American institute of chemical engineers',
+  ifacDescription: 'International federation of automatic control',
 };

@@ -24,4 +24,14 @@ export const communityTranslations = {
   contactUs: 'Contacto',
   learnMore: 'Contacto',
   contact: 'Contacto',
+  visitSite: 'Visitar sitio',
+  
+  // Association descriptions
+  abeqDescription: 'Principal asociación de ingeniería química de Brasil',
+  ieeeDescription: 'Mayor organización profesional técnica del mundo',
+  ieeeControlDescription: 'Sociedad enfocada en sistemas de control y automatización',
+  siamDescription: 'Sociedad de matemáticas aplicadas e industriales',
+  abengeDescription: 'Asociación dedicada a la educación en ingeniería',
+  aicheDescription: 'Instituto americano de ingenieros químicos',
+  ifacDescription: 'Federación internacional de control automático',
 };
