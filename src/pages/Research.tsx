@@ -1,83 +1,59 @@
-
 import React from 'react';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  FlaskConical, 
-  Cpu, 
-  Shield, 
-  Settings, 
-  BookOpen, 
-  Users, 
-  TrendingUp, 
-  DollarSign,
-  ArrowRight
-} from 'lucide-react';
+import { FlaskConical, Cpu, Shield, Settings, BookOpen, Users, TrendingUp, DollarSign, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
 const Research = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const navigate = useNavigate();
-
-  const researchAreas = [
-    {
-      title: t('processControlArea'),
-      description: t('processControlDescription'),
-      icon: <Settings className="h-8 w-8" />,
-      color: 'bg-blue-500'
-    },
-    {
-      title: t('optimizationArea'),
-      description: t('optimizationDescription'),
-      icon: <TrendingUp className="h-8 w-8" />,
-      color: 'bg-green-500'
-    },
-    {
-      title: t('safetyArea'),
-      description: t('safetyDescription'),
-      icon: <Shield className="h-8 w-8" />,
-      color: 'bg-red-500'
-    }
-  ];
-
-  const currentProjects = [
-    {
-      title: t('autonomousSystemProject'),
-      description: t('autonomousSystemDescription'),
-      status: t('ongoing'),
-      area: t('systemsEngineering')
-    },
-    {
-      title: t('energyTransitionProject'),
-      description: t('energyTransitionDescription'),
-      status: t('ongoing'),
-      area: t('processOptimization')
-    },
-    {
-      title: t('dynamicOperabilityProject'),
-      description: t('dynamicOperabilityDescription'),
-      status: t('ongoing'),
-      area: t('processControl')
-    },
-    {
-      title: t('faultTolerantControlProject'),
-      description: t('faultTolerantControlDescription'),
-      status: t('ongoing'),
-      area: t('faultTolerance')
-    },
-    {
-      title: t('artificialIntelligenceProject'),
-      description: t('artificialIntelligenceDescription'),
-      status: t('ongoing'),
-      area: t('processControl')
-    }
-  ];
-
-  return (
-    <AcademicLayout>
+  const researchAreas = [{
+    title: t('processControlArea'),
+    description: t('processControlDescription'),
+    icon: <Settings className="h-8 w-8" />,
+    color: 'bg-blue-500'
+  }, {
+    title: t('optimizationArea'),
+    description: t('optimizationDescription'),
+    icon: <TrendingUp className="h-8 w-8" />,
+    color: 'bg-green-500'
+  }, {
+    title: t('safetyArea'),
+    description: t('safetyDescription'),
+    icon: <Shield className="h-8 w-8" />,
+    color: 'bg-red-500'
+  }];
+  const currentProjects = [{
+    title: t('autonomousSystemProject'),
+    description: t('autonomousSystemDescription'),
+    status: t('ongoing'),
+    area: t('systemsEngineering')
+  }, {
+    title: t('energyTransitionProject'),
+    description: t('energyTransitionDescription'),
+    status: t('ongoing'),
+    area: t('processOptimization')
+  }, {
+    title: t('dynamicOperabilityProject'),
+    description: t('dynamicOperabilityDescription'),
+    status: t('ongoing'),
+    area: t('processControl')
+  }, {
+    title: t('faultTolerantControlProject'),
+    description: t('faultTolerantControlDescription'),
+    status: t('ongoing'),
+    area: t('faultTolerance')
+  }, {
+    title: t('artificialIntelligenceProject'),
+    description: t('artificialIntelligenceDescription'),
+    status: t('ongoing'),
+    area: t('processControl')
+  }];
+  return <AcademicLayout>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
@@ -120,15 +96,13 @@ const Research = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('researchAreas')}</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {researchAreas.map((area, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              {researchAreas.map((area, index) => <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <div className={`w-16 h-16 ${area.color} rounded-lg flex items-center justify-center text-white mb-4`}>
                     {area.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{area.title}</h3>
                   <p className="text-gray-600">{area.description}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -136,8 +110,7 @@ const Research = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('currentProjects')}</h2>
             <div className="space-y-6">
-              {currentProjects.map((project, index) => (
-                <Card key={index} className="p-6">
+              {currentProjects.map((project, index) => <Card key={index} className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
@@ -148,8 +121,7 @@ const Research = () => {
                       </div>
                     </div>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -162,20 +134,11 @@ const Research = () => {
                   {t('collaborationDescription')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    variant="secondary" 
-                    size="lg"
-                    onClick={() => navigate('/contact')}
-                  >
+                  <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
                     {t('contactMe')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="text-white border-white hover:bg-white hover:text-academic-blue"
-                    onClick={() => navigate('/publications')}
-                  >
+                  <Button variant="outline" size="lg" onClick={() => navigate('/publications')} className="text-white border-white hover:text-academic-blue bg-slate-200 hover:bg-slate-100">
                     {t('learnMoreResearch')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -185,8 +148,6 @@ const Research = () => {
           </section>
         </div>
       </div>
-    </AcademicLayout>
-  );
+    </AcademicLayout>;
 };
-
 export default Research;
