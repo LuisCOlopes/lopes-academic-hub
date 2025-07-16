@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import AcademicLayout from '@/components/AcademicLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
@@ -38,6 +39,31 @@ const Contact = () => {
     try {
       console.log('Submitting contact message:', formData);
       
+      // Primeiro, tentar enviar via EmailJS
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        institution: formData.institution || 'Não informado',
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'lcol@ufu.br'
+      };
+
+      try {
+        console.log('Sending email via EmailJS...');
+        await emailjs.send(
+          'service_47j6osg',
+          'template_lwzye36',
+          templateParams,
+          'rVaHGgm5eLIE4YAd_'
+        );
+        console.log('Email sent successfully via EmailJS');
+      } catch (emailError) {
+        console.error('EmailJS error:', emailError);
+        // Continua com o processo mesmo se o EmailJS falhar
+      }
+
+      // Backup no Supabase (mantém funcionalidade existente)
       const { data: result, error } = await supabase.functions.invoke('submit-forms', {
         body: {
           type: 'contact-message',
