@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import AcademicLayout from '@/components/AcademicLayout';
@@ -56,6 +58,38 @@ const Meeting = () => {
     return true;
   };
 
+  // Função para formatar o formato da reunião conforme o idioma
+  const formatMeetingFormat = (format: string) => {
+    switch (format) {
+      case 'presencial':
+        return t('inPerson');
+      case 'teams':
+        return t('msTeams');
+      case 'meet':
+        return t('googleMeet');
+      default:
+        return format;
+    }
+  };
+
+  // Função para formatar o tipo de reunião conforme o idioma
+  const formatMeetingType = (type: string) => {
+    switch (type) {
+      case 'academic':
+        return t('academicDiscussion');
+      case 'research':
+        return t('researchGuidance');
+      case 'collaboration':  
+        return t('collaboration');
+      case 'consulting':
+        return t('consulting');
+      case 'other':
+        return t('other');
+      default:
+        return type;
+    }
+  };
+
   const onSubmit = async (data: MeetingRequestForm) => {
     if (!canSubmit()) {
       toast.error('Aguarde antes de enviar outra solicitação.');
@@ -67,6 +101,38 @@ const Meeting = () => {
     try {
       console.log('Submitting meeting request:', data);
       
+      // Primeiro, tentar enviar via EmailJS
+      const templateParams = {
+        from_name: `${data.firstName} ${data.lastName}`,
+        first_name: data.firstName,
+        last_name: data.lastName,
+        from_email: data.email,
+        institution: data.institution || 'Não informado',
+        meeting_format: formatMeetingFormat(data.meetingFormat),
+        meeting_type: data.meetingType ? formatMeetingType(data.meetingType) : 'Não informado',
+        preferred_date: data.preferredDate,
+        preferred_time: data.preferredTime,
+        subject: data.subject,
+        description: data.description || 'Não informado',
+        additional_info: data.additionalInfo || 'Não informado',
+        to_email: 'lcol@ufu.br'
+      };
+
+      try {
+        console.log('Sending meeting request via EmailJS...');
+        await emailjs.send(
+          'service_47j6osg',
+          'template_tmou46p',
+          templateParams,
+          'rVaHGgm5eLIE4YAd_'
+        );
+        console.log('Meeting request sent successfully via EmailJS');
+      } catch (emailError) {
+        console.error('EmailJS error:', emailError);
+        // Continua com o processo mesmo se o EmailJS falhar
+      }
+
+      // Backup no Supabase (mantém funcionalidade existente)
       const { data: result, error } = await supabase.functions.invoke('submit-forms', {
         body: {
           type: 'meeting-request',
