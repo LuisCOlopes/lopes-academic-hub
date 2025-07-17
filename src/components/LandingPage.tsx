@@ -69,7 +69,7 @@ const LandingPage: React.FC = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full academic-gradient p-1">
                 <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/lovable-uploads/8d87c749-9750-4b89-8856-206e182b044c.png"
+                    src="/lovable-uploads/b9cfdca9-0d7d-4c7f-aceb-1cbd419ea4e6.png"
                     alt="Prof. Luís Cláudio Oliveira Lopes"
                     className="w-full h-full object-cover"
                   />
