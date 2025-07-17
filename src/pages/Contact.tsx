@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import AcademicLayout from '@/components/AcademicLayout';
@@ -12,7 +13,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { handleDownload, isDownloading } = useDownload();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -108,6 +109,23 @@ const Contact = () => {
     }
   };
 
+  // Função para obter os textos em três idiomas
+  const getTrilingualText = (ptText: string, enText: string, esText: string) => {
+    return `${ptText} / ${enText} / ${esText}`;
+  };
+
+  // Função para obter placeholders baseados no idioma atual
+  const getPlaceholder = (ptPlaceholder: string, enPlaceholder: string, esPlaceholder: string) => {
+    switch (language) {
+      case 'en':
+        return enPlaceholder;
+      case 'es':
+        return esPlaceholder;
+      default:
+        return ptPlaceholder;
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -165,74 +183,74 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Nome *
+                      {getTrilingualText('Nome', 'Name', 'Nombre')} *
                     </label>
                     <Input 
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      placeholder="Seu nome"
+                      placeholder={getPlaceholder('Seu nome', 'Your name', 'Su nombre')}
                       required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Sobrenome *
+                      {getTrilingualText('Sobrenome', 'Last Name', 'Apellido')} *
                     </label>
                     <Input 
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      placeholder="Seu sobrenome"
+                      placeholder={getPlaceholder('Seu sobrenome', 'Your last name', 'Su apellido')}
                       required
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('email')} *
+                    {getTrilingualText('E-mail', 'Email', 'Correo electrónico')} *
                   </label>
                   <Input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="seu.email@exemplo.com"
+                    placeholder={getPlaceholder('seu.email@exemplo.com', 'your.email@example.com', 'su.email@ejemplo.com')}
                     required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Instituição
+                    {getTrilingualText('Instituição', 'Institution', 'Institución')}
                   </label>
                   <Input 
                     name="institution"
                     value={formData.institution}
                     onChange={handleInputChange}
-                    placeholder="Sua instituição ou empresa"
+                    placeholder={getPlaceholder('Sua instituição ou empresa', 'Your institution or company', 'Su institución o empresa')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('subject')} *
+                    {getTrilingualText('Assunto/Objetivo da Reunião', 'Subject/Meeting Purpose', 'Asunto/Objetivo de la Reunión')} *
                   </label>
                   <Input 
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Assunto da mensagem"
+                    placeholder={getPlaceholder('Assunto da mensagem', 'Message subject', 'Asunto del mensaje')}
                     required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('message')} *
+                    {getTrilingualText('Mensagem', 'Message', 'Mensaje')} *
                   </label>
                   <Textarea 
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Sua mensagem..."
+                    placeholder={getPlaceholder('Sua mensagem...', 'Your message...', 'Su mensaje...')}
                     rows={6}
                     required
                   />
