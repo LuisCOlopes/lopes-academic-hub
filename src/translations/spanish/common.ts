@@ -8,6 +8,7 @@ export const commonTranslations = {
   access: 'Acceder',
   explore: 'Explorar',
   download: 'Descargar',
+  goTo: 'Ir a',
   
   // Conferences Page
   conferencesTitle: 'Conferencias',

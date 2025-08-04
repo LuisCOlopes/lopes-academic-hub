@@ -100,7 +100,7 @@ const LandingPage: React.FC = () => {
               <div className="space-y-3 text-gray-600">
                 <p>📧 lcol@ufu.br</p>
                 <p>📞 +55 (34) 3230-9536</p>
-                <p>🏢 Faculdade de Engenharia Química</p>
+                <p>🏢 Faculdade de Engenharia Química - Bloco 1K - Sala 1K219</p>
                 <p>📍 Uberlândia, MG - Brasil</p>
               </div>
             </Card>

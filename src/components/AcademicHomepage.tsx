@@ -118,7 +118,7 @@ const AcademicHomepage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{section.title}</h3>
                   <p className="text-gray-600 mb-4">{section.description}</p>
                   <Button variant="ghost" size="sm" className="text-academic-blue">
-                    {t('learnMore')} →
+                    {t('goTo')} →
                   </Button>
                 </div>
               </Card>

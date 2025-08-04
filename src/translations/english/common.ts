@@ -8,4 +8,5 @@ export const commonTranslations = {
   access: 'Access',
   explore: 'Explore',
   download: 'Download',
+  goTo: 'Go to',
 };
