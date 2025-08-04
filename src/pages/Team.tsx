@@ -16,12 +16,12 @@ const Team = () => {
   const undergraduateStudents = [
     {
       name: 'Filipe Eloy Rodrigues de Oliveira',
-      project: 'Projeto número 1',
+      project: 'Aplicação de Inteligência Artificial no Desenvolvimento Conceitual do Projeto de Separação de Sólidos da Perfuração',
       sponsor: 'Petrobras'
     },
     {
-      name: 'José Maria da Silva',
-      project: 'Projeto número 1',
+      name: 'Luís Felipe Bento Bessa',
+      project: 'Aplicação de Visão Computacional ao Projeto de Separação de Sólidos Gerados na Perfuração',
       sponsor: 'Petrobras'
     }
   ];
